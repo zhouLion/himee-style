@@ -1,0 +1,87 @@
+.ps-rel {
+    position: relative;
+}
+
+.ps-abs {
+    position: absolute;
+}
+
+.border-box {
+    box-sizing: border-box;
+}
+
+.content-box {
+    box-sizing: content-box;
+}
+
+page {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, SF UI Text, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei UI, Microsoft YaHei, Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+page * {
+    box-sizing: border-box;
+}
+
+.image-wrap {
+    height: fit-content;
+    background-color: #f3f3f3;
+}
+
+.application {
+    min-height: calc(100vh - env(safe-area-inset-bottom));
+    box-sizing: border-box;
+    background-color: rgba(238, 238, 238, 0.9);
+}
+
+.bg-white {
+    background-color: #fff;
+}
+
+.bg-dark {
+    background-color: rgb(0, 0, 0, 0.9);
+}
+
+// stripes background color
+.bg-stripes {
+    .tr:nth-child(even) {
+        background-color: var(--nut-table-tr-odd-bg-color, var(--nut-white, #fff))
+    }
+
+    .tr:nth-child(even) {
+        background-color: var(--nut-table-tr-even-bg-color, #f3f3f3)
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .bg-white {
+        .bg-dark();
+    }
+
+    .application {
+        .bg-dark();
+    }
+}
+
+.w-full {
+    width: 100%;
+}
+
+.w-half {
+    width: 50%;
+}
+
+.sticky-top {
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+}
+
+.sticky-bottom {
+    position: sticky;
+    bottom: 0;
+    z-index: 99;
+    width: 100%;
+}

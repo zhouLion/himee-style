@@ -1,0 +1,24 @@
+{
+  "name": "himee-style",
+  "version": "1.0.0",
+  "description": "",
+  "main": "mp.js",
+  "types": "mp.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "bumpp --commit --push --tag && npm publish --access=public",
+    "rollup": "rollup --config rollup.config.ts --configPlugin typescript"
+  },
+  "keywords": [],
+  "files": [
+    "styles",
+    "mp.js",
+    "README.md",
+    "mp.d.ts"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "bumpp": "^9.1.0"
+  }
+}

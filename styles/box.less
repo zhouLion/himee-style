@@ -1,0 +1,56 @@
+@step: 0.25rem;
+@max: 12;
+
+each(range(-12,12), {
+  .pa-@{value} {
+    padding: (@value * @step);
+  }
+  .px-@{value} {
+    padding-left: (@value * @step);
+    padding-right: (@value * @step);
+  }
+  .py-@{value} {
+    padding-top: (@value * @step);
+    padding-bottom: (@value * @step);
+  }
+  .pl-@{value} {
+    padding-left: (@value * @step);
+  }
+  .pt-@{value} {
+    padding-top: (@value * @step);
+  }
+  .pr-@{value} {
+    padding-right: (@value * @step);
+  }
+  .pb-@{value} {
+    padding-bottom: (@value * @step);
+  }
+
+  .ma-@{value} {
+    margin: (@value * @step);
+  }
+  .mx-@{value} {
+    margin-left: (@value * @step);
+    margin-right: (@value * @step);
+  }
+  .my-@{value} {
+    margin-top: (@value * @step);
+    margin-bottom: (@value * @step);
+  }
+  .ml-@{value} {
+    margin-left: (@value * @step);
+  }
+  .mt-@{value} {
+    margin-top: (@value * @step);
+  }
+  .mr-@{value} {
+    margin-right: (@value * @step);
+  }
+  .mb-@{value} {
+    margin-bottom: (@value * @step);
+  }
+});
+
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom);
+}

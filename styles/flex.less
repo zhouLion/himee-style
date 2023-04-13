@@ -1,0 +1,60 @@
+/* stylelint-disable CssSyntaxError */
+.flex {
+  display: flex;
+}
+
+.flex-row {
+  .flex();
+  flex-direction: row;
+}
+
+.flex-col {
+ .flex();
+  flex-direction: column;
+}
+
+.flex-column {
+ .flex-col();
+}
+
+.flex-between {
+  justify-content: space-between;
+}
+
+.flex-around {
+  justify-content: space-around;
+}
+
+.flex-start {
+  justify-content: flex-start;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+.flex-top {
+  align-items: flex-start;
+}
+
+.flex-middle {
+  align-items: center;
+}
+
+.flex-bottom {
+  align-items: flex-end;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+each(range(0,12), {
+  .flex@{value} {
+    flex: @value;
+  }
+})

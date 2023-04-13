@@ -1,0 +1,228 @@
+/* stylelint-disable CssSyntaxError */
+
+// https://res.wx.qq.com/wxdoc/dist/assets/img/8Font.ed3bc661.png
+// 字体
+// 微信内字体的使用与所运行的系统字体保持一致，常用字号为22, 17, 15, 14, 12(pt)，使用场景具体如下：
+
+.fs-22 {
+  font-size: calc(22px * 2);
+}
+.fs-17 {
+  font-size: calc(17px * 2);
+}
+.fs-15 {
+  font-size: calc(15px * 2);
+}
+.fs-14 {
+  font-size: calc(14px * 2);
+}
+.fs-12 {
+  font-size: calc(12px * 2);
+}
+
+.fw-md {
+  font-weight: 600;
+}
+
+.fw-normal {
+  font-weight: normal;
+}
+
+.fc-bw09 {
+  color: #000000e6;
+}
+
+.fc-bw05 {
+  color: #00000080;
+}
+
+.fc-bw03 {
+  color: #0000004d;
+}
+
+.fc-b03 {
+  color: #0000004d;
+}
+
+.f-start {
+  text-align: start;
+}
+
+.f-end {
+  text-align: end;
+}
+
+// 公众号标题，大标题
+.font-headline {
+  .fs-22();
+  .fw-md();
+  .fc-bw09();
+}
+
+// 弹窗标题
+.font-emtitle {
+  .fs-17();
+  .fw-md();
+  .fc-bw09();
+}
+
+// 列表内标题
+.font-title {
+  .fs-17();
+  .fw-normal();
+  .fc-bw09();
+}
+
+// 分组标题
+.font-emgrouptitle {
+  .fs-15();
+  .fw-md();
+  .fc-bw09();
+}
+
+// tableview 分组标题
+.font-grouptitle {
+  .fs-14();
+  .fw-normal();
+  .fc-bw05();
+}
+
+// 表单预设内容、弹窗正文
+.font-body {
+  .fs-17();
+  .fw-normal();
+  .fc-bw05();
+}
+
+// 公众号、大标题页面正文
+.font-text {
+  .fs-17();
+  .fw-normal();
+  .fc-bw09();
+}
+
+// profile 页描述
+.font-emdesc {
+  .fs-14();
+  .fw-normal();
+  .fc-bw05();
+}
+
+// 描述
+.font-desc {
+  .fs-14();
+  .fw-normal();
+  .fc-b03();
+}
+
+// 标注
+.font-footnote {
+  .fs-12();
+  .fw-normal();
+  .fc-b03();
+}
+
+/* DarkMode 下的样式 end */
+.font-reverse {
+  // 公众号标题，大标题
+  .font-headline {
+    color: #ffffffe6;
+  }
+
+  // 弹窗标题
+  .font-emtitle {
+    color: #ffffffe6;
+  }
+
+  // 列表内标题
+  .font-title {
+    color: #ffffffe6;
+  }
+
+  // 分组标题
+  .font-emgrouptitle {
+    color: #ffffffe6;
+  }
+
+  // tableview 分组标题
+  .font-grouptitle {
+    color: #ffffff80;
+  }
+
+  // 表单预设内容、弹窗正文
+  .font-body {
+    color: #ffffff80;
+  }
+
+  // 公众号、大标题页面正文
+  .font-text {
+    color: #ffffffe6;
+  }
+
+  // profile 页描述
+  .font-emdesc {
+    color: #ffffff80;
+  }
+
+  // 描述
+  .font-desc {
+    color: #ffffff4d;
+  }
+
+  // 标注
+  .font-footnote {
+    color: #ffffff4d;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  // 公众号标题，大标题
+  .font-headline {
+    color: #ffffffe6;
+  }
+
+  // 弹窗标题
+  .font-emtitle {
+    color: #ffffffe6;
+  }
+
+  // 列表内标题
+  .font-title {
+    color: #ffffffe6;
+  }
+
+  // 分组标题
+  .font-emgrouptitle {
+    color: #ffffffe6;
+  }
+
+  // tableview 分组标题
+  .font-grouptitle {
+    color: #ffffff80;
+  }
+
+  // 表单预设内容、弹窗正文
+  .font-body {
+    color: #ffffff80;
+  }
+
+  // 公众号、大标题页面正文
+  .font-text {
+    color: #ffffffe6;
+  }
+
+  // profile 页描述
+  .font-emdesc {
+    color: #ffffff80;
+  }
+
+  // 描述
+  .font-desc {
+    color: #ffffff4d;
+  }
+
+  // 标注
+  .font-footnote {
+    color: #ffffff4d;
+  }
+}
