@@ -105,10 +105,10 @@ export interface IPage_File_ {
     size?: number;
     total?: number;
 }
-export interface Map_long,string_ {
+export interface Map_long_string_ {
     [index: string]: string;
 }
-export interface Map_string,string_ {
+export interface Map_string_string_ {
     [index: string]: string;
 }
 export interface PageParams_FileFileParamVO_ {
@@ -206,7 +206,7 @@ export interface R_List_File__ {
     // 响应时间戳
     timestamp?: number;
 }
-export interface R_Map_long,string__ {
+export interface R_Map_long_string__ {
     // 响应编码:0/200-请求处理成功
     code?: number;
     // 响应数据
@@ -225,7 +225,7 @@ export interface R_Map_long,string__ {
     // 响应时间戳
     timestamp?: number;
 }
-export interface R_Map_string,string__ {
+export interface R_Map_string_string__ {
     // 响应编码:0/200-请求处理成功
     code?: number;
     // 响应数据

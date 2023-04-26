@@ -1,5 +1,5 @@
 // npx openapi-typescript https://petstore3.swagger.io/api/v3/openapi.yaml --output petstore.d.ts
-import type { DocumentDetails } from "@icholy/openapi-ts";
+import type { DocumentDetails, Schema } from "@icholy/openapi-ts";
 import { analyse, load, Printer } from "@icholy/openapi-ts";
 import * as dotenv from "dotenv"; // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
 import {
@@ -32,7 +32,10 @@ if (!BASE || !SWAGGERRESOURCES) {
   throw new Error("Missing env variables");
 }
 
-function clearDir(dir: string, notFirstCall = false) {
+const doEscape = (text: string) =>
+  text.replace(/\,/g, "_").replace(/«/g, "_").replace(/»/g, "_");
+
+const clearDir = (dir: string, notFirstCall = false) => {
   if (existsSync(dir)) {
     readdirSync(dir).forEach((file) => {
       const curPath = join(dir, file);
@@ -46,21 +49,50 @@ function clearDir(dir: string, notFirstCall = false) {
       if (notFirstCall) rmdirSync(dir);
     } catch {}
   }
-}
+};
 
-function transform(doc: DocumentDetails): string {
+const handleAdditional = (additional: Schema) => {
+  if (additional.type === "List") {
+    additional.type = "Array<unknown>";
+  }
+  if (additional.type === "Map") {
+    additional.type = "Record<string, unknown>";
+  }
+  return additional;
+};
+
+const handleProperties = (properties: Record<string, Schema>) => {
+  Object.entries(properties).forEach(([key, value]) => {
+    value.type = doEscape(value.type);
+    formatSchema(value);
+    properties[key] = value;
+  });
+  return properties;
+};
+
+const formatSchema = (schema: Schema) => {
+  if (schema.type === "object") {
+    if (schema.additional) {
+      schema.additional = handleAdditional(schema.additional);
+    }
+    if (schema.properties) {
+      schema.properties = handleProperties(schema.properties);
+    }
+  }
+};
+
+const transform = (doc: DocumentDetails): string => {
   const print = new Printer();
-  const escapeArrowSymbols = (text: string) =>
-    text.replace(/«/g, "_").replace(/»/g, "_");
   // output definitions
   for (const [name, schema] of Object.entries(doc.definitions)) {
-    print.schema(schema, escapeArrowSymbols(name));
+    formatSchema(schema);
+    print.schema(schema, doEscape(name));
   }
-  return escapeArrowSymbols(print.code());
-}
+  return print.code();
+};
 
 // ensure dir, if not exists then create it
-function ensureDir(dir: string) {
+const ensureDir = (dir: string) => {
   if (!existsSync(dir)) {
     mkdirSync(dir, {
       recursive: true,
@@ -68,17 +100,17 @@ function ensureDir(dir: string) {
   }
   // delete subdirs and files under this dir
   clearDir(dir);
-}
+};
 
-async function gen(item: Resource) {
+const gen = async (item: Resource) => {
   const doc = await load(BASE + item.location);
   const details = analyse(doc);
-
   const targetFile = resolve(output, `./${item.name}.d.ts`);
+  console.log("⚙ Handling", targetFile);
   writeFileSync(targetFile, transform(details), {
     encoding: "utf-8",
   });
-}
+};
 
 (() => {
   console.log("🚀：Generating API...");

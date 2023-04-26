@@ -705,7 +705,7 @@ export interface R_LoginLog_ {
     // 响应时间戳
     timestamp?: number;
 }
-export interface R_Map_string,object__ {
+export interface R_Map_string_object__ {
     // 响应编码:0/200-请求处理成功
     code?: number;
     // 响应数据

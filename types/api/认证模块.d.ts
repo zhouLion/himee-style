@@ -108,16 +108,16 @@ export interface LoginUserAuthInfo {
     // 工作描述
     workDescribe?: string;
 }
-export interface Map_string,List_Dictionary__ {
-    [index: string]: List;
+export interface Map_string_List_Dictionary__ {
+    [index: string]: Array<unknown>;
 }
-export interface Map_string,List_Option__ {
-    [index: string]: List;
+export interface Map_string_List_Option__ {
+    [index: string]: Array<unknown>;
 }
-export interface Map_string,Map_string,string__ {
-    [index: string]: Map;
+export interface Map_string_Map_string_string__ {
+    [index: string]: Record<string, unknown>;
 }
-export interface Map_string,string_ {
+export interface Map_string_string_ {
     [index: string]: string;
 }
 export interface Menu {
@@ -279,7 +279,7 @@ export interface R_LoginUserAuthInfo_ {
     // 响应时间戳
     timestamp?: number;
 }
-export interface R_Map_string,List_Dictionary___ {
+export interface R_Map_string_List_Dictionary___ {
     // 响应编码:0/200-请求处理成功
     code?: number;
     // 响应数据
@@ -298,7 +298,7 @@ export interface R_Map_string,List_Dictionary___ {
     // 响应时间戳
     timestamp?: number;
 }
-export interface R_Map_string,List_Option___ {
+export interface R_Map_string_List_Option___ {
     // 响应编码:0/200-请求处理成功
     code?: number;
     // 响应数据
@@ -317,7 +317,7 @@ export interface R_Map_string,List_Option___ {
     // 响应时间戳
     timestamp?: number;
 }
-export interface R_Map_string,Map_string,string___ {
+export interface R_Map_string_Map_string_string___ {
     // 响应编码:0/200-请求处理成功
     code?: number;
     // 响应数据
@@ -338,7 +338,7 @@ export interface R_Map_string,Map_string,string___ {
     // 响应时间戳
     timestamp?: number;
 }
-export interface R_Map_string,string__ {
+export interface R_Map_string_string__ {
     // 响应编码:0/200-请求处理成功
     code?: number;
     // 响应数据
