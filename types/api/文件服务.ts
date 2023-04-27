@@ -1,3 +1,6 @@
+/**
+ * @description: 业务附件
+ */
 export interface AppendixResultVO {
     // 业务id
     bizId?: number;
@@ -20,6 +23,7 @@ export interface AppendixResultVO {
     // 大小
     size?: number;
 }
+
 export interface File {
     bizType?: string;
     bucket?: string;
@@ -44,6 +48,10 @@ export interface File {
     updatedBy?: number;
     url?: string;
 }
+
+/**
+ * @description: 增量文件上传日志
+ */
 export interface FileFileParamVO {
     // 业务类型
     bizType?: string;
@@ -72,6 +80,10 @@ export interface FileFileParamVO {
     // 文件访问地址
     url?: string;
 }
+
+/**
+ * @description: 增量文件上传日志
+ */
 export interface FileFileResultVO {
     // 业务类型
     bizType?: string;
@@ -98,6 +110,7 @@ export interface FileFileResultVO {
     // 文件访问地址
     url?: string;
 }
+
 export interface IPage_File_ {
     current?: number;
     pages?: number;
@@ -105,12 +118,18 @@ export interface IPage_File_ {
     size?: number;
     total?: number;
 }
+
 export interface Map_long_string_ {
     [index: string]: string;
 }
+
 export interface Map_string_string_ {
     [index: string]: string;
 }
+
+/**
+ * @description: 分页参数
+ */
 export interface PageParams_FileFileParamVO_ {
     // 当前页
     current?: number;
@@ -124,6 +143,7 @@ export interface PageParams_FileFileParamVO_ {
     // 排序,默认createTime
     sort?: string;
 }
+
 export interface R_FileFileResultVO_ {
     // 响应编码:0/200-请求处理成功
     code?: number;
@@ -140,6 +160,7 @@ export interface R_FileFileResultVO_ {
     // 响应时间戳
     timestamp?: number;
 }
+
 export interface R_File_ {
     // 响应编码:0/200-请求处理成功
     code?: number;
@@ -156,6 +177,7 @@ export interface R_File_ {
     // 响应时间戳
     timestamp?: number;
 }
+
 export interface R_IPage_File__ {
     // 响应编码:0/200-请求处理成功
     code?: number;
@@ -172,6 +194,7 @@ export interface R_IPage_File__ {
     // 响应时间戳
     timestamp?: number;
 }
+
 export interface R_List_AppendixResultVO__ {
     // 响应编码:0/200-请求处理成功
     code?: number;
@@ -189,6 +212,7 @@ export interface R_List_AppendixResultVO__ {
     // 响应时间戳
     timestamp?: number;
 }
+
 export interface R_List_File__ {
     // 响应编码:0/200-请求处理成功
     code?: number;
@@ -206,6 +230,7 @@ export interface R_List_File__ {
     // 响应时间戳
     timestamp?: number;
 }
+
 export interface R_Map_long_string__ {
     // 响应编码:0/200-请求处理成功
     code?: number;
@@ -225,6 +250,7 @@ export interface R_Map_long_string__ {
     // 响应时间戳
     timestamp?: number;
 }
+
 export interface R_Map_string_string__ {
     // 响应编码:0/200-请求处理成功
     code?: number;
@@ -244,6 +270,7 @@ export interface R_Map_string_string__ {
     // 响应时间戳
     timestamp?: number;
 }
+
 export interface R_boolean_ {
     // 响应编码:0/200-请求处理成功
     code?: number;
@@ -260,4 +287,145 @@ export interface R_boolean_ {
     path?: string;
     // 响应时间戳
     timestamp?: number;
+}
+
+export interface TQueryOflistByBizIdUsingPOST {
+    // bizId
+    bizId: number;
+    // bizType
+    bizType?: string;
+}
+export type TResponseOflistByBizIdUsingPOST = R_List_AppendixResultVO__;
+export type TBodyOfdeleteUsingDELETE_6 = number[];
+export type TResponseOfdeleteUsingDELETE_6 = R_boolean_;
+export type TBodyOffindUrlByIdUsingPOST = number[];
+export type TResponseOffindUrlByIdUsingPOST = R_Map_long_string__;
+export type TBodyOffindUrlByPathUsingPOST = string[];
+export type TResponseOffindUrlByPathUsingPOST = R_Map_string_string__;
+export interface TFormDataOfuploadUsingPOST {
+    // 附件
+    file: MultipartFile[];
+}
+export interface TQueryOfuploadUsingPOST {
+    // 业务类型
+    bizType?: string;
+    // 桶
+    bucket?: string;
+    // 存储类型
+    storageType?: string;
+}
+export type TResponseOfuploadUsingPOST = R_FileFileResultVO_;
+export type TBodyOfdownloadUsingPOST = number[];
+export type TResponseOfdownloadUsingPOST = any;
+export type TBodyOfpageUsingPOST_6 = PageParams_FileFileParamVO_;
+export type TResponseOfpageUsingPOST_6 = R_IPage_File__;
+export type TBodyOfqueryUsingPOST_5 = File;
+export type TResponseOfqueryUsingPOST_5 = R_List_File__;
+export interface TPathOfgetUsingGET_6 {
+    // 主键
+    id?: number;
+}
+export type TResponseOfgetUsingGET_6 = R_File_;
+type MultipartFile = File;
+
+export interface IApiFn {
+  (url: string): {
+    [m in "get" | "post" | "put" | "patch" | "delete" | "head"]: (options: any) => Promise<any>;
+  };
+
+  (url: "/anyone/appendix/listByBizId"): {
+    /**
+     * @description 根据业务id 和 业务类型查询附件信息 listByBizIdUsingPOST
+     * 业务附件
+     */
+    post(options: {
+      query: TQueryOflistByBizIdUsingPOST;
+    }): Promise<TResponseOflistByBizIdUsingPOST>;
+  };
+  (url: "/file"): {
+    /**
+     * @description 删除 deleteUsingDELETE_6
+     * 文件实时上传
+     */
+    delete(options: { body: TBodyOfdeleteUsingDELETE_6 }): Promise<TResponseOfdeleteUsingDELETE_6>;
+  };
+  (url: "/file/anyone/findUrlById"): {
+    /**
+     * @description 根据文件id，获取文件临时的访问路径 findUrlByIdUsingPOST
+     * 文件实时上传
+     */
+    post(options: { body: TBodyOffindUrlByIdUsingPOST }): Promise<TResponseOffindUrlByIdUsingPOST>;
+  };
+  (url: "/file/anyone/findUrlByPath"): {
+    /**
+     * @description 批量根据文件相对路径，获取文件临时的访问路径 findUrlByPathUsingPOST
+     * 文件实时上传
+     */
+    post(options: {
+      body: TBodyOffindUrlByPathUsingPOST;
+    }): Promise<TResponseOffindUrlByPathUsingPOST>;
+  };
+  (url: "/file/anyone/upload"): {
+    /**
+     * @description 附件上传 uploadUsingPOST
+     * 文件实时上传
+     */
+    post(options: {
+      formData: TFormDataOfuploadUsingPOST;
+      query: TQueryOfuploadUsingPOST;
+    }): Promise<TResponseOfuploadUsingPOST>;
+  };
+  (url: "/file/download"): {
+    /**
+     * @description 根据文件id打包下载 downloadUsingPOST
+     * 文件实时上传
+     */
+    post(options: { body: TBodyOfdownloadUsingPOST }): Promise<TResponseOfdownloadUsingPOST>;
+  };
+  (url: "/file/page"): {
+    /**
+     * @description 分页列表查询 pageUsingPOST_6
+     * 文件实时上传
+     */
+    post(options: { body: TBodyOfpageUsingPOST_6 }): Promise<TResponseOfpageUsingPOST_6>;
+  };
+  (url: "/file/query"): {
+    /**
+     * @description 批量查询 queryUsingPOST_5
+     * 文件实时上传
+     */
+    post(options: { body: TBodyOfqueryUsingPOST_5 }): Promise<TResponseOfqueryUsingPOST_5>;
+  };
+  (url: "/file/{id}"): {
+    /**
+     * @description 单体查询 getUsingGET_6
+     * 文件实时上传
+     */
+    get(options: { path: TPathOfgetUsingGET_6 }): Promise<TResponseOfgetUsingGET_6>;
+  };
+}
+
+export interface RequestProvider {
+  get(url: string, options: any): Promise<any>;
+  post(url: string, options: any): Promise<any>;
+  put(url: string, options: any): Promise<any>;
+  head(url: string, options: any): Promise<any>;
+  delete(url: string, options: any): Promise<any>;
+  patch(url: string, options: any): Promise<any>;
+}
+
+/**
+ * create a request by a provider
+ */
+export function createRequest(provider: RequestProvider): IApiFn {
+  return (url: string) => {
+    return {
+      get: (options: any) => provider.get(url, options),
+      post: (options: any) => provider.post(url, options),
+      put: (options: any) => provider.put(url, options),
+      head: (options: any) => provider.head(url, options),
+      delete: (options: any) => provider.delete(url, options),
+      patch: (options: any) => provider.patch(url, options),
+    };
+  };
 }

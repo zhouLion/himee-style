@@ -1,5 +1,8 @@
-// npx openapi-typescript https://petstore3.swagger.io/api/v3/openapi.yaml --output petstore.d.ts
-import type { DocumentDetails, Schema } from "@icholy/openapi-ts";
+import type {
+  DocumentDetails,
+  OperationDetails,
+  Schema
+} from "@icholy/openapi-ts";
 import { analyse, load, Printer } from "@icholy/openapi-ts";
 import * as dotenv from "dotenv"; // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
 import {
@@ -12,6 +15,7 @@ import {
   writeFileSync
 } from "fs";
 import { join, resolve } from "path";
+import { format } from "prettier";
 
 dotenv.config({
   path: ".env.local",
@@ -31,6 +35,116 @@ const output = resolve(process.cwd(), "types/api");
 if (!BASE || !SWAGGERRESOURCES) {
   throw new Error("Missing env variables");
 }
+
+class MyPrinter extends Printer {
+  /**
+   * @param str
+   */
+  public commentBlock(comments: string | string[]) {
+    if (!comments) return;
+    if (Array.isArray(comments)) {
+      if (comments.length === 0) return;
+      comments = comments.join("\n");
+    }
+    this.raw(`/**\n * ${comments}\n */`);
+  }
+}
+
+const createIApiFnTemplate = (
+  operations: OperationDetails[],
+  printter: MyPrinter
+) => {
+  if (operations.length === 0) return "";
+  // group by path
+  const groupByPath = operations.reduce((acc, cur) => {
+    if (!acc[cur.path]) {
+      acc[cur.path] = [];
+    }
+    acc[cur.path].push(cur);
+    return acc;
+  }, {} as Record<string, OperationDetails[]>);
+
+  const types = Object.entries(groupByPath).map(([path, _operations]) => {
+    const innerMethodsType = _operations.map((operation) => {
+      const { body, formData, path, query, response } = operation.params;
+      const operationId = operation.obj.operationId;
+      let optionsType = `{`;
+      if (!body.isEmpty()) {
+        printter.schema(formatSchema(body), `TBodyOf${operationId}`);
+        optionsType += `body: TBodyOf${operationId},`;
+      }
+      if (!path.isEmpty()) {
+        printter.schema(formatSchema(path), `TPathOf${operationId}`);
+        optionsType += `path: TPathOf${operationId},`;
+      }
+      if (!formData.isEmpty()) {
+        printter.schema(formatSchema(formData), `TFormDataOf${operationId}`);
+        optionsType += `formData: TFormDataOf${operationId},`;
+      }
+      if (!query.isEmpty()) {
+        printter.schema(formatSchema(query), `TQueryOf${operationId}`);
+        optionsType += `query: TQueryOf${operationId},`;
+      }
+      optionsType += "}";
+
+      printter.schema(formatSchema(response), `TResponseOf${operationId}`);
+
+      return `
+      /**
+       * @description ${operation.obj.summary} ${operation.obj.operationId}
+       * ${
+         operation.obj.deprecated
+           ? "@deprecated"
+           : operation.obj.tags?.toString()
+       }
+       */
+       ${
+         operation.method
+       }(options: ${optionsType}): Promise<TResponseOf${operationId}>`;
+    });
+
+    return `
+    (url: '${path}'): {
+      ${innerMethodsType.join(",\n")}
+    }
+    `;
+  });
+  return `
+type MultipartFile = File;
+
+export interface IApiFn {
+  (url: string): {
+    [m in 'get' | 'post' | 'put' | 'patch' | 'delete' | 'head']: (options: any) => Promise<any>
+  },
+  ${types}
+}
+
+export interface RequestProvider {
+  get(url: string, options: any): Promise<any>;
+  post(url: string, options: any): Promise<any>;
+  put(url: string, options: any): Promise<any>;
+  head(url: string, options: any): Promise<any>;
+  delete(url: string, options: any): Promise<any>;
+  patch(url: string, options: any): Promise<any>;
+}
+
+/**
+ * create a request by a provider
+ */
+export function createRequest(provider: RequestProvider): IApiFn {
+  return (url: string) => {
+    return {
+      get: (options: any) => provider.get(url, options),
+      post: (options: any) => provider.post(url, options),
+      put: (options: any) => provider.put(url, options),
+      head: (options: any) => provider.head(url, options),
+      delete: (options: any) => provider.delete(url, options),
+      patch: (options: any) => provider.patch(url, options),
+    };
+  };
+}
+`;
+};
 
 const doEscape = (text: string) =>
   text.replace(/\,/g, "_").replace(/«/g, "_").replace(/»/g, "_");
@@ -71,6 +185,7 @@ const handleProperties = (properties: Record<string, Schema>) => {
 };
 
 const formatSchema = (schema: Schema) => {
+  schema.type = doEscape(schema.type);
   if (schema.type === "object") {
     if (schema.additional) {
       schema.additional = handleAdditional(schema.additional);
@@ -79,16 +194,39 @@ const formatSchema = (schema: Schema) => {
       schema.properties = handleProperties(schema.properties);
     }
   }
+  return schema;
 };
 
 const transform = (doc: DocumentDetails): string => {
-  const print = new Printer();
+  if (
+    (!doc.operations || !doc.operations.length) &&
+    (!doc.definitions || !doc.definitions.length)
+  )
+    return "";
+
+  const print = new MyPrinter();
   // output definitions
   for (const [name, schema] of Object.entries(doc.definitions)) {
     formatSchema(schema);
+
+    const blockComments: string[] = [];
+    if (schema.description)
+      blockComments.push(`@description: ${schema.description}`);
+    if (schema.deprecated)
+      blockComments.push(`@description: ${schema.deprecated}`);
+    print.commentBlock(blockComments);
     print.schema(schema, doEscape(name));
+    print.blank();
   }
-  return print.code();
+  const apiDeclares = createIApiFnTemplate(doc.operations, print);
+  return (
+    print.code() +
+    "\n" +
+    format(apiDeclares, {
+      parser: "typescript",
+      printWidth: 100,
+    })
+  );
 };
 
 // ensure dir, if not exists then create it
@@ -102,14 +240,24 @@ const ensureDir = (dir: string) => {
   clearDir(dir);
 };
 
-const gen = async (item: Resource) => {
-  const doc = await load(BASE + item.location);
-  const details = analyse(doc);
-  const targetFile = resolve(output, `./${item.name}.d.ts`);
-  console.log("⚙ Handling", targetFile);
-  writeFileSync(targetFile, transform(details), {
-    encoding: "utf-8",
-  });
+const generateDecalreFile = async (item: Resource) => {
+  const targetFile = resolve(output, `./${item.name}.ts`);
+  try {
+    const doc = await load(BASE + item.location);
+    const details = analyse(doc);
+    console.log("⚙ Handling", targetFile);
+    const code = transform(details);
+    if (!code) {
+      console.warn("❎ Handled empty", targetFile);
+      return;
+    }
+    writeFileSync(targetFile, code, {
+      encoding: "utf-8",
+    });
+    console.log("✅ Handled successfully", targetFile);
+  } catch (error) {
+    console.error("❌ Handled with error", targetFile, error.message);
+  }
 };
 
 (() => {
@@ -118,7 +266,7 @@ const gen = async (item: Resource) => {
   fetch(BASE + SWAGGERRESOURCES)
     .then((res) => res.json())
     .then((list: Resource[]) => {
-      return Promise.all(list.map((item) => gen(item)));
+      return Promise.all(list.map((item) => generateDecalreFile(item)));
     })
     .then(() => {
       console.log("🎉🎉🎉🎉🎉", "Done~");

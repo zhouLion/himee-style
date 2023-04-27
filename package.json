@@ -5,27 +5,43 @@
   "type": "module",
   "main": "mp.js",
   "types": "mp.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "gen:api": "tsx script/genApi",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "release": "npm run gen:api && bumpp --commit --push --tag && npm publish --access=public",
+    "release": "bumpp --commit --push --tag && npm publish --access=public",
     "rollup": "rollup --config rollup.config.ts --configPlugin typescript"
+  },
+  "repository": {
+    "type": "GitHub",
+    "url": "https://github.com/zhouLion/himee-style"
   },
   "keywords": [],
   "files": [
     "styles",
     "mp.js",
-    "types/api",
+    "types",
     "README.md",
     "mp.d.ts"
   ],
-  "author": "",
+  "author": {
+    "name": "zhouLion",
+    "email": "zhouquan147369@gmail.com"
+  },
   "license": "ISC",
   "devDependencies": {
     "@icholy/openapi-ts": "^2.10.4",
     "@types/node": "^18.16.1",
+    "@types/prettier": "^2.7.2",
+    "axios": "^1.0.0",
     "bumpp": "^9.1.0",
     "dotenv": "^16.0.3",
+    "prettier": "^2.8.8",
     "tsx": "^3.12.6"
+  },
+  "peerDependencies": {
+    "axios": "^1.0.0"
   }
 }

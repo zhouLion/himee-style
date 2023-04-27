@@ -1,3 +1,6 @@
+/**
+ * @description: 认证信息
+ */
 export interface AuthInfo {
     // 账号名
     account?: string;
@@ -22,6 +25,10 @@ export interface AuthInfo {
     // 工作描述
     workDescribe?: string;
 }
+
+/**
+ * @description: 权限资源
+ */
 export interface AuthorityResourceDTO {
     // 是否区分大小写
     caseSensitive?: boolean;
@@ -32,6 +39,10 @@ export interface AuthorityResourceDTO {
     // 拥有的角色编码
     roleList?: string[];
 }
+
+/**
+ * @description: 字典项
+ */
 export interface Dictionary {
     // 编码
     code?: string;
@@ -66,6 +77,10 @@ export interface Dictionary {
     // 最后修改人ID
     updatedBy?: number;
 }
+
+/**
+ * @description: 登录参数
+ */
 export interface LoginParamDTO {
     // 账号
     account?: string;
@@ -82,6 +97,10 @@ export interface LoginParamDTO {
     // 用户类型:1-平台用户，2-商户店铺用户,默认是1
     userType?: string;
 }
+
+/**
+ * @description: 认证信息带租户信息
+ */
 export interface LoginUserAuthInfo {
     // 账号名
     account?: string;
@@ -108,18 +127,26 @@ export interface LoginUserAuthInfo {
     // 工作描述
     workDescribe?: string;
 }
+
 export interface Map_string_List_Dictionary__ {
     [index: string]: Array<unknown>;
 }
+
 export interface Map_string_List_Option__ {
     [index: string]: Array<unknown>;
 }
+
 export interface Map_string_Map_string_string__ {
     [index: string]: Record<string, unknown>;
 }
+
 export interface Map_string_string_ {
     [index: string]: string;
 }
+
+/**
+ * @description: 菜单
+ */
 export interface Menu {
     // 组件
     component?: string;
@@ -166,11 +193,16 @@ export interface Menu {
     // 最后修改人ID
     updatedBy?: number;
 }
+
+/**
+ * @description: 下拉、多选组件选项
+ */
 export interface Option {
     label?: string;
     text?: string;
     value?: string;
 }
+
 export interface RouterMeta {
     // 是否固定标签
     affix?: boolean;
@@ -197,6 +229,7 @@ export interface RouterMeta {
     // 指定该路由切换的动画名
     transitionName?: string;
 }
+
 export interface R_AuthInfo_ {
     // 响应编码:0/200-请求处理成功
     code?: number;
@@ -213,6 +246,7 @@ export interface R_AuthInfo_ {
     // 响应时间戳
     timestamp?: number;
 }
+
 export interface R_AuthorityResourceDTO_ {
     // 响应编码:0/200-请求处理成功
     code?: number;
@@ -229,6 +263,7 @@ export interface R_AuthorityResourceDTO_ {
     // 响应时间戳
     timestamp?: number;
 }
+
 export interface R_List_Menu__ {
     // 响应编码:0/200-请求处理成功
     code?: number;
@@ -246,6 +281,7 @@ export interface R_List_Menu__ {
     // 响应时间戳
     timestamp?: number;
 }
+
 export interface R_List_VueRouter__ {
     // 响应编码:0/200-请求处理成功
     code?: number;
@@ -263,6 +299,7 @@ export interface R_List_VueRouter__ {
     // 响应时间戳
     timestamp?: number;
 }
+
 export interface R_LoginUserAuthInfo_ {
     // 响应编码:0/200-请求处理成功
     code?: number;
@@ -279,6 +316,7 @@ export interface R_LoginUserAuthInfo_ {
     // 响应时间戳
     timestamp?: number;
 }
+
 export interface R_Map_string_List_Dictionary___ {
     // 响应编码:0/200-请求处理成功
     code?: number;
@@ -298,6 +336,7 @@ export interface R_Map_string_List_Dictionary___ {
     // 响应时间戳
     timestamp?: number;
 }
+
 export interface R_Map_string_List_Option___ {
     // 响应编码:0/200-请求处理成功
     code?: number;
@@ -317,6 +356,7 @@ export interface R_Map_string_List_Option___ {
     // 响应时间戳
     timestamp?: number;
 }
+
 export interface R_Map_string_Map_string_string___ {
     // 响应编码:0/200-请求处理成功
     code?: number;
@@ -338,6 +378,7 @@ export interface R_Map_string_Map_string_string___ {
     // 响应时间戳
     timestamp?: number;
 }
+
 export interface R_Map_string_string__ {
     // 响应编码:0/200-请求处理成功
     code?: number;
@@ -357,6 +398,7 @@ export interface R_Map_string_string__ {
     // 响应时间戳
     timestamp?: number;
 }
+
 export interface R_boolean_ {
     // 响应编码:0/200-请求处理成功
     code?: number;
@@ -374,6 +416,7 @@ export interface R_boolean_ {
     // 响应时间戳
     timestamp?: number;
 }
+
 export interface R_string_ {
     // 响应编码:0/200-请求处理成功
     code?: number;
@@ -391,6 +434,7 @@ export interface R_string_ {
     // 响应时间戳
     timestamp?: number;
 }
+
 export interface VueRouter {
     alwaysShow?: boolean;
     // 组件
@@ -414,4 +458,207 @@ export interface VueRouter {
     updateTime?: string;
     // 最后修改人ID
     updatedBy?: number;
+}
+
+export interface TQueryOfcaptchaUsingGET {
+    // key
+    key: string;
+}
+export type TResponseOfcaptchaUsingGET = any;
+export interface TQueryOfcheckUsingGET_8 {
+    // code
+    code: string;
+    // key
+    key: string;
+}
+export type TResponseOfcheckUsingGET_8 = R_boolean_;
+export type TResponseOfverifyUsingGET = R_AuthInfo_;
+export type TBodyOfcodeListUsingPOST = string[];
+export type TResponseOfcodeListUsingPOST = R_Map_string_List_Option___;
+export type TBodyOflistUsingPOST_1 = string[];
+export type TResponseOflistUsingPOST_1 = R_Map_string_List_Dictionary___;
+export type TBodyOfenumListsUsingPOST = string[];
+export type TResponseOfenumListsUsingPOST = R_Map_string_List_Option___;
+export type TBodyOfenumsUsingPOST = string[];
+export type TResponseOfenumsUsingPOST = R_Map_string_Map_string_string___;
+export interface TQueryOfmyMenusUsingGET {
+    // 菜单组
+    group?: string;
+    // 用户id
+    userId?: number;
+}
+export type TResponseOfmyMenusUsingGET = R_List_Menu__;
+export interface TQueryOfmyRouterUsingGET {
+    // 菜单组
+    group?: string;
+    // 用户id
+    userId?: number;
+}
+export type TResponseOfmyRouterUsingGET = R_List_VueRouter__;
+export type TBodyOfloginUsingPOST = LoginParamDTO;
+export type TResponseOfloginUsingPOST = R_LoginUserAuthInfo_;
+export interface TQueryOflogoutUsingPOST_1 {
+    // clientId
+    clientId?: string;
+    // userId
+    userId?: number;
+}
+export type TResponseOflogoutUsingPOST_1 = R_boolean_;
+export type TBodyOfnoTokenTenantUsingPOST = LoginParamDTO;
+export type TResponseOfnoTokenTenantUsingPOST = R_string_;
+export type TBodyOffindParamsUsingPOST = string[];
+export type TResponseOffindParamsUsingPOST = R_Map_string_string__;
+export interface TQueryOfgetValueUsingGET {
+    // defVal
+    defVal?: string;
+    // key
+    key: string;
+}
+export type TResponseOfgetValueUsingGET = R_string_;
+export interface TQueryOfvisibleUsingGET {
+    // 菜单id
+    menuId?: number;
+    // 指定用户id
+    userId?: number;
+}
+export type TResponseOfvisibleUsingGET = R_AuthorityResourceDTO_;
+type MultipartFile = File;
+
+export interface IApiFn {
+  (url: string): {
+    [m in "get" | "post" | "put" | "patch" | "delete" | "head"]: (options: any) => Promise<any>;
+  };
+
+  (url: "/anno/captcha"): {
+    /**
+     * @description 验证码 captchaUsingGET
+     * 登录接口
+     */
+    get(options: { query: TQueryOfcaptchaUsingGET }): Promise<TResponseOfcaptchaUsingGET>;
+  };
+  (url: "/anno/check"): {
+    /**
+     * @description 验证验证码 checkUsingGET_8
+     * 登录接口
+     */
+    get(options: { query: TQueryOfcheckUsingGET_8 }): Promise<TResponseOfcheckUsingGET_8>;
+  };
+  (url: "/anno/verify"): {
+    /**
+     * @description 验证token verifyUsingGET
+     * 登录接口
+     */
+    get(options: {}): Promise<TResponseOfverifyUsingGET>;
+  };
+  (url: "/dictionary/codeList"): {
+    /**
+     * @description 根据类型编码查询字典项 codeListUsingPOST
+     * 通用Controller
+     */
+    post(options: { body: TBodyOfcodeListUsingPOST }): Promise<TResponseOfcodeListUsingPOST>;
+  };
+  (url: "/dictionary/codes"): {
+    /**
+     * @description 根据类型编码查询字典项 listUsingPOST_1
+     * 通用Controller
+     */
+    post(options: { body: TBodyOflistUsingPOST_1 }): Promise<TResponseOflistUsingPOST_1>;
+  };
+  (url: "/enumList"): {
+    /**
+     * @description 获取当前系统指定枚举 List enumListsUsingPOST
+     * 通用Controller
+     */
+    post(options: { body: TBodyOfenumListsUsingPOST }): Promise<TResponseOfenumListsUsingPOST>;
+  };
+  (url: "/enums"): {
+    /**
+     * @description 获取当前系统指定枚举 Map enumsUsingPOST
+     * 通用Controller
+     */
+    post(options: { body: TBodyOfenumsUsingPOST }): Promise<TResponseOfenumsUsingPOST>;
+  };
+  (url: "/menu/menus"): {
+    /**
+     * @description 查询用户可用的所有菜单 myMenusUsingGET
+     * 资源
+     */
+    get(options: { query: TQueryOfmyMenusUsingGET }): Promise<TResponseOfmyMenusUsingGET>;
+  };
+  (url: "/menu/router"): {
+    /**
+     * @description 查询用户可用的所有菜单路由树 myRouterUsingGET
+     * 资源
+     */
+    get(options: { query: TQueryOfmyRouterUsingGET }): Promise<TResponseOfmyRouterUsingGET>;
+  };
+  (url: "/noToken/login"): {
+    /**
+     * @description 登录接口 loginUsingPOST
+     * 登录接口
+     */
+    post(options: { body: TBodyOfloginUsingPOST }): Promise<TResponseOfloginUsingPOST>;
+  };
+  (url: "/noToken/logout"): {
+    /**
+     * @description 退出 logoutUsingPOST_1
+     * 登录接口
+     */
+    post(options: { query: TQueryOflogoutUsingPOST_1 }): Promise<TResponseOflogoutUsingPOST_1>;
+  };
+  (url: "/noToken/tenant"): {
+    /**
+     * @description 登录租户 noTokenTenantUsingPOST
+     * 登录接口
+     */
+    post(options: {
+      body: TBodyOfnoTokenTenantUsingPOST;
+    }): Promise<TResponseOfnoTokenTenantUsingPOST>;
+  };
+  (url: "/parameter/findParams"): {
+    /**
+     * @description 根据key批量获取系统参数 findParamsUsingPOST
+     * 通用Controller
+     */
+    post(options: { body: TBodyOffindParamsUsingPOST }): Promise<TResponseOffindParamsUsingPOST>;
+  };
+  (url: "/parameter/value"): {
+    /**
+     * @description 根据key获取系统参数 getValueUsingGET
+     * 通用Controller
+     */
+    get(options: { query: TQueryOfgetValueUsingGET }): Promise<TResponseOfgetValueUsingGET>;
+  };
+  (url: "/resource/visible"): {
+    /**
+     * @description 查询用户可用的所有资源 visibleUsingGET
+     * 资源
+     */
+    get(options: { query: TQueryOfvisibleUsingGET }): Promise<TResponseOfvisibleUsingGET>;
+  };
+}
+
+export interface RequestProvider {
+  get(url: string, options: any): Promise<any>;
+  post(url: string, options: any): Promise<any>;
+  put(url: string, options: any): Promise<any>;
+  head(url: string, options: any): Promise<any>;
+  delete(url: string, options: any): Promise<any>;
+  patch(url: string, options: any): Promise<any>;
+}
+
+/**
+ * create a request by a provider
+ */
+export function createRequest(provider: RequestProvider): IApiFn {
+  return (url: string) => {
+    return {
+      get: (options: any) => provider.get(url, options),
+      post: (options: any) => provider.post(url, options),
+      put: (options: any) => provider.put(url, options),
+      head: (options: any) => provider.head(url, options),
+      delete: (options: any) => provider.delete(url, options),
+      patch: (options: any) => provider.patch(url, options),
+    };
+  };
 }
