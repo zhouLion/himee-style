@@ -35,13 +35,13 @@
     "@icholy/openapi-ts": "^2.10.4",
     "@types/node": "^18.16.1",
     "@types/prettier": "^2.7.2",
-    "axios": "^1.0.0",
     "bumpp": "^9.1.0",
     "dotenv": "^16.0.3",
     "prettier": "^2.8.8",
     "tsx": "^3.12.6"
   },
-  "peerDependencies": {
-    "axios": "^1.0.0"
+  "optionalDependencies": {
+    "@tarojs/taro": "^3.6.5",
+    "axios": "^1.3.6"
   }
 }

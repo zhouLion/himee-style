@@ -1,28 +1,43 @@
 import { Axios } from "axios";
-import { RequestProvider } from "./Provider";
+import type { RequestProvider } from "./Provider";
+import { handlerUrl } from "./Provider";
 
 export const createProvider = (axios: Axios) => {
   const provider: RequestProvider = {
     get(url, options) {
-      return axios.get(url, {
+      return axios.get(handlerUrl(url, options), {
         data: options.body,
-        params: options.query,
       });
     },
     post(url, options) {
-      return axios.post(url, options.body);
+      return axios.post(
+        handlerUrl(url, options),
+        options.body || options.formData
+      );
     },
     put(url, options) {
-      return axios.put(url);
+      return axios.put(
+        handlerUrl(url, options),
+        options.body || options.formData
+      );
     },
     head(url, options) {
-      return axios.head(url);
+      return axios.head(
+        handlerUrl(url, options),
+        options.body || options.formData
+      );
     },
     delete(url, options) {
-      return axios.delete(url);
+      return axios.delete(
+        handlerUrl(url, options),
+        options.body || options.formData
+      );
     },
     patch(url, options) {
-      return axios.patch(url);
+      return axios.patch(
+        handlerUrl(url, options),
+        options.body || options.formData
+      );
     },
   };
   return provider;
