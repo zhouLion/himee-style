@@ -1,6 +1,6 @@
 {
   "name": "himee-style",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "",
   "type": "module",
   "main": "mp.js",
@@ -11,6 +11,7 @@
   "scripts": {
     "gen:api": "tsx script/genApi",
     "ts2js": "tsup",
+    "build": "npm run gen:api && npm run ts2js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "release": "bumpp --commit --push --tag && npm publish --access=public",
     "rollup": "rollup --config rollup.config.ts --configPlugin typescript"
