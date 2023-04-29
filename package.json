@@ -1,6 +1,6 @@
 {
   "name": "himee-style",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "",
   "type": "module",
   "main": "mp.js",
@@ -9,8 +9,8 @@
     "access": "public"
   },
   "scripts": {
-    "gen:api": "tsx script/genApi && npx tsup types --dts-resolve --format esm --external axios,@@tarojs/taro",
-    "ts2js": "tsc",
+    "gen:api": "tsx script/genApi",
+    "ts2js": "tsup",
     "test": "echo \"Error: no test specified\" && exit 1",
     "release": "bumpp --commit --push --tag && npm publish --access=public",
     "rollup": "rollup --config rollup.config.ts --configPlugin typescript"
@@ -39,6 +39,7 @@
     "bumpp": "^9.1.0",
     "dotenv": "^16.0.3",
     "prettier": "^2.8.8",
+    "tsup": "^6.7.0",
     "tsx": "^3.12.6",
     "typescript": "^5.0.4"
   },
