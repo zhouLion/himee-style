@@ -1,7 +1,7 @@
 /**
  * @description: 业务附件
  */
-export interface AppendixSaveVO {
+interface AppendixSaveVO {
     bizId?: number;
     bizType?: string;
     bucket?: string;
@@ -15,7 +15,7 @@ export interface AppendixSaveVO {
 /**
  * @description: 数据源
  */
-export interface DatasourceConfig {
+interface DatasourceConfig {
     createTime?: string;
     createdBy?: number;
     driverClassName?: string;
@@ -32,7 +32,7 @@ export interface DatasourceConfig {
 /**
  * @description: 数据源
  */
-export interface DatasourceConfigPageQuery {
+interface DatasourceConfigPageQuery {
     driverClassName?: string;
     name?: string;
     password?: string;
@@ -42,7 +42,7 @@ export interface DatasourceConfigPageQuery {
 /**
  * @description: 数据源
  */
-export interface DatasourceConfigSaveDTO {
+interface DatasourceConfigSaveDTO {
     driverClassName?: string;
     name?: string;
     password?: string;
@@ -52,7 +52,7 @@ export interface DatasourceConfigSaveDTO {
 /**
  * @description: 数据源
  */
-export interface DatasourceConfigUpdateDTO {
+interface DatasourceConfigUpdateDTO {
     driverClassName?: string;
     id?: number;
     name?: string;
@@ -60,14 +60,14 @@ export interface DatasourceConfigUpdateDTO {
     url?: string;
     username?: string;
 }
-export interface IPage_DatasourceConfig_ {
+interface IPage_DatasourceConfig_ {
     current?: number;
     pages?: number;
     records?: DatasourceConfig[];
     size?: number;
     total?: number;
 }
-export interface IPage_Tenant_ {
+interface IPage_Tenant_ {
     current?: number;
     pages?: number;
     records?: Tenant[];
@@ -77,7 +77,7 @@ export interface IPage_Tenant_ {
 /**
  * @description: 分页参数
  */
-export interface PageParams_DatasourceConfigPageQuery_ {
+interface PageParams_DatasourceConfigPageQuery_ {
     current?: number;
     extra?: any;
     model: DatasourceConfigPageQuery;
@@ -88,7 +88,7 @@ export interface PageParams_DatasourceConfigPageQuery_ {
 /**
  * @description: 分页参数
  */
-export interface PageParams_TenantPageQuery_ {
+interface PageParams_TenantPageQuery_ {
     current?: number;
     extra?: any;
     model: TenantPageQuery;
@@ -96,7 +96,7 @@ export interface PageParams_TenantPageQuery_ {
     size?: number;
     sort?: string;
 }
-export interface R_DatasourceConfig_ {
+interface R_DatasourceConfig_ {
     code?: number;
     data?: DatasourceConfig;
     errorMsg?: string;
@@ -106,7 +106,7 @@ export interface R_DatasourceConfig_ {
     path?: string;
     timestamp?: number;
 }
-export interface R_IPage_DatasourceConfig__ {
+interface R_IPage_DatasourceConfig__ {
     code?: number;
     data?: IPage_DatasourceConfig_;
     errorMsg?: string;
@@ -116,7 +116,7 @@ export interface R_IPage_DatasourceConfig__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_IPage_Tenant__ {
+interface R_IPage_Tenant__ {
     code?: number;
     data?: IPage_Tenant_;
     errorMsg?: string;
@@ -126,7 +126,7 @@ export interface R_IPage_Tenant__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_List_DatasourceConfig__ {
+interface R_List_DatasourceConfig__ {
     code?: number;
     data?: DatasourceConfig[];
     errorMsg?: string;
@@ -136,7 +136,7 @@ export interface R_List_DatasourceConfig__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_List_Tenant__ {
+interface R_List_Tenant__ {
     code?: number;
     data?: Tenant[];
     errorMsg?: string;
@@ -146,7 +146,7 @@ export interface R_List_Tenant__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_Tenant_ {
+interface R_Tenant_ {
     code?: number;
     data?: Tenant;
     errorMsg?: string;
@@ -156,7 +156,7 @@ export interface R_Tenant_ {
     path?: string;
     timestamp?: number;
 }
-export interface R_boolean_ {
+interface R_boolean_ {
     code?: number;
     data?: boolean;
     errorMsg?: string;
@@ -166,7 +166,7 @@ export interface R_boolean_ {
     path?: string;
     timestamp?: number;
 }
-export interface R_string_ {
+interface R_string_ {
     code?: number;
     data?: string;
     errorMsg?: string;
@@ -179,7 +179,7 @@ export interface R_string_ {
 /**
  * @description: 企业
  */
-export interface Tenant {
+interface Tenant {
     code?: string;
     connectType?: string;
     createTime?: string;
@@ -199,7 +199,7 @@ export interface Tenant {
 /**
  * @description: 租户连接
  */
-export interface TenantConnectDTO {
+interface TenantConnectDTO {
     baseDatasourceId?: number;
     connectType?: string;
     extendDatasourceId?: number;
@@ -209,7 +209,7 @@ export interface TenantConnectDTO {
 /**
  * @description: 企业
  */
-export interface TenantPageQuery {
+interface TenantPageQuery {
     code?: string;
     connectType?: string;
     describe?: string;
@@ -224,7 +224,7 @@ export interface TenantPageQuery {
 /**
  * @description: 企业
  */
-export interface TenantSaveDTO {
+interface TenantSaveDTO {
     code?: string;
     describe?: string;
     duty?: string;
@@ -235,7 +235,7 @@ export interface TenantSaveDTO {
 /**
  * @description: 企业
  */
-export interface TenantUpdateDTO {
+interface TenantUpdateDTO {
     code?: string;
     connectType?: string;
     describe?: string;
@@ -248,71 +248,71 @@ export interface TenantUpdateDTO {
     status?: string;
     type?: string;
 }
-export type TBodyOfsaveUsingPOST_14 = DatasourceConfigSaveDTO;
-export type TResponseOfsaveUsingPOST_14 = R_DatasourceConfig_;
-export type TBodyOfupdateUsingPUT_13 = DatasourceConfigUpdateDTO;
-export type TResponseOfupdateUsingPUT_13 = R_DatasourceConfig_;
-export type TBodyOfdeleteUsingDELETE_17 = number[];
-export type TResponseOfdeleteUsingDELETE_17 = R_boolean_;
-export type TBodyOfupdateAllUsingPUT_13 = DatasourceConfig;
-export type TResponseOfupdateAllUsingPUT_13 = R_DatasourceConfig_;
-export type TBodyOfexportExcelUsingPOST_15 = PageParams_DatasourceConfigPageQuery_;
-export type TResponseOfexportExcelUsingPOST_15 = any;
-export interface TFormDataOfimportExcelUsingPOST_14 {
+type TBodyOfsaveUsingPOST_14 = DatasourceConfigSaveDTO;
+type TResponseOfsaveUsingPOST_14 = R_DatasourceConfig_;
+type TBodyOfupdateUsingPUT_13 = DatasourceConfigUpdateDTO;
+type TResponseOfupdateUsingPUT_13 = R_DatasourceConfig_;
+type TBodyOfdeleteUsingDELETE_17 = number[];
+type TResponseOfdeleteUsingDELETE_17 = R_boolean_;
+type TBodyOfupdateAllUsingPUT_13 = DatasourceConfig;
+type TResponseOfupdateAllUsingPUT_13 = R_DatasourceConfig_;
+type TBodyOfexportExcelUsingPOST_15 = PageParams_DatasourceConfigPageQuery_;
+type TResponseOfexportExcelUsingPOST_15 = any;
+interface TFormDataOfimportExcelUsingPOST_14 {
     file: string;
 }
-export type TResponseOfimportExcelUsingPOST_14 = R_boolean_;
-export type TBodyOfpageUsingPOST_19 = PageParams_DatasourceConfigPageQuery_;
-export type TResponseOfpageUsingPOST_19 = R_IPage_DatasourceConfig__;
-export type TBodyOfpreviewUsingPOST_15 = PageParams_DatasourceConfigPageQuery_;
-export type TResponseOfpreviewUsingPOST_15 = R_string_;
-export type TBodyOfqueryUsingPOST_15 = DatasourceConfig;
-export type TResponseOfqueryUsingPOST_15 = R_List_DatasourceConfig__;
-export interface TPathOfgetUsingGET_17 {
+type TResponseOfimportExcelUsingPOST_14 = R_boolean_;
+type TBodyOfpageUsingPOST_19 = PageParams_DatasourceConfigPageQuery_;
+type TResponseOfpageUsingPOST_19 = R_IPage_DatasourceConfig__;
+type TBodyOfpreviewUsingPOST_15 = PageParams_DatasourceConfigPageQuery_;
+type TResponseOfpreviewUsingPOST_15 = R_string_;
+type TBodyOfqueryUsingPOST_15 = DatasourceConfig;
+type TResponseOfqueryUsingPOST_15 = R_List_DatasourceConfig__;
+interface TPathOfgetUsingGET_17 {
     id?: number;
 }
-export type TResponseOfgetUsingGET_17 = R_DatasourceConfig_;
-export type TBodyOfsaveUsingPOST_15 = TenantSaveDTO;
-export type TResponseOfsaveUsingPOST_15 = R_Tenant_;
-export type TBodyOfupdateUsingPUT_14 = TenantUpdateDTO;
-export type TResponseOfupdateUsingPUT_14 = R_Tenant_;
-export type TBodyOfdeleteUsingDELETE_18 = number[];
-export type TResponseOfdeleteUsingDELETE_18 = R_boolean_;
-export type TResponseOflistUsingGET = R_List_Tenant__;
-export type TBodyOfupdateAllUsingPUT_14 = Tenant;
-export type TResponseOfupdateAllUsingPUT_14 = R_Tenant_;
-export interface TPathOfcheckUsingGET_5 {
+type TResponseOfgetUsingGET_17 = R_DatasourceConfig_;
+type TBodyOfsaveUsingPOST_15 = TenantSaveDTO;
+type TResponseOfsaveUsingPOST_15 = R_Tenant_;
+type TBodyOfupdateUsingPUT_14 = TenantUpdateDTO;
+type TResponseOfupdateUsingPUT_14 = R_Tenant_;
+type TBodyOfdeleteUsingDELETE_18 = number[];
+type TResponseOfdeleteUsingDELETE_18 = R_boolean_;
+type TResponseOflistUsingGET = R_List_Tenant__;
+type TBodyOfupdateAllUsingPUT_14 = Tenant;
+type TResponseOfupdateAllUsingPUT_14 = R_Tenant_;
+interface TPathOfcheckUsingGET_5 {
     code: string;
 }
-export type TResponseOfcheckUsingGET_5 = R_boolean_;
-export type TResponseOfclearCacheUsingPOST_6 = R_boolean_;
-export type TBodyOfdeleteAllUsingDELETE = number[];
-export type TResponseOfdeleteAllUsingDELETE = R_boolean_;
-export type TBodyOfexportExcelUsingPOST_16 = PageParams_TenantPageQuery_;
-export type TResponseOfexportExcelUsingPOST_16 = any;
-export interface TFormDataOfimportExcelUsingPOST_15 {
+type TResponseOfcheckUsingGET_5 = R_boolean_;
+type TResponseOfclearCacheUsingPOST_6 = R_boolean_;
+type TBodyOfdeleteAllUsingDELETE = number[];
+type TResponseOfdeleteAllUsingDELETE = R_boolean_;
+type TBodyOfexportExcelUsingPOST_16 = PageParams_TenantPageQuery_;
+type TResponseOfexportExcelUsingPOST_16 = any;
+interface TFormDataOfimportExcelUsingPOST_15 {
     file: string;
 }
-export type TResponseOfimportExcelUsingPOST_15 = R_boolean_;
-export type TBodyOfinitConnectUsingPOST = TenantConnectDTO;
-export type TResponseOfinitConnectUsingPOST = R_boolean_;
-export type TBodyOfpageUsingPOST_20 = PageParams_TenantPageQuery_;
-export type TResponseOfpageUsingPOST_20 = R_IPage_Tenant__;
-export type TBodyOfpreviewUsingPOST_16 = PageParams_TenantPageQuery_;
-export type TResponseOfpreviewUsingPOST_16 = R_string_;
-export type TBodyOfqueryUsingPOST_16 = Tenant;
-export type TResponseOfqueryUsingPOST_16 = R_List_Tenant__;
-export type TResponseOfrefreshCacheUsingPOST_6 = R_boolean_;
-export interface TQueryOfupdateStatusUsingPOST {
+type TResponseOfimportExcelUsingPOST_15 = R_boolean_;
+type TBodyOfinitConnectUsingPOST = TenantConnectDTO;
+type TResponseOfinitConnectUsingPOST = R_boolean_;
+type TBodyOfpageUsingPOST_20 = PageParams_TenantPageQuery_;
+type TResponseOfpageUsingPOST_20 = R_IPage_Tenant__;
+type TBodyOfpreviewUsingPOST_16 = PageParams_TenantPageQuery_;
+type TResponseOfpreviewUsingPOST_16 = R_string_;
+type TBodyOfqueryUsingPOST_16 = Tenant;
+type TResponseOfqueryUsingPOST_16 = R_List_Tenant__;
+type TResponseOfrefreshCacheUsingPOST_6 = R_boolean_;
+interface TQueryOfupdateStatusUsingPOST {
     "ids[]": number[];
     status: string;
 }
-export type TResponseOfupdateStatusUsingPOST = R_boolean_;
-export interface TPathOfgetUsingGET_18 {
+type TResponseOfupdateStatusUsingPOST = R_boolean_;
+interface TPathOfgetUsingGET_18 {
     id?: number;
 }
-export type TResponseOfgetUsingGET_18 = R_Tenant_;
-export interface IApiFn {
+type TResponseOfgetUsingGET_18 = R_Tenant_;
+interface IApiFn {
     (url: string): {
         [m in "get" | "post" | "put" | "patch" | "delete" | "head"]: (options: any) => Promise<any>;
     };
@@ -544,7 +544,7 @@ export interface IApiFn {
         }): Promise<TResponseOfgetUsingGET_18>;
     };
 }
-export interface RequestProvider {
+interface RequestProvider {
     get(url: string, options: any): Promise<any>;
     post(url: string, options: any): Promise<any>;
     put(url: string, options: any): Promise<any>;
@@ -555,4 +555,6 @@ export interface RequestProvider {
 /**
  * create a request by a provider
  */
-export declare function createRequest(provider: RequestProvider): IApiFn;
+declare function createRequest(provider: RequestProvider): IApiFn;
+
+export { AppendixSaveVO, DatasourceConfig, DatasourceConfigPageQuery, DatasourceConfigSaveDTO, DatasourceConfigUpdateDTO, IApiFn, IPage_DatasourceConfig_, IPage_Tenant_, PageParams_DatasourceConfigPageQuery_, PageParams_TenantPageQuery_, R_DatasourceConfig_, R_IPage_DatasourceConfig__, R_IPage_Tenant__, R_List_DatasourceConfig__, R_List_Tenant__, R_Tenant_, R_boolean_, R_string_, RequestProvider, TBodyOfdeleteAllUsingDELETE, TBodyOfdeleteUsingDELETE_17, TBodyOfdeleteUsingDELETE_18, TBodyOfexportExcelUsingPOST_15, TBodyOfexportExcelUsingPOST_16, TBodyOfinitConnectUsingPOST, TBodyOfpageUsingPOST_19, TBodyOfpageUsingPOST_20, TBodyOfpreviewUsingPOST_15, TBodyOfpreviewUsingPOST_16, TBodyOfqueryUsingPOST_15, TBodyOfqueryUsingPOST_16, TBodyOfsaveUsingPOST_14, TBodyOfsaveUsingPOST_15, TBodyOfupdateAllUsingPUT_13, TBodyOfupdateAllUsingPUT_14, TBodyOfupdateUsingPUT_13, TBodyOfupdateUsingPUT_14, TFormDataOfimportExcelUsingPOST_14, TFormDataOfimportExcelUsingPOST_15, TPathOfcheckUsingGET_5, TPathOfgetUsingGET_17, TPathOfgetUsingGET_18, TQueryOfupdateStatusUsingPOST, TResponseOfcheckUsingGET_5, TResponseOfclearCacheUsingPOST_6, TResponseOfdeleteAllUsingDELETE, TResponseOfdeleteUsingDELETE_17, TResponseOfdeleteUsingDELETE_18, TResponseOfexportExcelUsingPOST_15, TResponseOfexportExcelUsingPOST_16, TResponseOfgetUsingGET_17, TResponseOfgetUsingGET_18, TResponseOfimportExcelUsingPOST_14, TResponseOfimportExcelUsingPOST_15, TResponseOfinitConnectUsingPOST, TResponseOflistUsingGET, TResponseOfpageUsingPOST_19, TResponseOfpageUsingPOST_20, TResponseOfpreviewUsingPOST_15, TResponseOfpreviewUsingPOST_16, TResponseOfqueryUsingPOST_15, TResponseOfqueryUsingPOST_16, TResponseOfrefreshCacheUsingPOST_6, TResponseOfsaveUsingPOST_14, TResponseOfsaveUsingPOST_15, TResponseOfupdateAllUsingPUT_13, TResponseOfupdateAllUsingPUT_14, TResponseOfupdateStatusUsingPOST, TResponseOfupdateUsingPUT_13, TResponseOfupdateUsingPUT_14, Tenant, TenantConnectDTO, TenantPageQuery, TenantSaveDTO, TenantUpdateDTO, createRequest };

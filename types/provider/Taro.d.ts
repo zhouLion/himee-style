@@ -1,3 +1,6 @@
-import { request } from "@tarojs/taro";
-import type { RequestProvider } from "./Provider";
-export declare const createProvider: (taroRequest: typeof request) => RequestProvider;
+import { request } from '@tarojs/taro';
+import { RequestProvider } from './Provider.js';
+
+declare const createProvider: (taroRequest: typeof request) => RequestProvider;
+
+export { createProvider };

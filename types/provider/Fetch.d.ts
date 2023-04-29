@@ -1,2 +1,5 @@
-import { RequestProvider } from "./Provider";
-export declare const createProvider: () => RequestProvider;
+import { RequestProvider } from './Provider.js';
+
+declare const createProvider: () => RequestProvider;
+
+export { createProvider };

@@ -1,7 +1,10 @@
-import { Axios } from "axios";
-import type { RequestProvider } from "./Provider";
-export declare const createProvider: (axios: Axios) => RequestProvider;
-export declare const createRequest: (axios?: Axios) => {
+import { Axios } from 'axios';
+import { RequestProvider } from './Provider.js';
+
+declare const createProvider: (axios: Axios) => RequestProvider;
+declare const createRequest: (axios?: Axios) => {
     provider: RequestProvider;
     instance: Axios;
 };
+
+export { createProvider, createRequest };

@@ -30,7 +30,7 @@ interface Resource {
 
 const BASE = process.env.BASE;
 const SWAGGERRESOURCES = process.env.SWAGGERRESOURCES;
-const output = resolve(process.cwd(), "types/api");
+const output = resolve(process.cwd(), "src/api");
 
 if (!BASE || !SWAGGERRESOURCES) {
   throw new Error("Missing env variables");

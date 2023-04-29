@@ -1,10 +1,10 @@
-export interface Options {
+interface Options {
     body?: never;
     formData?: never;
     path?: never;
     query?: never;
 }
-export type RequestProvider = {
+type RequestProvider = {
     get(url: string, options: Options): Promise<unknown>;
     post(url: string, options: Options): Promise<unknown>;
     put(url: string, options: Options): Promise<unknown>;
@@ -12,4 +12,6 @@ export type RequestProvider = {
     delete(url: string, options: Options): Promise<unknown>;
     patch(url: string, options: Options): Promise<unknown>;
 };
-export declare function handlerUrl(url: string, options: Options): string;
+declare function handlerUrl(url: string, options: Options): string;
+
+export { Options, RequestProvider, handlerUrl };

@@ -1,7 +1,7 @@
 /**
  * @description: 业务附件
  */
-export interface AppendixSaveVO {
+interface AppendixSaveVO {
     bizId?: number;
     bizType?: string;
     bucket?: string;
@@ -15,7 +15,7 @@ export interface AppendixSaveVO {
 /**
  * @description: 应用
  */
-export interface Application {
+interface Application {
     appType?: string;
     clientId?: string;
     clientSecret?: string;
@@ -33,7 +33,7 @@ export interface Application {
 /**
  * @description: 应用
  */
-export interface ApplicationPageQuery {
+interface ApplicationPageQuery {
     appType?: string;
     clientId?: string;
     clientSecret?: string;
@@ -46,7 +46,7 @@ export interface ApplicationPageQuery {
 /**
  * @description: 应用
  */
-export interface ApplicationSaveDTO {
+interface ApplicationSaveDTO {
     appType?: string;
     clientId?: string;
     clientSecret?: string;
@@ -59,7 +59,7 @@ export interface ApplicationSaveDTO {
 /**
  * @description: 应用
  */
-export interface ApplicationUpdateDTO {
+interface ApplicationUpdateDTO {
     appType?: string;
     clientId?: string;
     clientSecret?: string;
@@ -73,7 +73,7 @@ export interface ApplicationUpdateDTO {
 /**
  * @description: 全局账号
  */
-export interface GlobalUserSaveDTO {
+interface GlobalUserSaveDTO {
     account?: string;
     email?: string;
     mobile?: string;
@@ -83,7 +83,7 @@ export interface GlobalUserSaveDTO {
 /**
  * @description: 全局账号
  */
-export interface GlobalUserSaveDTO_1 {
+interface GlobalUserSaveDTO_1 {
     account?: string;
     confirmPassword?: string;
     email?: string;
@@ -97,7 +97,7 @@ export interface GlobalUserSaveDTO_1 {
 /**
  * @description: 全局账号
  */
-export interface GlobalUserUpdateDTO {
+interface GlobalUserUpdateDTO {
     email?: string;
     id?: number;
     mobile?: string;
@@ -105,42 +105,42 @@ export interface GlobalUserUpdateDTO {
     sex?: string;
     tenantCode?: string;
 }
-export interface IPage_Application_ {
+interface IPage_Application_ {
     current?: number;
     pages?: number;
     records?: Application[];
     size?: number;
     total?: number;
 }
-export interface IPage_Menu_ {
+interface IPage_Menu_ {
     current?: number;
     pages?: number;
     records?: Menu[];
     size?: number;
     total?: number;
 }
-export interface IPage_Online_ {
+interface IPage_Online_ {
     current?: number;
     pages?: number;
     records?: Online[];
     size?: number;
     total?: number;
 }
-export interface IPage_Resource_ {
+interface IPage_Resource_ {
     current?: number;
     pages?: number;
     records?: Resource[];
     size?: number;
     total?: number;
 }
-export interface IPage_Role_ {
+interface IPage_Role_ {
     current?: number;
     pages?: number;
     records?: Role[];
     size?: number;
     total?: number;
 }
-export interface IPage_User_ {
+interface IPage_User_ {
     current?: number;
     pages?: number;
     records?: User[];
@@ -150,7 +150,7 @@ export interface IPage_User_ {
 /**
  * @description: 菜单
  */
-export interface Menu {
+interface Menu {
     component?: string;
     createTime?: string;
     createdBy?: number;
@@ -174,7 +174,7 @@ export interface Menu {
     updateTime?: string;
     updatedBy?: number;
 }
-export interface MenuResourceTreeVO {
+interface MenuResourceTreeVO {
     code?: string;
     createTime?: string;
     createdBy?: number;
@@ -192,7 +192,7 @@ export interface MenuResourceTreeVO {
 /**
  * @description: 菜单
  */
-export interface MenuSaveDTO {
+interface MenuSaveDTO {
     component?: string;
     customClass?: string;
     dataScope?: string;
@@ -212,7 +212,7 @@ export interface MenuSaveDTO {
 /**
  * @description: 菜单
  */
-export interface MenuUpdateDTO {
+interface MenuUpdateDTO {
     component?: string;
     customClass?: string;
     dataScope?: string;
@@ -233,7 +233,7 @@ export interface MenuUpdateDTO {
 /**
  * @description: 在线用户
  */
-export interface Online {
+interface Online {
     account?: string;
     clientId?: string;
     expireMillis?: number;
@@ -248,7 +248,7 @@ export interface Online {
 /**
  * @description: 分页参数
  */
-export interface PageParams_ApplicationPageQuery_ {
+interface PageParams_ApplicationPageQuery_ {
     current?: number;
     extra?: any;
     model: ApplicationPageQuery;
@@ -259,7 +259,7 @@ export interface PageParams_ApplicationPageQuery_ {
 /**
  * @description: 分页参数
  */
-export interface PageParams_GlobalUserSaveDTO_ {
+interface PageParams_GlobalUserSaveDTO_ {
     current?: number;
     extra?: any;
     model: GlobalUserSaveDTO;
@@ -270,7 +270,7 @@ export interface PageParams_GlobalUserSaveDTO_ {
 /**
  * @description: 分页参数
  */
-export interface PageParams_Menu_ {
+interface PageParams_Menu_ {
     current?: number;
     extra?: any;
     model: Menu;
@@ -281,7 +281,7 @@ export interface PageParams_Menu_ {
 /**
  * @description: 分页参数
  */
-export interface PageParams_Online_ {
+interface PageParams_Online_ {
     current?: number;
     extra?: any;
     model: Online;
@@ -292,7 +292,7 @@ export interface PageParams_Online_ {
 /**
  * @description: 分页参数
  */
-export interface PageParams_Resource_ {
+interface PageParams_Resource_ {
     current?: number;
     extra?: any;
     model: Resource;
@@ -303,7 +303,7 @@ export interface PageParams_Resource_ {
 /**
  * @description: 分页参数
  */
-export interface PageParams_RolePageQuery_ {
+interface PageParams_RolePageQuery_ {
     current?: number;
     extra?: any;
     model: RolePageQuery;
@@ -314,7 +314,7 @@ export interface PageParams_RolePageQuery_ {
 /**
  * @description: 分页参数
  */
-export interface PageParams_UserPageQuery_ {
+interface PageParams_UserPageQuery_ {
     current?: number;
     extra?: any;
     model: UserPageQuery;
@@ -325,7 +325,7 @@ export interface PageParams_UserPageQuery_ {
 /**
  * @description: 资源
  */
-export interface Resource {
+interface Resource {
     code?: string;
     createTime?: string;
     createdBy?: number;
@@ -340,7 +340,7 @@ export interface Resource {
 /**
  * @description: 资源
  */
-export interface ResourceSaveDTO {
+interface ResourceSaveDTO {
     code?: string;
     describe?: string;
     menuId?: number;
@@ -350,7 +350,7 @@ export interface ResourceSaveDTO {
 /**
  * @description: 资源
  */
-export interface ResourceUpdateDTO {
+interface ResourceUpdateDTO {
     code?: string;
     describe?: string;
     id?: number;
@@ -361,7 +361,7 @@ export interface ResourceUpdateDTO {
 /**
  * @description: 角色
  */
-export interface Role {
+interface Role {
     category?: string;
     code?: string;
     createTime?: string;
@@ -379,7 +379,7 @@ export interface Role {
 /**
  * @description: 角色的资源
  */
-export interface RoleAuthority {
+interface RoleAuthority {
     authorityId?: number;
     authorityType?: string;
     createTime?: string;
@@ -390,7 +390,7 @@ export interface RoleAuthority {
 /**
  * @description: 角色的资源
  */
-export interface RoleAuthoritySaveDTO {
+interface RoleAuthoritySaveDTO {
     menuIdList?: number[];
     resourceIdList?: number[];
     roleId?: number;
@@ -398,7 +398,7 @@ export interface RoleAuthoritySaveDTO {
 /**
  * @description: 角色
  */
-export interface RolePageQuery {
+interface RolePageQuery {
     category?: string[];
     code?: string;
     describe?: string;
@@ -410,7 +410,7 @@ export interface RolePageQuery {
 /**
  * @description: 角色
  */
-export interface RoleSaveDTO {
+interface RoleSaveDTO {
     category?: string;
     code?: string;
     describe?: string;
@@ -424,7 +424,7 @@ export interface RoleSaveDTO {
 /**
  * @description: 角色
  */
-export interface RoleSaveDTO_1 {
+interface RoleSaveDTO_1 {
     category?: string;
     code?: string;
     describe?: string;
@@ -436,7 +436,7 @@ export interface RoleSaveDTO_1 {
 /**
  * @description: 角色
  */
-export interface RoleUpdateDTO {
+interface RoleUpdateDTO {
     category?: string;
     code?: string;
     describe?: string;
@@ -449,12 +449,12 @@ export interface RoleUpdateDTO {
 /**
  * @description: 给角色分配员工
  */
-export interface RoleUserSaveVO {
+interface RoleUserSaveVO {
     flag?: boolean;
     roleId?: number;
     userIdList?: number[];
 }
-export interface R_Application_ {
+interface R_Application_ {
     code?: number;
     data?: Application;
     errorMsg?: string;
@@ -464,7 +464,7 @@ export interface R_Application_ {
     path?: string;
     timestamp?: number;
 }
-export interface R_IPage_Application__ {
+interface R_IPage_Application__ {
     code?: number;
     data?: IPage_Application_;
     errorMsg?: string;
@@ -474,7 +474,7 @@ export interface R_IPage_Application__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_IPage_Menu__ {
+interface R_IPage_Menu__ {
     code?: number;
     data?: IPage_Menu_;
     errorMsg?: string;
@@ -484,7 +484,7 @@ export interface R_IPage_Menu__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_IPage_Online__ {
+interface R_IPage_Online__ {
     code?: number;
     data?: IPage_Online_;
     errorMsg?: string;
@@ -494,7 +494,7 @@ export interface R_IPage_Online__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_IPage_Resource__ {
+interface R_IPage_Resource__ {
     code?: number;
     data?: IPage_Resource_;
     errorMsg?: string;
@@ -504,7 +504,7 @@ export interface R_IPage_Resource__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_IPage_Role__ {
+interface R_IPage_Role__ {
     code?: number;
     data?: IPage_Role_;
     errorMsg?: string;
@@ -514,7 +514,7 @@ export interface R_IPage_Role__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_IPage_User__ {
+interface R_IPage_User__ {
     code?: number;
     data?: IPage_User_;
     errorMsg?: string;
@@ -524,7 +524,7 @@ export interface R_IPage_User__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_List_Application__ {
+interface R_List_Application__ {
     code?: number;
     data?: Application[];
     errorMsg?: string;
@@ -534,7 +534,7 @@ export interface R_List_Application__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_List_MenuResourceTreeVO__ {
+interface R_List_MenuResourceTreeVO__ {
     code?: number;
     data?: MenuResourceTreeVO[];
     errorMsg?: string;
@@ -544,7 +544,7 @@ export interface R_List_MenuResourceTreeVO__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_List_Menu__ {
+interface R_List_Menu__ {
     code?: number;
     data?: Menu[];
     errorMsg?: string;
@@ -554,7 +554,7 @@ export interface R_List_Menu__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_List_Online__ {
+interface R_List_Online__ {
     code?: number;
     data?: Online[];
     errorMsg?: string;
@@ -564,7 +564,7 @@ export interface R_List_Online__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_List_Resource__ {
+interface R_List_Resource__ {
     code?: number;
     data?: Resource[];
     errorMsg?: string;
@@ -574,7 +574,7 @@ export interface R_List_Resource__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_List_RoleAuthority__ {
+interface R_List_RoleAuthority__ {
     code?: number;
     data?: RoleAuthority[];
     errorMsg?: string;
@@ -584,7 +584,7 @@ export interface R_List_RoleAuthority__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_List_Role__ {
+interface R_List_Role__ {
     code?: number;
     data?: Role[];
     errorMsg?: string;
@@ -594,7 +594,7 @@ export interface R_List_Role__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_List_User__ {
+interface R_List_User__ {
     code?: number;
     data?: User[];
     errorMsg?: string;
@@ -604,7 +604,7 @@ export interface R_List_User__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_List_long__ {
+interface R_List_long__ {
     code?: number;
     data?: number[];
     errorMsg?: string;
@@ -614,7 +614,7 @@ export interface R_List_long__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_Menu_ {
+interface R_Menu_ {
     code?: number;
     data?: Menu;
     errorMsg?: string;
@@ -624,7 +624,7 @@ export interface R_Menu_ {
     path?: string;
     timestamp?: number;
 }
-export interface R_Resource_ {
+interface R_Resource_ {
     code?: number;
     data?: Resource;
     errorMsg?: string;
@@ -634,7 +634,7 @@ export interface R_Resource_ {
     path?: string;
     timestamp?: number;
 }
-export interface R_RoleAuthoritySaveDTO_ {
+interface R_RoleAuthoritySaveDTO_ {
     code?: number;
     data?: RoleAuthoritySaveDTO;
     errorMsg?: string;
@@ -644,7 +644,7 @@ export interface R_RoleAuthoritySaveDTO_ {
     path?: string;
     timestamp?: number;
 }
-export interface R_RoleSaveDTO_ {
+interface R_RoleSaveDTO_ {
     code?: number;
     data?: RoleSaveDTO;
     errorMsg?: string;
@@ -654,7 +654,7 @@ export interface R_RoleSaveDTO_ {
     path?: string;
     timestamp?: number;
 }
-export interface R_Role_ {
+interface R_Role_ {
     code?: number;
     data?: Role;
     errorMsg?: string;
@@ -664,7 +664,7 @@ export interface R_Role_ {
     path?: string;
     timestamp?: number;
 }
-export interface R_UserRoleDTO_ {
+interface R_UserRoleDTO_ {
     code?: number;
     data?: UserRoleDTO;
     errorMsg?: string;
@@ -674,7 +674,7 @@ export interface R_UserRoleDTO_ {
     path?: string;
     timestamp?: number;
 }
-export interface R_User_ {
+interface R_User_ {
     code?: number;
     data?: User;
     errorMsg?: string;
@@ -684,7 +684,7 @@ export interface R_User_ {
     path?: string;
     timestamp?: number;
 }
-export interface R_WechatUser_ {
+interface R_WechatUser_ {
     code?: number;
     data?: WechatUser;
     errorMsg?: string;
@@ -694,7 +694,7 @@ export interface R_WechatUser_ {
     path?: string;
     timestamp?: number;
 }
-export interface R_boolean_ {
+interface R_boolean_ {
     code?: number;
     data?: boolean;
     errorMsg?: string;
@@ -704,7 +704,7 @@ export interface R_boolean_ {
     path?: string;
     timestamp?: number;
 }
-export interface R_string_ {
+interface R_string_ {
     code?: number;
     data?: string;
     errorMsg?: string;
@@ -717,7 +717,7 @@ export interface R_string_ {
 /**
  * @description: 用户
  */
-export interface User {
+interface User {
     account?: string;
     avatar?: string;
     createTime?: string;
@@ -751,7 +751,7 @@ export interface User {
 /**
  * @description: 用户
  */
-export interface UserPageQuery {
+interface UserPageQuery {
     account?: string;
     avatar?: string;
     createdOrgId?: number;
@@ -779,21 +779,21 @@ export interface UserPageQuery {
 /**
  * @description: 用户角色DTO
  */
-export interface UserRoleDTO {
+interface UserRoleDTO {
     idList?: number[];
     userList?: User[];
 }
 /**
  * @description: 角色分配 账号角色绑定
  */
-export interface UserRoleSaveDTO {
+interface UserRoleSaveDTO {
     roleId?: number;
     userIdList?: number[];
 }
 /**
  * @description: 用户
  */
-export interface UserSaveDTO {
+interface UserSaveDTO {
     account?: string;
     avatar?: string;
     createdOrgId?: number;
@@ -813,7 +813,7 @@ export interface UserSaveDTO {
 /**
  * @description: 用户
  */
-export interface UserUpdateAvatarDTO {
+interface UserUpdateAvatarDTO {
     appendixAvatar?: AppendixSaveVO;
     avatar?: string;
     id?: number;
@@ -821,7 +821,7 @@ export interface UserUpdateAvatarDTO {
 /**
  * @description: 用户修改基础信息实体
  */
-export interface UserUpdateBaseInfoDTO {
+interface UserUpdateBaseInfoDTO {
     education?: string;
     email?: string;
     id?: number;
@@ -835,7 +835,7 @@ export interface UserUpdateBaseInfoDTO {
 /**
  * @description: 用户
  */
-export interface UserUpdateDTO {
+interface UserUpdateDTO {
     account?: string;
     avatar?: string;
     education?: string;
@@ -854,14 +854,14 @@ export interface UserUpdateDTO {
 /**
  * @description: 用户
  */
-export interface UserUpdatePasswordDTO {
+interface UserUpdatePasswordDTO {
     confirmPassword?: string;
     id?: number;
     oldPassword?: string;
     password?: string;
     tenantCode?: string;
 }
-export interface WechatLoginRequestDTO {
+interface WechatLoginRequestDTO {
     code: string;
     encryptedData?: string;
     iv?: string;
@@ -871,7 +871,7 @@ export interface WechatLoginRequestDTO {
 /**
  * @description: 小程序用户表
  */
-export interface WechatUser {
+interface WechatUser {
     avatarUrl?: string;
     city?: string;
     country?: string;
@@ -889,253 +889,253 @@ export interface WechatUser {
     updateTime?: string;
     updatedBy?: number;
 }
-export type TBodyOfsaveUsingPOST_5 = ApplicationSaveDTO;
-export type TResponseOfsaveUsingPOST_5 = R_Application_;
-export type TBodyOfupdateUsingPUT_5 = ApplicationUpdateDTO;
-export type TResponseOfupdateUsingPUT_5 = R_Application_;
-export type TBodyOfdeleteUsingDELETE_7 = number[];
-export type TResponseOfdeleteUsingDELETE_7 = R_boolean_;
-export type TBodyOfupdateAllUsingPUT_5 = Application;
-export type TResponseOfupdateAllUsingPUT_5 = R_Application_;
-export type TResponseOfclearCacheUsingPOST_1 = R_boolean_;
-export type TBodyOfexportExcelUsingPOST_6 = PageParams_ApplicationPageQuery_;
-export type TResponseOfexportExcelUsingPOST_6 = any;
-export interface TFormDataOfimportExcelUsingPOST_6 {
+type TBodyOfsaveUsingPOST_5 = ApplicationSaveDTO;
+type TResponseOfsaveUsingPOST_5 = R_Application_;
+type TBodyOfupdateUsingPUT_5 = ApplicationUpdateDTO;
+type TResponseOfupdateUsingPUT_5 = R_Application_;
+type TBodyOfdeleteUsingDELETE_7 = number[];
+type TResponseOfdeleteUsingDELETE_7 = R_boolean_;
+type TBodyOfupdateAllUsingPUT_5 = Application;
+type TResponseOfupdateAllUsingPUT_5 = R_Application_;
+type TResponseOfclearCacheUsingPOST_1 = R_boolean_;
+type TBodyOfexportExcelUsingPOST_6 = PageParams_ApplicationPageQuery_;
+type TResponseOfexportExcelUsingPOST_6 = any;
+interface TFormDataOfimportExcelUsingPOST_6 {
     file: string;
 }
-export type TResponseOfimportExcelUsingPOST_6 = R_boolean_;
-export type TBodyOfpageUsingPOST_7 = PageParams_ApplicationPageQuery_;
-export type TResponseOfpageUsingPOST_7 = R_IPage_Application__;
-export type TBodyOfpreviewUsingPOST_6 = PageParams_ApplicationPageQuery_;
-export type TResponseOfpreviewUsingPOST_6 = R_string_;
-export type TBodyOfqueryUsingPOST_6 = Application;
-export type TResponseOfqueryUsingPOST_6 = R_List_Application__;
-export type TResponseOfrefreshCacheUsingPOST_1 = R_boolean_;
-export interface TPathOfgetUsingGET_7 {
+type TResponseOfimportExcelUsingPOST_6 = R_boolean_;
+type TBodyOfpageUsingPOST_7 = PageParams_ApplicationPageQuery_;
+type TResponseOfpageUsingPOST_7 = R_IPage_Application__;
+type TBodyOfpreviewUsingPOST_6 = PageParams_ApplicationPageQuery_;
+type TResponseOfpreviewUsingPOST_6 = R_string_;
+type TBodyOfqueryUsingPOST_6 = Application;
+type TResponseOfqueryUsingPOST_6 = R_List_Application__;
+type TResponseOfrefreshCacheUsingPOST_1 = R_boolean_;
+interface TPathOfgetUsingGET_7 {
     id?: number;
 }
-export type TResponseOfgetUsingGET_7 = R_Application_;
-export type TBodyOfsaveUsingPOST_6 = GlobalUserSaveDTO_1;
-export type TResponseOfsaveUsingPOST_6 = R_User_;
-export type TBodyOfupdateUsingPUT_6 = GlobalUserUpdateDTO;
-export type TResponseOfupdateUsingPUT_6 = R_User_;
-export type TBodyOfdeleteUsingDELETE_9 = number[];
-export type TResponseOfdeleteUsingDELETE_9 = R_boolean_;
-export type TBodyOfupdateAllUsingPUT_6 = User;
-export type TResponseOfupdateAllUsingPUT_6 = R_User_;
-export interface TQueryOfcheckUsingGET_1 {
+type TResponseOfgetUsingGET_7 = R_Application_;
+type TBodyOfsaveUsingPOST_6 = GlobalUserSaveDTO_1;
+type TResponseOfsaveUsingPOST_6 = R_User_;
+type TBodyOfupdateUsingPUT_6 = GlobalUserUpdateDTO;
+type TResponseOfupdateUsingPUT_6 = R_User_;
+type TBodyOfdeleteUsingDELETE_9 = number[];
+type TResponseOfdeleteUsingDELETE_9 = R_boolean_;
+type TBodyOfupdateAllUsingPUT_6 = User;
+type TResponseOfupdateAllUsingPUT_6 = R_User_;
+interface TQueryOfcheckUsingGET_1 {
     account?: string;
     tenantCode?: string;
 }
-export type TResponseOfcheckUsingGET_1 = R_boolean_;
-export interface TQueryOfdeleteUsingDELETE_8 {
+type TResponseOfcheckUsingGET_1 = R_boolean_;
+interface TQueryOfdeleteUsingDELETE_8 {
     "ids[]"?: string[];
     tenantCode?: string;
 }
-export type TResponseOfdeleteUsingDELETE_8 = R_boolean_;
-export type TBodyOfexportExcelUsingPOST_7 = PageParams_GlobalUserSaveDTO_;
-export type TResponseOfexportExcelUsingPOST_7 = any;
-export interface TFormDataOfimportExcelUsingPOST_7 {
+type TResponseOfdeleteUsingDELETE_8 = R_boolean_;
+type TBodyOfexportExcelUsingPOST_7 = PageParams_GlobalUserSaveDTO_;
+type TResponseOfexportExcelUsingPOST_7 = any;
+interface TFormDataOfimportExcelUsingPOST_7 {
     file: string;
 }
-export type TResponseOfimportExcelUsingPOST_7 = R_boolean_;
-export type TBodyOfpageUsingPOST_8 = PageParams_GlobalUserSaveDTO_;
-export type TResponseOfpageUsingPOST_8 = R_IPage_User__;
-export type TBodyOfpreviewUsingPOST_7 = PageParams_GlobalUserSaveDTO_;
-export type TResponseOfpreviewUsingPOST_7 = R_string_;
-export type TBodyOfqueryUsingPOST_7 = User;
-export type TResponseOfqueryUsingPOST_7 = R_List_User__;
-export type TBodyOfupdatePasswordUsingPUT = UserUpdatePasswordDTO;
-export type TResponseOfupdatePasswordUsingPUT = R_boolean_;
-export interface TPathOfgetUsingGET_8 {
+type TResponseOfimportExcelUsingPOST_7 = R_boolean_;
+type TBodyOfpageUsingPOST_8 = PageParams_GlobalUserSaveDTO_;
+type TResponseOfpageUsingPOST_8 = R_IPage_User__;
+type TBodyOfpreviewUsingPOST_7 = PageParams_GlobalUserSaveDTO_;
+type TResponseOfpreviewUsingPOST_7 = R_string_;
+type TBodyOfqueryUsingPOST_7 = User;
+type TResponseOfqueryUsingPOST_7 = R_List_User__;
+type TBodyOfupdatePasswordUsingPUT = UserUpdatePasswordDTO;
+type TResponseOfupdatePasswordUsingPUT = R_boolean_;
+interface TPathOfgetUsingGET_8 {
     id?: number;
 }
-export type TResponseOfgetUsingGET_8 = R_User_;
-export type TBodyOfsaveUsingPOST_7 = MenuSaveDTO;
-export type TResponseOfsaveUsingPOST_7 = R_Menu_;
-export type TBodyOfupdateUsingPUT_7 = MenuUpdateDTO;
-export type TResponseOfupdateUsingPUT_7 = R_Menu_;
-export type TBodyOfdeleteUsingDELETE_10 = number[];
-export type TResponseOfdeleteUsingDELETE_10 = R_boolean_;
-export type TBodyOfupdateAllUsingPUT_7 = Menu;
-export type TResponseOfupdateAllUsingPUT_7 = R_Menu_;
-export type TResponseOfclearCacheUsingPOST_2 = R_boolean_;
-export type TBodyOfexportExcelUsingPOST_8 = PageParams_Menu_;
-export type TResponseOfexportExcelUsingPOST_8 = any;
-export type TResponseOffindMenuDataScopeTreeUsingPOST = R_List_MenuResourceTreeVO__;
-export interface TFormDataOfimportExcelUsingPOST_8 {
+type TResponseOfgetUsingGET_8 = R_User_;
+type TBodyOfsaveUsingPOST_7 = MenuSaveDTO;
+type TResponseOfsaveUsingPOST_7 = R_Menu_;
+type TBodyOfupdateUsingPUT_7 = MenuUpdateDTO;
+type TResponseOfupdateUsingPUT_7 = R_Menu_;
+type TBodyOfdeleteUsingDELETE_10 = number[];
+type TResponseOfdeleteUsingDELETE_10 = R_boolean_;
+type TBodyOfupdateAllUsingPUT_7 = Menu;
+type TResponseOfupdateAllUsingPUT_7 = R_Menu_;
+type TResponseOfclearCacheUsingPOST_2 = R_boolean_;
+type TBodyOfexportExcelUsingPOST_8 = PageParams_Menu_;
+type TResponseOfexportExcelUsingPOST_8 = any;
+type TResponseOffindMenuDataScopeTreeUsingPOST = R_List_MenuResourceTreeVO__;
+interface TFormDataOfimportExcelUsingPOST_8 {
     file: string;
 }
-export type TResponseOfimportExcelUsingPOST_8 = R_boolean_;
-export type TResponseOfmenuResourceTreeUsingPOST = R_List_MenuResourceTreeVO__;
-export type TBodyOfpageUsingPOST_9 = PageParams_Menu_;
-export type TResponseOfpageUsingPOST_9 = R_IPage_Menu__;
-export type TBodyOfpreviewUsingPOST_8 = PageParams_Menu_;
-export type TResponseOfpreviewUsingPOST_8 = R_string_;
-export type TBodyOfqueryUsingPOST_8 = Menu;
-export type TResponseOfqueryUsingPOST_8 = R_List_Menu__;
-export type TResponseOfrefreshCacheUsingPOST_2 = R_boolean_;
-export type TResponseOfallTreeUsingPOST = R_List_Menu__;
-export interface TPathOfgetUsingGET_9 {
+type TResponseOfimportExcelUsingPOST_8 = R_boolean_;
+type TResponseOfmenuResourceTreeUsingPOST = R_List_MenuResourceTreeVO__;
+type TBodyOfpageUsingPOST_9 = PageParams_Menu_;
+type TResponseOfpageUsingPOST_9 = R_IPage_Menu__;
+type TBodyOfpreviewUsingPOST_8 = PageParams_Menu_;
+type TResponseOfpreviewUsingPOST_8 = R_string_;
+type TBodyOfqueryUsingPOST_8 = Menu;
+type TResponseOfqueryUsingPOST_8 = R_List_Menu__;
+type TResponseOfrefreshCacheUsingPOST_2 = R_boolean_;
+type TResponseOfallTreeUsingPOST = R_List_Menu__;
+interface TPathOfgetUsingGET_9 {
     id?: number;
 }
-export type TResponseOfgetUsingGET_9 = R_Menu_;
-export interface TQueryOflistUsingPOST {
+type TResponseOfgetUsingGET_9 = R_Menu_;
+interface TQueryOflistUsingPOST {
     name?: string;
 }
-export type TResponseOflistUsingPOST = R_List_Online__;
-export type TBodyOfpageUsingPOST_10 = PageParams_Online_;
-export type TResponseOfpageUsingPOST_10 = R_IPage_Online__;
-export interface TQueryOflogoutUsingPOST {
+type TResponseOflistUsingPOST = R_List_Online__;
+type TBodyOfpageUsingPOST_10 = PageParams_Online_;
+type TResponseOfpageUsingPOST_10 = R_IPage_Online__;
+interface TQueryOflogoutUsingPOST {
     clientId?: string;
     userId?: number;
     userToken?: string;
 }
-export type TResponseOflogoutUsingPOST = R_boolean_;
-export type TBodyOfsaveUsingPOST_8 = ResourceSaveDTO;
-export type TResponseOfsaveUsingPOST_8 = R_Resource_;
-export type TBodyOfupdateUsingPUT_8 = ResourceUpdateDTO;
-export type TResponseOfupdateUsingPUT_8 = R_Resource_;
-export type TBodyOfdeleteUsingDELETE_11 = number[];
-export type TResponseOfdeleteUsingDELETE_11 = R_boolean_;
-export type TBodyOfupdateAllUsingPUT_8 = Resource;
-export type TResponseOfupdateAllUsingPUT_8 = R_Resource_;
-export interface TQueryOfcheckUsingGET_2 {
+type TResponseOflogoutUsingPOST = R_boolean_;
+type TBodyOfsaveUsingPOST_8 = ResourceSaveDTO;
+type TResponseOfsaveUsingPOST_8 = R_Resource_;
+type TBodyOfupdateUsingPUT_8 = ResourceUpdateDTO;
+type TResponseOfupdateUsingPUT_8 = R_Resource_;
+type TBodyOfdeleteUsingDELETE_11 = number[];
+type TResponseOfdeleteUsingDELETE_11 = R_boolean_;
+type TBodyOfupdateAllUsingPUT_8 = Resource;
+type TResponseOfupdateAllUsingPUT_8 = R_Resource_;
+interface TQueryOfcheckUsingGET_2 {
     code?: string;
     id?: number;
 }
-export type TResponseOfcheckUsingGET_2 = R_boolean_;
-export type TResponseOfclearCacheUsingPOST_3 = R_boolean_;
-export type TBodyOfexportExcelUsingPOST_9 = PageParams_Resource_;
-export type TResponseOfexportExcelUsingPOST_9 = any;
-export interface TFormDataOfimportExcelUsingPOST_9 {
+type TResponseOfcheckUsingGET_2 = R_boolean_;
+type TResponseOfclearCacheUsingPOST_3 = R_boolean_;
+type TBodyOfexportExcelUsingPOST_9 = PageParams_Resource_;
+type TResponseOfexportExcelUsingPOST_9 = any;
+interface TFormDataOfimportExcelUsingPOST_9 {
     file: string;
 }
-export type TResponseOfimportExcelUsingPOST_9 = R_boolean_;
-export type TBodyOfpageUsingPOST_11 = PageParams_Resource_;
-export type TResponseOfpageUsingPOST_11 = R_IPage_Resource__;
-export type TBodyOfpreviewUsingPOST_9 = PageParams_Resource_;
-export type TResponseOfpreviewUsingPOST_9 = R_string_;
-export type TBodyOfqueryUsingPOST_9 = Resource;
-export type TResponseOfqueryUsingPOST_9 = R_List_Resource__;
-export type TResponseOfrefreshCacheUsingPOST_3 = R_boolean_;
-export interface TPathOfgetUsingGET_10 {
+type TResponseOfimportExcelUsingPOST_9 = R_boolean_;
+type TBodyOfpageUsingPOST_11 = PageParams_Resource_;
+type TResponseOfpageUsingPOST_11 = R_IPage_Resource__;
+type TBodyOfpreviewUsingPOST_9 = PageParams_Resource_;
+type TResponseOfpreviewUsingPOST_9 = R_string_;
+type TBodyOfqueryUsingPOST_9 = Resource;
+type TResponseOfqueryUsingPOST_9 = R_List_Resource__;
+type TResponseOfrefreshCacheUsingPOST_3 = R_boolean_;
+interface TPathOfgetUsingGET_10 {
     id?: number;
 }
-export type TResponseOfgetUsingGET_10 = R_Resource_;
-export type TBodyOfsaveUsingPOST_9 = RoleSaveDTO_1;
-export type TResponseOfsaveUsingPOST_9 = R_Role_;
-export type TBodyOfupdateUsingPUT_9 = RoleUpdateDTO;
-export type TResponseOfupdateUsingPUT_9 = R_Role_;
-export type TBodyOfdeleteUsingDELETE_12 = number[];
-export type TResponseOfdeleteUsingDELETE_12 = R_boolean_;
-export type TBodyOfupdateAllUsingPUT_9 = Role;
-export type TResponseOfupdateAllUsingPUT_9 = R_Role_;
-export interface TQueryOfcheckUsingGET_3 {
+type TResponseOfgetUsingGET_10 = R_Resource_;
+type TBodyOfsaveUsingPOST_9 = RoleSaveDTO_1;
+type TResponseOfsaveUsingPOST_9 = R_Role_;
+type TBodyOfupdateUsingPUT_9 = RoleUpdateDTO;
+type TResponseOfupdateUsingPUT_9 = R_Role_;
+type TBodyOfdeleteUsingDELETE_12 = number[];
+type TResponseOfdeleteUsingDELETE_12 = R_boolean_;
+type TBodyOfupdateAllUsingPUT_9 = Role;
+type TResponseOfupdateAllUsingPUT_9 = R_Role_;
+interface TQueryOfcheckUsingGET_3 {
     code: string;
 }
-export type TResponseOfcheckUsingGET_3 = R_boolean_;
-export type TResponseOfclearCacheUsingPOST_4 = R_boolean_;
-export interface TQueryOffindUserIdByCodeUsingGET {
+type TResponseOfcheckUsingGET_3 = R_boolean_;
+type TResponseOfclearCacheUsingPOST_4 = R_boolean_;
+interface TQueryOffindUserIdByCodeUsingGET {
     codes: string[];
 }
-export type TResponseOffindUserIdByCodeUsingGET = R_List_long__;
-export interface TQueryOfgetDetailsUsingGET {
+type TResponseOffindUserIdByCodeUsingGET = R_List_long__;
+interface TQueryOfgetDetailsUsingGET {
     id: number;
 }
-export type TResponseOfgetDetailsUsingGET = R_RoleSaveDTO_;
-export type TBodyOfexportExcelUsingPOST_10 = PageParams_RolePageQuery_;
-export type TResponseOfexportExcelUsingPOST_10 = any;
-export interface TFormDataOfimportExcelUsingPOST_10 {
+type TResponseOfgetDetailsUsingGET = R_RoleSaveDTO_;
+type TBodyOfexportExcelUsingPOST_10 = PageParams_RolePageQuery_;
+type TResponseOfexportExcelUsingPOST_10 = any;
+interface TFormDataOfimportExcelUsingPOST_10 {
     file: string;
 }
-export type TResponseOfimportExcelUsingPOST_10 = R_boolean_;
-export type TBodyOfpageUsingPOST_12 = PageParams_RolePageQuery_;
-export type TResponseOfpageUsingPOST_12 = R_IPage_Role__;
-export type TBodyOfpreviewUsingPOST_10 = PageParams_RolePageQuery_;
-export type TResponseOfpreviewUsingPOST_10 = R_string_;
-export type TBodyOfqueryUsingPOST_10 = Role;
-export type TResponseOfqueryUsingPOST_10 = R_List_Role__;
-export type TResponseOfrefreshCacheUsingPOST_4 = R_boolean_;
-export interface TQueryOffindResourceListByRoleIdUsingGET {
+type TResponseOfimportExcelUsingPOST_10 = R_boolean_;
+type TBodyOfpageUsingPOST_12 = PageParams_RolePageQuery_;
+type TResponseOfpageUsingPOST_12 = R_IPage_Role__;
+type TBodyOfpreviewUsingPOST_10 = PageParams_RolePageQuery_;
+type TResponseOfpreviewUsingPOST_10 = R_string_;
+type TBodyOfqueryUsingPOST_10 = Role;
+type TResponseOfqueryUsingPOST_10 = R_List_Role__;
+type TResponseOfrefreshCacheUsingPOST_4 = R_boolean_;
+interface TQueryOffindResourceListByRoleIdUsingGET {
     roleId: number;
 }
-export type TResponseOffindResourceListByRoleIdUsingGET = R_RoleAuthoritySaveDTO_;
-export type TBodyOfsaveRoleAuthorityUsingPOST = RoleAuthoritySaveDTO;
-export type TResponseOfsaveRoleAuthorityUsingPOST = R_boolean_;
-export type TBodyOfsaveUserRoleUsingPOST_1 = RoleUserSaveVO;
-export type TResponseOfsaveUserRoleUsingPOST_1 = R_List_long__;
-export interface TQueryOffindUserIdByRoleIdUsingGET {
+type TResponseOffindResourceListByRoleIdUsingGET = R_RoleAuthoritySaveDTO_;
+type TBodyOfsaveRoleAuthorityUsingPOST = RoleAuthoritySaveDTO;
+type TResponseOfsaveRoleAuthorityUsingPOST = R_boolean_;
+type TBodyOfsaveUserRoleUsingPOST_1 = RoleUserSaveVO;
+type TResponseOfsaveUserRoleUsingPOST_1 = R_List_long__;
+interface TQueryOffindUserIdByRoleIdUsingGET {
     roleId: number;
 }
-export type TResponseOffindUserIdByRoleIdUsingGET = R_List_long__;
-export interface TPathOfgetUsingGET_11 {
+type TResponseOffindUserIdByRoleIdUsingGET = R_List_long__;
+interface TPathOfgetUsingGET_11 {
     id?: number;
 }
-export type TResponseOfgetUsingGET_11 = R_Role_;
-export interface TPathOfqueryByRoleIdUsingGET {
+type TResponseOfgetUsingGET_11 = R_Role_;
+interface TPathOfqueryByRoleIdUsingGET {
     roleId: number;
 }
-export type TResponseOfqueryByRoleIdUsingGET = R_List_RoleAuthority__;
-export type TBodyOfsaveUsingPOST_10 = UserSaveDTO;
-export type TResponseOfsaveUsingPOST_10 = R_User_;
-export type TBodyOfupdateUsingPUT_10 = UserUpdateDTO;
-export type TResponseOfupdateUsingPUT_10 = R_User_;
-export type TBodyOfdeleteUsingDELETE_13 = number[];
-export type TResponseOfdeleteUsingDELETE_13 = R_boolean_;
-export type TBodyOfupdateAllUsingPUT_10 = User;
-export type TResponseOfupdateAllUsingPUT_10 = R_User_;
-export type TBodyOfavatarUsingPUT = UserUpdateAvatarDTO;
-export type TResponseOfavatarUsingPUT = R_boolean_;
-export type TBodyOfupdateBaseUsingPUT = UserUpdateBaseInfoDTO;
-export type TResponseOfupdateBaseUsingPUT = R_User_;
-export interface TQueryOfcheckUsingGET_4 {
+type TResponseOfqueryByRoleIdUsingGET = R_List_RoleAuthority__;
+type TBodyOfsaveUsingPOST_10 = UserSaveDTO;
+type TResponseOfsaveUsingPOST_10 = R_User_;
+type TBodyOfupdateUsingPUT_10 = UserUpdateDTO;
+type TResponseOfupdateUsingPUT_10 = R_User_;
+type TBodyOfdeleteUsingDELETE_13 = number[];
+type TResponseOfdeleteUsingDELETE_13 = R_boolean_;
+type TBodyOfupdateAllUsingPUT_10 = User;
+type TResponseOfupdateAllUsingPUT_10 = R_User_;
+type TBodyOfavatarUsingPUT = UserUpdateAvatarDTO;
+type TResponseOfavatarUsingPUT = R_boolean_;
+type TBodyOfupdateBaseUsingPUT = UserUpdateBaseInfoDTO;
+type TResponseOfupdateBaseUsingPUT = R_User_;
+interface TQueryOfcheckUsingGET_4 {
     id?: number;
     name?: string;
 }
-export type TResponseOfcheckUsingGET_4 = R_boolean_;
-export type TResponseOfclearCacheUsingPOST_5 = R_boolean_;
-export type TBodyOfexportExcelUsingPOST_11 = PageParams_UserPageQuery_;
-export type TResponseOfexportExcelUsingPOST_11 = any;
-export type TResponseOffindAllUserIdUsingGET = R_List_long__;
-export type TResponseOffindAllUsingGET = R_List_User__;
-export interface TQueryOffindUserByIdUsingGET {
+type TResponseOfcheckUsingGET_4 = R_boolean_;
+type TResponseOfclearCacheUsingPOST_5 = R_boolean_;
+type TBodyOfexportExcelUsingPOST_11 = PageParams_UserPageQuery_;
+type TResponseOfexportExcelUsingPOST_11 = any;
+type TResponseOffindAllUserIdUsingGET = R_List_long__;
+type TResponseOffindAllUsingGET = R_List_User__;
+interface TQueryOffindUserByIdUsingGET {
     ids: number[];
 }
-export type TResponseOffindUserByIdUsingGET = R_List_User__;
-export interface TFormDataOfimportExcelUsingPOST_11 {
+type TResponseOffindUserByIdUsingGET = R_List_User__;
+interface TFormDataOfimportExcelUsingPOST_11 {
     file: string;
 }
-export type TResponseOfimportExcelUsingPOST_11 = R_boolean_;
-export type TBodyOfpageUsingPOST_13 = PageParams_UserPageQuery_;
-export type TResponseOfpageUsingPOST_13 = R_IPage_User__;
-export type TBodyOfpageAllUsingPOST = PageParams_UserPageQuery_;
-export type TResponseOfpageAllUsingPOST = R_IPage_User__;
-export type TBodyOfupdatePasswordUsingPUT_1 = UserUpdatePasswordDTO;
-export type TResponseOfupdatePasswordUsingPUT_1 = R_boolean_;
-export type TBodyOfpreviewUsingPOST_11 = PageParams_UserPageQuery_;
-export type TResponseOfpreviewUsingPOST_11 = R_string_;
-export type TBodyOfqueryUsingPOST_11 = User;
-export type TResponseOfqueryUsingPOST_11 = R_List_User__;
-export type TResponseOfrefreshCacheUsingPOST_5 = R_boolean_;
-export type TBodyOfresetUsingPOST = UserUpdatePasswordDTO;
-export type TResponseOfresetUsingPOST = R_boolean_;
-export interface TPathOffindUserByRoleIdUsingGET {
+type TResponseOfimportExcelUsingPOST_11 = R_boolean_;
+type TBodyOfpageUsingPOST_13 = PageParams_UserPageQuery_;
+type TResponseOfpageUsingPOST_13 = R_IPage_User__;
+type TBodyOfpageAllUsingPOST = PageParams_UserPageQuery_;
+type TResponseOfpageAllUsingPOST = R_IPage_User__;
+type TBodyOfupdatePasswordUsingPUT_1 = UserUpdatePasswordDTO;
+type TResponseOfupdatePasswordUsingPUT_1 = R_boolean_;
+type TBodyOfpreviewUsingPOST_11 = PageParams_UserPageQuery_;
+type TResponseOfpreviewUsingPOST_11 = R_string_;
+type TBodyOfqueryUsingPOST_11 = User;
+type TResponseOfqueryUsingPOST_11 = R_List_User__;
+type TResponseOfrefreshCacheUsingPOST_5 = R_boolean_;
+type TBodyOfresetUsingPOST = UserUpdatePasswordDTO;
+type TResponseOfresetUsingPOST = R_boolean_;
+interface TPathOffindUserByRoleIdUsingGET {
     roleId: number;
 }
-export interface TQueryOffindUserByRoleIdUsingGET {
+interface TQueryOffindUserByRoleIdUsingGET {
     keyword?: string;
 }
-export type TResponseOffindUserByRoleIdUsingGET = R_UserRoleDTO_;
-export interface TPathOfgetUsingGET_12 {
+type TResponseOffindUserByRoleIdUsingGET = R_UserRoleDTO_;
+interface TPathOfgetUsingGET_12 {
     id?: number;
 }
-export type TResponseOfgetUsingGET_12 = R_User_;
-export type TBodyOfprogramLoginUsingPOST = WechatLoginRequestDTO;
-export type TResponseOfprogramLoginUsingPOST = R_WechatUser_;
-export type TBodyOfprogramLogin2UsingPOST = WechatLoginRequestDTO;
-export type TResponseOfprogramLogin2UsingPOST = R_WechatUser_;
-export interface IApiFn {
+type TResponseOfgetUsingGET_12 = R_User_;
+type TBodyOfprogramLoginUsingPOST = WechatLoginRequestDTO;
+type TResponseOfprogramLoginUsingPOST = R_WechatUser_;
+type TBodyOfprogramLogin2UsingPOST = WechatLoginRequestDTO;
+type TResponseOfprogramLogin2UsingPOST = R_WechatUser_;
+interface IApiFn {
     (url: string): {
         [m in "get" | "post" | "put" | "patch" | "delete" | "head"]: (options: any) => Promise<any>;
     };
@@ -1987,7 +1987,7 @@ export interface IApiFn {
         }): Promise<TResponseOfprogramLogin2UsingPOST>;
     };
 }
-export interface RequestProvider {
+interface RequestProvider {
     get(url: string, options: any): Promise<any>;
     post(url: string, options: any): Promise<any>;
     put(url: string, options: any): Promise<any>;
@@ -1998,4 +1998,6 @@ export interface RequestProvider {
 /**
  * create a request by a provider
  */
-export declare function createRequest(provider: RequestProvider): IApiFn;
+declare function createRequest(provider: RequestProvider): IApiFn;
+
+export { AppendixSaveVO, Application, ApplicationPageQuery, ApplicationSaveDTO, ApplicationUpdateDTO, GlobalUserSaveDTO, GlobalUserSaveDTO_1, GlobalUserUpdateDTO, IApiFn, IPage_Application_, IPage_Menu_, IPage_Online_, IPage_Resource_, IPage_Role_, IPage_User_, Menu, MenuResourceTreeVO, MenuSaveDTO, MenuUpdateDTO, Online, PageParams_ApplicationPageQuery_, PageParams_GlobalUserSaveDTO_, PageParams_Menu_, PageParams_Online_, PageParams_Resource_, PageParams_RolePageQuery_, PageParams_UserPageQuery_, R_Application_, R_IPage_Application__, R_IPage_Menu__, R_IPage_Online__, R_IPage_Resource__, R_IPage_Role__, R_IPage_User__, R_List_Application__, R_List_MenuResourceTreeVO__, R_List_Menu__, R_List_Online__, R_List_Resource__, R_List_RoleAuthority__, R_List_Role__, R_List_User__, R_List_long__, R_Menu_, R_Resource_, R_RoleAuthoritySaveDTO_, R_RoleSaveDTO_, R_Role_, R_UserRoleDTO_, R_User_, R_WechatUser_, R_boolean_, R_string_, RequestProvider, Resource, ResourceSaveDTO, ResourceUpdateDTO, Role, RoleAuthority, RoleAuthoritySaveDTO, RolePageQuery, RoleSaveDTO, RoleSaveDTO_1, RoleUpdateDTO, RoleUserSaveVO, TBodyOfavatarUsingPUT, TBodyOfdeleteUsingDELETE_10, TBodyOfdeleteUsingDELETE_11, TBodyOfdeleteUsingDELETE_12, TBodyOfdeleteUsingDELETE_13, TBodyOfdeleteUsingDELETE_7, TBodyOfdeleteUsingDELETE_9, TBodyOfexportExcelUsingPOST_10, TBodyOfexportExcelUsingPOST_11, TBodyOfexportExcelUsingPOST_6, TBodyOfexportExcelUsingPOST_7, TBodyOfexportExcelUsingPOST_8, TBodyOfexportExcelUsingPOST_9, TBodyOfpageAllUsingPOST, TBodyOfpageUsingPOST_10, TBodyOfpageUsingPOST_11, TBodyOfpageUsingPOST_12, TBodyOfpageUsingPOST_13, TBodyOfpageUsingPOST_7, TBodyOfpageUsingPOST_8, TBodyOfpageUsingPOST_9, TBodyOfpreviewUsingPOST_10, TBodyOfpreviewUsingPOST_11, TBodyOfpreviewUsingPOST_6, TBodyOfpreviewUsingPOST_7, TBodyOfpreviewUsingPOST_8, TBodyOfpreviewUsingPOST_9, TBodyOfprogramLogin2UsingPOST, TBodyOfprogramLoginUsingPOST, TBodyOfqueryUsingPOST_10, TBodyOfqueryUsingPOST_11, TBodyOfqueryUsingPOST_6, TBodyOfqueryUsingPOST_7, TBodyOfqueryUsingPOST_8, TBodyOfqueryUsingPOST_9, TBodyOfresetUsingPOST, TBodyOfsaveRoleAuthorityUsingPOST, TBodyOfsaveUserRoleUsingPOST_1, TBodyOfsaveUsingPOST_10, TBodyOfsaveUsingPOST_5, TBodyOfsaveUsingPOST_6, TBodyOfsaveUsingPOST_7, TBodyOfsaveUsingPOST_8, TBodyOfsaveUsingPOST_9, TBodyOfupdateAllUsingPUT_10, TBodyOfupdateAllUsingPUT_5, TBodyOfupdateAllUsingPUT_6, TBodyOfupdateAllUsingPUT_7, TBodyOfupdateAllUsingPUT_8, TBodyOfupdateAllUsingPUT_9, TBodyOfupdateBaseUsingPUT, TBodyOfupdatePasswordUsingPUT, TBodyOfupdatePasswordUsingPUT_1, TBodyOfupdateUsingPUT_10, TBodyOfupdateUsingPUT_5, TBodyOfupdateUsingPUT_6, TBodyOfupdateUsingPUT_7, TBodyOfupdateUsingPUT_8, TBodyOfupdateUsingPUT_9, TFormDataOfimportExcelUsingPOST_10, TFormDataOfimportExcelUsingPOST_11, TFormDataOfimportExcelUsingPOST_6, TFormDataOfimportExcelUsingPOST_7, TFormDataOfimportExcelUsingPOST_8, TFormDataOfimportExcelUsingPOST_9, TPathOffindUserByRoleIdUsingGET, TPathOfgetUsingGET_10, TPathOfgetUsingGET_11, TPathOfgetUsingGET_12, TPathOfgetUsingGET_7, TPathOfgetUsingGET_8, TPathOfgetUsingGET_9, TPathOfqueryByRoleIdUsingGET, TQueryOfcheckUsingGET_1, TQueryOfcheckUsingGET_2, TQueryOfcheckUsingGET_3, TQueryOfcheckUsingGET_4, TQueryOfdeleteUsingDELETE_8, TQueryOffindResourceListByRoleIdUsingGET, TQueryOffindUserByIdUsingGET, TQueryOffindUserByRoleIdUsingGET, TQueryOffindUserIdByCodeUsingGET, TQueryOffindUserIdByRoleIdUsingGET, TQueryOfgetDetailsUsingGET, TQueryOflistUsingPOST, TQueryOflogoutUsingPOST, TResponseOfallTreeUsingPOST, TResponseOfavatarUsingPUT, TResponseOfcheckUsingGET_1, TResponseOfcheckUsingGET_2, TResponseOfcheckUsingGET_3, TResponseOfcheckUsingGET_4, TResponseOfclearCacheUsingPOST_1, TResponseOfclearCacheUsingPOST_2, TResponseOfclearCacheUsingPOST_3, TResponseOfclearCacheUsingPOST_4, TResponseOfclearCacheUsingPOST_5, TResponseOfdeleteUsingDELETE_10, TResponseOfdeleteUsingDELETE_11, TResponseOfdeleteUsingDELETE_12, TResponseOfdeleteUsingDELETE_13, TResponseOfdeleteUsingDELETE_7, TResponseOfdeleteUsingDELETE_8, TResponseOfdeleteUsingDELETE_9, TResponseOfexportExcelUsingPOST_10, TResponseOfexportExcelUsingPOST_11, TResponseOfexportExcelUsingPOST_6, TResponseOfexportExcelUsingPOST_7, TResponseOfexportExcelUsingPOST_8, TResponseOfexportExcelUsingPOST_9, TResponseOffindAllUserIdUsingGET, TResponseOffindAllUsingGET, TResponseOffindMenuDataScopeTreeUsingPOST, TResponseOffindResourceListByRoleIdUsingGET, TResponseOffindUserByIdUsingGET, TResponseOffindUserByRoleIdUsingGET, TResponseOffindUserIdByCodeUsingGET, TResponseOffindUserIdByRoleIdUsingGET, TResponseOfgetDetailsUsingGET, TResponseOfgetUsingGET_10, TResponseOfgetUsingGET_11, TResponseOfgetUsingGET_12, TResponseOfgetUsingGET_7, TResponseOfgetUsingGET_8, TResponseOfgetUsingGET_9, TResponseOfimportExcelUsingPOST_10, TResponseOfimportExcelUsingPOST_11, TResponseOfimportExcelUsingPOST_6, TResponseOfimportExcelUsingPOST_7, TResponseOfimportExcelUsingPOST_8, TResponseOfimportExcelUsingPOST_9, TResponseOflistUsingPOST, TResponseOflogoutUsingPOST, TResponseOfmenuResourceTreeUsingPOST, TResponseOfpageAllUsingPOST, TResponseOfpageUsingPOST_10, TResponseOfpageUsingPOST_11, TResponseOfpageUsingPOST_12, TResponseOfpageUsingPOST_13, TResponseOfpageUsingPOST_7, TResponseOfpageUsingPOST_8, TResponseOfpageUsingPOST_9, TResponseOfpreviewUsingPOST_10, TResponseOfpreviewUsingPOST_11, TResponseOfpreviewUsingPOST_6, TResponseOfpreviewUsingPOST_7, TResponseOfpreviewUsingPOST_8, TResponseOfpreviewUsingPOST_9, TResponseOfprogramLogin2UsingPOST, TResponseOfprogramLoginUsingPOST, TResponseOfqueryByRoleIdUsingGET, TResponseOfqueryUsingPOST_10, TResponseOfqueryUsingPOST_11, TResponseOfqueryUsingPOST_6, TResponseOfqueryUsingPOST_7, TResponseOfqueryUsingPOST_8, TResponseOfqueryUsingPOST_9, TResponseOfrefreshCacheUsingPOST_1, TResponseOfrefreshCacheUsingPOST_2, TResponseOfrefreshCacheUsingPOST_3, TResponseOfrefreshCacheUsingPOST_4, TResponseOfrefreshCacheUsingPOST_5, TResponseOfresetUsingPOST, TResponseOfsaveRoleAuthorityUsingPOST, TResponseOfsaveUserRoleUsingPOST_1, TResponseOfsaveUsingPOST_10, TResponseOfsaveUsingPOST_5, TResponseOfsaveUsingPOST_6, TResponseOfsaveUsingPOST_7, TResponseOfsaveUsingPOST_8, TResponseOfsaveUsingPOST_9, TResponseOfupdateAllUsingPUT_10, TResponseOfupdateAllUsingPUT_5, TResponseOfupdateAllUsingPUT_6, TResponseOfupdateAllUsingPUT_7, TResponseOfupdateAllUsingPUT_8, TResponseOfupdateAllUsingPUT_9, TResponseOfupdateBaseUsingPUT, TResponseOfupdatePasswordUsingPUT, TResponseOfupdatePasswordUsingPUT_1, TResponseOfupdateUsingPUT_10, TResponseOfupdateUsingPUT_5, TResponseOfupdateUsingPUT_6, TResponseOfupdateUsingPUT_7, TResponseOfupdateUsingPUT_8, TResponseOfupdateUsingPUT_9, User, UserPageQuery, UserRoleDTO, UserRoleSaveDTO, UserSaveDTO, UserUpdateAvatarDTO, UserUpdateBaseInfoDTO, UserUpdateDTO, UserUpdatePasswordDTO, WechatLoginRequestDTO, WechatUser, createRequest };

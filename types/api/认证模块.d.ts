@@ -1,7 +1,7 @@
 /**
  * @description: 认证信息
  */
-export interface AuthInfo {
+interface AuthInfo {
     account?: string;
     avatarId?: number;
     expiration?: string;
@@ -17,7 +17,7 @@ export interface AuthInfo {
 /**
  * @description: 权限资源
  */
-export interface AuthorityResourceDTO {
+interface AuthorityResourceDTO {
     caseSensitive?: boolean;
     enabled?: boolean;
     resourceList?: string[];
@@ -26,7 +26,7 @@ export interface AuthorityResourceDTO {
 /**
  * @description: 字典项
  */
-export interface Dictionary {
+interface Dictionary {
     code?: string;
     createTime?: string;
     createdBy?: number;
@@ -47,7 +47,7 @@ export interface Dictionary {
 /**
  * @description: 登录参数
  */
-export interface LoginParamDTO {
+interface LoginParamDTO {
     account?: string;
     code?: string;
     grantType?: string;
@@ -59,7 +59,7 @@ export interface LoginParamDTO {
 /**
  * @description: 认证信息带租户信息
  */
-export interface LoginUserAuthInfo {
+interface LoginUserAuthInfo {
     account?: string;
     avatarId?: number;
     expiration?: string;
@@ -73,22 +73,22 @@ export interface LoginUserAuthInfo {
     userId?: number;
     workDescribe?: string;
 }
-export interface Map_string_List_Dictionary__ {
+interface Map_string_List_Dictionary__ {
     [index: string]: Array<unknown>;
 }
-export interface Map_string_List_Option__ {
+interface Map_string_List_Option__ {
     [index: string]: Array<unknown>;
 }
-export interface Map_string_Map_string_string__ {
+interface Map_string_Map_string_string__ {
     [index: string]: Record<string, unknown>;
 }
-export interface Map_string_string_ {
+interface Map_string_string_ {
     [index: string]: string;
 }
 /**
  * @description: 菜单
  */
-export interface Menu {
+interface Menu {
     component?: string;
     createTime?: string;
     createdBy?: number;
@@ -115,12 +115,12 @@ export interface Menu {
 /**
  * @description: 下拉、多选组件选项
  */
-export interface Option {
+interface Option {
     label?: string;
     text?: string;
     value?: string;
 }
-export interface RouterMeta {
+interface RouterMeta {
     affix?: boolean;
     breadcrumb?: boolean;
     carryParam?: boolean;
@@ -134,7 +134,7 @@ export interface RouterMeta {
     title?: string;
     transitionName?: string;
 }
-export interface R_AuthInfo_ {
+interface R_AuthInfo_ {
     code?: number;
     data?: AuthInfo;
     errorMsg?: string;
@@ -144,7 +144,7 @@ export interface R_AuthInfo_ {
     path?: string;
     timestamp?: number;
 }
-export interface R_AuthorityResourceDTO_ {
+interface R_AuthorityResourceDTO_ {
     code?: number;
     data?: AuthorityResourceDTO;
     errorMsg?: string;
@@ -154,7 +154,7 @@ export interface R_AuthorityResourceDTO_ {
     path?: string;
     timestamp?: number;
 }
-export interface R_List_Menu__ {
+interface R_List_Menu__ {
     code?: number;
     data?: Menu[];
     errorMsg?: string;
@@ -164,7 +164,7 @@ export interface R_List_Menu__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_List_VueRouter__ {
+interface R_List_VueRouter__ {
     code?: number;
     data?: VueRouter[];
     errorMsg?: string;
@@ -174,7 +174,7 @@ export interface R_List_VueRouter__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_LoginUserAuthInfo_ {
+interface R_LoginUserAuthInfo_ {
     code?: number;
     data?: LoginUserAuthInfo;
     errorMsg?: string;
@@ -184,7 +184,7 @@ export interface R_LoginUserAuthInfo_ {
     path?: string;
     timestamp?: number;
 }
-export interface R_Map_string_List_Dictionary___ {
+interface R_Map_string_List_Dictionary___ {
     code?: number;
     data?: {
         [index: string]: Dictionary[];
@@ -196,7 +196,7 @@ export interface R_Map_string_List_Dictionary___ {
     path?: string;
     timestamp?: number;
 }
-export interface R_Map_string_List_Option___ {
+interface R_Map_string_List_Option___ {
     code?: number;
     data?: {
         [index: string]: Option[];
@@ -208,7 +208,7 @@ export interface R_Map_string_List_Option___ {
     path?: string;
     timestamp?: number;
 }
-export interface R_Map_string_Map_string_string___ {
+interface R_Map_string_Map_string_string___ {
     code?: number;
     data?: {
         [index: string]: {
@@ -222,7 +222,7 @@ export interface R_Map_string_Map_string_string___ {
     path?: string;
     timestamp?: number;
 }
-export interface R_Map_string_string__ {
+interface R_Map_string_string__ {
     code?: number;
     data?: {
         [index: string]: string;
@@ -234,7 +234,7 @@ export interface R_Map_string_string__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_boolean_ {
+interface R_boolean_ {
     code?: number;
     data?: boolean;
     errorMsg?: string;
@@ -244,7 +244,7 @@ export interface R_boolean_ {
     path?: string;
     timestamp?: number;
 }
-export interface R_string_ {
+interface R_string_ {
     code?: number;
     data?: string;
     errorMsg?: string;
@@ -254,7 +254,7 @@ export interface R_string_ {
     path?: string;
     timestamp?: number;
 }
-export interface VueRouter {
+interface VueRouter {
     alwaysShow?: boolean;
     component?: string;
     createTime?: string;
@@ -268,56 +268,56 @@ export interface VueRouter {
     updateTime?: string;
     updatedBy?: number;
 }
-export interface TQueryOfcaptchaUsingGET {
+interface TQueryOfcaptchaUsingGET {
     key: string;
 }
-export type TResponseOfcaptchaUsingGET = any;
-export interface TQueryOfcheckUsingGET_8 {
+type TResponseOfcaptchaUsingGET = any;
+interface TQueryOfcheckUsingGET_8 {
     code: string;
     key: string;
 }
-export type TResponseOfcheckUsingGET_8 = R_boolean_;
-export type TResponseOfverifyUsingGET = R_AuthInfo_;
-export type TBodyOfcodeListUsingPOST = string[];
-export type TResponseOfcodeListUsingPOST = R_Map_string_List_Option___;
-export type TBodyOflistUsingPOST_1 = string[];
-export type TResponseOflistUsingPOST_1 = R_Map_string_List_Dictionary___;
-export type TBodyOfenumListsUsingPOST = string[];
-export type TResponseOfenumListsUsingPOST = R_Map_string_List_Option___;
-export type TBodyOfenumsUsingPOST = string[];
-export type TResponseOfenumsUsingPOST = R_Map_string_Map_string_string___;
-export interface TQueryOfmyMenusUsingGET {
+type TResponseOfcheckUsingGET_8 = R_boolean_;
+type TResponseOfverifyUsingGET = R_AuthInfo_;
+type TBodyOfcodeListUsingPOST = string[];
+type TResponseOfcodeListUsingPOST = R_Map_string_List_Option___;
+type TBodyOflistUsingPOST_1 = string[];
+type TResponseOflistUsingPOST_1 = R_Map_string_List_Dictionary___;
+type TBodyOfenumListsUsingPOST = string[];
+type TResponseOfenumListsUsingPOST = R_Map_string_List_Option___;
+type TBodyOfenumsUsingPOST = string[];
+type TResponseOfenumsUsingPOST = R_Map_string_Map_string_string___;
+interface TQueryOfmyMenusUsingGET {
     group?: string;
     userId?: number;
 }
-export type TResponseOfmyMenusUsingGET = R_List_Menu__;
-export interface TQueryOfmyRouterUsingGET {
+type TResponseOfmyMenusUsingGET = R_List_Menu__;
+interface TQueryOfmyRouterUsingGET {
     group?: string;
     userId?: number;
 }
-export type TResponseOfmyRouterUsingGET = R_List_VueRouter__;
-export type TBodyOfloginUsingPOST = LoginParamDTO;
-export type TResponseOfloginUsingPOST = R_LoginUserAuthInfo_;
-export interface TQueryOflogoutUsingPOST_1 {
+type TResponseOfmyRouterUsingGET = R_List_VueRouter__;
+type TBodyOfloginUsingPOST = LoginParamDTO;
+type TResponseOfloginUsingPOST = R_LoginUserAuthInfo_;
+interface TQueryOflogoutUsingPOST_1 {
     clientId?: string;
     userId?: number;
 }
-export type TResponseOflogoutUsingPOST_1 = R_boolean_;
-export type TBodyOfnoTokenTenantUsingPOST = LoginParamDTO;
-export type TResponseOfnoTokenTenantUsingPOST = R_string_;
-export type TBodyOffindParamsUsingPOST = string[];
-export type TResponseOffindParamsUsingPOST = R_Map_string_string__;
-export interface TQueryOfgetValueUsingGET {
+type TResponseOflogoutUsingPOST_1 = R_boolean_;
+type TBodyOfnoTokenTenantUsingPOST = LoginParamDTO;
+type TResponseOfnoTokenTenantUsingPOST = R_string_;
+type TBodyOffindParamsUsingPOST = string[];
+type TResponseOffindParamsUsingPOST = R_Map_string_string__;
+interface TQueryOfgetValueUsingGET {
     defVal?: string;
     key: string;
 }
-export type TResponseOfgetValueUsingGET = R_string_;
-export interface TQueryOfvisibleUsingGET {
+type TResponseOfgetValueUsingGET = R_string_;
+interface TQueryOfvisibleUsingGET {
     menuId?: number;
     userId?: number;
 }
-export type TResponseOfvisibleUsingGET = R_AuthorityResourceDTO_;
-export interface IApiFn {
+type TResponseOfvisibleUsingGET = R_AuthorityResourceDTO_;
+interface IApiFn {
     (url: string): {
         [m in "get" | "post" | "put" | "patch" | "delete" | "head"]: (options: any) => Promise<any>;
     };
@@ -455,7 +455,7 @@ export interface IApiFn {
         }): Promise<TResponseOfvisibleUsingGET>;
     };
 }
-export interface RequestProvider {
+interface RequestProvider {
     get(url: string, options: any): Promise<any>;
     post(url: string, options: any): Promise<any>;
     put(url: string, options: any): Promise<any>;
@@ -466,4 +466,6 @@ export interface RequestProvider {
 /**
  * create a request by a provider
  */
-export declare function createRequest(provider: RequestProvider): IApiFn;
+declare function createRequest(provider: RequestProvider): IApiFn;
+
+export { AuthInfo, AuthorityResourceDTO, Dictionary, IApiFn, LoginParamDTO, LoginUserAuthInfo, Map_string_List_Dictionary__, Map_string_List_Option__, Map_string_Map_string_string__, Map_string_string_, Menu, Option, R_AuthInfo_, R_AuthorityResourceDTO_, R_List_Menu__, R_List_VueRouter__, R_LoginUserAuthInfo_, R_Map_string_List_Dictionary___, R_Map_string_List_Option___, R_Map_string_Map_string_string___, R_Map_string_string__, R_boolean_, R_string_, RequestProvider, RouterMeta, TBodyOfcodeListUsingPOST, TBodyOfenumListsUsingPOST, TBodyOfenumsUsingPOST, TBodyOffindParamsUsingPOST, TBodyOflistUsingPOST_1, TBodyOfloginUsingPOST, TBodyOfnoTokenTenantUsingPOST, TQueryOfcaptchaUsingGET, TQueryOfcheckUsingGET_8, TQueryOfgetValueUsingGET, TQueryOflogoutUsingPOST_1, TQueryOfmyMenusUsingGET, TQueryOfmyRouterUsingGET, TQueryOfvisibleUsingGET, TResponseOfcaptchaUsingGET, TResponseOfcheckUsingGET_8, TResponseOfcodeListUsingPOST, TResponseOfenumListsUsingPOST, TResponseOfenumsUsingPOST, TResponseOffindParamsUsingPOST, TResponseOfgetValueUsingGET, TResponseOflistUsingPOST_1, TResponseOfloginUsingPOST, TResponseOflogoutUsingPOST_1, TResponseOfmyMenusUsingGET, TResponseOfmyRouterUsingGET, TResponseOfnoTokenTenantUsingPOST, TResponseOfverifyUsingGET, TResponseOfvisibleUsingGET, VueRouter, createRequest };

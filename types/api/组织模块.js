@@ -1,15 +1,1 @@
-/**
- * create a request by a provider
- */
-export function createRequest(provider) {
-    return (url) => {
-        return {
-            get: (options) => provider.get(url, options),
-            post: (options) => provider.post(url, options),
-            put: (options) => provider.put(url, options),
-            head: (options) => provider.head(url, options),
-            delete: (options) => provider.delete(url, options),
-            patch: (options) => provider.patch(url, options),
-        };
-    };
-}
+function s(t){return r=>({get:e=>t.get(r,e),post:e=>t.post(r,e),put:e=>t.put(r,e),head:e=>t.head(r,e),delete:e=>t.delete(r,e),patch:e=>t.patch(r,e)})}export{s as createRequest};

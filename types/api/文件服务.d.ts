@@ -1,7 +1,7 @@
 /**
  * @description: 业务附件
  */
-export interface AppendixResultVO {
+interface AppendixResultVO {
     bizId?: number;
     bizType?: string;
     bucket?: string;
@@ -13,7 +13,7 @@ export interface AppendixResultVO {
     path?: string;
     size?: number;
 }
-export interface File {
+interface File {
     bizType?: string;
     bucket?: string;
     contentType?: string;
@@ -35,7 +35,7 @@ export interface File {
 /**
  * @description: 增量文件上传日志
  */
-export interface FileFileParamVO {
+interface FileFileParamVO {
     bizType?: string;
     bucket?: string;
     contentType?: string;
@@ -53,7 +53,7 @@ export interface FileFileParamVO {
 /**
  * @description: 增量文件上传日志
  */
-export interface FileFileResultVO {
+interface FileFileResultVO {
     bizType?: string;
     bucket?: string;
     contentType?: string;
@@ -67,23 +67,23 @@ export interface FileFileResultVO {
     uniqueFileName?: string;
     url?: string;
 }
-export interface IPage_File_ {
+interface IPage_File_ {
     current?: number;
     pages?: number;
     records?: File[];
     size?: number;
     total?: number;
 }
-export interface Map_long_string_ {
+interface Map_long_string_ {
     [index: string]: string;
 }
-export interface Map_string_string_ {
+interface Map_string_string_ {
     [index: string]: string;
 }
 /**
  * @description: 分页参数
  */
-export interface PageParams_FileFileParamVO_ {
+interface PageParams_FileFileParamVO_ {
     current?: number;
     extra?: any;
     model: FileFileParamVO;
@@ -91,7 +91,7 @@ export interface PageParams_FileFileParamVO_ {
     size?: number;
     sort?: string;
 }
-export interface R_FileFileResultVO_ {
+interface R_FileFileResultVO_ {
     code?: number;
     data?: FileFileResultVO;
     errorMsg?: string;
@@ -101,7 +101,7 @@ export interface R_FileFileResultVO_ {
     path?: string;
     timestamp?: number;
 }
-export interface R_File_ {
+interface R_File_ {
     code?: number;
     data?: File;
     errorMsg?: string;
@@ -111,7 +111,7 @@ export interface R_File_ {
     path?: string;
     timestamp?: number;
 }
-export interface R_IPage_File__ {
+interface R_IPage_File__ {
     code?: number;
     data?: IPage_File_;
     errorMsg?: string;
@@ -121,7 +121,7 @@ export interface R_IPage_File__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_List_AppendixResultVO__ {
+interface R_List_AppendixResultVO__ {
     code?: number;
     data?: AppendixResultVO[];
     errorMsg?: string;
@@ -131,7 +131,7 @@ export interface R_List_AppendixResultVO__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_List_File__ {
+interface R_List_File__ {
     code?: number;
     data?: File[];
     errorMsg?: string;
@@ -141,7 +141,7 @@ export interface R_List_File__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_Map_long_string__ {
+interface R_Map_long_string__ {
     code?: number;
     data?: {
         [index: string]: string;
@@ -153,7 +153,7 @@ export interface R_Map_long_string__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_Map_string_string__ {
+interface R_Map_string_string__ {
     code?: number;
     data?: {
         [index: string]: string;
@@ -165,7 +165,7 @@ export interface R_Map_string_string__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_boolean_ {
+interface R_boolean_ {
     code?: number;
     data?: boolean;
     errorMsg?: string;
@@ -175,38 +175,38 @@ export interface R_boolean_ {
     path?: string;
     timestamp?: number;
 }
-export interface TQueryOflistByBizIdUsingPOST {
+interface TQueryOflistByBizIdUsingPOST {
     bizId: number;
     bizType?: string;
 }
-export type TResponseOflistByBizIdUsingPOST = R_List_AppendixResultVO__;
-export type TBodyOfdeleteUsingDELETE_6 = number[];
-export type TResponseOfdeleteUsingDELETE_6 = R_boolean_;
-export type TBodyOffindUrlByIdUsingPOST = number[];
-export type TResponseOffindUrlByIdUsingPOST = R_Map_long_string__;
-export type TBodyOffindUrlByPathUsingPOST = string[];
-export type TResponseOffindUrlByPathUsingPOST = R_Map_string_string__;
-export interface TFormDataOfuploadUsingPOST {
+type TResponseOflistByBizIdUsingPOST = R_List_AppendixResultVO__;
+type TBodyOfdeleteUsingDELETE_6 = number[];
+type TResponseOfdeleteUsingDELETE_6 = R_boolean_;
+type TBodyOffindUrlByIdUsingPOST = number[];
+type TResponseOffindUrlByIdUsingPOST = R_Map_long_string__;
+type TBodyOffindUrlByPathUsingPOST = string[];
+type TResponseOffindUrlByPathUsingPOST = R_Map_string_string__;
+interface TFormDataOfuploadUsingPOST {
     file: MultipartFile[];
 }
-export interface TQueryOfuploadUsingPOST {
+interface TQueryOfuploadUsingPOST {
     bizType?: string;
     bucket?: string;
     storageType?: string;
 }
-export type TResponseOfuploadUsingPOST = R_FileFileResultVO_;
-export type TBodyOfdownloadUsingPOST = number[];
-export type TResponseOfdownloadUsingPOST = any;
-export type TBodyOfpageUsingPOST_6 = PageParams_FileFileParamVO_;
-export type TResponseOfpageUsingPOST_6 = R_IPage_File__;
-export type TBodyOfqueryUsingPOST_5 = File;
-export type TResponseOfqueryUsingPOST_5 = R_List_File__;
-export interface TPathOfgetUsingGET_6 {
+type TResponseOfuploadUsingPOST = R_FileFileResultVO_;
+type TBodyOfdownloadUsingPOST = number[];
+type TResponseOfdownloadUsingPOST = any;
+type TBodyOfpageUsingPOST_6 = PageParams_FileFileParamVO_;
+type TResponseOfpageUsingPOST_6 = R_IPage_File__;
+type TBodyOfqueryUsingPOST_5 = File;
+type TResponseOfqueryUsingPOST_5 = R_List_File__;
+interface TPathOfgetUsingGET_6 {
     id?: number;
 }
-export type TResponseOfgetUsingGET_6 = R_File_;
+type TResponseOfgetUsingGET_6 = R_File_;
 type MultipartFile = File;
-export interface IApiFn {
+interface IApiFn {
     (url: string): {
         [m in "get" | "post" | "put" | "patch" | "delete" | "head"]: (options: any) => Promise<any>;
     };
@@ -293,7 +293,7 @@ export interface IApiFn {
         }): Promise<TResponseOfgetUsingGET_6>;
     };
 }
-export interface RequestProvider {
+interface RequestProvider {
     get(url: string, options: any): Promise<any>;
     post(url: string, options: any): Promise<any>;
     put(url: string, options: any): Promise<any>;
@@ -304,5 +304,6 @@ export interface RequestProvider {
 /**
  * create a request by a provider
  */
-export declare function createRequest(provider: RequestProvider): IApiFn;
-export {};
+declare function createRequest(provider: RequestProvider): IApiFn;
+
+export { AppendixResultVO, File, FileFileParamVO, FileFileResultVO, IApiFn, IPage_File_, Map_long_string_, Map_string_string_, PageParams_FileFileParamVO_, R_FileFileResultVO_, R_File_, R_IPage_File__, R_List_AppendixResultVO__, R_List_File__, R_Map_long_string__, R_Map_string_string__, R_boolean_, RequestProvider, TBodyOfdeleteUsingDELETE_6, TBodyOfdownloadUsingPOST, TBodyOffindUrlByIdUsingPOST, TBodyOffindUrlByPathUsingPOST, TBodyOfpageUsingPOST_6, TBodyOfqueryUsingPOST_5, TFormDataOfuploadUsingPOST, TPathOfgetUsingGET_6, TQueryOflistByBizIdUsingPOST, TQueryOfuploadUsingPOST, TResponseOfdeleteUsingDELETE_6, TResponseOfdownloadUsingPOST, TResponseOffindUrlByIdUsingPOST, TResponseOffindUrlByPathUsingPOST, TResponseOfgetUsingGET_6, TResponseOflistByBizIdUsingPOST, TResponseOfpageUsingPOST_6, TResponseOfqueryUsingPOST_5, TResponseOfuploadUsingPOST, createRequest };

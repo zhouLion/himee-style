@@ -1,11 +1,11 @@
-export interface IPage_Org_ {
+interface IPage_Org_ {
     current?: number;
     pages?: number;
     records?: Org[];
     size?: number;
     total?: number;
 }
-export interface IPage_Station_ {
+interface IPage_Station_ {
     current?: number;
     pages?: number;
     records?: Station[];
@@ -15,7 +15,7 @@ export interface IPage_Station_ {
 /**
  * @description: 组织
  */
-export interface Org {
+interface Org {
     abbreviation?: string;
     createTime?: string;
     createdBy?: number;
@@ -34,7 +34,7 @@ export interface Org {
 /**
  * @description: 组织
  */
-export interface OrgPageQuery {
+interface OrgPageQuery {
     abbreviation?: string;
     describe?: string;
     label?: string;
@@ -47,7 +47,7 @@ export interface OrgPageQuery {
 /**
  * @description: 组织
  */
-export interface OrgSaveDTO {
+interface OrgSaveDTO {
     abbreviation?: string;
     describe?: string;
     label?: string;
@@ -59,7 +59,7 @@ export interface OrgSaveDTO {
 /**
  * @description: 组织
  */
-export interface OrgUpdateDTO {
+interface OrgUpdateDTO {
     abbreviation?: string;
     describe?: string;
     id?: number;
@@ -72,7 +72,7 @@ export interface OrgUpdateDTO {
 /**
  * @description: 分页参数
  */
-export interface PageParams_OrgPageQuery_ {
+interface PageParams_OrgPageQuery_ {
     current?: number;
     extra?: any;
     model: OrgPageQuery;
@@ -83,7 +83,7 @@ export interface PageParams_OrgPageQuery_ {
 /**
  * @description: 分页参数
  */
-export interface PageParams_StationPageQuery_ {
+interface PageParams_StationPageQuery_ {
     current?: number;
     extra?: any;
     model: StationPageQuery;
@@ -91,7 +91,7 @@ export interface PageParams_StationPageQuery_ {
     size?: number;
     sort?: string;
 }
-export interface R_IPage_Org__ {
+interface R_IPage_Org__ {
     code?: number;
     data?: IPage_Org_;
     errorMsg?: string;
@@ -101,7 +101,7 @@ export interface R_IPage_Org__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_IPage_Station__ {
+interface R_IPage_Station__ {
     code?: number;
     data?: IPage_Station_;
     errorMsg?: string;
@@ -111,7 +111,7 @@ export interface R_IPage_Station__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_List_Org__ {
+interface R_List_Org__ {
     code?: number;
     data?: Org[];
     errorMsg?: string;
@@ -121,7 +121,7 @@ export interface R_List_Org__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_List_Station__ {
+interface R_List_Station__ {
     code?: number;
     data?: Station[];
     errorMsg?: string;
@@ -131,7 +131,7 @@ export interface R_List_Station__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_Org_ {
+interface R_Org_ {
     code?: number;
     data?: Org;
     errorMsg?: string;
@@ -141,7 +141,7 @@ export interface R_Org_ {
     path?: string;
     timestamp?: number;
 }
-export interface R_Station_ {
+interface R_Station_ {
     code?: number;
     data?: Station;
     errorMsg?: string;
@@ -151,7 +151,7 @@ export interface R_Station_ {
     path?: string;
     timestamp?: number;
 }
-export interface R_boolean_ {
+interface R_boolean_ {
     code?: number;
     data?: boolean;
     errorMsg?: string;
@@ -161,7 +161,7 @@ export interface R_boolean_ {
     path?: string;
     timestamp?: number;
 }
-export interface R_string_ {
+interface R_string_ {
     code?: number;
     data?: string;
     errorMsg?: string;
@@ -174,7 +174,7 @@ export interface R_string_ {
 /**
  * @description: 岗位
  */
-export interface Station {
+interface Station {
     createTime?: string;
     createdBy?: number;
     createdOrgId?: number;
@@ -190,7 +190,7 @@ export interface Station {
 /**
  * @description: 岗位
  */
-export interface StationPageQuery {
+interface StationPageQuery {
     createdOrgId?: number;
     describe?: string;
     name?: string;
@@ -200,7 +200,7 @@ export interface StationPageQuery {
 /**
  * @description: 岗位
  */
-export interface StationSaveDTO {
+interface StationSaveDTO {
     createdOrgId?: number;
     describe?: string;
     name?: string;
@@ -210,81 +210,81 @@ export interface StationSaveDTO {
 /**
  * @description: 岗位
  */
-export interface StationUpdateDTO {
+interface StationUpdateDTO {
     describe?: string;
     id?: number;
     name?: string;
     orgId?: number;
     state?: boolean;
 }
-export type TBodyOfsaveUsingPOST_16 = OrgSaveDTO;
-export type TResponseOfsaveUsingPOST_16 = R_Org_;
-export type TBodyOfupdateUsingPUT_15 = OrgUpdateDTO;
-export type TResponseOfupdateUsingPUT_15 = R_Org_;
-export type TBodyOfdeleteUsingDELETE_19 = number[];
-export type TResponseOfdeleteUsingDELETE_19 = R_boolean_;
-export type TBodyOfupdateAllUsingPUT_15 = Org;
-export type TResponseOfupdateAllUsingPUT_15 = R_Org_;
-export interface TQueryOfcheckUsingGET_6 {
+type TBodyOfsaveUsingPOST_16 = OrgSaveDTO;
+type TResponseOfsaveUsingPOST_16 = R_Org_;
+type TBodyOfupdateUsingPUT_15 = OrgUpdateDTO;
+type TResponseOfupdateUsingPUT_15 = R_Org_;
+type TBodyOfdeleteUsingDELETE_19 = number[];
+type TResponseOfdeleteUsingDELETE_19 = R_boolean_;
+type TBodyOfupdateAllUsingPUT_15 = Org;
+type TResponseOfupdateAllUsingPUT_15 = R_Org_;
+interface TQueryOfcheckUsingGET_6 {
     id?: number;
     name?: string;
 }
-export type TResponseOfcheckUsingGET_6 = R_boolean_;
-export type TResponseOfclearCacheUsingPOST_7 = R_boolean_;
-export type TBodyOfexportExcelUsingPOST_17 = PageParams_OrgPageQuery_;
-export type TResponseOfexportExcelUsingPOST_17 = any;
-export interface TFormDataOfimportExcelUsingPOST_16 {
+type TResponseOfcheckUsingGET_6 = R_boolean_;
+type TResponseOfclearCacheUsingPOST_7 = R_boolean_;
+type TBodyOfexportExcelUsingPOST_17 = PageParams_OrgPageQuery_;
+type TResponseOfexportExcelUsingPOST_17 = any;
+interface TFormDataOfimportExcelUsingPOST_16 {
     file: string;
 }
-export type TResponseOfimportExcelUsingPOST_16 = R_boolean_;
-export type TBodyOfpageUsingPOST_21 = PageParams_OrgPageQuery_;
-export type TResponseOfpageUsingPOST_21 = R_IPage_Org__;
-export type TBodyOfpreviewUsingPOST_17 = PageParams_OrgPageQuery_;
-export type TResponseOfpreviewUsingPOST_17 = R_string_;
-export type TBodyOfqueryUsingPOST_17 = Org;
-export type TResponseOfqueryUsingPOST_17 = R_List_Org__;
-export type TResponseOfrefreshCacheUsingPOST_7 = R_boolean_;
-export interface TQueryOftreeUsingGET {
+type TResponseOfimportExcelUsingPOST_16 = R_boolean_;
+type TBodyOfpageUsingPOST_21 = PageParams_OrgPageQuery_;
+type TResponseOfpageUsingPOST_21 = R_IPage_Org__;
+type TBodyOfpreviewUsingPOST_17 = PageParams_OrgPageQuery_;
+type TResponseOfpreviewUsingPOST_17 = R_string_;
+type TBodyOfqueryUsingPOST_17 = Org;
+type TResponseOfqueryUsingPOST_17 = R_List_Org__;
+type TResponseOfrefreshCacheUsingPOST_7 = R_boolean_;
+interface TQueryOftreeUsingGET {
     name?: string;
     state?: boolean;
 }
-export type TResponseOftreeUsingGET = R_List_Org__;
-export interface TPathOfgetUsingGET_19 {
+type TResponseOftreeUsingGET = R_List_Org__;
+interface TPathOfgetUsingGET_19 {
     id?: number;
 }
-export type TResponseOfgetUsingGET_19 = R_Org_;
-export type TBodyOfsaveUsingPOST_17 = StationSaveDTO;
-export type TResponseOfsaveUsingPOST_17 = R_Station_;
-export type TBodyOfupdateUsingPUT_16 = StationUpdateDTO;
-export type TResponseOfupdateUsingPUT_16 = R_Station_;
-export type TBodyOfdeleteUsingDELETE_20 = number[];
-export type TResponseOfdeleteUsingDELETE_20 = R_boolean_;
-export type TBodyOfupdateAllUsingPUT_16 = Station;
-export type TResponseOfupdateAllUsingPUT_16 = R_Station_;
-export interface TQueryOfcheckUsingGET_7 {
+type TResponseOfgetUsingGET_19 = R_Org_;
+type TBodyOfsaveUsingPOST_17 = StationSaveDTO;
+type TResponseOfsaveUsingPOST_17 = R_Station_;
+type TBodyOfupdateUsingPUT_16 = StationUpdateDTO;
+type TResponseOfupdateUsingPUT_16 = R_Station_;
+type TBodyOfdeleteUsingDELETE_20 = number[];
+type TResponseOfdeleteUsingDELETE_20 = R_boolean_;
+type TBodyOfupdateAllUsingPUT_16 = Station;
+type TResponseOfupdateAllUsingPUT_16 = R_Station_;
+interface TQueryOfcheckUsingGET_7 {
     id?: number;
     name?: string;
 }
-export type TResponseOfcheckUsingGET_7 = R_boolean_;
-export type TResponseOfclearCacheUsingPOST_8 = R_boolean_;
-export type TBodyOfexportExcelUsingPOST_18 = PageParams_StationPageQuery_;
-export type TResponseOfexportExcelUsingPOST_18 = any;
-export interface TFormDataOfimportExcelUsingPOST_17 {
+type TResponseOfcheckUsingGET_7 = R_boolean_;
+type TResponseOfclearCacheUsingPOST_8 = R_boolean_;
+type TBodyOfexportExcelUsingPOST_18 = PageParams_StationPageQuery_;
+type TResponseOfexportExcelUsingPOST_18 = any;
+interface TFormDataOfimportExcelUsingPOST_17 {
     file: string;
 }
-export type TResponseOfimportExcelUsingPOST_17 = R_boolean_;
-export type TBodyOfpageUsingPOST_22 = PageParams_StationPageQuery_;
-export type TResponseOfpageUsingPOST_22 = R_IPage_Station__;
-export type TBodyOfpreviewUsingPOST_18 = PageParams_StationPageQuery_;
-export type TResponseOfpreviewUsingPOST_18 = R_string_;
-export type TBodyOfqueryUsingPOST_18 = Station;
-export type TResponseOfqueryUsingPOST_18 = R_List_Station__;
-export type TResponseOfrefreshCacheUsingPOST_8 = R_boolean_;
-export interface TPathOfgetUsingGET_20 {
+type TResponseOfimportExcelUsingPOST_17 = R_boolean_;
+type TBodyOfpageUsingPOST_22 = PageParams_StationPageQuery_;
+type TResponseOfpageUsingPOST_22 = R_IPage_Station__;
+type TBodyOfpreviewUsingPOST_18 = PageParams_StationPageQuery_;
+type TResponseOfpreviewUsingPOST_18 = R_string_;
+type TBodyOfqueryUsingPOST_18 = Station;
+type TResponseOfqueryUsingPOST_18 = R_List_Station__;
+type TResponseOfrefreshCacheUsingPOST_8 = R_boolean_;
+interface TPathOfgetUsingGET_20 {
     id?: number;
 }
-export type TResponseOfgetUsingGET_20 = R_Station_;
-export interface IApiFn {
+type TResponseOfgetUsingGET_20 = R_Station_;
+interface IApiFn {
     (url: string): {
         [m in "get" | "post" | "put" | "patch" | "delete" | "head"]: (options: any) => Promise<any>;
     };
@@ -516,7 +516,7 @@ export interface IApiFn {
         }): Promise<TResponseOfgetUsingGET_20>;
     };
 }
-export interface RequestProvider {
+interface RequestProvider {
     get(url: string, options: any): Promise<any>;
     post(url: string, options: any): Promise<any>;
     put(url: string, options: any): Promise<any>;
@@ -527,4 +527,6 @@ export interface RequestProvider {
 /**
  * create a request by a provider
  */
-export declare function createRequest(provider: RequestProvider): IApiFn;
+declare function createRequest(provider: RequestProvider): IApiFn;
+
+export { IApiFn, IPage_Org_, IPage_Station_, Org, OrgPageQuery, OrgSaveDTO, OrgUpdateDTO, PageParams_OrgPageQuery_, PageParams_StationPageQuery_, R_IPage_Org__, R_IPage_Station__, R_List_Org__, R_List_Station__, R_Org_, R_Station_, R_boolean_, R_string_, RequestProvider, Station, StationPageQuery, StationSaveDTO, StationUpdateDTO, TBodyOfdeleteUsingDELETE_19, TBodyOfdeleteUsingDELETE_20, TBodyOfexportExcelUsingPOST_17, TBodyOfexportExcelUsingPOST_18, TBodyOfpageUsingPOST_21, TBodyOfpageUsingPOST_22, TBodyOfpreviewUsingPOST_17, TBodyOfpreviewUsingPOST_18, TBodyOfqueryUsingPOST_17, TBodyOfqueryUsingPOST_18, TBodyOfsaveUsingPOST_16, TBodyOfsaveUsingPOST_17, TBodyOfupdateAllUsingPUT_15, TBodyOfupdateAllUsingPUT_16, TBodyOfupdateUsingPUT_15, TBodyOfupdateUsingPUT_16, TFormDataOfimportExcelUsingPOST_16, TFormDataOfimportExcelUsingPOST_17, TPathOfgetUsingGET_19, TPathOfgetUsingGET_20, TQueryOfcheckUsingGET_6, TQueryOfcheckUsingGET_7, TQueryOftreeUsingGET, TResponseOfcheckUsingGET_6, TResponseOfcheckUsingGET_7, TResponseOfclearCacheUsingPOST_7, TResponseOfclearCacheUsingPOST_8, TResponseOfdeleteUsingDELETE_19, TResponseOfdeleteUsingDELETE_20, TResponseOfexportExcelUsingPOST_17, TResponseOfexportExcelUsingPOST_18, TResponseOfgetUsingGET_19, TResponseOfgetUsingGET_20, TResponseOfimportExcelUsingPOST_16, TResponseOfimportExcelUsingPOST_17, TResponseOfpageUsingPOST_21, TResponseOfpageUsingPOST_22, TResponseOfpreviewUsingPOST_17, TResponseOfpreviewUsingPOST_18, TResponseOfqueryUsingPOST_17, TResponseOfqueryUsingPOST_18, TResponseOfrefreshCacheUsingPOST_7, TResponseOfrefreshCacheUsingPOST_8, TResponseOfsaveUsingPOST_16, TResponseOfsaveUsingPOST_17, TResponseOftreeUsingGET, TResponseOfupdateAllUsingPUT_15, TResponseOfupdateAllUsingPUT_16, TResponseOfupdateUsingPUT_15, TResponseOfupdateUsingPUT_16, createRequest };

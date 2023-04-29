@@ -1,4 +1,4 @@
-export interface IPage_Order_ {
+interface IPage_Order_ {
     current?: number;
     pages?: number;
     records?: Order[];
@@ -8,7 +8,7 @@ export interface IPage_Order_ {
 /**
  * @description: 订单
  */
-export interface Order {
+interface Order {
     code?: string;
     createTime?: string;
     createdBy?: number;
@@ -24,7 +24,7 @@ export interface Order {
 /**
  * @description: 订单
  */
-export interface OrderPageQuery {
+interface OrderPageQuery {
     code?: string;
     education?: string;
     name?: string;
@@ -34,7 +34,7 @@ export interface OrderPageQuery {
 /**
  * @description: 订单
  */
-export interface OrderSaveDTO {
+interface OrderSaveDTO {
     code?: string;
     education?: string;
     name?: string;
@@ -44,7 +44,7 @@ export interface OrderSaveDTO {
 /**
  * @description: 订单
  */
-export interface OrderUpdateDTO {
+interface OrderUpdateDTO {
     code?: string;
     education?: string;
     id?: number;
@@ -55,7 +55,7 @@ export interface OrderUpdateDTO {
 /**
  * @description: 分页参数
  */
-export interface PageParams_OrderPageQuery_ {
+interface PageParams_OrderPageQuery_ {
     current?: number;
     extra?: any;
     model: OrderPageQuery;
@@ -63,7 +63,7 @@ export interface PageParams_OrderPageQuery_ {
     size?: number;
     sort?: string;
 }
-export interface R_IPage_Order__ {
+interface R_IPage_Order__ {
     code?: number;
     data?: IPage_Order_;
     errorMsg?: string;
@@ -73,7 +73,7 @@ export interface R_IPage_Order__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_List_Order__ {
+interface R_List_Order__ {
     code?: number;
     data?: Order[];
     errorMsg?: string;
@@ -83,7 +83,7 @@ export interface R_List_Order__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_Order_ {
+interface R_Order_ {
     code?: number;
     data?: Order;
     errorMsg?: string;
@@ -93,7 +93,7 @@ export interface R_Order_ {
     path?: string;
     timestamp?: number;
 }
-export interface R_boolean_ {
+interface R_boolean_ {
     code?: number;
     data?: boolean;
     errorMsg?: string;
@@ -103,7 +103,7 @@ export interface R_boolean_ {
     path?: string;
     timestamp?: number;
 }
-export interface R_string_ {
+interface R_string_ {
     code?: number;
     data?: string;
     errorMsg?: string;
@@ -113,32 +113,32 @@ export interface R_string_ {
     path?: string;
     timestamp?: number;
 }
-export type TBodyOfsaveUsingPOST_4 = OrderSaveDTO;
-export type TResponseOfsaveUsingPOST_4 = R_Order_;
-export type TBodyOfupdateUsingPUT_4 = OrderUpdateDTO;
-export type TResponseOfupdateUsingPUT_4 = R_Order_;
-export type TBodyOfdeleteUsingDELETE_5 = number[];
-export type TResponseOfdeleteUsingDELETE_5 = R_boolean_;
-export type TBodyOfupdateAllUsingPUT_4 = Order;
-export type TResponseOfupdateAllUsingPUT_4 = R_Order_;
-export type TBodyOfexportExcelUsingPOST_5 = PageParams_OrderPageQuery_;
-export type TResponseOfexportExcelUsingPOST_5 = any;
-export interface TFormDataOfimportExcelUsingPOST_5 {
+type TBodyOfsaveUsingPOST_4 = OrderSaveDTO;
+type TResponseOfsaveUsingPOST_4 = R_Order_;
+type TBodyOfupdateUsingPUT_4 = OrderUpdateDTO;
+type TResponseOfupdateUsingPUT_4 = R_Order_;
+type TBodyOfdeleteUsingDELETE_5 = number[];
+type TResponseOfdeleteUsingDELETE_5 = R_boolean_;
+type TBodyOfupdateAllUsingPUT_4 = Order;
+type TResponseOfupdateAllUsingPUT_4 = R_Order_;
+type TBodyOfexportExcelUsingPOST_5 = PageParams_OrderPageQuery_;
+type TResponseOfexportExcelUsingPOST_5 = any;
+interface TFormDataOfimportExcelUsingPOST_5 {
     file: string;
 }
-export type TResponseOfimportExcelUsingPOST_5 = R_boolean_;
-export type TBodyOfpageUsingPOST_5 = PageParams_OrderPageQuery_;
-export type TResponseOfpageUsingPOST_5 = R_IPage_Order__;
-export type TBodyOfpreviewUsingPOST_5 = PageParams_OrderPageQuery_;
-export type TResponseOfpreviewUsingPOST_5 = R_string_;
-export type TResponseOfqueryUsingGET = R_string_;
-export type TBodyOfqueryUsingPOST_4 = Order;
-export type TResponseOfqueryUsingPOST_4 = R_List_Order__;
-export interface TPathOfgetUsingGET_5 {
+type TResponseOfimportExcelUsingPOST_5 = R_boolean_;
+type TBodyOfpageUsingPOST_5 = PageParams_OrderPageQuery_;
+type TResponseOfpageUsingPOST_5 = R_IPage_Order__;
+type TBodyOfpreviewUsingPOST_5 = PageParams_OrderPageQuery_;
+type TResponseOfpreviewUsingPOST_5 = R_string_;
+type TResponseOfqueryUsingGET = R_string_;
+type TBodyOfqueryUsingPOST_4 = Order;
+type TResponseOfqueryUsingPOST_4 = R_List_Order__;
+interface TPathOfgetUsingGET_5 {
     id?: number;
 }
-export type TResponseOfgetUsingGET_5 = R_Order_;
-export interface IApiFn {
+type TResponseOfgetUsingGET_5 = R_Order_;
+interface IApiFn {
     (url: string): {
         [m in "get" | "post" | "put" | "patch" | "delete" | "head"]: (options: any) => Promise<any>;
     };
@@ -234,7 +234,7 @@ export interface IApiFn {
         }): Promise<TResponseOfgetUsingGET_5>;
     };
 }
-export interface RequestProvider {
+interface RequestProvider {
     get(url: string, options: any): Promise<any>;
     post(url: string, options: any): Promise<any>;
     put(url: string, options: any): Promise<any>;
@@ -245,4 +245,6 @@ export interface RequestProvider {
 /**
  * create a request by a provider
  */
-export declare function createRequest(provider: RequestProvider): IApiFn;
+declare function createRequest(provider: RequestProvider): IApiFn;
+
+export { IApiFn, IPage_Order_, Order, OrderPageQuery, OrderSaveDTO, OrderUpdateDTO, PageParams_OrderPageQuery_, R_IPage_Order__, R_List_Order__, R_Order_, R_boolean_, R_string_, RequestProvider, TBodyOfdeleteUsingDELETE_5, TBodyOfexportExcelUsingPOST_5, TBodyOfpageUsingPOST_5, TBodyOfpreviewUsingPOST_5, TBodyOfqueryUsingPOST_4, TBodyOfsaveUsingPOST_4, TBodyOfupdateAllUsingPUT_4, TBodyOfupdateUsingPUT_4, TFormDataOfimportExcelUsingPOST_5, TPathOfgetUsingGET_5, TResponseOfdeleteUsingDELETE_5, TResponseOfexportExcelUsingPOST_5, TResponseOfgetUsingGET_5, TResponseOfimportExcelUsingPOST_5, TResponseOfpageUsingPOST_5, TResponseOfpreviewUsingPOST_5, TResponseOfqueryUsingGET, TResponseOfqueryUsingPOST_4, TResponseOfsaveUsingPOST_4, TResponseOfupdateAllUsingPUT_4, TResponseOfupdateUsingPUT_4, createRequest };

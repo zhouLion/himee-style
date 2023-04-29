@@ -1,7 +1,7 @@
 /**
  * @description: 地区表
  */
-export interface Area {
+interface Area {
     code?: string;
     createTime?: string;
     createdBy?: number;
@@ -22,7 +22,7 @@ export interface Area {
 /**
  * @description: 地区表
  */
-export interface AreaPageQuery {
+interface AreaPageQuery {
     code?: string;
     fullName?: string;
     label?: string;
@@ -37,7 +37,7 @@ export interface AreaPageQuery {
 /**
  * @description: 地区表
  */
-export interface AreaSaveDTO {
+interface AreaSaveDTO {
     code?: string;
     fullName?: string;
     label?: string;
@@ -52,7 +52,7 @@ export interface AreaSaveDTO {
 /**
  * @description: 地区表
  */
-export interface AreaUpdateDTO {
+interface AreaUpdateDTO {
     code?: string;
     fullName?: string;
     id?: number;
@@ -68,7 +68,7 @@ export interface AreaUpdateDTO {
 /**
  * @description: 字典项
  */
-export interface Dictionary {
+interface Dictionary {
     code?: string;
     createTime?: string;
     createdBy?: number;
@@ -89,7 +89,7 @@ export interface Dictionary {
 /**
  * @description: 字典项
  */
-export interface DictionaryPageQuery {
+interface DictionaryPageQuery {
     code?: string;
     cssClass?: string;
     cssStyle?: string;
@@ -105,7 +105,7 @@ export interface DictionaryPageQuery {
 /**
  * @description: 字典项
  */
-export interface DictionarySaveDTO {
+interface DictionarySaveDTO {
     code?: string;
     cssClass?: string;
     cssStyle?: string;
@@ -121,7 +121,7 @@ export interface DictionarySaveDTO {
 /**
  * @description: 字典类型
  */
-export interface DictionaryTypeSaveDTO {
+interface DictionaryTypeSaveDTO {
     label?: string;
     state?: boolean;
     type?: string;
@@ -129,7 +129,7 @@ export interface DictionaryTypeSaveDTO {
 /**
  * @description: 字典项
  */
-export interface DictionaryUpdateDTO {
+interface DictionaryUpdateDTO {
     code?: string;
     cssClass?: string;
     cssStyle?: string;
@@ -143,35 +143,35 @@ export interface DictionaryUpdateDTO {
     state?: boolean;
     type?: string;
 }
-export interface IPage_Area_ {
+interface IPage_Area_ {
     current?: number;
     pages?: number;
     records?: Area[];
     size?: number;
     total?: number;
 }
-export interface IPage_Dictionary_ {
+interface IPage_Dictionary_ {
     current?: number;
     pages?: number;
     records?: Dictionary[];
     size?: number;
     total?: number;
 }
-export interface IPage_LoginLog_ {
+interface IPage_LoginLog_ {
     current?: number;
     pages?: number;
     records?: LoginLog[];
     size?: number;
     total?: number;
 }
-export interface IPage_OptLog_ {
+interface IPage_OptLog_ {
     current?: number;
     pages?: number;
     records?: OptLog[];
     size?: number;
     total?: number;
 }
-export interface IPage_Parameter_ {
+interface IPage_Parameter_ {
     current?: number;
     pages?: number;
     records?: Parameter[];
@@ -181,7 +181,7 @@ export interface IPage_Parameter_ {
 /**
  * @description: 登录日志
  */
-export interface LoginLog {
+interface LoginLog {
     account?: string;
     browser?: string;
     browserVersion?: string;
@@ -200,7 +200,7 @@ export interface LoginLog {
 /**
  * @description: 登录日志
  */
-export interface LoginLogUpdateDTO {
+interface LoginLogUpdateDTO {
     account?: string;
     browser?: string;
     browserVersion?: string;
@@ -217,7 +217,7 @@ export interface LoginLogUpdateDTO {
 /**
  * @description: 系统日志
  */
-export interface OptLog {
+interface OptLog {
     actionMethod?: string;
     classPath?: string;
     consumingTime?: number;
@@ -237,7 +237,7 @@ export interface OptLog {
 /**
  * @description: 系统日志扩展
  */
-export interface OptLogResult {
+interface OptLogResult {
     actionMethod?: string;
     classPath?: string;
     consumingTime?: number;
@@ -260,7 +260,7 @@ export interface OptLogResult {
 /**
  * @description: 分页参数
  */
-export interface PageParams_AreaPageQuery_ {
+interface PageParams_AreaPageQuery_ {
     current?: number;
     extra?: any;
     model: AreaPageQuery;
@@ -271,7 +271,7 @@ export interface PageParams_AreaPageQuery_ {
 /**
  * @description: 分页参数
  */
-export interface PageParams_DictionaryPageQuery_ {
+interface PageParams_DictionaryPageQuery_ {
     current?: number;
     extra?: any;
     model: DictionaryPageQuery;
@@ -282,7 +282,7 @@ export interface PageParams_DictionaryPageQuery_ {
 /**
  * @description: 分页参数
  */
-export interface PageParams_LoginLog_ {
+interface PageParams_LoginLog_ {
     current?: number;
     extra?: any;
     model: LoginLog;
@@ -293,7 +293,7 @@ export interface PageParams_LoginLog_ {
 /**
  * @description: 分页参数
  */
-export interface PageParams_OptLog_ {
+interface PageParams_OptLog_ {
     current?: number;
     extra?: any;
     model: OptLog;
@@ -304,7 +304,7 @@ export interface PageParams_OptLog_ {
 /**
  * @description: 分页参数
  */
-export interface PageParams_ParameterPageQuery_ {
+interface PageParams_ParameterPageQuery_ {
     current?: number;
     extra?: any;
     model: ParameterPageQuery;
@@ -315,7 +315,7 @@ export interface PageParams_ParameterPageQuery_ {
 /**
  * @description: 参数配置
  */
-export interface Parameter {
+interface Parameter {
     createTime?: string;
     createdBy?: number;
     describe?: string;
@@ -331,7 +331,7 @@ export interface Parameter {
 /**
  * @description: 参数配置
  */
-export interface ParameterPageQuery {
+interface ParameterPageQuery {
     describe?: string;
     key?: string;
     name?: string;
@@ -342,7 +342,7 @@ export interface ParameterPageQuery {
 /**
  * @description: 参数配置
  */
-export interface ParameterSaveDTO {
+interface ParameterSaveDTO {
     describe?: string;
     key?: string;
     name?: string;
@@ -353,7 +353,7 @@ export interface ParameterSaveDTO {
 /**
  * @description: 参数配置
  */
-export interface ParameterUpdateDTO {
+interface ParameterUpdateDTO {
     describe?: string;
     id?: number;
     key?: string;
@@ -362,7 +362,7 @@ export interface ParameterUpdateDTO {
     state?: boolean;
     value?: string;
 }
-export interface R_Area_ {
+interface R_Area_ {
     code?: number;
     data?: Area;
     errorMsg?: string;
@@ -372,7 +372,7 @@ export interface R_Area_ {
     path?: string;
     timestamp?: number;
 }
-export interface R_Dictionary_ {
+interface R_Dictionary_ {
     code?: number;
     data?: Dictionary;
     errorMsg?: string;
@@ -382,7 +382,7 @@ export interface R_Dictionary_ {
     path?: string;
     timestamp?: number;
 }
-export interface R_IPage_Area__ {
+interface R_IPage_Area__ {
     code?: number;
     data?: IPage_Area_;
     errorMsg?: string;
@@ -392,7 +392,7 @@ export interface R_IPage_Area__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_IPage_Dictionary__ {
+interface R_IPage_Dictionary__ {
     code?: number;
     data?: IPage_Dictionary_;
     errorMsg?: string;
@@ -402,7 +402,7 @@ export interface R_IPage_Dictionary__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_IPage_LoginLog__ {
+interface R_IPage_LoginLog__ {
     code?: number;
     data?: IPage_LoginLog_;
     errorMsg?: string;
@@ -412,7 +412,7 @@ export interface R_IPage_LoginLog__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_IPage_OptLog__ {
+interface R_IPage_OptLog__ {
     code?: number;
     data?: IPage_OptLog_;
     errorMsg?: string;
@@ -422,7 +422,7 @@ export interface R_IPage_OptLog__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_IPage_Parameter__ {
+interface R_IPage_Parameter__ {
     code?: number;
     data?: IPage_Parameter_;
     errorMsg?: string;
@@ -432,7 +432,7 @@ export interface R_IPage_Parameter__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_List_Area__ {
+interface R_List_Area__ {
     code?: number;
     data?: Area[];
     errorMsg?: string;
@@ -442,7 +442,7 @@ export interface R_List_Area__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_List_Dictionary__ {
+interface R_List_Dictionary__ {
     code?: number;
     data?: Dictionary[];
     errorMsg?: string;
@@ -452,7 +452,7 @@ export interface R_List_Dictionary__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_List_LoginLog__ {
+interface R_List_LoginLog__ {
     code?: number;
     data?: LoginLog[];
     errorMsg?: string;
@@ -462,7 +462,7 @@ export interface R_List_LoginLog__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_List_Parameter__ {
+interface R_List_Parameter__ {
     code?: number;
     data?: Parameter[];
     errorMsg?: string;
@@ -472,7 +472,7 @@ export interface R_List_Parameter__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_LoginLog_ {
+interface R_LoginLog_ {
     code?: number;
     data?: LoginLog;
     errorMsg?: string;
@@ -482,7 +482,7 @@ export interface R_LoginLog_ {
     path?: string;
     timestamp?: number;
 }
-export interface R_Map_string_object__ {
+interface R_Map_string_object__ {
     code?: number;
     data?: any;
     errorMsg?: string;
@@ -492,7 +492,7 @@ export interface R_Map_string_object__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_OptLogResult_ {
+interface R_OptLogResult_ {
     code?: number;
     data?: OptLogResult;
     errorMsg?: string;
@@ -502,7 +502,7 @@ export interface R_OptLogResult_ {
     path?: string;
     timestamp?: number;
 }
-export interface R_Parameter_ {
+interface R_Parameter_ {
     code?: number;
     data?: Parameter;
     errorMsg?: string;
@@ -512,7 +512,7 @@ export interface R_Parameter_ {
     path?: string;
     timestamp?: number;
 }
-export interface R_boolean_ {
+interface R_boolean_ {
     code?: number;
     data?: boolean;
     errorMsg?: string;
@@ -522,7 +522,7 @@ export interface R_boolean_ {
     path?: string;
     timestamp?: number;
 }
-export interface R_object_ {
+interface R_object_ {
     code?: number;
     data?: any;
     errorMsg?: string;
@@ -532,7 +532,7 @@ export interface R_object_ {
     path?: string;
     timestamp?: number;
 }
-export interface R_string_ {
+interface R_string_ {
     code?: number;
     data?: string;
     errorMsg?: string;
@@ -542,156 +542,156 @@ export interface R_string_ {
     path?: string;
     timestamp?: number;
 }
-export type TBodyOfsaveUsingPOST = AreaSaveDTO;
-export type TResponseOfsaveUsingPOST = R_Area_;
-export type TBodyOfupdateUsingPUT = AreaUpdateDTO;
-export type TResponseOfupdateUsingPUT = R_Area_;
-export type TBodyOfdeleteUsingDELETE = number[];
-export type TResponseOfdeleteUsingDELETE = R_boolean_;
-export type TBodyOfupdateAllUsingPUT = Area;
-export type TResponseOfupdateAllUsingPUT = R_Area_;
-export interface TPathOfcheckUsingGET {
+type TBodyOfsaveUsingPOST = AreaSaveDTO;
+type TResponseOfsaveUsingPOST = R_Area_;
+type TBodyOfupdateUsingPUT = AreaUpdateDTO;
+type TResponseOfupdateUsingPUT = R_Area_;
+type TBodyOfdeleteUsingDELETE = number[];
+type TResponseOfdeleteUsingDELETE = R_boolean_;
+type TBodyOfupdateAllUsingPUT = Area;
+type TResponseOfupdateAllUsingPUT = R_Area_;
+interface TPathOfcheckUsingGET {
     code: string;
 }
-export interface TQueryOfcheckUsingGET {
+interface TQueryOfcheckUsingGET {
     id?: number;
 }
-export type TResponseOfcheckUsingGET = R_boolean_;
-export type TResponseOfclearCacheUsingPOST = R_boolean_;
-export type TBodyOfexportExcelUsingPOST = PageParams_AreaPageQuery_;
-export type TResponseOfexportExcelUsingPOST = any;
-export interface TFormDataOfimportExcelUsingPOST {
+type TResponseOfcheckUsingGET = R_boolean_;
+type TResponseOfclearCacheUsingPOST = R_boolean_;
+type TBodyOfexportExcelUsingPOST = PageParams_AreaPageQuery_;
+type TResponseOfexportExcelUsingPOST = any;
+interface TFormDataOfimportExcelUsingPOST {
     file: string;
 }
-export type TResponseOfimportExcelUsingPOST = R_boolean_;
-export interface TQueryOflinkageQueryUsingGET {
+type TResponseOfimportExcelUsingPOST = R_boolean_;
+interface TQueryOflinkageQueryUsingGET {
     parentId?: number;
 }
-export type TResponseOflinkageQueryUsingGET = R_List_Area__;
-export type TBodyOfpageUsingPOST = PageParams_AreaPageQuery_;
-export type TResponseOfpageUsingPOST = R_IPage_Area__;
-export type TBodyOfpreviewUsingPOST = PageParams_AreaPageQuery_;
-export type TResponseOfpreviewUsingPOST = R_string_;
-export type TBodyOfqueryUsingPOST = Area;
-export type TResponseOfqueryUsingPOST = R_List_Area__;
-export type TResponseOfrefreshCacheUsingPOST = R_boolean_;
-export interface TPathOfgetUsingGET {
+type TResponseOflinkageQueryUsingGET = R_List_Area__;
+type TBodyOfpageUsingPOST = PageParams_AreaPageQuery_;
+type TResponseOfpageUsingPOST = R_IPage_Area__;
+type TBodyOfpreviewUsingPOST = PageParams_AreaPageQuery_;
+type TResponseOfpreviewUsingPOST = R_string_;
+type TBodyOfqueryUsingPOST = Area;
+type TResponseOfqueryUsingPOST = R_List_Area__;
+type TResponseOfrefreshCacheUsingPOST = R_boolean_;
+interface TPathOfgetUsingGET {
     id?: number;
 }
-export type TResponseOfgetUsingGET = R_Area_;
-export interface TQueryOflinkageQueryUsingGET_1 {
+type TResponseOfgetUsingGET = R_Area_;
+interface TQueryOflinkageQueryUsingGET_1 {
     parentId?: number;
 }
-export type TResponseOflinkageQueryUsingGET_1 = R_List_Area__;
-export type TResponseOfgenerateUsingGET = R_object_;
-export type TResponseOfchartUsingGET = R_Map_string_object__;
-export type TResponseOfitemUsingGET = R_Map_string_object__;
-export type TResponseOfpvIncrUsingPOST = R_boolean_;
-export type TBodyOfsaveUsingPOST_1 = DictionarySaveDTO;
-export type TResponseOfsaveUsingPOST_1 = R_Dictionary_;
-export type TBodyOfupdateUsingPUT_1 = DictionaryUpdateDTO;
-export type TResponseOfupdateUsingPUT_1 = R_Dictionary_;
-export type TBodyOfdeleteUsingDELETE_1 = number[];
-export type TResponseOfdeleteUsingDELETE_1 = R_boolean_;
-export type TBodyOfupdateAllUsingPUT_1 = Dictionary;
-export type TResponseOfupdateAllUsingPUT_1 = R_Dictionary_;
-export type TBodyOfexportExcelUsingPOST_1 = PageParams_DictionaryPageQuery_;
-export type TResponseOfexportExcelUsingPOST_1 = any;
-export interface TFormDataOfimportExcelUsingPOST_1 {
+type TResponseOflinkageQueryUsingGET_1 = R_List_Area__;
+type TResponseOfgenerateUsingGET = R_object_;
+type TResponseOfchartUsingGET = R_Map_string_object__;
+type TResponseOfitemUsingGET = R_Map_string_object__;
+type TResponseOfpvIncrUsingPOST = R_boolean_;
+type TBodyOfsaveUsingPOST_1 = DictionarySaveDTO;
+type TResponseOfsaveUsingPOST_1 = R_Dictionary_;
+type TBodyOfupdateUsingPUT_1 = DictionaryUpdateDTO;
+type TResponseOfupdateUsingPUT_1 = R_Dictionary_;
+type TBodyOfdeleteUsingDELETE_1 = number[];
+type TResponseOfdeleteUsingDELETE_1 = R_boolean_;
+type TBodyOfupdateAllUsingPUT_1 = Dictionary;
+type TResponseOfupdateAllUsingPUT_1 = R_Dictionary_;
+type TBodyOfexportExcelUsingPOST_1 = PageParams_DictionaryPageQuery_;
+type TResponseOfexportExcelUsingPOST_1 = any;
+interface TFormDataOfimportExcelUsingPOST_1 {
     file: string;
 }
-export type TResponseOfimportExcelUsingPOST_1 = R_boolean_;
-export type TBodyOfpageUsingPOST_1 = PageParams_DictionaryPageQuery_;
-export type TResponseOfpageUsingPOST_1 = R_IPage_Dictionary__;
-export type TBodyOfpageTypeUsingPOST = PageParams_DictionaryPageQuery_;
-export type TResponseOfpageTypeUsingPOST = R_IPage_Dictionary__;
-export type TBodyOfpreviewUsingPOST_1 = PageParams_DictionaryPageQuery_;
-export type TResponseOfpreviewUsingPOST_1 = R_string_;
-export type TBodyOfqueryUsingPOST_1 = Dictionary;
-export type TResponseOfqueryUsingPOST_1 = R_List_Dictionary__;
-export type TBodyOfsaveTypeUsingPOST = DictionaryTypeSaveDTO;
-export type TResponseOfsaveTypeUsingPOST = R_Dictionary_;
-export type TBodyOfupdateTypeUsingPUT = DictionaryTypeSaveDTO;
-export type TResponseOfupdateTypeUsingPUT = R_boolean_;
-export type TBodyOfdeleteTypeUsingDELETE = string[];
-export type TResponseOfdeleteTypeUsingDELETE = R_boolean_;
-export interface TPathOfgetUsingGET_1 {
+type TResponseOfimportExcelUsingPOST_1 = R_boolean_;
+type TBodyOfpageUsingPOST_1 = PageParams_DictionaryPageQuery_;
+type TResponseOfpageUsingPOST_1 = R_IPage_Dictionary__;
+type TBodyOfpageTypeUsingPOST = PageParams_DictionaryPageQuery_;
+type TResponseOfpageTypeUsingPOST = R_IPage_Dictionary__;
+type TBodyOfpreviewUsingPOST_1 = PageParams_DictionaryPageQuery_;
+type TResponseOfpreviewUsingPOST_1 = R_string_;
+type TBodyOfqueryUsingPOST_1 = Dictionary;
+type TResponseOfqueryUsingPOST_1 = R_List_Dictionary__;
+type TBodyOfsaveTypeUsingPOST = DictionaryTypeSaveDTO;
+type TResponseOfsaveTypeUsingPOST = R_Dictionary_;
+type TBodyOfupdateTypeUsingPUT = DictionaryTypeSaveDTO;
+type TResponseOfupdateTypeUsingPUT = R_boolean_;
+type TBodyOfdeleteTypeUsingDELETE = string[];
+type TResponseOfdeleteTypeUsingDELETE = R_boolean_;
+interface TPathOfgetUsingGET_1 {
     id?: number;
 }
-export type TResponseOfgetUsingGET_1 = R_Dictionary_;
-export type TBodyOfsaveUsingPOST_2 = LoginLog;
-export type TResponseOfsaveUsingPOST_2 = R_LoginLog_;
-export type TBodyOfupdateUsingPUT_2 = LoginLogUpdateDTO;
-export type TResponseOfupdateUsingPUT_2 = R_LoginLog_;
-export type TBodyOfdeleteUsingDELETE_2 = number[];
-export type TResponseOfdeleteUsingDELETE_2 = R_boolean_;
-export type TBodyOfupdateAllUsingPUT_2 = LoginLog;
-export type TResponseOfupdateAllUsingPUT_2 = R_LoginLog_;
-export interface TQueryOfclearUsingDELETE {
+type TResponseOfgetUsingGET_1 = R_Dictionary_;
+type TBodyOfsaveUsingPOST_2 = LoginLog;
+type TResponseOfsaveUsingPOST_2 = R_LoginLog_;
+type TBodyOfupdateUsingPUT_2 = LoginLogUpdateDTO;
+type TResponseOfupdateUsingPUT_2 = R_LoginLog_;
+type TBodyOfdeleteUsingDELETE_2 = number[];
+type TResponseOfdeleteUsingDELETE_2 = R_boolean_;
+type TBodyOfupdateAllUsingPUT_2 = LoginLog;
+type TResponseOfupdateAllUsingPUT_2 = R_LoginLog_;
+interface TQueryOfclearUsingDELETE {
     type?: number;
 }
-export type TResponseOfclearUsingDELETE = R_boolean_;
-export type TBodyOfexportExcelUsingPOST_2 = PageParams_LoginLog_;
-export type TResponseOfexportExcelUsingPOST_2 = any;
-export interface TFormDataOfimportExcelUsingPOST_2 {
+type TResponseOfclearUsingDELETE = R_boolean_;
+type TBodyOfexportExcelUsingPOST_2 = PageParams_LoginLog_;
+type TResponseOfexportExcelUsingPOST_2 = any;
+interface TFormDataOfimportExcelUsingPOST_2 {
     file: string;
 }
-export type TResponseOfimportExcelUsingPOST_2 = R_boolean_;
-export type TBodyOfpageUsingPOST_2 = PageParams_LoginLog_;
-export type TResponseOfpageUsingPOST_2 = R_IPage_LoginLog__;
-export type TBodyOfpreviewUsingPOST_2 = PageParams_LoginLog_;
-export type TResponseOfpreviewUsingPOST_2 = R_string_;
-export type TBodyOfqueryUsingPOST_2 = LoginLog;
-export type TResponseOfqueryUsingPOST_2 = R_List_LoginLog__;
-export interface TPathOfgetUsingGET_2 {
+type TResponseOfimportExcelUsingPOST_2 = R_boolean_;
+type TBodyOfpageUsingPOST_2 = PageParams_LoginLog_;
+type TResponseOfpageUsingPOST_2 = R_IPage_LoginLog__;
+type TBodyOfpreviewUsingPOST_2 = PageParams_LoginLog_;
+type TResponseOfpreviewUsingPOST_2 = R_string_;
+type TBodyOfqueryUsingPOST_2 = LoginLog;
+type TResponseOfqueryUsingPOST_2 = R_List_LoginLog__;
+interface TPathOfgetUsingGET_2 {
     id?: number;
 }
-export type TResponseOfgetUsingGET_2 = R_LoginLog_;
-export type TBodyOfdeleteUsingDELETE_3 = number[];
-export type TResponseOfdeleteUsingDELETE_3 = R_boolean_;
-export interface TQueryOfclearUsingDELETE_1 {
+type TResponseOfgetUsingGET_2 = R_LoginLog_;
+type TBodyOfdeleteUsingDELETE_3 = number[];
+type TResponseOfdeleteUsingDELETE_3 = R_boolean_;
+interface TQueryOfclearUsingDELETE_1 {
     type?: number;
 }
-export type TResponseOfclearUsingDELETE_1 = R_boolean_;
-export type TBodyOfexportExcelUsingPOST_3 = PageParams_OptLog_;
-export type TResponseOfexportExcelUsingPOST_3 = any;
-export interface TQueryOfgetUsingGET_3 {
+type TResponseOfclearUsingDELETE_1 = R_boolean_;
+type TBodyOfexportExcelUsingPOST_3 = PageParams_OptLog_;
+type TResponseOfexportExcelUsingPOST_3 = any;
+interface TQueryOfgetUsingGET_3 {
     id?: number;
 }
-export type TResponseOfgetUsingGET_3 = R_OptLogResult_;
-export interface TFormDataOfimportExcelUsingPOST_3 {
+type TResponseOfgetUsingGET_3 = R_OptLogResult_;
+interface TFormDataOfimportExcelUsingPOST_3 {
     file: string;
 }
-export type TResponseOfimportExcelUsingPOST_3 = R_boolean_;
-export type TBodyOfpageUsingPOST_3 = PageParams_OptLog_;
-export type TResponseOfpageUsingPOST_3 = R_IPage_OptLog__;
-export type TBodyOfpreviewUsingPOST_3 = PageParams_OptLog_;
-export type TResponseOfpreviewUsingPOST_3 = R_string_;
-export type TBodyOfsaveUsingPOST_3 = ParameterSaveDTO;
-export type TResponseOfsaveUsingPOST_3 = R_Parameter_;
-export type TBodyOfupdateUsingPUT_3 = ParameterUpdateDTO;
-export type TResponseOfupdateUsingPUT_3 = R_Parameter_;
-export type TBodyOfdeleteUsingDELETE_4 = number[];
-export type TResponseOfdeleteUsingDELETE_4 = R_boolean_;
-export type TBodyOfupdateAllUsingPUT_3 = Parameter;
-export type TResponseOfupdateAllUsingPUT_3 = R_Parameter_;
-export type TBodyOfexportExcelUsingPOST_4 = PageParams_ParameterPageQuery_;
-export type TResponseOfexportExcelUsingPOST_4 = any;
-export interface TFormDataOfimportExcelUsingPOST_4 {
+type TResponseOfimportExcelUsingPOST_3 = R_boolean_;
+type TBodyOfpageUsingPOST_3 = PageParams_OptLog_;
+type TResponseOfpageUsingPOST_3 = R_IPage_OptLog__;
+type TBodyOfpreviewUsingPOST_3 = PageParams_OptLog_;
+type TResponseOfpreviewUsingPOST_3 = R_string_;
+type TBodyOfsaveUsingPOST_3 = ParameterSaveDTO;
+type TResponseOfsaveUsingPOST_3 = R_Parameter_;
+type TBodyOfupdateUsingPUT_3 = ParameterUpdateDTO;
+type TResponseOfupdateUsingPUT_3 = R_Parameter_;
+type TBodyOfdeleteUsingDELETE_4 = number[];
+type TResponseOfdeleteUsingDELETE_4 = R_boolean_;
+type TBodyOfupdateAllUsingPUT_3 = Parameter;
+type TResponseOfupdateAllUsingPUT_3 = R_Parameter_;
+type TBodyOfexportExcelUsingPOST_4 = PageParams_ParameterPageQuery_;
+type TResponseOfexportExcelUsingPOST_4 = any;
+interface TFormDataOfimportExcelUsingPOST_4 {
     file: string;
 }
-export type TResponseOfimportExcelUsingPOST_4 = R_boolean_;
-export type TBodyOfpageUsingPOST_4 = PageParams_ParameterPageQuery_;
-export type TResponseOfpageUsingPOST_4 = R_IPage_Parameter__;
-export type TBodyOfpreviewUsingPOST_4 = PageParams_ParameterPageQuery_;
-export type TResponseOfpreviewUsingPOST_4 = R_string_;
-export type TBodyOfqueryUsingPOST_3 = Parameter;
-export type TResponseOfqueryUsingPOST_3 = R_List_Parameter__;
-export interface TPathOfgetUsingGET_4 {
+type TResponseOfimportExcelUsingPOST_4 = R_boolean_;
+type TBodyOfpageUsingPOST_4 = PageParams_ParameterPageQuery_;
+type TResponseOfpageUsingPOST_4 = R_IPage_Parameter__;
+type TBodyOfpreviewUsingPOST_4 = PageParams_ParameterPageQuery_;
+type TResponseOfpreviewUsingPOST_4 = R_string_;
+type TBodyOfqueryUsingPOST_3 = Parameter;
+type TResponseOfqueryUsingPOST_3 = R_List_Parameter__;
+interface TPathOfgetUsingGET_4 {
     id?: number;
 }
-export type TResponseOfgetUsingGET_4 = R_Parameter_;
-export interface IApiFn {
+type TResponseOfgetUsingGET_4 = R_Parameter_;
+interface IApiFn {
     (url: string): {
         [m in "get" | "post" | "put" | "patch" | "delete" | "head"]: (options: any) => Promise<any>;
     };
@@ -1214,7 +1214,7 @@ export interface IApiFn {
         }): Promise<TResponseOfgetUsingGET_4>;
     };
 }
-export interface RequestProvider {
+interface RequestProvider {
     get(url: string, options: any): Promise<any>;
     post(url: string, options: any): Promise<any>;
     put(url: string, options: any): Promise<any>;
@@ -1225,4 +1225,6 @@ export interface RequestProvider {
 /**
  * create a request by a provider
  */
-export declare function createRequest(provider: RequestProvider): IApiFn;
+declare function createRequest(provider: RequestProvider): IApiFn;
+
+export { Area, AreaPageQuery, AreaSaveDTO, AreaUpdateDTO, Dictionary, DictionaryPageQuery, DictionarySaveDTO, DictionaryTypeSaveDTO, DictionaryUpdateDTO, IApiFn, IPage_Area_, IPage_Dictionary_, IPage_LoginLog_, IPage_OptLog_, IPage_Parameter_, LoginLog, LoginLogUpdateDTO, OptLog, OptLogResult, PageParams_AreaPageQuery_, PageParams_DictionaryPageQuery_, PageParams_LoginLog_, PageParams_OptLog_, PageParams_ParameterPageQuery_, Parameter, ParameterPageQuery, ParameterSaveDTO, ParameterUpdateDTO, R_Area_, R_Dictionary_, R_IPage_Area__, R_IPage_Dictionary__, R_IPage_LoginLog__, R_IPage_OptLog__, R_IPage_Parameter__, R_List_Area__, R_List_Dictionary__, R_List_LoginLog__, R_List_Parameter__, R_LoginLog_, R_Map_string_object__, R_OptLogResult_, R_Parameter_, R_boolean_, R_object_, R_string_, RequestProvider, TBodyOfdeleteTypeUsingDELETE, TBodyOfdeleteUsingDELETE, TBodyOfdeleteUsingDELETE_1, TBodyOfdeleteUsingDELETE_2, TBodyOfdeleteUsingDELETE_3, TBodyOfdeleteUsingDELETE_4, TBodyOfexportExcelUsingPOST, TBodyOfexportExcelUsingPOST_1, TBodyOfexportExcelUsingPOST_2, TBodyOfexportExcelUsingPOST_3, TBodyOfexportExcelUsingPOST_4, TBodyOfpageTypeUsingPOST, TBodyOfpageUsingPOST, TBodyOfpageUsingPOST_1, TBodyOfpageUsingPOST_2, TBodyOfpageUsingPOST_3, TBodyOfpageUsingPOST_4, TBodyOfpreviewUsingPOST, TBodyOfpreviewUsingPOST_1, TBodyOfpreviewUsingPOST_2, TBodyOfpreviewUsingPOST_3, TBodyOfpreviewUsingPOST_4, TBodyOfqueryUsingPOST, TBodyOfqueryUsingPOST_1, TBodyOfqueryUsingPOST_2, TBodyOfqueryUsingPOST_3, TBodyOfsaveTypeUsingPOST, TBodyOfsaveUsingPOST, TBodyOfsaveUsingPOST_1, TBodyOfsaveUsingPOST_2, TBodyOfsaveUsingPOST_3, TBodyOfupdateAllUsingPUT, TBodyOfupdateAllUsingPUT_1, TBodyOfupdateAllUsingPUT_2, TBodyOfupdateAllUsingPUT_3, TBodyOfupdateTypeUsingPUT, TBodyOfupdateUsingPUT, TBodyOfupdateUsingPUT_1, TBodyOfupdateUsingPUT_2, TBodyOfupdateUsingPUT_3, TFormDataOfimportExcelUsingPOST, TFormDataOfimportExcelUsingPOST_1, TFormDataOfimportExcelUsingPOST_2, TFormDataOfimportExcelUsingPOST_3, TFormDataOfimportExcelUsingPOST_4, TPathOfcheckUsingGET, TPathOfgetUsingGET, TPathOfgetUsingGET_1, TPathOfgetUsingGET_2, TPathOfgetUsingGET_4, TQueryOfcheckUsingGET, TQueryOfclearUsingDELETE, TQueryOfclearUsingDELETE_1, TQueryOfgetUsingGET_3, TQueryOflinkageQueryUsingGET, TQueryOflinkageQueryUsingGET_1, TResponseOfchartUsingGET, TResponseOfcheckUsingGET, TResponseOfclearCacheUsingPOST, TResponseOfclearUsingDELETE, TResponseOfclearUsingDELETE_1, TResponseOfdeleteTypeUsingDELETE, TResponseOfdeleteUsingDELETE, TResponseOfdeleteUsingDELETE_1, TResponseOfdeleteUsingDELETE_2, TResponseOfdeleteUsingDELETE_3, TResponseOfdeleteUsingDELETE_4, TResponseOfexportExcelUsingPOST, TResponseOfexportExcelUsingPOST_1, TResponseOfexportExcelUsingPOST_2, TResponseOfexportExcelUsingPOST_3, TResponseOfexportExcelUsingPOST_4, TResponseOfgenerateUsingGET, TResponseOfgetUsingGET, TResponseOfgetUsingGET_1, TResponseOfgetUsingGET_2, TResponseOfgetUsingGET_3, TResponseOfgetUsingGET_4, TResponseOfimportExcelUsingPOST, TResponseOfimportExcelUsingPOST_1, TResponseOfimportExcelUsingPOST_2, TResponseOfimportExcelUsingPOST_3, TResponseOfimportExcelUsingPOST_4, TResponseOfitemUsingGET, TResponseOflinkageQueryUsingGET, TResponseOflinkageQueryUsingGET_1, TResponseOfpageTypeUsingPOST, TResponseOfpageUsingPOST, TResponseOfpageUsingPOST_1, TResponseOfpageUsingPOST_2, TResponseOfpageUsingPOST_3, TResponseOfpageUsingPOST_4, TResponseOfpreviewUsingPOST, TResponseOfpreviewUsingPOST_1, TResponseOfpreviewUsingPOST_2, TResponseOfpreviewUsingPOST_3, TResponseOfpreviewUsingPOST_4, TResponseOfpvIncrUsingPOST, TResponseOfqueryUsingPOST, TResponseOfqueryUsingPOST_1, TResponseOfqueryUsingPOST_2, TResponseOfqueryUsingPOST_3, TResponseOfrefreshCacheUsingPOST, TResponseOfsaveTypeUsingPOST, TResponseOfsaveUsingPOST, TResponseOfsaveUsingPOST_1, TResponseOfsaveUsingPOST_2, TResponseOfsaveUsingPOST_3, TResponseOfupdateAllUsingPUT, TResponseOfupdateAllUsingPUT_1, TResponseOfupdateAllUsingPUT_2, TResponseOfupdateAllUsingPUT_3, TResponseOfupdateTypeUsingPUT, TResponseOfupdateUsingPUT, TResponseOfupdateUsingPUT_1, TResponseOfupdateUsingPUT_2, TResponseOfupdateUsingPUT_3, createRequest };

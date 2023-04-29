@@ -1,46 +1,46 @@
-export interface IPage_MsgPageResult_ {
+interface IPage_MsgPageResult_ {
     current?: number;
     pages?: number;
     records?: MsgPageResult[];
     size?: number;
     total?: number;
 }
-export interface IPage_Msg_ {
+interface IPage_Msg_ {
     current?: number;
     pages?: number;
     records?: Msg[];
     size?: number;
     total?: number;
 }
-export interface IPage_SmsSendStatus_ {
+interface IPage_SmsSendStatus_ {
     current?: number;
     pages?: number;
     records?: SmsSendStatus[];
     size?: number;
     total?: number;
 }
-export interface IPage_SmsTask_ {
+interface IPage_SmsTask_ {
     current?: number;
     pages?: number;
     records?: SmsTask[];
     size?: number;
     total?: number;
 }
-export interface IPage_SmsTemplate_ {
+interface IPage_SmsTemplate_ {
     current?: number;
     pages?: number;
     records?: SmsTemplate[];
     size?: number;
     total?: number;
 }
-export interface Kv {
+interface Kv {
     key?: string;
     value?: string;
 }
 /**
  * @description: 消息表
  */
-export interface Msg {
+interface Msg {
     author?: string;
     bizId?: string;
     bizType?: string;
@@ -59,7 +59,7 @@ export interface Msg {
 /**
  * @description: 消息中心
  */
-export interface MsgDTO {
+interface MsgDTO {
     author?: string;
     bizId?: string;
     bizType?: string;
@@ -73,7 +73,7 @@ export interface MsgDTO {
 /**
  * @description: 消息分页返回
  */
-export interface MsgPageResult {
+interface MsgPageResult {
     author?: string;
     bizId?: string;
     bizType?: string;
@@ -95,7 +95,7 @@ export interface MsgPageResult {
 /**
  * @description: 消息分页参数
  */
-export interface MsgQuery {
+interface MsgQuery {
     author?: string;
     bizType?: string;
     content?: string;
@@ -107,7 +107,7 @@ export interface MsgQuery {
 /**
  * @description: 消息中心
  */
-export interface MsgSaveDTO {
+interface MsgSaveDTO {
     msgDTO?: MsgDTO;
     roleCodeList?: string[];
     userIdList?: number[];
@@ -115,7 +115,7 @@ export interface MsgSaveDTO {
 /**
  * @description: 我的消息
  */
-export interface MyMsgResult {
+interface MyMsgResult {
     earlyWarningList?: IPage_MsgPageResult_;
     noticeList?: IPage_MsgPageResult_;
     notifyList?: IPage_MsgPageResult_;
@@ -124,7 +124,7 @@ export interface MyMsgResult {
 /**
  * @description: 分页参数
  */
-export interface PageParams_MsgQuery_ {
+interface PageParams_MsgQuery_ {
     current?: number;
     extra?: any;
     model: MsgQuery;
@@ -135,7 +135,7 @@ export interface PageParams_MsgQuery_ {
 /**
  * @description: 分页参数
  */
-export interface PageParams_SmsSendStatusPageQuery_ {
+interface PageParams_SmsSendStatusPageQuery_ {
     current?: number;
     extra?: any;
     model: SmsSendStatusPageQuery;
@@ -146,7 +146,7 @@ export interface PageParams_SmsSendStatusPageQuery_ {
 /**
  * @description: 分页参数
  */
-export interface PageParams_SmsTaskPageQuery_ {
+interface PageParams_SmsTaskPageQuery_ {
     current?: number;
     extra?: any;
     model: SmsTaskPageQuery;
@@ -157,7 +157,7 @@ export interface PageParams_SmsTaskPageQuery_ {
 /**
  * @description: 分页参数
  */
-export interface PageParams_SmsTemplatePageQuery_ {
+interface PageParams_SmsTemplatePageQuery_ {
     current?: number;
     extra?: any;
     model: SmsTemplatePageQuery;
@@ -165,7 +165,7 @@ export interface PageParams_SmsTemplatePageQuery_ {
     size?: number;
     sort?: string;
 }
-export interface R_IPage_MsgPageResult__ {
+interface R_IPage_MsgPageResult__ {
     code?: number;
     data?: IPage_MsgPageResult_;
     errorMsg?: string;
@@ -175,7 +175,7 @@ export interface R_IPage_MsgPageResult__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_IPage_Msg__ {
+interface R_IPage_Msg__ {
     code?: number;
     data?: IPage_Msg_;
     errorMsg?: string;
@@ -185,7 +185,7 @@ export interface R_IPage_Msg__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_IPage_SmsSendStatus__ {
+interface R_IPage_SmsSendStatus__ {
     code?: number;
     data?: IPage_SmsSendStatus_;
     errorMsg?: string;
@@ -195,7 +195,7 @@ export interface R_IPage_SmsSendStatus__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_IPage_SmsTask__ {
+interface R_IPage_SmsTask__ {
     code?: number;
     data?: IPage_SmsTask_;
     errorMsg?: string;
@@ -205,7 +205,7 @@ export interface R_IPage_SmsTask__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_IPage_SmsTemplate__ {
+interface R_IPage_SmsTemplate__ {
     code?: number;
     data?: IPage_SmsTemplate_;
     errorMsg?: string;
@@ -215,7 +215,7 @@ export interface R_IPage_SmsTemplate__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_List_SmsSendStatus__ {
+interface R_List_SmsSendStatus__ {
     code?: number;
     data?: SmsSendStatus[];
     errorMsg?: string;
@@ -225,7 +225,7 @@ export interface R_List_SmsSendStatus__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_List_SmsTask__ {
+interface R_List_SmsTask__ {
     code?: number;
     data?: SmsTask[];
     errorMsg?: string;
@@ -235,7 +235,7 @@ export interface R_List_SmsTask__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_List_SmsTemplate__ {
+interface R_List_SmsTemplate__ {
     code?: number;
     data?: SmsTemplate[];
     errorMsg?: string;
@@ -245,7 +245,7 @@ export interface R_List_SmsTemplate__ {
     path?: string;
     timestamp?: number;
 }
-export interface R_Msg_ {
+interface R_Msg_ {
     code?: number;
     data?: Msg;
     errorMsg?: string;
@@ -255,7 +255,7 @@ export interface R_Msg_ {
     path?: string;
     timestamp?: number;
 }
-export interface R_MyMsgResult_ {
+interface R_MyMsgResult_ {
     code?: number;
     data?: MyMsgResult;
     errorMsg?: string;
@@ -265,7 +265,7 @@ export interface R_MyMsgResult_ {
     path?: string;
     timestamp?: number;
 }
-export interface R_SmsSendStatus_ {
+interface R_SmsSendStatus_ {
     code?: number;
     data?: SmsSendStatus;
     errorMsg?: string;
@@ -275,7 +275,7 @@ export interface R_SmsSendStatus_ {
     path?: string;
     timestamp?: number;
 }
-export interface R_SmsTask_ {
+interface R_SmsTask_ {
     code?: number;
     data?: SmsTask_1;
     errorMsg?: string;
@@ -285,7 +285,7 @@ export interface R_SmsTask_ {
     path?: string;
     timestamp?: number;
 }
-export interface R_SmsTask__1 {
+interface R_SmsTask__1 {
     code?: number;
     data?: SmsTask;
     errorMsg?: string;
@@ -295,7 +295,7 @@ export interface R_SmsTask__1 {
     path?: string;
     timestamp?: number;
 }
-export interface R_SmsTemplate_ {
+interface R_SmsTemplate_ {
     code?: number;
     data?: SmsTemplate;
     errorMsg?: string;
@@ -305,7 +305,7 @@ export interface R_SmsTemplate_ {
     path?: string;
     timestamp?: number;
 }
-export interface R_boolean_ {
+interface R_boolean_ {
     code?: number;
     data?: boolean;
     errorMsg?: string;
@@ -315,7 +315,7 @@ export interface R_boolean_ {
     path?: string;
     timestamp?: number;
 }
-export interface R_string_ {
+interface R_string_ {
     code?: number;
     data?: string;
     errorMsg?: string;
@@ -328,7 +328,7 @@ export interface R_string_ {
 /**
  * @description: 短信发送状态
  */
-export interface SmsSendStatus {
+interface SmsSendStatus {
     bizId?: string;
     code?: string;
     createTime?: string;
@@ -347,7 +347,7 @@ export interface SmsSendStatus {
 /**
  * @description: 短信发送状态
  */
-export interface SmsSendStatusPageQuery {
+interface SmsSendStatusPageQuery {
     bizId?: string;
     code?: string;
     ext?: string;
@@ -360,7 +360,7 @@ export interface SmsSendStatusPageQuery {
 /**
  * @description: 发送任务
  */
-export interface SmsTask {
+interface SmsTask {
     content?: string;
     createTime?: string;
     createdBy?: number;
@@ -379,7 +379,7 @@ export interface SmsTask {
 /**
  * @description: 发送任务
  */
-export interface SmsTaskPageQuery {
+interface SmsTaskPageQuery {
     content?: string;
     draft?: boolean;
     sendTime?: string;
@@ -393,7 +393,7 @@ export interface SmsTaskPageQuery {
 /**
  * @description: 发送任务
  */
-export interface SmsTaskSaveDTO {
+interface SmsTaskSaveDTO {
     content?: string;
     draft?: boolean;
     sendTime?: string;
@@ -405,7 +405,7 @@ export interface SmsTaskSaveDTO {
 /**
  * @description: 发送任务
  */
-export interface SmsTaskUpdateDTO {
+interface SmsTaskUpdateDTO {
     content?: string;
     draft?: boolean;
     id?: number;
@@ -420,7 +420,7 @@ export interface SmsTaskUpdateDTO {
 /**
  * @description: 发送任务
  */
-export interface SmsTask_1 {
+interface SmsTask_1 {
     content?: string;
     createTime?: string;
     createdBy?: number;
@@ -440,7 +440,7 @@ export interface SmsTask_1 {
 /**
  * @description: 短信模板
  */
-export interface SmsTemplate {
+interface SmsTemplate {
     appId?: string;
     appSecret?: string;
     content?: string;
@@ -461,7 +461,7 @@ export interface SmsTemplate {
 /**
  * @description: 短信模板
  */
-export interface SmsTemplatePageQuery {
+interface SmsTemplatePageQuery {
     appId?: string;
     appSecret?: string;
     content?: string;
@@ -476,7 +476,7 @@ export interface SmsTemplatePageQuery {
 /**
  * @description: 短信模板
  */
-export interface SmsTemplateSaveDTO {
+interface SmsTemplateSaveDTO {
     appId?: string;
     appSecret?: string;
     content?: string;
@@ -490,7 +490,7 @@ export interface SmsTemplateSaveDTO {
 /**
  * @description: 短信模板
  */
-export interface SmsTemplateUpdateDTO {
+interface SmsTemplateUpdateDTO {
     appId?: string;
     appSecret?: string;
     content?: string;
@@ -505,96 +505,96 @@ export interface SmsTemplateUpdateDTO {
 /**
  * @description: 验证码发送验证DTO
  */
-export interface VerificationCodeDTO {
+interface VerificationCodeDTO {
     code?: string;
     mobile?: string;
     type?: string;
 }
-export type TBodyOfmyMsgUsingPOST = PageParams_MsgQuery_;
-export type TResponseOfmyMsgUsingPOST = R_MyMsgResult_;
-export type TBodyOfmarkUsingPOST = number[];
-export type TResponseOfmarkUsingPOST = R_boolean_;
-export type TBodyOfpageUsingPOST_15 = PageParams_MsgQuery_;
-export type TResponseOfpageUsingPOST_15 = R_IPage_MsgPageResult__;
-export type TBodyOfsaveUsingPOST_11 = MsgSaveDTO;
-export type TResponseOfsaveUsingPOST_11 = R_Msg_;
-export type TBodyOfdeleteUsingDELETE_14 = number[];
-export type TResponseOfdeleteUsingDELETE_14 = R_boolean_;
-export type TBodyOfexportExcelUsingPOST_12 = PageParams_MsgQuery_;
-export type TResponseOfexportExcelUsingPOST_12 = any;
-export type TBodyOfpageUsingPOST_14 = PageParams_MsgQuery_;
-export type TResponseOfpageUsingPOST_14 = R_IPage_Msg__;
-export type TBodyOfpreviewUsingPOST_12 = PageParams_MsgQuery_;
-export type TResponseOfpreviewUsingPOST_12 = R_string_;
-export interface TPathOfgetUsingGET_13 {
+type TBodyOfmyMsgUsingPOST = PageParams_MsgQuery_;
+type TResponseOfmyMsgUsingPOST = R_MyMsgResult_;
+type TBodyOfmarkUsingPOST = number[];
+type TResponseOfmarkUsingPOST = R_boolean_;
+type TBodyOfpageUsingPOST_15 = PageParams_MsgQuery_;
+type TResponseOfpageUsingPOST_15 = R_IPage_MsgPageResult__;
+type TBodyOfsaveUsingPOST_11 = MsgSaveDTO;
+type TResponseOfsaveUsingPOST_11 = R_Msg_;
+type TBodyOfdeleteUsingDELETE_14 = number[];
+type TResponseOfdeleteUsingDELETE_14 = R_boolean_;
+type TBodyOfexportExcelUsingPOST_12 = PageParams_MsgQuery_;
+type TResponseOfexportExcelUsingPOST_12 = any;
+type TBodyOfpageUsingPOST_14 = PageParams_MsgQuery_;
+type TResponseOfpageUsingPOST_14 = R_IPage_Msg__;
+type TBodyOfpreviewUsingPOST_12 = PageParams_MsgQuery_;
+type TResponseOfpreviewUsingPOST_12 = R_string_;
+interface TPathOfgetUsingGET_13 {
     id: number;
 }
-export type TResponseOfgetUsingGET_13 = R_Msg_;
-export type TBodyOfpageUsingPOST_16 = PageParams_SmsSendStatusPageQuery_;
-export type TResponseOfpageUsingPOST_16 = R_IPage_SmsSendStatus__;
-export type TBodyOfqueryUsingPOST_12 = SmsSendStatus;
-export type TResponseOfqueryUsingPOST_12 = R_List_SmsSendStatus__;
-export interface TPathOfgetUsingGET_14 {
+type TResponseOfgetUsingGET_13 = R_Msg_;
+type TBodyOfpageUsingPOST_16 = PageParams_SmsSendStatusPageQuery_;
+type TResponseOfpageUsingPOST_16 = R_IPage_SmsSendStatus__;
+type TBodyOfqueryUsingPOST_12 = SmsSendStatus;
+type TResponseOfqueryUsingPOST_12 = R_List_SmsSendStatus__;
+interface TPathOfgetUsingGET_14 {
     id?: number;
 }
-export type TResponseOfgetUsingGET_14 = R_SmsSendStatus_;
-export type TBodyOfsaveUsingPOST_12 = SmsTaskSaveDTO;
-export type TResponseOfsaveUsingPOST_12 = R_SmsTask__1;
-export type TBodyOfupdateUsingPUT_11 = SmsTaskUpdateDTO;
-export type TResponseOfupdateUsingPUT_11 = R_SmsTask__1;
-export type TBodyOfdeleteUsingDELETE_15 = number[];
-export type TResponseOfdeleteUsingDELETE_15 = R_boolean_;
-export type TBodyOfupdateAllUsingPUT_11 = SmsTask;
-export type TResponseOfupdateAllUsingPUT_11 = R_SmsTask__1;
-export interface TPathOfdetailUsingGET {
+type TResponseOfgetUsingGET_14 = R_SmsSendStatus_;
+type TBodyOfsaveUsingPOST_12 = SmsTaskSaveDTO;
+type TResponseOfsaveUsingPOST_12 = R_SmsTask__1;
+type TBodyOfupdateUsingPUT_11 = SmsTaskUpdateDTO;
+type TResponseOfupdateUsingPUT_11 = R_SmsTask__1;
+type TBodyOfdeleteUsingDELETE_15 = number[];
+type TResponseOfdeleteUsingDELETE_15 = R_boolean_;
+type TBodyOfupdateAllUsingPUT_11 = SmsTask;
+type TResponseOfupdateAllUsingPUT_11 = R_SmsTask__1;
+interface TPathOfdetailUsingGET {
     id?: number;
 }
-export type TResponseOfdetailUsingGET = R_SmsTask_;
-export type TBodyOfexportExcelUsingPOST_13 = PageParams_SmsTaskPageQuery_;
-export type TResponseOfexportExcelUsingPOST_13 = any;
-export interface TFormDataOfimportExcelUsingPOST_12 {
+type TResponseOfdetailUsingGET = R_SmsTask_;
+type TBodyOfexportExcelUsingPOST_13 = PageParams_SmsTaskPageQuery_;
+type TResponseOfexportExcelUsingPOST_13 = any;
+interface TFormDataOfimportExcelUsingPOST_12 {
     file: string;
 }
-export type TResponseOfimportExcelUsingPOST_12 = R_boolean_;
-export type TBodyOfpageUsingPOST_17 = PageParams_SmsTaskPageQuery_;
-export type TResponseOfpageUsingPOST_17 = R_IPage_SmsTask__;
-export type TBodyOfpreviewUsingPOST_13 = PageParams_SmsTaskPageQuery_;
-export type TResponseOfpreviewUsingPOST_13 = R_string_;
-export type TBodyOfqueryUsingPOST_13 = SmsTask;
-export type TResponseOfqueryUsingPOST_13 = R_List_SmsTask__;
-export interface TPathOfgetUsingGET_15 {
+type TResponseOfimportExcelUsingPOST_12 = R_boolean_;
+type TBodyOfpageUsingPOST_17 = PageParams_SmsTaskPageQuery_;
+type TResponseOfpageUsingPOST_17 = R_IPage_SmsTask__;
+type TBodyOfpreviewUsingPOST_13 = PageParams_SmsTaskPageQuery_;
+type TResponseOfpreviewUsingPOST_13 = R_string_;
+type TBodyOfqueryUsingPOST_13 = SmsTask;
+type TResponseOfqueryUsingPOST_13 = R_List_SmsTask__;
+interface TPathOfgetUsingGET_15 {
     id?: number;
 }
-export type TResponseOfgetUsingGET_15 = R_SmsTask__1;
-export type TBodyOfsaveUsingPOST_13 = SmsTemplateSaveDTO;
-export type TResponseOfsaveUsingPOST_13 = R_SmsTemplate_;
-export type TBodyOfupdateUsingPUT_12 = SmsTemplateUpdateDTO;
-export type TResponseOfupdateUsingPUT_12 = R_SmsTemplate_;
-export type TBodyOfdeleteUsingDELETE_16 = number[];
-export type TResponseOfdeleteUsingDELETE_16 = R_boolean_;
-export type TBodyOfupdateAllUsingPUT_12 = SmsTemplate;
-export type TResponseOfupdateAllUsingPUT_12 = R_SmsTemplate_;
-export type TBodyOfexportExcelUsingPOST_14 = PageParams_SmsTemplatePageQuery_;
-export type TResponseOfexportExcelUsingPOST_14 = any;
-export interface TFormDataOfimportExcelUsingPOST_13 {
+type TResponseOfgetUsingGET_15 = R_SmsTask__1;
+type TBodyOfsaveUsingPOST_13 = SmsTemplateSaveDTO;
+type TResponseOfsaveUsingPOST_13 = R_SmsTemplate_;
+type TBodyOfupdateUsingPUT_12 = SmsTemplateUpdateDTO;
+type TResponseOfupdateUsingPUT_12 = R_SmsTemplate_;
+type TBodyOfdeleteUsingDELETE_16 = number[];
+type TResponseOfdeleteUsingDELETE_16 = R_boolean_;
+type TBodyOfupdateAllUsingPUT_12 = SmsTemplate;
+type TResponseOfupdateAllUsingPUT_12 = R_SmsTemplate_;
+type TBodyOfexportExcelUsingPOST_14 = PageParams_SmsTemplatePageQuery_;
+type TResponseOfexportExcelUsingPOST_14 = any;
+interface TFormDataOfimportExcelUsingPOST_13 {
     file: string;
 }
-export type TResponseOfimportExcelUsingPOST_13 = R_boolean_;
-export type TBodyOfpageUsingPOST_18 = PageParams_SmsTemplatePageQuery_;
-export type TResponseOfpageUsingPOST_18 = R_IPage_SmsTemplate__;
-export type TBodyOfpreviewUsingPOST_14 = PageParams_SmsTemplatePageQuery_;
-export type TResponseOfpreviewUsingPOST_14 = R_string_;
-export type TBodyOfqueryUsingPOST_14 = SmsTemplate;
-export type TResponseOfqueryUsingPOST_14 = R_List_SmsTemplate__;
-export interface TPathOfgetUsingGET_16 {
+type TResponseOfimportExcelUsingPOST_13 = R_boolean_;
+type TBodyOfpageUsingPOST_18 = PageParams_SmsTemplatePageQuery_;
+type TResponseOfpageUsingPOST_18 = R_IPage_SmsTemplate__;
+type TBodyOfpreviewUsingPOST_14 = PageParams_SmsTemplatePageQuery_;
+type TResponseOfpreviewUsingPOST_14 = R_string_;
+type TBodyOfqueryUsingPOST_14 = SmsTemplate;
+type TResponseOfqueryUsingPOST_14 = R_List_SmsTemplate__;
+interface TPathOfgetUsingGET_16 {
     id?: number;
 }
-export type TResponseOfgetUsingGET_16 = R_SmsTemplate_;
-export type TBodyOfverificationUsingPOST = VerificationCodeDTO;
-export type TResponseOfverificationUsingPOST = R_boolean_;
-export type TBodyOfsendUsingPOST = VerificationCodeDTO;
-export type TResponseOfsendUsingPOST = R_boolean_;
-export interface IApiFn {
+type TResponseOfgetUsingGET_16 = R_SmsTemplate_;
+type TBodyOfverificationUsingPOST = VerificationCodeDTO;
+type TResponseOfverificationUsingPOST = R_boolean_;
+type TBodyOfsendUsingPOST = VerificationCodeDTO;
+type TResponseOfsendUsingPOST = R_boolean_;
+interface IApiFn {
     (url: string): {
         [m in "get" | "post" | "put" | "patch" | "delete" | "head"]: (options: any) => Promise<any>;
     };
@@ -904,7 +904,7 @@ export interface IApiFn {
         }): Promise<TResponseOfsendUsingPOST>;
     };
 }
-export interface RequestProvider {
+interface RequestProvider {
     get(url: string, options: any): Promise<any>;
     post(url: string, options: any): Promise<any>;
     put(url: string, options: any): Promise<any>;
@@ -915,4 +915,6 @@ export interface RequestProvider {
 /**
  * create a request by a provider
  */
-export declare function createRequest(provider: RequestProvider): IApiFn;
+declare function createRequest(provider: RequestProvider): IApiFn;
+
+export { IApiFn, IPage_MsgPageResult_, IPage_Msg_, IPage_SmsSendStatus_, IPage_SmsTask_, IPage_SmsTemplate_, Kv, Msg, MsgDTO, MsgPageResult, MsgQuery, MsgSaveDTO, MyMsgResult, PageParams_MsgQuery_, PageParams_SmsSendStatusPageQuery_, PageParams_SmsTaskPageQuery_, PageParams_SmsTemplatePageQuery_, R_IPage_MsgPageResult__, R_IPage_Msg__, R_IPage_SmsSendStatus__, R_IPage_SmsTask__, R_IPage_SmsTemplate__, R_List_SmsSendStatus__, R_List_SmsTask__, R_List_SmsTemplate__, R_Msg_, R_MyMsgResult_, R_SmsSendStatus_, R_SmsTask_, R_SmsTask__1, R_SmsTemplate_, R_boolean_, R_string_, RequestProvider, SmsSendStatus, SmsSendStatusPageQuery, SmsTask, SmsTaskPageQuery, SmsTaskSaveDTO, SmsTaskUpdateDTO, SmsTask_1, SmsTemplate, SmsTemplatePageQuery, SmsTemplateSaveDTO, SmsTemplateUpdateDTO, TBodyOfdeleteUsingDELETE_14, TBodyOfdeleteUsingDELETE_15, TBodyOfdeleteUsingDELETE_16, TBodyOfexportExcelUsingPOST_12, TBodyOfexportExcelUsingPOST_13, TBodyOfexportExcelUsingPOST_14, TBodyOfmarkUsingPOST, TBodyOfmyMsgUsingPOST, TBodyOfpageUsingPOST_14, TBodyOfpageUsingPOST_15, TBodyOfpageUsingPOST_16, TBodyOfpageUsingPOST_17, TBodyOfpageUsingPOST_18, TBodyOfpreviewUsingPOST_12, TBodyOfpreviewUsingPOST_13, TBodyOfpreviewUsingPOST_14, TBodyOfqueryUsingPOST_12, TBodyOfqueryUsingPOST_13, TBodyOfqueryUsingPOST_14, TBodyOfsaveUsingPOST_11, TBodyOfsaveUsingPOST_12, TBodyOfsaveUsingPOST_13, TBodyOfsendUsingPOST, TBodyOfupdateAllUsingPUT_11, TBodyOfupdateAllUsingPUT_12, TBodyOfupdateUsingPUT_11, TBodyOfupdateUsingPUT_12, TBodyOfverificationUsingPOST, TFormDataOfimportExcelUsingPOST_12, TFormDataOfimportExcelUsingPOST_13, TPathOfdetailUsingGET, TPathOfgetUsingGET_13, TPathOfgetUsingGET_14, TPathOfgetUsingGET_15, TPathOfgetUsingGET_16, TResponseOfdeleteUsingDELETE_14, TResponseOfdeleteUsingDELETE_15, TResponseOfdeleteUsingDELETE_16, TResponseOfdetailUsingGET, TResponseOfexportExcelUsingPOST_12, TResponseOfexportExcelUsingPOST_13, TResponseOfexportExcelUsingPOST_14, TResponseOfgetUsingGET_13, TResponseOfgetUsingGET_14, TResponseOfgetUsingGET_15, TResponseOfgetUsingGET_16, TResponseOfimportExcelUsingPOST_12, TResponseOfimportExcelUsingPOST_13, TResponseOfmarkUsingPOST, TResponseOfmyMsgUsingPOST, TResponseOfpageUsingPOST_14, TResponseOfpageUsingPOST_15, TResponseOfpageUsingPOST_16, TResponseOfpageUsingPOST_17, TResponseOfpageUsingPOST_18, TResponseOfpreviewUsingPOST_12, TResponseOfpreviewUsingPOST_13, TResponseOfpreviewUsingPOST_14, TResponseOfqueryUsingPOST_12, TResponseOfqueryUsingPOST_13, TResponseOfqueryUsingPOST_14, TResponseOfsaveUsingPOST_11, TResponseOfsaveUsingPOST_12, TResponseOfsaveUsingPOST_13, TResponseOfsendUsingPOST, TResponseOfupdateAllUsingPUT_11, TResponseOfupdateAllUsingPUT_12, TResponseOfupdateUsingPUT_11, TResponseOfupdateUsingPUT_12, TResponseOfverificationUsingPOST, VerificationCodeDTO, createRequest };
