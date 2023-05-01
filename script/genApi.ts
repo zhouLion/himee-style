@@ -28,14 +28,6 @@ interface Resource {
   url: string;
 }
 
-const BASE = process.env.BASE;
-const SWAGGERRESOURCES = process.env.SWAGGERRESOURCES;
-const output = resolve(process.cwd(), "src/api");
-
-if (!BASE || !SWAGGERRESOURCES) {
-  throw new Error("Missing env variables");
-}
-
 class MyPrinter extends Printer {
   /**
    * @param str
@@ -240,10 +232,14 @@ const ensureDir = (dir: string) => {
   clearDir(dir);
 };
 
-const generateDecalreFile = async (item: Resource) => {
+const generateDecalreFile = async (
+  item: Resource,
+  base: string,
+  output: string
+) => {
   const targetFile = resolve(output, `./${item.name}.ts`);
   try {
-    const doc = await load(BASE + item.location);
+    const doc = await load(base + item.location);
     const details = analyse(doc);
     console.log("⚙ Handling", targetFile);
     const code = transform(details);
@@ -260,15 +256,29 @@ const generateDecalreFile = async (item: Resource) => {
   }
 };
 
-(() => {
-  console.log("🚀：Generating API...");
-  ensureDir(output);
-  fetch(BASE + SWAGGERRESOURCES)
-    .then((res) => res.json())
-    .then((list: Resource[]) => {
-      return Promise.all(list.map((item) => generateDecalreFile(item)));
-    })
-    .then(() => {
-      console.log("🎉🎉🎉🎉🎉", "Done~");
-    });
-})();
+function main() {
+  const BASE = process.env.BASE;
+  const SWAGGERRESOURCES = process.env.SWAGGERRESOURCES;
+
+  if (!BASE || !SWAGGERRESOURCES) {
+    throw new Error("Missing env variables");
+  }
+
+  const bases = BASE.split(",").map((item) => item.split("|"));
+
+  bases.forEach(([base, group]) => {
+    const output = resolve(process.cwd(), `src/${group}`);
+    console.log("🚀：Generating API...");
+    ensureDir(output);
+    fetch(base + SWAGGERRESOURCES)
+      .then((res) => res.json())
+      .then((list: Resource[]) =>
+        Promise.all(list.map((item) => generateDecalreFile(item, base, output)))
+      )
+      .then(() => {
+        console.log("🎉🎉🎉🎉🎉", "Done~");
+      });
+  });
+}
+
+main();

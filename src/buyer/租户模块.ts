@@ -414,41 +414,41 @@ export interface TenantUpdateDTO {
     type?: string;
 }
 
-export type TBodyOfsaveUsingPOST_14 = DatasourceConfigSaveDTO;
-export type TResponseOfsaveUsingPOST_14 = R_DatasourceConfig_;
-export type TBodyOfupdateUsingPUT_13 = DatasourceConfigUpdateDTO;
-export type TResponseOfupdateUsingPUT_13 = R_DatasourceConfig_;
-export type TBodyOfdeleteUsingDELETE_17 = number[];
-export type TResponseOfdeleteUsingDELETE_17 = R_boolean_;
-export type TBodyOfupdateAllUsingPUT_13 = DatasourceConfig;
-export type TResponseOfupdateAllUsingPUT_13 = R_DatasourceConfig_;
-export type TBodyOfexportExcelUsingPOST_15 = PageParams_DatasourceConfigPageQuery_;
-export type TResponseOfexportExcelUsingPOST_15 = any;
-export interface TFormDataOfimportExcelUsingPOST_14 {
+export type TBodyOfsaveUsingPOST_20 = DatasourceConfigSaveDTO;
+export type TResponseOfsaveUsingPOST_20 = R_DatasourceConfig_;
+export type TBodyOfupdateUsingPUT_19 = DatasourceConfigUpdateDTO;
+export type TResponseOfupdateUsingPUT_19 = R_DatasourceConfig_;
+export type TBodyOfdeleteUsingDELETE_23 = number[];
+export type TResponseOfdeleteUsingDELETE_23 = R_boolean_;
+export type TBodyOfupdateAllUsingPUT_19 = DatasourceConfig;
+export type TResponseOfupdateAllUsingPUT_19 = R_DatasourceConfig_;
+export type TBodyOfexportExcelUsingPOST_21 = PageParams_DatasourceConfigPageQuery_;
+export type TResponseOfexportExcelUsingPOST_21 = any;
+export interface TFormDataOfimportExcelUsingPOST_20 {
     // file
     file: string;
 }
-export type TResponseOfimportExcelUsingPOST_14 = R_boolean_;
-export type TBodyOfpageUsingPOST_19 = PageParams_DatasourceConfigPageQuery_;
-export type TResponseOfpageUsingPOST_19 = R_IPage_DatasourceConfig__;
-export type TBodyOfpreviewUsingPOST_15 = PageParams_DatasourceConfigPageQuery_;
-export type TResponseOfpreviewUsingPOST_15 = R_string_;
-export type TBodyOfqueryUsingPOST_15 = DatasourceConfig;
-export type TResponseOfqueryUsingPOST_15 = R_List_DatasourceConfig__;
-export interface TPathOfgetUsingGET_17 {
+export type TResponseOfimportExcelUsingPOST_20 = R_boolean_;
+export type TBodyOfpageUsingPOST_25 = PageParams_DatasourceConfigPageQuery_;
+export type TResponseOfpageUsingPOST_25 = R_IPage_DatasourceConfig__;
+export type TBodyOfpreviewUsingPOST_21 = PageParams_DatasourceConfigPageQuery_;
+export type TResponseOfpreviewUsingPOST_21 = R_string_;
+export type TBodyOfqueryUsingPOST_21 = DatasourceConfig;
+export type TResponseOfqueryUsingPOST_21 = R_List_DatasourceConfig__;
+export interface TPathOfgetUsingGET_23 {
     // 主键
     id?: number;
 }
-export type TResponseOfgetUsingGET_17 = R_DatasourceConfig_;
-export type TBodyOfsaveUsingPOST_15 = TenantSaveDTO;
-export type TResponseOfsaveUsingPOST_15 = R_Tenant_;
-export type TBodyOfupdateUsingPUT_14 = TenantUpdateDTO;
-export type TResponseOfupdateUsingPUT_14 = R_Tenant_;
-export type TBodyOfdeleteUsingDELETE_18 = number[];
-export type TResponseOfdeleteUsingDELETE_18 = R_boolean_;
+export type TResponseOfgetUsingGET_23 = R_DatasourceConfig_;
+export type TBodyOfsaveUsingPOST_21 = TenantSaveDTO;
+export type TResponseOfsaveUsingPOST_21 = R_Tenant_;
+export type TBodyOfupdateUsingPUT_20 = TenantUpdateDTO;
+export type TResponseOfupdateUsingPUT_20 = R_Tenant_;
+export type TBodyOfdeleteUsingDELETE_24 = number[];
+export type TResponseOfdeleteUsingDELETE_24 = R_boolean_;
 export type TResponseOflistUsingGET = R_List_Tenant__;
-export type TBodyOfupdateAllUsingPUT_14 = Tenant;
-export type TResponseOfupdateAllUsingPUT_14 = R_Tenant_;
+export type TBodyOfupdateAllUsingPUT_20 = Tenant;
+export type TResponseOfupdateAllUsingPUT_20 = R_Tenant_;
 export interface TPathOfcheckUsingGET_5 {
     // code
     code: string;
@@ -457,21 +457,21 @@ export type TResponseOfcheckUsingGET_5 = R_boolean_;
 export type TResponseOfclearCacheUsingPOST_6 = R_boolean_;
 export type TBodyOfdeleteAllUsingDELETE = number[];
 export type TResponseOfdeleteAllUsingDELETE = R_boolean_;
-export type TBodyOfexportExcelUsingPOST_16 = PageParams_TenantPageQuery_;
-export type TResponseOfexportExcelUsingPOST_16 = any;
-export interface TFormDataOfimportExcelUsingPOST_15 {
+export type TBodyOfexportExcelUsingPOST_22 = PageParams_TenantPageQuery_;
+export type TResponseOfexportExcelUsingPOST_22 = any;
+export interface TFormDataOfimportExcelUsingPOST_21 {
     // file
     file: string;
 }
-export type TResponseOfimportExcelUsingPOST_15 = R_boolean_;
+export type TResponseOfimportExcelUsingPOST_21 = R_boolean_;
 export type TBodyOfinitConnectUsingPOST = TenantConnectDTO;
 export type TResponseOfinitConnectUsingPOST = R_boolean_;
-export type TBodyOfpageUsingPOST_20 = PageParams_TenantPageQuery_;
-export type TResponseOfpageUsingPOST_20 = R_IPage_Tenant__;
-export type TBodyOfpreviewUsingPOST_16 = PageParams_TenantPageQuery_;
-export type TResponseOfpreviewUsingPOST_16 = R_string_;
-export type TBodyOfqueryUsingPOST_16 = Tenant;
-export type TResponseOfqueryUsingPOST_16 = R_List_Tenant__;
+export type TBodyOfpageUsingPOST_26 = PageParams_TenantPageQuery_;
+export type TResponseOfpageUsingPOST_26 = R_IPage_Tenant__;
+export type TBodyOfpreviewUsingPOST_22 = PageParams_TenantPageQuery_;
+export type TResponseOfpreviewUsingPOST_22 = R_string_;
+export type TBodyOfqueryUsingPOST_22 = Tenant;
+export type TResponseOfqueryUsingPOST_22 = R_List_Tenant__;
 export type TResponseOfrefreshCacheUsingPOST_6 = R_boolean_;
 export interface TQueryOfupdateStatusUsingPOST {
     // ids[]
@@ -480,11 +480,11 @@ export interface TQueryOfupdateStatusUsingPOST {
     status: string;
 }
 export type TResponseOfupdateStatusUsingPOST = R_boolean_;
-export interface TPathOfgetUsingGET_18 {
+export interface TPathOfgetUsingGET_24 {
     // 主键
     id?: number;
 }
-export type TResponseOfgetUsingGET_18 = R_Tenant_;
+export type TResponseOfgetUsingGET_24 = R_Tenant_;
 type MultipartFile = File;
 
 export interface IApiFn {
@@ -494,98 +494,98 @@ export interface IApiFn {
 
   (url: "/datasourceConfig"): {
     /**
-     * @description 新增 saveUsingPOST_14
+     * @description 新增 saveUsingPOST_20
      * 数据源
      */
-    post(options: { body: TBodyOfsaveUsingPOST_14 }): Promise<TResponseOfsaveUsingPOST_14>;
+    post(options: { body: TBodyOfsaveUsingPOST_20 }): Promise<TResponseOfsaveUsingPOST_20>;
 
     /**
-     * @description 修改 updateUsingPUT_13
+     * @description 修改 updateUsingPUT_19
      * 数据源
      */
-    put(options: { body: TBodyOfupdateUsingPUT_13 }): Promise<TResponseOfupdateUsingPUT_13>;
+    put(options: { body: TBodyOfupdateUsingPUT_19 }): Promise<TResponseOfupdateUsingPUT_19>;
 
     /**
-     * @description 删除 deleteUsingDELETE_17
+     * @description 删除 deleteUsingDELETE_23
      * 数据源
      */
     delete(options: {
-      body: TBodyOfdeleteUsingDELETE_17;
-    }): Promise<TResponseOfdeleteUsingDELETE_17>;
+      body: TBodyOfdeleteUsingDELETE_23;
+    }): Promise<TResponseOfdeleteUsingDELETE_23>;
   };
   (url: "/datasourceConfig/all"): {
     /**
-     * @description 修改所有字段 updateAllUsingPUT_13
+     * @description 修改所有字段 updateAllUsingPUT_19
      * 数据源
      */
-    put(options: { body: TBodyOfupdateAllUsingPUT_13 }): Promise<TResponseOfupdateAllUsingPUT_13>;
+    put(options: { body: TBodyOfupdateAllUsingPUT_19 }): Promise<TResponseOfupdateAllUsingPUT_19>;
   };
   (url: "/datasourceConfig/export"): {
     /**
-     * @description 导出Excel exportExcelUsingPOST_15
+     * @description 导出Excel exportExcelUsingPOST_21
      * 数据源
      */
     post(options: {
-      body: TBodyOfexportExcelUsingPOST_15;
-    }): Promise<TResponseOfexportExcelUsingPOST_15>;
+      body: TBodyOfexportExcelUsingPOST_21;
+    }): Promise<TResponseOfexportExcelUsingPOST_21>;
   };
   (url: "/datasourceConfig/import"): {
     /**
-     * @description 导入Excel importExcelUsingPOST_14
+     * @description 导入Excel importExcelUsingPOST_20
      * 数据源
      */
     post(options: {
-      formData: TFormDataOfimportExcelUsingPOST_14;
-    }): Promise<TResponseOfimportExcelUsingPOST_14>;
+      formData: TFormDataOfimportExcelUsingPOST_20;
+    }): Promise<TResponseOfimportExcelUsingPOST_20>;
   };
   (url: "/datasourceConfig/page"): {
     /**
-     * @description 分页列表查询 pageUsingPOST_19
+     * @description 分页列表查询 pageUsingPOST_25
      * 数据源
      */
-    post(options: { body: TBodyOfpageUsingPOST_19 }): Promise<TResponseOfpageUsingPOST_19>;
+    post(options: { body: TBodyOfpageUsingPOST_25 }): Promise<TResponseOfpageUsingPOST_25>;
   };
   (url: "/datasourceConfig/preview"): {
     /**
-     * @description 预览Excel previewUsingPOST_15
+     * @description 预览Excel previewUsingPOST_21
      * 数据源
      */
-    post(options: { body: TBodyOfpreviewUsingPOST_15 }): Promise<TResponseOfpreviewUsingPOST_15>;
+    post(options: { body: TBodyOfpreviewUsingPOST_21 }): Promise<TResponseOfpreviewUsingPOST_21>;
   };
   (url: "/datasourceConfig/query"): {
     /**
-     * @description 批量查询 queryUsingPOST_15
+     * @description 批量查询 queryUsingPOST_21
      * 数据源
      */
-    post(options: { body: TBodyOfqueryUsingPOST_15 }): Promise<TResponseOfqueryUsingPOST_15>;
+    post(options: { body: TBodyOfqueryUsingPOST_21 }): Promise<TResponseOfqueryUsingPOST_21>;
   };
   (url: "/datasourceConfig/{id}"): {
     /**
-     * @description 单体查询 getUsingGET_17
+     * @description 单体查询 getUsingGET_23
      * 数据源
      */
-    get(options: { path: TPathOfgetUsingGET_17 }): Promise<TResponseOfgetUsingGET_17>;
+    get(options: { path: TPathOfgetUsingGET_23 }): Promise<TResponseOfgetUsingGET_23>;
   };
   (url: "/tenant"): {
     /**
-     * @description 新增 saveUsingPOST_15
+     * @description 新增 saveUsingPOST_21
      * 企业
      */
-    post(options: { body: TBodyOfsaveUsingPOST_15 }): Promise<TResponseOfsaveUsingPOST_15>;
+    post(options: { body: TBodyOfsaveUsingPOST_21 }): Promise<TResponseOfsaveUsingPOST_21>;
 
     /**
-     * @description 修改 updateUsingPUT_14
+     * @description 修改 updateUsingPUT_20
      * 企业
      */
-    put(options: { body: TBodyOfupdateUsingPUT_14 }): Promise<TResponseOfupdateUsingPUT_14>;
+    put(options: { body: TBodyOfupdateUsingPUT_20 }): Promise<TResponseOfupdateUsingPUT_20>;
 
     /**
-     * @description 删除 deleteUsingDELETE_18
+     * @description 删除 deleteUsingDELETE_24
      * 企业
      */
     delete(options: {
-      body: TBodyOfdeleteUsingDELETE_18;
-    }): Promise<TResponseOfdeleteUsingDELETE_18>;
+      body: TBodyOfdeleteUsingDELETE_24;
+    }): Promise<TResponseOfdeleteUsingDELETE_24>;
   };
   (url: "/tenant/all"): {
     /**
@@ -595,10 +595,10 @@ export interface IApiFn {
     get(options: {}): Promise<TResponseOflistUsingGET>;
 
     /**
-     * @description 修改所有字段 updateAllUsingPUT_14
+     * @description 修改所有字段 updateAllUsingPUT_20
      * 企业
      */
-    put(options: { body: TBodyOfupdateAllUsingPUT_14 }): Promise<TResponseOfupdateAllUsingPUT_14>;
+    put(options: { body: TBodyOfupdateAllUsingPUT_20 }): Promise<TResponseOfupdateAllUsingPUT_20>;
   };
   (url: "/tenant/check/{code}"): {
     /**
@@ -625,21 +625,21 @@ export interface IApiFn {
   };
   (url: "/tenant/export"): {
     /**
-     * @description 导出Excel exportExcelUsingPOST_16
+     * @description 导出Excel exportExcelUsingPOST_22
      * 企业
      */
     post(options: {
-      body: TBodyOfexportExcelUsingPOST_16;
-    }): Promise<TResponseOfexportExcelUsingPOST_16>;
+      body: TBodyOfexportExcelUsingPOST_22;
+    }): Promise<TResponseOfexportExcelUsingPOST_22>;
   };
   (url: "/tenant/import"): {
     /**
-     * @description 导入Excel importExcelUsingPOST_15
+     * @description 导入Excel importExcelUsingPOST_21
      * 企业
      */
     post(options: {
-      formData: TFormDataOfimportExcelUsingPOST_15;
-    }): Promise<TResponseOfimportExcelUsingPOST_15>;
+      formData: TFormDataOfimportExcelUsingPOST_21;
+    }): Promise<TResponseOfimportExcelUsingPOST_21>;
   };
   (url: "/tenant/initConnect"): {
     /**
@@ -650,24 +650,24 @@ export interface IApiFn {
   };
   (url: "/tenant/page"): {
     /**
-     * @description 分页列表查询 pageUsingPOST_20
+     * @description 分页列表查询 pageUsingPOST_26
      * 企业
      */
-    post(options: { body: TBodyOfpageUsingPOST_20 }): Promise<TResponseOfpageUsingPOST_20>;
+    post(options: { body: TBodyOfpageUsingPOST_26 }): Promise<TResponseOfpageUsingPOST_26>;
   };
   (url: "/tenant/preview"): {
     /**
-     * @description 预览Excel previewUsingPOST_16
+     * @description 预览Excel previewUsingPOST_22
      * 企业
      */
-    post(options: { body: TBodyOfpreviewUsingPOST_16 }): Promise<TResponseOfpreviewUsingPOST_16>;
+    post(options: { body: TBodyOfpreviewUsingPOST_22 }): Promise<TResponseOfpreviewUsingPOST_22>;
   };
   (url: "/tenant/query"): {
     /**
-     * @description 批量查询 queryUsingPOST_16
+     * @description 批量查询 queryUsingPOST_22
      * 企业
      */
-    post(options: { body: TBodyOfqueryUsingPOST_16 }): Promise<TResponseOfqueryUsingPOST_16>;
+    post(options: { body: TBodyOfqueryUsingPOST_22 }): Promise<TResponseOfqueryUsingPOST_22>;
   };
   (url: "/tenant/refreshCache"): {
     /**
@@ -687,10 +687,10 @@ export interface IApiFn {
   };
   (url: "/tenant/{id}"): {
     /**
-     * @description 单体查询 getUsingGET_18
+     * @description 单体查询 getUsingGET_24
      * 企业
      */
-    get(options: { path: TPathOfgetUsingGET_18 }): Promise<TResponseOfgetUsingGET_18>;
+    get(options: { path: TPathOfgetUsingGET_24 }): Promise<TResponseOfgetUsingGET_24>;
   };
 }
 

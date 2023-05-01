@@ -399,6 +399,23 @@ export interface R_Map_string_string__ {
     timestamp?: number;
 }
 
+export interface R_Tenant_ {
+    // 响应编码:0/200-请求处理成功
+    code?: number;
+    data?: Tenant;
+    // 异常消息
+    errorMsg?: string;
+    // 附加数据
+    extra?: any;
+    isSuccess?: boolean;
+    // 提示消息
+    msg?: string;
+    // 请求路径
+    path?: string;
+    // 响应时间戳
+    timestamp?: number;
+}
+
 export interface R_boolean_ {
     // 响应编码:0/200-请求处理成功
     code?: number;
@@ -433,6 +450,100 @@ export interface R_string_ {
     path?: string;
     // 响应时间戳
     timestamp?: number;
+}
+
+/**
+ * @description: 企业
+ */
+export interface Tenant {
+    // 详细地址
+    address?: string;
+    // 营业执照文件地址;文件服务地址
+    busLicenseFile?: string;
+    // 营业执照名称;单店和连锁类型必填
+    busLicenseName?: string;
+    // 所在地市编码;6位行政区划编码
+    cityCode?: string;
+    // 企业编码
+    code?: string;
+    // 连接类型
+    connectType?: string;
+    // 联系人
+    contact?: string;
+    // 所在地区县编码;6位行政区划编码
+    countyCode?: string;
+    // 创建时间
+    createTime?: string;
+    // 创建人ID
+    createdBy?: number;
+    // 企业简介
+    describe?: string;
+    // 责任人
+    duty?: string;
+    // 有效期
+    expirationTime?: string;
+    // 主键
+    id?: number;
+    // logo地址
+    logo?: string;
+    // 商户类型;
+    merchantType?: string;
+    // 联系人手机号
+    mobile?: string;
+    // 企业名称
+    name?: string;
+    // 所在地省编码;6位行政区划编码
+    provCode?: string;
+    // 内置
+    readonly?: boolean;
+    // 状态
+    status?: string;
+    // 类型
+    type?: string;
+    // 统一信用代码;单店和连锁类型必填
+    unifiedCreditCode?: string;
+    // 最后修改时间
+    updateTime?: string;
+    // 最后修改人ID
+    updatedBy?: number;
+}
+
+/**
+ * @description: 商户注册
+ */
+export interface TenantRegisterDTO {
+    // 登录用户名称
+    account?: string;
+    // 详细地址
+    address?: string;
+    // 营业执照文件地址;文件服务地址
+    busLicenseFile?: string;
+    // 营业执照名称;单店和连锁类型必填
+    busLicenseName?: string;
+    // 所在地市编码;6位行政区划编码
+    cityCode?: string;
+    // 确认登录密码
+    confirmPassword?: string;
+    // 联系人
+    contact?: string;
+    // 所在地区县编码;6位行政区划编码
+    countyCode?: string;
+    // 商户类型
+    merchantType?: string;
+    // 联系人手机号
+    mobile?: string;
+    // 商户名称
+    name?: string;
+    // 登录密码
+    password?: string;
+    // 所在地省编码;6位行政区划编码
+    provCode?: string;
+    // 统一信用代码;单店和连锁类型必填
+    unifiedCreditCode?: string;
+    // 验证码
+    verifyCode?: string;
+    // 验证码KEY
+    verifyKey?: string;
 }
 
 export interface VueRouter {
@@ -506,6 +617,8 @@ export interface TQueryOflogoutUsingPOST_1 {
 export type TResponseOflogoutUsingPOST_1 = R_boolean_;
 export type TBodyOfnoTokenTenantUsingPOST = LoginParamDTO;
 export type TResponseOfnoTokenTenantUsingPOST = R_string_;
+export type TBodyOfregisterUsingPUT = TenantRegisterDTO;
+export type TResponseOfregisterUsingPUT = R_Tenant_;
 export type TBodyOffindParamsUsingPOST = string[];
 export type TResponseOffindParamsUsingPOST = R_Map_string_string__;
 export interface TQueryOfgetValueUsingGET {
@@ -614,6 +727,13 @@ export interface IApiFn {
     post(options: {
       body: TBodyOfnoTokenTenantUsingPOST;
     }): Promise<TResponseOfnoTokenTenantUsingPOST>;
+  };
+  (url: "/noToken/tenant/register"): {
+    /**
+     * @description 商户注册 registerUsingPUT
+     * 登录接口
+     */
+    put(options: { body: TBodyOfregisterUsingPUT }): Promise<TResponseOfregisterUsingPUT>;
   };
   (url: "/parameter/findParams"): {
     /**

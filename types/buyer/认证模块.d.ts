@@ -54,24 +54,6 @@ interface LoginParamDTO {
     key?: string;
     password?: string;
     refreshToken?: string;
-    userType?: string;
-}
-/**
- * @description: 认证信息带租户信息
- */
-interface LoginUserAuthInfo {
-    account?: string;
-    avatarId?: number;
-    expiration?: string;
-    expire?: number;
-    expireMillis?: number;
-    name?: string;
-    refreshToken?: string;
-    tenantCode?: string;
-    token?: string;
-    tokenType?: string;
-    userId?: number;
-    workDescribe?: string;
 }
 interface Map_string_List_Dictionary__ {
     [index: string]: Array<unknown>;
@@ -167,16 +149,6 @@ interface R_List_Menu__ {
 interface R_List_VueRouter__ {
     code?: number;
     data?: VueRouter[];
-    errorMsg?: string;
-    extra?: any;
-    isSuccess?: boolean;
-    msg?: string;
-    path?: string;
-    timestamp?: number;
-}
-interface R_LoginUserAuthInfo_ {
-    code?: number;
-    data?: LoginUserAuthInfo;
     errorMsg?: string;
     extra?: any;
     isSuccess?: boolean;
@@ -297,14 +269,12 @@ interface TQueryOfmyRouterUsingGET {
 }
 type TResponseOfmyRouterUsingGET = R_List_VueRouter__;
 type TBodyOfloginUsingPOST = LoginParamDTO;
-type TResponseOfloginUsingPOST = R_LoginUserAuthInfo_;
+type TResponseOfloginUsingPOST = R_AuthInfo_;
 interface TQueryOflogoutUsingPOST_1 {
     clientId?: string;
     userId?: number;
 }
 type TResponseOflogoutUsingPOST_1 = R_boolean_;
-type TBodyOfnoTokenTenantUsingPOST = LoginParamDTO;
-type TResponseOfnoTokenTenantUsingPOST = R_string_;
 type TBodyOffindParamsUsingPOST = string[];
 type TResponseOffindParamsUsingPOST = R_Map_string_string__;
 interface TQueryOfgetValueUsingGET {
@@ -418,15 +388,6 @@ interface IApiFn {
             query: TQueryOflogoutUsingPOST_1;
         }): Promise<TResponseOflogoutUsingPOST_1>;
     };
-    (url: "/noToken/tenant"): {
-        /**
-         * @description 登录租户 noTokenTenantUsingPOST
-         * 登录接口
-         */
-        post(options: {
-            body: TBodyOfnoTokenTenantUsingPOST;
-        }): Promise<TResponseOfnoTokenTenantUsingPOST>;
-    };
     (url: "/parameter/findParams"): {
         /**
          * @description 根据key批量获取系统参数 findParamsUsingPOST
@@ -468,4 +429,4 @@ interface RequestProvider {
  */
 declare function createRequest(provider: RequestProvider): IApiFn;
 
-export { AuthInfo, AuthorityResourceDTO, Dictionary, IApiFn, LoginParamDTO, LoginUserAuthInfo, Map_string_List_Dictionary__, Map_string_List_Option__, Map_string_Map_string_string__, Map_string_string_, Menu, Option, R_AuthInfo_, R_AuthorityResourceDTO_, R_List_Menu__, R_List_VueRouter__, R_LoginUserAuthInfo_, R_Map_string_List_Dictionary___, R_Map_string_List_Option___, R_Map_string_Map_string_string___, R_Map_string_string__, R_boolean_, R_string_, RequestProvider, RouterMeta, TBodyOfcodeListUsingPOST, TBodyOfenumListsUsingPOST, TBodyOfenumsUsingPOST, TBodyOffindParamsUsingPOST, TBodyOflistUsingPOST_1, TBodyOfloginUsingPOST, TBodyOfnoTokenTenantUsingPOST, TQueryOfcaptchaUsingGET, TQueryOfcheckUsingGET_8, TQueryOfgetValueUsingGET, TQueryOflogoutUsingPOST_1, TQueryOfmyMenusUsingGET, TQueryOfmyRouterUsingGET, TQueryOfvisibleUsingGET, TResponseOfcaptchaUsingGET, TResponseOfcheckUsingGET_8, TResponseOfcodeListUsingPOST, TResponseOfenumListsUsingPOST, TResponseOfenumsUsingPOST, TResponseOffindParamsUsingPOST, TResponseOfgetValueUsingGET, TResponseOflistUsingPOST_1, TResponseOfloginUsingPOST, TResponseOflogoutUsingPOST_1, TResponseOfmyMenusUsingGET, TResponseOfmyRouterUsingGET, TResponseOfnoTokenTenantUsingPOST, TResponseOfverifyUsingGET, TResponseOfvisibleUsingGET, VueRouter, createRequest };
+export { AuthInfo, AuthorityResourceDTO, Dictionary, IApiFn, LoginParamDTO, Map_string_List_Dictionary__, Map_string_List_Option__, Map_string_Map_string_string__, Map_string_string_, Menu, Option, R_AuthInfo_, R_AuthorityResourceDTO_, R_List_Menu__, R_List_VueRouter__, R_Map_string_List_Dictionary___, R_Map_string_List_Option___, R_Map_string_Map_string_string___, R_Map_string_string__, R_boolean_, R_string_, RequestProvider, RouterMeta, TBodyOfcodeListUsingPOST, TBodyOfenumListsUsingPOST, TBodyOfenumsUsingPOST, TBodyOffindParamsUsingPOST, TBodyOflistUsingPOST_1, TBodyOfloginUsingPOST, TQueryOfcaptchaUsingGET, TQueryOfcheckUsingGET_8, TQueryOfgetValueUsingGET, TQueryOflogoutUsingPOST_1, TQueryOfmyMenusUsingGET, TQueryOfmyRouterUsingGET, TQueryOfvisibleUsingGET, TResponseOfcaptchaUsingGET, TResponseOfcheckUsingGET_8, TResponseOfcodeListUsingPOST, TResponseOfenumListsUsingPOST, TResponseOfenumsUsingPOST, TResponseOffindParamsUsingPOST, TResponseOfgetValueUsingGET, TResponseOflistUsingPOST_1, TResponseOfloginUsingPOST, TResponseOflogoutUsingPOST_1, TResponseOfmyMenusUsingGET, TResponseOfmyRouterUsingGET, TResponseOfverifyUsingGET, TResponseOfvisibleUsingGET, VueRouter, createRequest };
