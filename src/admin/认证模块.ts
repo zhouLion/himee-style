@@ -456,6 +456,7 @@ export interface R_string_ {
  * @description: 企业
  */
 export interface Tenant {
+    account?: string;
     // 详细地址
     address?: string;
     // 营业执照文件地址;文件服务地址
@@ -492,6 +493,7 @@ export interface Tenant {
     mobile?: string;
     // 企业名称
     name?: string;
+    password?: string;
     // 所在地省编码;6位行政区划编码
     provCode?: string;
     // 内置

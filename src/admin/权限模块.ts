@@ -1487,6 +1487,8 @@ export interface WechatUser {
     openId?: string;
     // 省份
     province?: string;
+    // 租户编码
+    tenantCode?: string;
     // token
     token?: string;
     // 小程序unionId

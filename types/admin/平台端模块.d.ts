@@ -5,29 +5,6 @@ interface IPage_Order_ {
     size?: number;
     total?: number;
 }
-interface Merchant {
-    account?: string;
-    address?: string;
-    busLicenseFile?: string;
-    busLicenseName?: string;
-    cityCode?: string;
-    contact?: string;
-    countyCode?: string;
-    createTime?: string;
-    createdBy?: number;
-    echoMap?: any;
-    id?: number;
-    merchantName?: string;
-    merchantType?: string;
-    mobile?: string;
-    password?: string;
-    provCode?: string;
-    state?: string;
-    unifiedCreditCode?: string;
-    updateTime?: string;
-    updatedBy?: number;
-    userId?: number;
-}
 /**
  * @description: 订单
  */
@@ -136,8 +113,6 @@ interface R_string_ {
     path?: string;
     timestamp?: number;
 }
-type TBodyOfapproveUsingPOST = Merchant;
-type TResponseOfapproveUsingPOST = R_boolean_;
 type TBodyOfsaveUsingPOST_4 = OrderSaveDTO;
 type TResponseOfsaveUsingPOST_4 = R_Order_;
 type TBodyOfupdateUsingPUT_4 = OrderUpdateDTO;
@@ -166,15 +141,6 @@ type TResponseOfgetUsingGET_5 = R_Order_;
 interface IApiFn {
     (url: string): {
         [m in "get" | "post" | "put" | "patch" | "delete" | "head"]: (options: any) => Promise<any>;
-    };
-    (url: "/admin/merchant/approve"): {
-        /**
-         * @description 商户审核 approveUsingPOST
-         * 平台商户
-         */
-        post(options: {
-            body: TBodyOfapproveUsingPOST;
-        }): Promise<TResponseOfapproveUsingPOST>;
     };
     (url: "/order"): {
         /**
@@ -281,4 +247,4 @@ interface RequestProvider {
  */
 declare function createRequest(provider: RequestProvider): IApiFn;
 
-export { IApiFn, IPage_Order_, Merchant, Order, OrderPageQuery, OrderSaveDTO, OrderUpdateDTO, PageParams_OrderPageQuery_, R_IPage_Order__, R_List_Order__, R_Order_, R_boolean_, R_string_, RequestProvider, TBodyOfapproveUsingPOST, TBodyOfdeleteUsingDELETE_5, TBodyOfexportExcelUsingPOST_5, TBodyOfpageUsingPOST_5, TBodyOfpreviewUsingPOST_5, TBodyOfqueryUsingPOST_4, TBodyOfsaveUsingPOST_4, TBodyOfupdateAllUsingPUT_4, TBodyOfupdateUsingPUT_4, TFormDataOfimportExcelUsingPOST_5, TPathOfgetUsingGET_5, TResponseOfapproveUsingPOST, TResponseOfdeleteUsingDELETE_5, TResponseOfexportExcelUsingPOST_5, TResponseOfgetUsingGET_5, TResponseOfimportExcelUsingPOST_5, TResponseOfpageUsingPOST_5, TResponseOfpreviewUsingPOST_5, TResponseOfqueryUsingGET, TResponseOfqueryUsingPOST_4, TResponseOfsaveUsingPOST_4, TResponseOfupdateAllUsingPUT_4, TResponseOfupdateUsingPUT_4, createRequest };
+export { IApiFn, IPage_Order_, Order, OrderPageQuery, OrderSaveDTO, OrderUpdateDTO, PageParams_OrderPageQuery_, R_IPage_Order__, R_List_Order__, R_Order_, R_boolean_, R_string_, RequestProvider, TBodyOfdeleteUsingDELETE_5, TBodyOfexportExcelUsingPOST_5, TBodyOfpageUsingPOST_5, TBodyOfpreviewUsingPOST_5, TBodyOfqueryUsingPOST_4, TBodyOfsaveUsingPOST_4, TBodyOfupdateAllUsingPUT_4, TBodyOfupdateUsingPUT_4, TFormDataOfimportExcelUsingPOST_5, TPathOfgetUsingGET_5, TResponseOfdeleteUsingDELETE_5, TResponseOfexportExcelUsingPOST_5, TResponseOfgetUsingGET_5, TResponseOfimportExcelUsingPOST_5, TResponseOfpageUsingPOST_5, TResponseOfpreviewUsingPOST_5, TResponseOfqueryUsingGET, TResponseOfqueryUsingPOST_4, TResponseOfsaveUsingPOST_4, TResponseOfupdateAllUsingPUT_4, TResponseOfupdateUsingPUT_4, createRequest };

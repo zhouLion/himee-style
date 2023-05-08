@@ -884,6 +884,7 @@ interface WechatUser {
     nickname?: string;
     openId?: string;
     province?: string;
+    tenantCode?: string;
     token?: string;
     unionId?: string;
     updateTime?: string;

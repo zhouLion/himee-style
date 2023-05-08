@@ -268,6 +268,7 @@ interface R_string_ {
  * @description: 企业
  */
 interface Tenant {
+    account?: string;
     address?: string;
     busLicenseFile?: string;
     busLicenseName?: string;
@@ -286,6 +287,7 @@ interface Tenant {
     merchantType?: string;
     mobile?: string;
     name?: string;
+    password?: string;
     provCode?: string;
     readonly?: boolean;
     status?: string;

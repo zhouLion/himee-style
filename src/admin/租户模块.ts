@@ -295,6 +295,7 @@ export interface R_string_ {
  * @description: 企业
  */
 export interface Tenant {
+    account?: string;
     // 详细地址
     address?: string;
     // 营业执照文件地址;文件服务地址
@@ -331,6 +332,7 @@ export interface Tenant {
     mobile?: string;
     // 企业名称
     name?: string;
+    password?: string;
     // 所在地省编码;6位行政区划编码
     provCode?: string;
     // 内置
@@ -348,18 +350,13 @@ export interface Tenant {
 }
 
 /**
- * @description: 租户连接
+ * @description: 商户审核
  */
-export interface TenantConnectDTO {
-    // 基础库数据源配置
-    baseDatasourceId?: number;
-    // 连接类型
-    connectType?: string;
-    // 扩展库数据源配置
-    extendDatasourceId?: number;
-    // 企业ID
+export interface TenantApproveDTO {
+    // 商户id
     id?: number;
-    tenant?: string;
+    // 状态
+    status?: string;
 }
 
 /**
@@ -469,6 +466,8 @@ export type TResponseOfdeleteUsingDELETE_18 = R_boolean_;
 export type TResponseOflistUsingGET = R_List_Tenant__;
 export type TBodyOfupdateAllUsingPUT_14 = Tenant;
 export type TResponseOfupdateAllUsingPUT_14 = R_Tenant_;
+export type TBodyOfapproveUsingPOST = TenantApproveDTO;
+export type TResponseOfapproveUsingPOST = R_boolean_;
 export interface TPathOfcheckUsingGET_5 {
     // code
     code: string;
@@ -484,8 +483,6 @@ export interface TFormDataOfimportExcelUsingPOST_15 {
     file: string;
 }
 export type TResponseOfimportExcelUsingPOST_15 = R_boolean_;
-export type TBodyOfinitConnectUsingPOST = TenantConnectDTO;
-export type TResponseOfinitConnectUsingPOST = R_boolean_;
 export type TBodyOfpageUsingPOST_20 = PageParams_TenantPageQuery_;
 export type TResponseOfpageUsingPOST_20 = R_IPage_Tenant__;
 export type TBodyOfpreviewUsingPOST_16 = PageParams_TenantPageQuery_;
@@ -620,6 +617,13 @@ export interface IApiFn {
      */
     put(options: { body: TBodyOfupdateAllUsingPUT_14 }): Promise<TResponseOfupdateAllUsingPUT_14>;
   };
+  (url: "/tenant/approve"): {
+    /**
+     * @description 商户审核 approveUsingPOST
+     * 商户（租户）
+     */
+    post(options: { body: TBodyOfapproveUsingPOST }): Promise<TResponseOfapproveUsingPOST>;
+  };
   (url: "/tenant/check/{code}"): {
     /**
      * @description 检测租户是否存在 checkUsingGET_5
@@ -660,13 +664,6 @@ export interface IApiFn {
     post(options: {
       formData: TFormDataOfimportExcelUsingPOST_15;
     }): Promise<TResponseOfimportExcelUsingPOST_15>;
-  };
-  (url: "/tenant/initConnect"): {
-    /**
-     * @description 连接数据源 initConnectUsingPOST
-     * 商户（租户）
-     */
-    post(options: { body: TBodyOfinitConnectUsingPOST }): Promise<TResponseOfinitConnectUsingPOST>;
   };
   (url: "/tenant/page"): {
     /**

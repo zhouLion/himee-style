@@ -180,6 +180,7 @@ interface R_string_ {
  * @description: 企业
  */
 interface Tenant {
+    account?: string;
     address?: string;
     busLicenseFile?: string;
     busLicenseName?: string;
@@ -198,6 +199,7 @@ interface Tenant {
     merchantType?: string;
     mobile?: string;
     name?: string;
+    password?: string;
     provCode?: string;
     readonly?: boolean;
     status?: string;
@@ -207,14 +209,11 @@ interface Tenant {
     updatedBy?: number;
 }
 /**
- * @description: 租户连接
+ * @description: 商户审核
  */
-interface TenantConnectDTO {
-    baseDatasourceId?: number;
-    connectType?: string;
-    extendDatasourceId?: number;
+interface TenantApproveDTO {
     id?: number;
-    tenant?: string;
+    status?: string;
 }
 /**
  * @description: 企业
@@ -291,6 +290,8 @@ type TResponseOfdeleteUsingDELETE_18 = R_boolean_;
 type TResponseOflistUsingGET = R_List_Tenant__;
 type TBodyOfupdateAllUsingPUT_14 = Tenant;
 type TResponseOfupdateAllUsingPUT_14 = R_Tenant_;
+type TBodyOfapproveUsingPOST = TenantApproveDTO;
+type TResponseOfapproveUsingPOST = R_boolean_;
 interface TPathOfcheckUsingGET_5 {
     code: string;
 }
@@ -304,8 +305,6 @@ interface TFormDataOfimportExcelUsingPOST_15 {
     file: string;
 }
 type TResponseOfimportExcelUsingPOST_15 = R_boolean_;
-type TBodyOfinitConnectUsingPOST = TenantConnectDTO;
-type TResponseOfinitConnectUsingPOST = R_boolean_;
 type TBodyOfpageUsingPOST_20 = PageParams_TenantPageQuery_;
 type TResponseOfpageUsingPOST_20 = R_IPage_Tenant__;
 type TBodyOfpreviewUsingPOST_16 = PageParams_TenantPageQuery_;
@@ -449,6 +448,15 @@ interface IApiFn {
             body: TBodyOfupdateAllUsingPUT_14;
         }): Promise<TResponseOfupdateAllUsingPUT_14>;
     };
+    (url: "/tenant/approve"): {
+        /**
+         * @description 商户审核 approveUsingPOST
+         * 商户（租户）
+         */
+        post(options: {
+            body: TBodyOfapproveUsingPOST;
+        }): Promise<TResponseOfapproveUsingPOST>;
+    };
     (url: "/tenant/check/{code}"): {
         /**
          * @description 检测租户是否存在 checkUsingGET_5
@@ -491,15 +499,6 @@ interface IApiFn {
         post(options: {
             formData: TFormDataOfimportExcelUsingPOST_15;
         }): Promise<TResponseOfimportExcelUsingPOST_15>;
-    };
-    (url: "/tenant/initConnect"): {
-        /**
-         * @description 连接数据源 initConnectUsingPOST
-         * 商户（租户）
-         */
-        post(options: {
-            body: TBodyOfinitConnectUsingPOST;
-        }): Promise<TResponseOfinitConnectUsingPOST>;
     };
     (url: "/tenant/page"): {
         /**
@@ -567,4 +566,4 @@ interface RequestProvider {
  */
 declare function createRequest(provider: RequestProvider): IApiFn;
 
-export { AppendixSaveVO, DatasourceConfig, DatasourceConfigPageQuery, DatasourceConfigSaveDTO, DatasourceConfigUpdateDTO, IApiFn, IPage_DatasourceConfig_, IPage_Tenant_, PageParams_DatasourceConfigPageQuery_, PageParams_TenantPageQuery_, R_DatasourceConfig_, R_IPage_DatasourceConfig__, R_IPage_Tenant__, R_List_DatasourceConfig__, R_List_Tenant__, R_Tenant_, R_boolean_, R_string_, RequestProvider, TBodyOfdeleteAllUsingDELETE, TBodyOfdeleteUsingDELETE_17, TBodyOfdeleteUsingDELETE_18, TBodyOfexportExcelUsingPOST_15, TBodyOfexportExcelUsingPOST_16, TBodyOfinitConnectUsingPOST, TBodyOfpageUsingPOST_19, TBodyOfpageUsingPOST_20, TBodyOfpreviewUsingPOST_15, TBodyOfpreviewUsingPOST_16, TBodyOfqueryUsingPOST_15, TBodyOfqueryUsingPOST_16, TBodyOfsaveUsingPOST_14, TBodyOfsaveUsingPOST_15, TBodyOfupdateAllUsingPUT_13, TBodyOfupdateAllUsingPUT_14, TBodyOfupdateUsingPUT_13, TBodyOfupdateUsingPUT_14, TFormDataOfimportExcelUsingPOST_14, TFormDataOfimportExcelUsingPOST_15, TPathOfcheckUsingGET_5, TPathOfgetUsingGET_17, TPathOfgetUsingGET_18, TQueryOfupdateStatusUsingPOST, TResponseOfcheckUsingGET_5, TResponseOfclearCacheUsingPOST_6, TResponseOfdeleteAllUsingDELETE, TResponseOfdeleteUsingDELETE_17, TResponseOfdeleteUsingDELETE_18, TResponseOfexportExcelUsingPOST_15, TResponseOfexportExcelUsingPOST_16, TResponseOfgetUsingGET_17, TResponseOfgetUsingGET_18, TResponseOfimportExcelUsingPOST_14, TResponseOfimportExcelUsingPOST_15, TResponseOfinitConnectUsingPOST, TResponseOflistUsingGET, TResponseOfpageUsingPOST_19, TResponseOfpageUsingPOST_20, TResponseOfpreviewUsingPOST_15, TResponseOfpreviewUsingPOST_16, TResponseOfqueryUsingPOST_15, TResponseOfqueryUsingPOST_16, TResponseOfrefreshCacheUsingPOST_6, TResponseOfsaveUsingPOST_14, TResponseOfsaveUsingPOST_15, TResponseOfupdateAllUsingPUT_13, TResponseOfupdateAllUsingPUT_14, TResponseOfupdateStatusUsingPOST, TResponseOfupdateUsingPUT_13, TResponseOfupdateUsingPUT_14, Tenant, TenantConnectDTO, TenantPageQuery, TenantSaveDTO, TenantUpdateDTO, createRequest };
+export { AppendixSaveVO, DatasourceConfig, DatasourceConfigPageQuery, DatasourceConfigSaveDTO, DatasourceConfigUpdateDTO, IApiFn, IPage_DatasourceConfig_, IPage_Tenant_, PageParams_DatasourceConfigPageQuery_, PageParams_TenantPageQuery_, R_DatasourceConfig_, R_IPage_DatasourceConfig__, R_IPage_Tenant__, R_List_DatasourceConfig__, R_List_Tenant__, R_Tenant_, R_boolean_, R_string_, RequestProvider, TBodyOfapproveUsingPOST, TBodyOfdeleteAllUsingDELETE, TBodyOfdeleteUsingDELETE_17, TBodyOfdeleteUsingDELETE_18, TBodyOfexportExcelUsingPOST_15, TBodyOfexportExcelUsingPOST_16, TBodyOfpageUsingPOST_19, TBodyOfpageUsingPOST_20, TBodyOfpreviewUsingPOST_15, TBodyOfpreviewUsingPOST_16, TBodyOfqueryUsingPOST_15, TBodyOfqueryUsingPOST_16, TBodyOfsaveUsingPOST_14, TBodyOfsaveUsingPOST_15, TBodyOfupdateAllUsingPUT_13, TBodyOfupdateAllUsingPUT_14, TBodyOfupdateUsingPUT_13, TBodyOfupdateUsingPUT_14, TFormDataOfimportExcelUsingPOST_14, TFormDataOfimportExcelUsingPOST_15, TPathOfcheckUsingGET_5, TPathOfgetUsingGET_17, TPathOfgetUsingGET_18, TQueryOfupdateStatusUsingPOST, TResponseOfapproveUsingPOST, TResponseOfcheckUsingGET_5, TResponseOfclearCacheUsingPOST_6, TResponseOfdeleteAllUsingDELETE, TResponseOfdeleteUsingDELETE_17, TResponseOfdeleteUsingDELETE_18, TResponseOfexportExcelUsingPOST_15, TResponseOfexportExcelUsingPOST_16, TResponseOfgetUsingGET_17, TResponseOfgetUsingGET_18, TResponseOfimportExcelUsingPOST_14, TResponseOfimportExcelUsingPOST_15, TResponseOflistUsingGET, TResponseOfpageUsingPOST_19, TResponseOfpageUsingPOST_20, TResponseOfpreviewUsingPOST_15, TResponseOfpreviewUsingPOST_16, TResponseOfqueryUsingPOST_15, TResponseOfqueryUsingPOST_16, TResponseOfrefreshCacheUsingPOST_6, TResponseOfsaveUsingPOST_14, TResponseOfsaveUsingPOST_15, TResponseOfupdateAllUsingPUT_13, TResponseOfupdateAllUsingPUT_14, TResponseOfupdateStatusUsingPOST, TResponseOfupdateUsingPUT_13, TResponseOfupdateUsingPUT_14, Tenant, TenantApproveDTO, TenantPageQuery, TenantSaveDTO, TenantUpdateDTO, createRequest };

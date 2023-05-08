@@ -6,50 +6,6 @@ export interface IPage_Order_ {
     total?: number;
 }
 
-export interface Merchant {
-    // 登录用户名称
-    account?: string;
-    // 详细地址
-    address?: string;
-    // 营业执照文件地址;文件服务地址
-    busLicenseFile?: string;
-    // 营业执照名称;单店和连锁类型必填
-    busLicenseName?: string;
-    // 所在地市编码;6位行政区划编码
-    cityCode?: string;
-    // 联系人
-    contact?: string;
-    // 所在地区县编码;6位行政区划编码
-    countyCode?: string;
-    // 创建时间
-    createTime?: string;
-    // 创建人ID
-    createdBy?: number;
-    echoMap?: any;
-    // 主键
-    id?: number;
-    // 商户名称
-    merchantName?: string;
-    // 商户类型;
-    merchantType?: string;
-    // 联系人手机号
-    mobile?: string;
-    // 登录密码
-    password?: string;
-    // 所在地省编码;6位行政区划编码
-    provCode?: string;
-    // 商户状态;
-    state?: string;
-    // 统一信用代码;单店和连锁类型必填
-    unifiedCreditCode?: string;
-    // 最后修改时间
-    updateTime?: string;
-    // 最后修改人ID
-    updatedBy?: number;
-    // 用户id;关联用户表
-    userId?: number;
-}
-
 /**
  * @description: 订单
  */
@@ -232,8 +188,6 @@ export interface R_string_ {
     timestamp?: number;
 }
 
-export type TBodyOfapproveUsingPOST = Merchant;
-export type TResponseOfapproveUsingPOST = R_boolean_;
 export type TBodyOfsaveUsingPOST_4 = OrderSaveDTO;
 export type TResponseOfsaveUsingPOST_4 = R_Order_;
 export type TBodyOfupdateUsingPUT_4 = OrderUpdateDTO;
@@ -268,13 +222,6 @@ export interface IApiFn {
     [m in "get" | "post" | "put" | "patch" | "delete" | "head"]: (options: any) => Promise<any>;
   };
 
-  (url: "/admin/merchant/approve"): {
-    /**
-     * @description 商户审核 approveUsingPOST
-     * 平台商户
-     */
-    post(options: { body: TBodyOfapproveUsingPOST }): Promise<TResponseOfapproveUsingPOST>;
-  };
   (url: "/order"): {
     /**
      * @description 新增 saveUsingPOST_4
