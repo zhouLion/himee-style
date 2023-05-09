@@ -1,1 +1,1 @@
-import{a}from"../chunk-527NZ7UG.js";export{a as handlerUrl};
+import{handlerUrl as o}from"../chunk-VH7EEN3F.js";export{o as handlerUrl};//# sourceMappingURL=Provider.js.map

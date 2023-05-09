@@ -290,22 +290,28 @@ interface IApiFn {
     };
     (url: "/org"): {
         /**
-         * @description 新增 saveUsingPOST_16
-         * 组织
+         * @description 新增
+         * @see [Swagger doc: 新增](http://120.79.250.86:8760/doc.html#/组织模块/组织/saveUsingPOST_16)
+         *
+         * @tag组织
          */
         post(options: {
             body: TBodyOfsaveUsingPOST_16;
         }): Promise<TResponseOfsaveUsingPOST_16>;
         /**
-         * @description 修改 updateUsingPUT_15
-         * 组织
+         * @description 修改
+         * @see [Swagger doc: 修改](http://120.79.250.86:8760/doc.html#/组织模块/组织/updateUsingPUT_15)
+         *
+         * @tag组织
          */
         put(options: {
             body: TBodyOfupdateUsingPUT_15;
         }): Promise<TResponseOfupdateUsingPUT_15>;
         /**
-         * @description 删除 deleteUsingDELETE_19
-         * 组织
+         * @description 删除
+         * @see [Swagger doc: 删除](http://120.79.250.86:8760/doc.html#/组织模块/组织/deleteUsingDELETE_19)
+         *
+         * @tag组织
          */
         delete(options: {
             body: TBodyOfdeleteUsingDELETE_19;
@@ -313,8 +319,10 @@ interface IApiFn {
     };
     (url: "/org/all"): {
         /**
-         * @description 修改所有字段 updateAllUsingPUT_15
-         * 组织
+         * @description 修改所有字段
+         * @see [Swagger doc: 修改所有字段](http://120.79.250.86:8760/doc.html#/组织模块/组织/updateAllUsingPUT_15)
+         *
+         * @tag组织
          */
         put(options: {
             body: TBodyOfupdateAllUsingPUT_15;
@@ -322,8 +330,10 @@ interface IApiFn {
     };
     (url: "/org/check"): {
         /**
-         * @description 检测名称是否可用 checkUsingGET_6
-         * 组织
+         * @description 检测名称是否可用
+         * @see [Swagger doc: 检测名称是否可用](http://120.79.250.86:8760/doc.html#/组织模块/组织/checkUsingGET_6)
+         *
+         * @tag组织
          */
         get(options: {
             query: TQueryOfcheckUsingGET_6;
@@ -331,15 +341,19 @@ interface IApiFn {
     };
     (url: "/org/clearCache"): {
         /**
-         * @description 清理缓存 clearCacheUsingPOST_7
-         * 组织
+         * @description 清理缓存
+         * @see [Swagger doc: 清理缓存](http://120.79.250.86:8760/doc.html#/组织模块/组织/clearCacheUsingPOST_7)
+         *
+         * @tag组织
          */
         post(options: {}): Promise<TResponseOfclearCacheUsingPOST_7>;
     };
     (url: "/org/export"): {
         /**
-         * @description 导出Excel exportExcelUsingPOST_17
-         * 组织
+         * @description 导出Excel
+         * @see [Swagger doc: 导出Excel](http://120.79.250.86:8760/doc.html#/组织模块/组织/exportExcelUsingPOST_17)
+         *
+         * @tag组织
          */
         post(options: {
             body: TBodyOfexportExcelUsingPOST_17;
@@ -347,8 +361,10 @@ interface IApiFn {
     };
     (url: "/org/import"): {
         /**
-         * @description 导入Excel importExcelUsingPOST_16
-         * 组织
+         * @description 导入Excel
+         * @see [Swagger doc: 导入Excel](http://120.79.250.86:8760/doc.html#/组织模块/组织/importExcelUsingPOST_16)
+         *
+         * @tag组织
          */
         post(options: {
             formData: TFormDataOfimportExcelUsingPOST_16;
@@ -356,8 +372,10 @@ interface IApiFn {
     };
     (url: "/org/page"): {
         /**
-         * @description 分页列表查询 pageUsingPOST_21
-         * 组织
+         * @description 分页列表查询
+         * @see [Swagger doc: 分页列表查询](http://120.79.250.86:8760/doc.html#/组织模块/组织/pageUsingPOST_21)
+         *
+         * @tag组织
          */
         post(options: {
             body: TBodyOfpageUsingPOST_21;
@@ -365,8 +383,10 @@ interface IApiFn {
     };
     (url: "/org/preview"): {
         /**
-         * @description 预览Excel previewUsingPOST_17
-         * 组织
+         * @description 预览Excel
+         * @see [Swagger doc: 预览Excel](http://120.79.250.86:8760/doc.html#/组织模块/组织/previewUsingPOST_17)
+         *
+         * @tag组织
          */
         post(options: {
             body: TBodyOfpreviewUsingPOST_17;
@@ -374,8 +394,10 @@ interface IApiFn {
     };
     (url: "/org/query"): {
         /**
-         * @description 批量查询 queryUsingPOST_17
-         * 组织
+         * @description 批量查询
+         * @see [Swagger doc: 批量查询](http://120.79.250.86:8760/doc.html#/组织模块/组织/queryUsingPOST_17)
+         *
+         * @tag组织
          */
         post(options: {
             body: TBodyOfqueryUsingPOST_17;
@@ -383,15 +405,19 @@ interface IApiFn {
     };
     (url: "/org/refreshCache"): {
         /**
-         * @description 刷新缓存 refreshCacheUsingPOST_7
-         * 组织
+         * @description 刷新缓存
+         * @see [Swagger doc: 刷新缓存](http://120.79.250.86:8760/doc.html#/组织模块/组织/refreshCacheUsingPOST_7)
+         *
+         * @tag组织
          */
         post(options: {}): Promise<TResponseOfrefreshCacheUsingPOST_7>;
     };
     (url: "/org/tree"): {
         /**
-         * @description 查询系统所有的组织树 treeUsingGET
-         * 组织
+         * @description 查询系统所有的组织树
+         * @see [Swagger doc: 查询系统所有的组织树](http://120.79.250.86:8760/doc.html#/组织模块/组织/treeUsingGET)
+         *
+         * @tag组织
          */
         get(options: {
             query: TQueryOftreeUsingGET;
@@ -399,8 +425,10 @@ interface IApiFn {
     };
     (url: "/org/{id}"): {
         /**
-         * @description 单体查询 getUsingGET_19
-         * 组织
+         * @description 单体查询
+         * @see [Swagger doc: 单体查询](http://120.79.250.86:8760/doc.html#/组织模块/组织/getUsingGET_19)
+         *
+         * @tag组织
          */
         get(options: {
             path: TPathOfgetUsingGET_19;
@@ -408,22 +436,28 @@ interface IApiFn {
     };
     (url: "/station"): {
         /**
-         * @description 新增 saveUsingPOST_17
-         * 岗位
+         * @description 新增
+         * @see [Swagger doc: 新增](http://120.79.250.86:8760/doc.html#/组织模块/岗位/saveUsingPOST_17)
+         *
+         * @tag岗位
          */
         post(options: {
             body: TBodyOfsaveUsingPOST_17;
         }): Promise<TResponseOfsaveUsingPOST_17>;
         /**
-         * @description 修改 updateUsingPUT_16
-         * 岗位
+         * @description 修改
+         * @see [Swagger doc: 修改](http://120.79.250.86:8760/doc.html#/组织模块/岗位/updateUsingPUT_16)
+         *
+         * @tag岗位
          */
         put(options: {
             body: TBodyOfupdateUsingPUT_16;
         }): Promise<TResponseOfupdateUsingPUT_16>;
         /**
-         * @description 删除 deleteUsingDELETE_20
-         * 岗位
+         * @description 删除
+         * @see [Swagger doc: 删除](http://120.79.250.86:8760/doc.html#/组织模块/岗位/deleteUsingDELETE_20)
+         *
+         * @tag岗位
          */
         delete(options: {
             body: TBodyOfdeleteUsingDELETE_20;
@@ -431,8 +465,10 @@ interface IApiFn {
     };
     (url: "/station/all"): {
         /**
-         * @description 修改所有字段 updateAllUsingPUT_16
-         * 岗位
+         * @description 修改所有字段
+         * @see [Swagger doc: 修改所有字段](http://120.79.250.86:8760/doc.html#/组织模块/岗位/updateAllUsingPUT_16)
+         *
+         * @tag岗位
          */
         put(options: {
             body: TBodyOfupdateAllUsingPUT_16;
@@ -440,8 +476,10 @@ interface IApiFn {
     };
     (url: "/station/check"): {
         /**
-         * @description 检测名称是否可用 checkUsingGET_7
-         * 岗位
+         * @description 检测名称是否可用
+         * @see [Swagger doc: 检测名称是否可用](http://120.79.250.86:8760/doc.html#/组织模块/岗位/checkUsingGET_7)
+         *
+         * @tag岗位
          */
         get(options: {
             query: TQueryOfcheckUsingGET_7;
@@ -449,15 +487,19 @@ interface IApiFn {
     };
     (url: "/station/clearCache"): {
         /**
-         * @description 清理缓存 clearCacheUsingPOST_8
-         * 岗位
+         * @description 清理缓存
+         * @see [Swagger doc: 清理缓存](http://120.79.250.86:8760/doc.html#/组织模块/岗位/clearCacheUsingPOST_8)
+         *
+         * @tag岗位
          */
         post(options: {}): Promise<TResponseOfclearCacheUsingPOST_8>;
     };
     (url: "/station/export"): {
         /**
-         * @description 导出Excel exportExcelUsingPOST_18
-         * 岗位
+         * @description 导出Excel
+         * @see [Swagger doc: 导出Excel](http://120.79.250.86:8760/doc.html#/组织模块/岗位/exportExcelUsingPOST_18)
+         *
+         * @tag岗位
          */
         post(options: {
             body: TBodyOfexportExcelUsingPOST_18;
@@ -465,8 +507,10 @@ interface IApiFn {
     };
     (url: "/station/import"): {
         /**
-         * @description 导入Excel importExcelUsingPOST_17
-         * 岗位
+         * @description 导入Excel
+         * @see [Swagger doc: 导入Excel](http://120.79.250.86:8760/doc.html#/组织模块/岗位/importExcelUsingPOST_17)
+         *
+         * @tag岗位
          */
         post(options: {
             formData: TFormDataOfimportExcelUsingPOST_17;
@@ -474,8 +518,10 @@ interface IApiFn {
     };
     (url: "/station/page"): {
         /**
-         * @description 分页列表查询 pageUsingPOST_22
-         * 岗位
+         * @description 分页列表查询
+         * @see [Swagger doc: 分页列表查询](http://120.79.250.86:8760/doc.html#/组织模块/岗位/pageUsingPOST_22)
+         *
+         * @tag岗位
          */
         post(options: {
             body: TBodyOfpageUsingPOST_22;
@@ -483,8 +529,10 @@ interface IApiFn {
     };
     (url: "/station/preview"): {
         /**
-         * @description 预览Excel previewUsingPOST_18
-         * 岗位
+         * @description 预览Excel
+         * @see [Swagger doc: 预览Excel](http://120.79.250.86:8760/doc.html#/组织模块/岗位/previewUsingPOST_18)
+         *
+         * @tag岗位
          */
         post(options: {
             body: TBodyOfpreviewUsingPOST_18;
@@ -492,8 +540,10 @@ interface IApiFn {
     };
     (url: "/station/query"): {
         /**
-         * @description 批量查询 queryUsingPOST_18
-         * 岗位
+         * @description 批量查询
+         * @see [Swagger doc: 批量查询](http://120.79.250.86:8760/doc.html#/组织模块/岗位/queryUsingPOST_18)
+         *
+         * @tag岗位
          */
         post(options: {
             body: TBodyOfqueryUsingPOST_18;
@@ -501,15 +551,19 @@ interface IApiFn {
     };
     (url: "/station/refreshCache"): {
         /**
-         * @description 刷新缓存 refreshCacheUsingPOST_8
-         * 岗位
+         * @description 刷新缓存
+         * @see [Swagger doc: 刷新缓存](http://120.79.250.86:8760/doc.html#/组织模块/岗位/refreshCacheUsingPOST_8)
+         *
+         * @tag岗位
          */
         post(options: {}): Promise<TResponseOfrefreshCacheUsingPOST_8>;
     };
     (url: "/station/{id}"): {
         /**
-         * @description 单体查询 getUsingGET_20
-         * 岗位
+         * @description 单体查询
+         * @see [Swagger doc: 单体查询](http://120.79.250.86:8760/doc.html#/组织模块/岗位/getUsingGET_20)
+         *
+         * @tag岗位
          */
         get(options: {
             path: TPathOfgetUsingGET_20;

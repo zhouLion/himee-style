@@ -338,41 +338,53 @@ export interface IApiFn {
 
   (url: "/merchant"): {
     /**
-     * @description 新增 saveUsingPOST_2
-     * 商户
+     * @description 新增
+     * @see [Swagger doc: 新增](http://120.79.250.86:8761/doc.html#/商户模块/商户/saveUsingPOST_2)
+     *
+     * @tag商户
      */
     post(options: { body: TBodyOfsaveUsingPOST_2 }): Promise<TResponseOfsaveUsingPOST_2>;
 
     /**
-     * @description 修改 updateUsingPUT_2
-     * 商户
+     * @description 修改
+     * @see [Swagger doc: 修改](http://120.79.250.86:8761/doc.html#/商户模块/商户/updateUsingPUT_2)
+     *
+     * @tag商户
      */
     put(options: { body: TBodyOfupdateUsingPUT_2 }): Promise<TResponseOfupdateUsingPUT_2>;
 
     /**
-     * @description 删除 deleteUsingDELETE_2
-     * 商户
+     * @description 删除
+     * @see [Swagger doc: 删除](http://120.79.250.86:8761/doc.html#/商户模块/商户/deleteUsingDELETE_2)
+     *
+     * @tag商户
      */
     delete(options: { body: TBodyOfdeleteUsingDELETE_2 }): Promise<TResponseOfdeleteUsingDELETE_2>;
   };
   (url: "/merchant/all"): {
     /**
-     * @description 修改所有字段 updateAllUsingPUT_2
-     * 商户
+     * @description 修改所有字段
+     * @see [Swagger doc: 修改所有字段](http://120.79.250.86:8761/doc.html#/商户模块/商户/updateAllUsingPUT_2)
+     *
+     * @tag商户
      */
     put(options: { body: TBodyOfupdateAllUsingPUT_2 }): Promise<TResponseOfupdateAllUsingPUT_2>;
   };
   (url: "/merchant/approve"): {
     /**
-     * @description 商户审核后 approveUsingPOST
-     * 商户
+     * @description 商户审核后
+     * @see [Swagger doc: 商户审核后](http://120.79.250.86:8761/doc.html#/商户模块/商户/approveUsingPOST)
+     *
+     * @tag商户
      */
     post(options: { body: TBodyOfapproveUsingPOST }): Promise<TResponseOfapproveUsingPOST>;
   };
   (url: "/merchant/export"): {
     /**
-     * @description 导出Excel exportExcelUsingPOST_2
-     * 商户
+     * @description 导出Excel
+     * @see [Swagger doc: 导出Excel](http://120.79.250.86:8761/doc.html#/商户模块/商户/exportExcelUsingPOST_2)
+     *
+     * @tag商户
      */
     post(options: {
       body: TBodyOfexportExcelUsingPOST_2;
@@ -380,8 +392,10 @@ export interface IApiFn {
   };
   (url: "/merchant/import"): {
     /**
-     * @description 导入Excel importExcelUsingPOST_2
-     * 商户
+     * @description 导入Excel
+     * @see [Swagger doc: 导入Excel](http://120.79.250.86:8761/doc.html#/商户模块/商户/importExcelUsingPOST_2)
+     *
+     * @tag商户
      */
     post(options: {
       formData: TFormDataOfimportExcelUsingPOST_2;
@@ -389,36 +403,46 @@ export interface IApiFn {
   };
   (url: "/merchant/page"): {
     /**
-     * @description 分页列表查询 pageUsingPOST_2
-     * 商户
+     * @description 分页列表查询
+     * @see [Swagger doc: 分页列表查询](http://120.79.250.86:8761/doc.html#/商户模块/商户/pageUsingPOST_2)
+     *
+     * @tag商户
      */
     post(options: { body: TBodyOfpageUsingPOST_2 }): Promise<TResponseOfpageUsingPOST_2>;
   };
   (url: "/merchant/preview"): {
     /**
-     * @description 预览Excel previewUsingPOST_2
-     * 商户
+     * @description 预览Excel
+     * @see [Swagger doc: 预览Excel](http://120.79.250.86:8761/doc.html#/商户模块/商户/previewUsingPOST_2)
+     *
+     * @tag商户
      */
     post(options: { body: TBodyOfpreviewUsingPOST_2 }): Promise<TResponseOfpreviewUsingPOST_2>;
   };
   (url: "/merchant/query"): {
     /**
-     * @description 批量查询 queryUsingPOST_2
-     * 商户
+     * @description 批量查询
+     * @see [Swagger doc: 批量查询](http://120.79.250.86:8761/doc.html#/商户模块/商户/queryUsingPOST_2)
+     *
+     * @tag商户
      */
     post(options: { body: TBodyOfqueryUsingPOST_2 }): Promise<TResponseOfqueryUsingPOST_2>;
   };
   (url: "/merchant/register"): {
     /**
-     * @description 商户注册 registerUsingPUT
-     * 商户
+     * @description 商户注册
+     * @see [Swagger doc: 商户注册](http://120.79.250.86:8761/doc.html#/商户模块/商户/registerUsingPUT)
+     *
+     * @tag商户
      */
     put(options: { body: TBodyOfregisterUsingPUT }): Promise<TResponseOfregisterUsingPUT>;
   };
   (url: "/merchant/{id}"): {
     /**
-     * @description 单体查询 getUsingGET_2
-     * 商户
+     * @description 单体查询
+     * @see [Swagger doc: 单体查询](http://120.79.250.86:8761/doc.html#/商户模块/商户/getUsingGET_2)
+     *
+     * @tag商户
      */
     get(options: { path: TPathOfgetUsingGET_2 }): Promise<TResponseOfgetUsingGET_2>;
   };

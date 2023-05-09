@@ -293,8 +293,10 @@ interface IApiFn {
     };
     (url: "/anno/captcha"): {
         /**
-         * @description 验证码 captchaUsingGET
-         * 登录接口
+         * @description 验证码
+         * @see [Swagger doc: 验证码](http://120.79.250.86:8762/doc.html#/认证模块/登录接口/captchaUsingGET)
+         *
+         * @tag登录接口
          */
         get(options: {
             query: TQueryOfcaptchaUsingGET;
@@ -302,8 +304,10 @@ interface IApiFn {
     };
     (url: "/anno/check"): {
         /**
-         * @description 验证验证码 checkUsingGET_8
-         * 登录接口
+         * @description 验证验证码
+         * @see [Swagger doc: 验证验证码](http://120.79.250.86:8762/doc.html#/认证模块/登录接口/checkUsingGET_8)
+         *
+         * @tag登录接口
          */
         get(options: {
             query: TQueryOfcheckUsingGET_8;
@@ -311,15 +315,19 @@ interface IApiFn {
     };
     (url: "/anno/verify"): {
         /**
-         * @description 验证token verifyUsingGET
-         * 登录接口
+         * @description 验证token
+         * @see [Swagger doc: 验证token](http://120.79.250.86:8762/doc.html#/认证模块/登录接口/verifyUsingGET)
+         *
+         * @tag登录接口
          */
         get(options: {}): Promise<TResponseOfverifyUsingGET>;
     };
     (url: "/dictionary/codeList"): {
         /**
-         * @description 根据类型编码查询字典项 codeListUsingPOST
-         * 通用Controller
+         * @description 根据类型编码查询字典项
+         * @see [Swagger doc: 根据类型编码查询字典项](http://120.79.250.86:8762/doc.html#/认证模块/通用Controller/codeListUsingPOST)
+         *
+         * @tag通用Controller
          */
         post(options: {
             body: TBodyOfcodeListUsingPOST;
@@ -327,8 +335,10 @@ interface IApiFn {
     };
     (url: "/dictionary/codes"): {
         /**
-         * @description 根据类型编码查询字典项 listUsingPOST_1
-         * 通用Controller
+         * @description 根据类型编码查询字典项
+         * @see [Swagger doc: 根据类型编码查询字典项](http://120.79.250.86:8762/doc.html#/认证模块/通用Controller/listUsingPOST_1)
+         *
+         * @tag通用Controller
          */
         post(options: {
             body: TBodyOflistUsingPOST_1;
@@ -336,8 +346,10 @@ interface IApiFn {
     };
     (url: "/enumList"): {
         /**
-         * @description 获取当前系统指定枚举 List enumListsUsingPOST
-         * 通用Controller
+         * @description 获取当前系统指定枚举 List
+         * @see [Swagger doc: 获取当前系统指定枚举 List](http://120.79.250.86:8762/doc.html#/认证模块/通用Controller/enumListsUsingPOST)
+         *
+         * @tag通用Controller
          */
         post(options: {
             body: TBodyOfenumListsUsingPOST;
@@ -345,8 +357,10 @@ interface IApiFn {
     };
     (url: "/enums"): {
         /**
-         * @description 获取当前系统指定枚举 Map enumsUsingPOST
-         * 通用Controller
+         * @description 获取当前系统指定枚举 Map
+         * @see [Swagger doc: 获取当前系统指定枚举 Map](http://120.79.250.86:8762/doc.html#/认证模块/通用Controller/enumsUsingPOST)
+         *
+         * @tag通用Controller
          */
         post(options: {
             body: TBodyOfenumsUsingPOST;
@@ -354,8 +368,10 @@ interface IApiFn {
     };
     (url: "/menu/menus"): {
         /**
-         * @description 查询用户可用的所有菜单 myMenusUsingGET
-         * 资源
+         * @description 查询用户可用的所有菜单
+         * @see [Swagger doc: 查询用户可用的所有菜单](http://120.79.250.86:8762/doc.html#/认证模块/资源/myMenusUsingGET)
+         *
+         * @tag资源
          */
         get(options: {
             query: TQueryOfmyMenusUsingGET;
@@ -363,8 +379,10 @@ interface IApiFn {
     };
     (url: "/menu/router"): {
         /**
-         * @description 查询用户可用的所有菜单路由树 myRouterUsingGET
-         * 资源
+         * @description 查询用户可用的所有菜单路由树
+         * @see [Swagger doc: 查询用户可用的所有菜单路由树](http://120.79.250.86:8762/doc.html#/认证模块/资源/myRouterUsingGET)
+         *
+         * @tag资源
          */
         get(options: {
             query: TQueryOfmyRouterUsingGET;
@@ -372,8 +390,10 @@ interface IApiFn {
     };
     (url: "/noToken/login"): {
         /**
-         * @description 登录接口 loginUsingPOST
-         * 登录接口
+         * @description 登录接口
+         * @see [Swagger doc: 登录接口](http://120.79.250.86:8762/doc.html#/认证模块/登录接口/loginUsingPOST)
+         *
+         * @tag登录接口
          */
         post(options: {
             body: TBodyOfloginUsingPOST;
@@ -381,8 +401,10 @@ interface IApiFn {
     };
     (url: "/noToken/logout"): {
         /**
-         * @description 退出 logoutUsingPOST_1
-         * 登录接口
+         * @description 退出
+         * @see [Swagger doc: 退出](http://120.79.250.86:8762/doc.html#/认证模块/登录接口/logoutUsingPOST_1)
+         *
+         * @tag登录接口
          */
         post(options: {
             query: TQueryOflogoutUsingPOST_1;
@@ -390,8 +412,10 @@ interface IApiFn {
     };
     (url: "/parameter/findParams"): {
         /**
-         * @description 根据key批量获取系统参数 findParamsUsingPOST
-         * 通用Controller
+         * @description 根据key批量获取系统参数
+         * @see [Swagger doc: 根据key批量获取系统参数](http://120.79.250.86:8762/doc.html#/认证模块/通用Controller/findParamsUsingPOST)
+         *
+         * @tag通用Controller
          */
         post(options: {
             body: TBodyOffindParamsUsingPOST;
@@ -399,8 +423,10 @@ interface IApiFn {
     };
     (url: "/parameter/value"): {
         /**
-         * @description 根据key获取系统参数 getValueUsingGET
-         * 通用Controller
+         * @description 根据key获取系统参数
+         * @see [Swagger doc: 根据key获取系统参数](http://120.79.250.86:8762/doc.html#/认证模块/通用Controller/getValueUsingGET)
+         *
+         * @tag通用Controller
          */
         get(options: {
             query: TQueryOfgetValueUsingGET;
@@ -408,8 +434,10 @@ interface IApiFn {
     };
     (url: "/resource/visible"): {
         /**
-         * @description 查询用户可用的所有资源 visibleUsingGET
-         * 资源
+         * @description 查询用户可用的所有资源
+         * @see [Swagger doc: 查询用户可用的所有资源](http://120.79.250.86:8762/doc.html#/认证模块/资源/visibleUsingGET)
+         *
+         * @tag资源
          */
         get(options: {
             query: TQueryOfvisibleUsingGET;

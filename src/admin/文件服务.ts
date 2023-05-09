@@ -335,8 +335,10 @@ export interface IApiFn {
 
   (url: "/anyone/appendix/listByBizId"): {
     /**
-     * @description 根据业务id 和 业务类型查询附件信息 listByBizIdUsingPOST
-     * 业务附件
+     * @description 根据业务id 和 业务类型查询附件信息
+     * @see [Swagger doc: 根据业务id 和 业务类型查询附件信息](http://120.79.250.86:8760/doc.html#/文件服务/业务附件/listByBizIdUsingPOST)
+     *
+     * @tag业务附件
      */
     post(options: {
       query: TQueryOflistByBizIdUsingPOST;
@@ -344,22 +346,28 @@ export interface IApiFn {
   };
   (url: "/file"): {
     /**
-     * @description 删除 deleteUsingDELETE_6
-     * 文件实时上传
+     * @description 删除
+     * @see [Swagger doc: 删除](http://120.79.250.86:8760/doc.html#/文件服务/文件实时上传/deleteUsingDELETE_6)
+     *
+     * @tag文件实时上传
      */
     delete(options: { body: TBodyOfdeleteUsingDELETE_6 }): Promise<TResponseOfdeleteUsingDELETE_6>;
   };
   (url: "/file/anyone/findUrlById"): {
     /**
-     * @description 根据文件id，获取文件临时的访问路径 findUrlByIdUsingPOST
-     * 文件实时上传
+     * @description 根据文件id，获取文件临时的访问路径
+     * @see [Swagger doc: 根据文件id，获取文件临时的访问路径](http://120.79.250.86:8760/doc.html#/文件服务/文件实时上传/findUrlByIdUsingPOST)
+     *
+     * @tag文件实时上传
      */
     post(options: { body: TBodyOffindUrlByIdUsingPOST }): Promise<TResponseOffindUrlByIdUsingPOST>;
   };
   (url: "/file/anyone/findUrlByPath"): {
     /**
-     * @description 批量根据文件相对路径，获取文件临时的访问路径 findUrlByPathUsingPOST
-     * 文件实时上传
+     * @description 批量根据文件相对路径，获取文件临时的访问路径
+     * @see [Swagger doc: 批量根据文件相对路径，获取文件临时的访问路径](http://120.79.250.86:8760/doc.html#/文件服务/文件实时上传/findUrlByPathUsingPOST)
+     *
+     * @tag文件实时上传
      */
     post(options: {
       body: TBodyOffindUrlByPathUsingPOST;
@@ -367,8 +375,10 @@ export interface IApiFn {
   };
   (url: "/file/anyone/upload"): {
     /**
-     * @description 附件上传 uploadUsingPOST
-     * 文件实时上传
+     * @description 附件上传
+     * @see [Swagger doc: 附件上传](http://120.79.250.86:8760/doc.html#/文件服务/文件实时上传/uploadUsingPOST)
+     *
+     * @tag文件实时上传
      */
     post(options: {
       formData: TFormDataOfuploadUsingPOST;
@@ -377,29 +387,37 @@ export interface IApiFn {
   };
   (url: "/file/download"): {
     /**
-     * @description 根据文件id打包下载 downloadUsingPOST
-     * 文件实时上传
+     * @description 根据文件id打包下载
+     * @see [Swagger doc: 根据文件id打包下载](http://120.79.250.86:8760/doc.html#/文件服务/文件实时上传/downloadUsingPOST)
+     *
+     * @tag文件实时上传
      */
     post(options: { body: TBodyOfdownloadUsingPOST }): Promise<TResponseOfdownloadUsingPOST>;
   };
   (url: "/file/page"): {
     /**
-     * @description 分页列表查询 pageUsingPOST_6
-     * 文件实时上传
+     * @description 分页列表查询
+     * @see [Swagger doc: 分页列表查询](http://120.79.250.86:8760/doc.html#/文件服务/文件实时上传/pageUsingPOST_6)
+     *
+     * @tag文件实时上传
      */
     post(options: { body: TBodyOfpageUsingPOST_6 }): Promise<TResponseOfpageUsingPOST_6>;
   };
   (url: "/file/query"): {
     /**
-     * @description 批量查询 queryUsingPOST_5
-     * 文件实时上传
+     * @description 批量查询
+     * @see [Swagger doc: 批量查询](http://120.79.250.86:8760/doc.html#/文件服务/文件实时上传/queryUsingPOST_5)
+     *
+     * @tag文件实时上传
      */
     post(options: { body: TBodyOfqueryUsingPOST_5 }): Promise<TResponseOfqueryUsingPOST_5>;
   };
   (url: "/file/{id}"): {
     /**
-     * @description 单体查询 getUsingGET_6
-     * 文件实时上传
+     * @description 单体查询
+     * @see [Swagger doc: 单体查询](http://120.79.250.86:8760/doc.html#/文件服务/文件实时上传/getUsingGET_6)
+     *
+     * @tag文件实时上传
      */
     get(options: { path: TPathOfgetUsingGET_6 }): Promise<TResponseOfgetUsingGET_6>;
   };

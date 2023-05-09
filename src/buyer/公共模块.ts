@@ -1085,34 +1085,44 @@ export interface IApiFn {
 
   (url: "/area"): {
     /**
-     * @description 新增 saveUsingPOST
-     * 地区表
+     * @description 新增
+     * @see [Swagger doc: 新增](http://120.79.250.86:8762/doc.html#/公共模块/地区表/saveUsingPOST)
+     *
+     * @tag地区表
      */
     post(options: { body: TBodyOfsaveUsingPOST }): Promise<TResponseOfsaveUsingPOST>;
 
     /**
-     * @description 修改 updateUsingPUT
-     * 地区表
+     * @description 修改
+     * @see [Swagger doc: 修改](http://120.79.250.86:8762/doc.html#/公共模块/地区表/updateUsingPUT)
+     *
+     * @tag地区表
      */
     put(options: { body: TBodyOfupdateUsingPUT }): Promise<TResponseOfupdateUsingPUT>;
 
     /**
-     * @description 删除 deleteUsingDELETE
-     * 地区表
+     * @description 删除
+     * @see [Swagger doc: 删除](http://120.79.250.86:8762/doc.html#/公共模块/地区表/deleteUsingDELETE)
+     *
+     * @tag地区表
      */
     delete(options: { body: TBodyOfdeleteUsingDELETE }): Promise<TResponseOfdeleteUsingDELETE>;
   };
   (url: "/area/all"): {
     /**
-     * @description 修改所有字段 updateAllUsingPUT
-     * 地区表
+     * @description 修改所有字段
+     * @see [Swagger doc: 修改所有字段](http://120.79.250.86:8762/doc.html#/公共模块/地区表/updateAllUsingPUT)
+     *
+     * @tag地区表
      */
     put(options: { body: TBodyOfupdateAllUsingPUT }): Promise<TResponseOfupdateAllUsingPUT>;
   };
   (url: "/area/check/{code}"): {
     /**
-     * @description 检测地区编码是否重复 checkUsingGET
-     * 地区表
+     * @description 检测地区编码是否重复
+     * @see [Swagger doc: 检测地区编码是否重复](http://120.79.250.86:8762/doc.html#/公共模块/地区表/checkUsingGET)
+     *
+     * @tag地区表
      */
     get(options: {
       path: TPathOfcheckUsingGET;
@@ -1121,22 +1131,28 @@ export interface IApiFn {
   };
   (url: "/area/clearCache"): {
     /**
-     * @description 清理缓存 clearCacheUsingPOST
-     * 地区表
+     * @description 清理缓存
+     * @see [Swagger doc: 清理缓存](http://120.79.250.86:8762/doc.html#/公共模块/地区表/clearCacheUsingPOST)
+     *
+     * @tag地区表
      */
     post(options: {}): Promise<TResponseOfclearCacheUsingPOST>;
   };
   (url: "/area/export"): {
     /**
-     * @description 导出Excel exportExcelUsingPOST
-     * 地区表
+     * @description 导出Excel
+     * @see [Swagger doc: 导出Excel](http://120.79.250.86:8762/doc.html#/公共模块/地区表/exportExcelUsingPOST)
+     *
+     * @tag地区表
      */
     post(options: { body: TBodyOfexportExcelUsingPOST }): Promise<TResponseOfexportExcelUsingPOST>;
   };
   (url: "/area/import"): {
     /**
-     * @description 导入Excel importExcelUsingPOST
-     * 地区表
+     * @description 导入Excel
+     * @see [Swagger doc: 导入Excel](http://120.79.250.86:8762/doc.html#/公共模块/地区表/importExcelUsingPOST)
+     *
+     * @tag地区表
      */
     post(options: {
       formData: TFormDataOfimportExcelUsingPOST;
@@ -1144,104 +1160,134 @@ export interface IApiFn {
   };
   (url: "/area/linkage"): {
     /**
-     * @description 级联查询缓存中的地区 linkageQueryUsingGET
-     * 地区表
+     * @description 级联查询缓存中的地区
+     * @see [Swagger doc: 级联查询缓存中的地区](http://120.79.250.86:8762/doc.html#/公共模块/地区表/linkageQueryUsingGET)
+     *
+     * @tag地区表
      */
     get(options: { query: TQueryOflinkageQueryUsingGET }): Promise<TResponseOflinkageQueryUsingGET>;
   };
   (url: "/area/page"): {
     /**
-     * @description 分页列表查询 pageUsingPOST
-     * 地区表
+     * @description 分页列表查询
+     * @see [Swagger doc: 分页列表查询](http://120.79.250.86:8762/doc.html#/公共模块/地区表/pageUsingPOST)
+     *
+     * @tag地区表
      */
     post(options: { body: TBodyOfpageUsingPOST }): Promise<TResponseOfpageUsingPOST>;
   };
   (url: "/area/preview"): {
     /**
-     * @description 预览Excel previewUsingPOST
-     * 地区表
+     * @description 预览Excel
+     * @see [Swagger doc: 预览Excel](http://120.79.250.86:8762/doc.html#/公共模块/地区表/previewUsingPOST)
+     *
+     * @tag地区表
      */
     post(options: { body: TBodyOfpreviewUsingPOST }): Promise<TResponseOfpreviewUsingPOST>;
   };
   (url: "/area/query"): {
     /**
-     * @description 批量查询 queryUsingPOST
-     * 地区表
+     * @description 批量查询
+     * @see [Swagger doc: 批量查询](http://120.79.250.86:8762/doc.html#/公共模块/地区表/queryUsingPOST)
+     *
+     * @tag地区表
      */
     post(options: { body: TBodyOfqueryUsingPOST }): Promise<TResponseOfqueryUsingPOST>;
   };
   (url: "/area/refreshCache"): {
     /**
-     * @description 刷新缓存 refreshCacheUsingPOST
-     * 地区表
+     * @description 刷新缓存
+     * @see [Swagger doc: 刷新缓存](http://120.79.250.86:8762/doc.html#/公共模块/地区表/refreshCacheUsingPOST)
+     *
+     * @tag地区表
      */
     post(options: {}): Promise<TResponseOfrefreshCacheUsingPOST>;
   };
   (url: "/area/{id}"): {
     /**
-     * @description 单体查询 getUsingGET
-     * 地区表
+     * @description 单体查询
+     * @see [Swagger doc: 单体查询](http://120.79.250.86:8762/doc.html#/公共模块/地区表/getUsingGET)
+     *
+     * @tag地区表
      */
     get(options: { path: TPathOfgetUsingGET }): Promise<TResponseOfgetUsingGET>;
   };
   (url: "/common/generateId"): {
     /**
-     * @description generate generateUsingGET
-     * 首页
+     * @description generate
+     * @see [Swagger doc: generate](http://120.79.250.86:8762/doc.html#/公共模块/首页/generateUsingGET)
+     *
+     * @tag首页
      */
     get(options: {}): Promise<TResponseOfgenerateUsingGET>;
   };
   (url: "/dashboard/chart"): {
     /**
-     * @description chart chartUsingGET
-     * 首页
+     * @description chart
+     * @see [Swagger doc: chart](http://120.79.250.86:8762/doc.html#/公共模块/首页/chartUsingGET)
+     *
+     * @tag首页
      */
     get(options: {}): Promise<TResponseOfchartUsingGET>;
   };
   (url: "/dashboard/item"): {
     /**
-     * @description item itemUsingGET
-     * 首页
+     * @description item
+     * @see [Swagger doc: item](http://120.79.250.86:8762/doc.html#/公共模块/首页/itemUsingGET)
+     *
+     * @tag首页
      */
     get(options: {}): Promise<TResponseOfitemUsingGET>;
   };
   (url: "/dashboard/pvIncr"): {
     /**
-     * @description pvIncr pvIncrUsingPOST
-     * 首页
+     * @description pvIncr
+     * @see [Swagger doc: pvIncr](http://120.79.250.86:8762/doc.html#/公共模块/首页/pvIncrUsingPOST)
+     *
+     * @tag首页
      */
     post(options: {}): Promise<TResponseOfpvIncrUsingPOST>;
   };
   (url: "/dictionary"): {
     /**
-     * @description 新增 saveUsingPOST_1
-     * 字典类型
+     * @description 新增
+     * @see [Swagger doc: 新增](http://120.79.250.86:8762/doc.html#/公共模块/字典类型/saveUsingPOST_1)
+     *
+     * @tag字典类型
      */
     post(options: { body: TBodyOfsaveUsingPOST_1 }): Promise<TResponseOfsaveUsingPOST_1>;
 
     /**
-     * @description 修改 updateUsingPUT_1
-     * 字典类型
+     * @description 修改
+     * @see [Swagger doc: 修改](http://120.79.250.86:8762/doc.html#/公共模块/字典类型/updateUsingPUT_1)
+     *
+     * @tag字典类型
      */
     put(options: { body: TBodyOfupdateUsingPUT_1 }): Promise<TResponseOfupdateUsingPUT_1>;
 
     /**
-     * @description 删除 deleteUsingDELETE_1
-     * 字典类型
+     * @description 删除
+     * @see [Swagger doc: 删除](http://120.79.250.86:8762/doc.html#/公共模块/字典类型/deleteUsingDELETE_1)
+     *
+     * @tag字典类型
      */
     delete(options: { body: TBodyOfdeleteUsingDELETE_1 }): Promise<TResponseOfdeleteUsingDELETE_1>;
   };
   (url: "/dictionary/all"): {
     /**
-     * @description 修改所有字段 updateAllUsingPUT_1
-     * 字典类型
+     * @description 修改所有字段
+     * @see [Swagger doc: 修改所有字段](http://120.79.250.86:8762/doc.html#/公共模块/字典类型/updateAllUsingPUT_1)
+     *
+     * @tag字典类型
      */
     put(options: { body: TBodyOfupdateAllUsingPUT_1 }): Promise<TResponseOfupdateAllUsingPUT_1>;
   };
   (url: "/dictionary/export"): {
     /**
-     * @description 导出Excel exportExcelUsingPOST_1
-     * 字典类型
+     * @description 导出Excel
+     * @see [Swagger doc: 导出Excel](http://120.79.250.86:8762/doc.html#/公共模块/字典类型/exportExcelUsingPOST_1)
+     *
+     * @tag字典类型
      */
     post(options: {
       body: TBodyOfexportExcelUsingPOST_1;
@@ -1249,8 +1295,10 @@ export interface IApiFn {
   };
   (url: "/dictionary/import"): {
     /**
-     * @description 导入Excel importExcelUsingPOST_1
-     * 字典类型
+     * @description 导入Excel
+     * @see [Swagger doc: 导入Excel](http://120.79.250.86:8762/doc.html#/公共模块/字典类型/importExcelUsingPOST_1)
+     *
+     * @tag字典类型
      */
     post(options: {
       formData: TFormDataOfimportExcelUsingPOST_1;
@@ -1258,48 +1306,62 @@ export interface IApiFn {
   };
   (url: "/dictionary/page"): {
     /**
-     * @description 分页列表查询 pageUsingPOST_1
-     * 字典类型
+     * @description 分页列表查询
+     * @see [Swagger doc: 分页列表查询](http://120.79.250.86:8762/doc.html#/公共模块/字典类型/pageUsingPOST_1)
+     *
+     * @tag字典类型
      */
     post(options: { body: TBodyOfpageUsingPOST_1 }): Promise<TResponseOfpageUsingPOST_1>;
   };
   (url: "/dictionary/pageType"): {
     /**
-     * @description 分页列表查询-字典类型 pageTypeUsingPOST
-     * 字典类型
+     * @description 分页列表查询-字典类型
+     * @see [Swagger doc: 分页列表查询-字典类型](http://120.79.250.86:8762/doc.html#/公共模块/字典类型/pageTypeUsingPOST)
+     *
+     * @tag字典类型
      */
     post(options: { body: TBodyOfpageTypeUsingPOST }): Promise<TResponseOfpageTypeUsingPOST>;
   };
   (url: "/dictionary/preview"): {
     /**
-     * @description 预览Excel previewUsingPOST_1
-     * 字典类型
+     * @description 预览Excel
+     * @see [Swagger doc: 预览Excel](http://120.79.250.86:8762/doc.html#/公共模块/字典类型/previewUsingPOST_1)
+     *
+     * @tag字典类型
      */
     post(options: { body: TBodyOfpreviewUsingPOST_1 }): Promise<TResponseOfpreviewUsingPOST_1>;
   };
   (url: "/dictionary/query"): {
     /**
-     * @description 批量查询 queryUsingPOST_1
-     * 字典类型
+     * @description 批量查询
+     * @see [Swagger doc: 批量查询](http://120.79.250.86:8762/doc.html#/公共模块/字典类型/queryUsingPOST_1)
+     *
+     * @tag字典类型
      */
     post(options: { body: TBodyOfqueryUsingPOST_1 }): Promise<TResponseOfqueryUsingPOST_1>;
   };
   (url: "/dictionary/type"): {
     /**
-     * @description 保存-字典类型 saveTypeUsingPOST
-     * 字典类型
+     * @description 保存-字典类型
+     * @see [Swagger doc: 保存-字典类型](http://120.79.250.86:8762/doc.html#/公共模块/字典类型/saveTypeUsingPOST)
+     *
+     * @tag字典类型
      */
     post(options: { body: TBodyOfsaveTypeUsingPOST }): Promise<TResponseOfsaveTypeUsingPOST>;
 
     /**
-     * @description 修改-字典类型 updateTypeUsingPUT
-     * 字典类型
+     * @description 修改-字典类型
+     * @see [Swagger doc: 修改-字典类型](http://120.79.250.86:8762/doc.html#/公共模块/字典类型/updateTypeUsingPUT)
+     *
+     * @tag字典类型
      */
     put(options: { body: TBodyOfupdateTypeUsingPUT }): Promise<TResponseOfupdateTypeUsingPUT>;
 
     /**
-     * @description 删除-字典类型 deleteTypeUsingDELETE
-     * 字典类型
+     * @description 删除-字典类型
+     * @see [Swagger doc: 删除-字典类型](http://120.79.250.86:8762/doc.html#/公共模块/字典类型/deleteTypeUsingDELETE)
+     *
+     * @tag字典类型
      */
     delete(options: {
       body: TBodyOfdeleteTypeUsingDELETE;
@@ -1307,48 +1369,62 @@ export interface IApiFn {
   };
   (url: "/dictionary/{id}"): {
     /**
-     * @description 单体查询 getUsingGET_1
-     * 字典类型
+     * @description 单体查询
+     * @see [Swagger doc: 单体查询](http://120.79.250.86:8762/doc.html#/公共模块/字典类型/getUsingGET_1)
+     *
+     * @tag字典类型
      */
     get(options: { path: TPathOfgetUsingGET_1 }): Promise<TResponseOfgetUsingGET_1>;
   };
   (url: "/loginLog"): {
     /**
-     * @description 新增 saveUsingPOST_2
-     * 登录日志
+     * @description 新增
+     * @see [Swagger doc: 新增](http://120.79.250.86:8762/doc.html#/公共模块/登录日志/saveUsingPOST_2)
+     *
+     * @tag登录日志
      */
     post(options: { body: TBodyOfsaveUsingPOST_2 }): Promise<TResponseOfsaveUsingPOST_2>;
 
     /**
-     * @description 修改 updateUsingPUT_2
-     * 登录日志
+     * @description 修改
+     * @see [Swagger doc: 修改](http://120.79.250.86:8762/doc.html#/公共模块/登录日志/updateUsingPUT_2)
+     *
+     * @tag登录日志
      */
     put(options: { body: TBodyOfupdateUsingPUT_2 }): Promise<TResponseOfupdateUsingPUT_2>;
 
     /**
-     * @description 删除 deleteUsingDELETE_2
-     * 登录日志
+     * @description 删除
+     * @see [Swagger doc: 删除](http://120.79.250.86:8762/doc.html#/公共模块/登录日志/deleteUsingDELETE_2)
+     *
+     * @tag登录日志
      */
     delete(options: { body: TBodyOfdeleteUsingDELETE_2 }): Promise<TResponseOfdeleteUsingDELETE_2>;
   };
   (url: "/loginLog/all"): {
     /**
-     * @description 修改所有字段 updateAllUsingPUT_2
-     * 登录日志
+     * @description 修改所有字段
+     * @see [Swagger doc: 修改所有字段](http://120.79.250.86:8762/doc.html#/公共模块/登录日志/updateAllUsingPUT_2)
+     *
+     * @tag登录日志
      */
     put(options: { body: TBodyOfupdateAllUsingPUT_2 }): Promise<TResponseOfupdateAllUsingPUT_2>;
   };
   (url: "/loginLog/clear"): {
     /**
-     * @description 清空日志 clearUsingDELETE
-     * 登录日志
+     * @description 清空日志
+     * @see [Swagger doc: 清空日志](http://120.79.250.86:8762/doc.html#/公共模块/登录日志/clearUsingDELETE)
+     *
+     * @tag登录日志
      */
     delete(options: { query: TQueryOfclearUsingDELETE }): Promise<TResponseOfclearUsingDELETE>;
   };
   (url: "/loginLog/export"): {
     /**
-     * @description 导出Excel exportExcelUsingPOST_2
-     * 登录日志
+     * @description 导出Excel
+     * @see [Swagger doc: 导出Excel](http://120.79.250.86:8762/doc.html#/公共模块/登录日志/exportExcelUsingPOST_2)
+     *
+     * @tag登录日志
      */
     post(options: {
       body: TBodyOfexportExcelUsingPOST_2;
@@ -1356,8 +1432,10 @@ export interface IApiFn {
   };
   (url: "/loginLog/import"): {
     /**
-     * @description 导入Excel importExcelUsingPOST_2
-     * 登录日志
+     * @description 导入Excel
+     * @see [Swagger doc: 导入Excel](http://120.79.250.86:8762/doc.html#/公共模块/登录日志/importExcelUsingPOST_2)
+     *
+     * @tag登录日志
      */
     post(options: {
       formData: TFormDataOfimportExcelUsingPOST_2;
@@ -1365,50 +1443,64 @@ export interface IApiFn {
   };
   (url: "/loginLog/page"): {
     /**
-     * @description 分页列表查询 pageUsingPOST_2
-     * 登录日志
+     * @description 分页列表查询
+     * @see [Swagger doc: 分页列表查询](http://120.79.250.86:8762/doc.html#/公共模块/登录日志/pageUsingPOST_2)
+     *
+     * @tag登录日志
      */
     post(options: { body: TBodyOfpageUsingPOST_2 }): Promise<TResponseOfpageUsingPOST_2>;
   };
   (url: "/loginLog/preview"): {
     /**
-     * @description 预览Excel previewUsingPOST_2
-     * 登录日志
+     * @description 预览Excel
+     * @see [Swagger doc: 预览Excel](http://120.79.250.86:8762/doc.html#/公共模块/登录日志/previewUsingPOST_2)
+     *
+     * @tag登录日志
      */
     post(options: { body: TBodyOfpreviewUsingPOST_2 }): Promise<TResponseOfpreviewUsingPOST_2>;
   };
   (url: "/loginLog/query"): {
     /**
-     * @description 批量查询 queryUsingPOST_2
-     * 登录日志
+     * @description 批量查询
+     * @see [Swagger doc: 批量查询](http://120.79.250.86:8762/doc.html#/公共模块/登录日志/queryUsingPOST_2)
+     *
+     * @tag登录日志
      */
     post(options: { body: TBodyOfqueryUsingPOST_2 }): Promise<TResponseOfqueryUsingPOST_2>;
   };
   (url: "/loginLog/{id}"): {
     /**
-     * @description 单体查询 getUsingGET_2
-     * 登录日志
+     * @description 单体查询
+     * @see [Swagger doc: 单体查询](http://120.79.250.86:8762/doc.html#/公共模块/登录日志/getUsingGET_2)
+     *
+     * @tag登录日志
      */
     get(options: { path: TPathOfgetUsingGET_2 }): Promise<TResponseOfgetUsingGET_2>;
   };
   (url: "/optLog"): {
     /**
-     * @description 删除 deleteUsingDELETE_3
-     * 系统日志
+     * @description 删除
+     * @see [Swagger doc: 删除](http://120.79.250.86:8762/doc.html#/公共模块/系统日志/deleteUsingDELETE_3)
+     *
+     * @tag系统日志
      */
     delete(options: { body: TBodyOfdeleteUsingDELETE_3 }): Promise<TResponseOfdeleteUsingDELETE_3>;
   };
   (url: "/optLog/clear"): {
     /**
-     * @description 清空日志 clearUsingDELETE_1
-     * 系统日志
+     * @description 清空日志
+     * @see [Swagger doc: 清空日志](http://120.79.250.86:8762/doc.html#/公共模块/系统日志/clearUsingDELETE_1)
+     *
+     * @tag系统日志
      */
     delete(options: { query: TQueryOfclearUsingDELETE_1 }): Promise<TResponseOfclearUsingDELETE_1>;
   };
   (url: "/optLog/export"): {
     /**
-     * @description 导出Excel exportExcelUsingPOST_3
-     * 系统日志
+     * @description 导出Excel
+     * @see [Swagger doc: 导出Excel](http://120.79.250.86:8762/doc.html#/公共模块/系统日志/exportExcelUsingPOST_3)
+     *
+     * @tag系统日志
      */
     post(options: {
       body: TBodyOfexportExcelUsingPOST_3;
@@ -1416,15 +1508,19 @@ export interface IApiFn {
   };
   (url: "/optLog/get"): {
     /**
-     * @description 单体查询 getUsingGET_3
-     * 系统日志
+     * @description 单体查询
+     * @see [Swagger doc: 单体查询](http://120.79.250.86:8762/doc.html#/公共模块/系统日志/getUsingGET_3)
+     *
+     * @tag系统日志
      */
     get(options: { query: TQueryOfgetUsingGET_3 }): Promise<TResponseOfgetUsingGET_3>;
   };
   (url: "/optLog/import"): {
     /**
-     * @description 导入Excel importExcelUsingPOST_3
-     * 系统日志
+     * @description 导入Excel
+     * @see [Swagger doc: 导入Excel](http://120.79.250.86:8762/doc.html#/公共模块/系统日志/importExcelUsingPOST_3)
+     *
+     * @tag系统日志
      */
     post(options: {
       formData: TFormDataOfimportExcelUsingPOST_3;
@@ -1432,48 +1528,62 @@ export interface IApiFn {
   };
   (url: "/optLog/page"): {
     /**
-     * @description 分页列表查询 pageUsingPOST_3
-     * 系统日志
+     * @description 分页列表查询
+     * @see [Swagger doc: 分页列表查询](http://120.79.250.86:8762/doc.html#/公共模块/系统日志/pageUsingPOST_3)
+     *
+     * @tag系统日志
      */
     post(options: { body: TBodyOfpageUsingPOST_3 }): Promise<TResponseOfpageUsingPOST_3>;
   };
   (url: "/optLog/preview"): {
     /**
-     * @description 预览Excel previewUsingPOST_3
-     * 系统日志
+     * @description 预览Excel
+     * @see [Swagger doc: 预览Excel](http://120.79.250.86:8762/doc.html#/公共模块/系统日志/previewUsingPOST_3)
+     *
+     * @tag系统日志
      */
     post(options: { body: TBodyOfpreviewUsingPOST_3 }): Promise<TResponseOfpreviewUsingPOST_3>;
   };
   (url: "/parameter"): {
     /**
-     * @description 新增 saveUsingPOST_3
-     * 参数配置
+     * @description 新增
+     * @see [Swagger doc: 新增](http://120.79.250.86:8762/doc.html#/公共模块/参数配置/saveUsingPOST_3)
+     *
+     * @tag参数配置
      */
     post(options: { body: TBodyOfsaveUsingPOST_3 }): Promise<TResponseOfsaveUsingPOST_3>;
 
     /**
-     * @description 修改 updateUsingPUT_3
-     * 参数配置
+     * @description 修改
+     * @see [Swagger doc: 修改](http://120.79.250.86:8762/doc.html#/公共模块/参数配置/updateUsingPUT_3)
+     *
+     * @tag参数配置
      */
     put(options: { body: TBodyOfupdateUsingPUT_3 }): Promise<TResponseOfupdateUsingPUT_3>;
 
     /**
-     * @description 删除 deleteUsingDELETE_4
-     * 参数配置
+     * @description 删除
+     * @see [Swagger doc: 删除](http://120.79.250.86:8762/doc.html#/公共模块/参数配置/deleteUsingDELETE_4)
+     *
+     * @tag参数配置
      */
     delete(options: { body: TBodyOfdeleteUsingDELETE_4 }): Promise<TResponseOfdeleteUsingDELETE_4>;
   };
   (url: "/parameter/all"): {
     /**
-     * @description 修改所有字段 updateAllUsingPUT_3
-     * 参数配置
+     * @description 修改所有字段
+     * @see [Swagger doc: 修改所有字段](http://120.79.250.86:8762/doc.html#/公共模块/参数配置/updateAllUsingPUT_3)
+     *
+     * @tag参数配置
      */
     put(options: { body: TBodyOfupdateAllUsingPUT_3 }): Promise<TResponseOfupdateAllUsingPUT_3>;
   };
   (url: "/parameter/export"): {
     /**
-     * @description 导出Excel exportExcelUsingPOST_4
-     * 参数配置
+     * @description 导出Excel
+     * @see [Swagger doc: 导出Excel](http://120.79.250.86:8762/doc.html#/公共模块/参数配置/exportExcelUsingPOST_4)
+     *
+     * @tag参数配置
      */
     post(options: {
       body: TBodyOfexportExcelUsingPOST_4;
@@ -1481,8 +1591,10 @@ export interface IApiFn {
   };
   (url: "/parameter/import"): {
     /**
-     * @description 导入Excel importExcelUsingPOST_4
-     * 参数配置
+     * @description 导入Excel
+     * @see [Swagger doc: 导入Excel](http://120.79.250.86:8762/doc.html#/公共模块/参数配置/importExcelUsingPOST_4)
+     *
+     * @tag参数配置
      */
     post(options: {
       formData: TFormDataOfimportExcelUsingPOST_4;
@@ -1490,29 +1602,37 @@ export interface IApiFn {
   };
   (url: "/parameter/page"): {
     /**
-     * @description 分页列表查询 pageUsingPOST_4
-     * 参数配置
+     * @description 分页列表查询
+     * @see [Swagger doc: 分页列表查询](http://120.79.250.86:8762/doc.html#/公共模块/参数配置/pageUsingPOST_4)
+     *
+     * @tag参数配置
      */
     post(options: { body: TBodyOfpageUsingPOST_4 }): Promise<TResponseOfpageUsingPOST_4>;
   };
   (url: "/parameter/preview"): {
     /**
-     * @description 预览Excel previewUsingPOST_4
-     * 参数配置
+     * @description 预览Excel
+     * @see [Swagger doc: 预览Excel](http://120.79.250.86:8762/doc.html#/公共模块/参数配置/previewUsingPOST_4)
+     *
+     * @tag参数配置
      */
     post(options: { body: TBodyOfpreviewUsingPOST_4 }): Promise<TResponseOfpreviewUsingPOST_4>;
   };
   (url: "/parameter/query"): {
     /**
-     * @description 批量查询 queryUsingPOST_3
-     * 参数配置
+     * @description 批量查询
+     * @see [Swagger doc: 批量查询](http://120.79.250.86:8762/doc.html#/公共模块/参数配置/queryUsingPOST_3)
+     *
+     * @tag参数配置
      */
     post(options: { body: TBodyOfqueryUsingPOST_3 }): Promise<TResponseOfqueryUsingPOST_3>;
   };
   (url: "/parameter/{id}"): {
     /**
-     * @description 单体查询 getUsingGET_4
-     * 参数配置
+     * @description 单体查询
+     * @see [Swagger doc: 单体查询](http://120.79.250.86:8762/doc.html#/公共模块/参数配置/getUsingGET_4)
+     *
+     * @tag参数配置
      */
     get(options: { path: TPathOfgetUsingGET_4 }): Promise<TResponseOfgetUsingGET_4>;
   };

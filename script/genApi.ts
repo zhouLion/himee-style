@@ -44,7 +44,11 @@ class MyPrinter extends Printer {
 
 const createIApiFnTemplate = (
   operations: OperationDetails[],
-  printter: MyPrinter
+  printter: MyPrinter,
+  _options: {
+    item: Resource,
+    base: string
+  }
 ) => {
   if (operations.length === 0) return "";
   // group by path
@@ -83,11 +87,13 @@ const createIApiFnTemplate = (
 
       return `
       /**
-       * @description ${operation.obj.summary} ${operation.obj.operationId}
+       * @description ${operation.obj.summary}
+       * @see [Swagger doc: ${operation.obj.summary}](${_options.base}/doc.html#/${_options.item.name}/${operation.obj.tags?.[0]||''}/${operation.obj.operationId})
+       * 
        * ${
          operation.obj.deprecated
            ? "@deprecated"
-           : operation.obj.tags?.toString()
+           : "@tag" + operation.obj.tags?.toString()
        }
        */
        ${
@@ -189,7 +195,10 @@ const formatSchema = (schema: Schema) => {
   return schema;
 };
 
-const transform = (doc: DocumentDetails): string => {
+const transform = (doc: DocumentDetails, _options: {
+  item: Resource
+  base: string
+}): string => {
   if (
     (!doc.operations || !doc.operations.length) &&
     (!doc.definitions || !doc.definitions.length)
@@ -210,7 +219,7 @@ const transform = (doc: DocumentDetails): string => {
     print.schema(schema, doEscape(name));
     print.blank();
   }
-  const apiDeclares = createIApiFnTemplate(doc.operations, print);
+  const apiDeclares = createIApiFnTemplate(doc.operations, print, _options);
   return (
     print.code() +
     "\n" +
@@ -242,7 +251,7 @@ const generateDecalreFile = async (
     const doc = await load(base + item.location);
     const details = analyse(doc);
     console.log("⚙ Handling", targetFile);
-    const code = transform(details);
+    const code = transform(details, { item, base });
     if (!code) {
       console.warn("❎ Handled empty", targetFile);
       return;
@@ -271,8 +280,8 @@ function main() {
     console.log("🚀：Generating API...");
     ensureDir(output);
     fetch(base + SWAGGERRESOURCES)
-      .then((res) => res.json())
-      .then((list: Resource[]) =>
+      .then<Resource[]>((res) => res.json())
+      .then((list) =>
         Promise.all(list.map((item) => generateDecalreFile(item, base, output)))
       )
       .then(() => {

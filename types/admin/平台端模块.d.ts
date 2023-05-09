@@ -144,22 +144,28 @@ interface IApiFn {
     };
     (url: "/order"): {
         /**
-         * @description 新增 saveUsingPOST_4
-         * 订单
+         * @description 新增
+         * @see [Swagger doc: 新增](http://120.79.250.86:8760/doc.html#/平台端模块/订单/saveUsingPOST_4)
+         *
+         * @tag订单
          */
         post(options: {
             body: TBodyOfsaveUsingPOST_4;
         }): Promise<TResponseOfsaveUsingPOST_4>;
         /**
-         * @description 修改 updateUsingPUT_4
-         * 订单
+         * @description 修改
+         * @see [Swagger doc: 修改](http://120.79.250.86:8760/doc.html#/平台端模块/订单/updateUsingPUT_4)
+         *
+         * @tag订单
          */
         put(options: {
             body: TBodyOfupdateUsingPUT_4;
         }): Promise<TResponseOfupdateUsingPUT_4>;
         /**
-         * @description 删除 deleteUsingDELETE_5
-         * 订单
+         * @description 删除
+         * @see [Swagger doc: 删除](http://120.79.250.86:8760/doc.html#/平台端模块/订单/deleteUsingDELETE_5)
+         *
+         * @tag订单
          */
         delete(options: {
             body: TBodyOfdeleteUsingDELETE_5;
@@ -167,8 +173,10 @@ interface IApiFn {
     };
     (url: "/order/all"): {
         /**
-         * @description 修改所有字段 updateAllUsingPUT_4
-         * 订单
+         * @description 修改所有字段
+         * @see [Swagger doc: 修改所有字段](http://120.79.250.86:8760/doc.html#/平台端模块/订单/updateAllUsingPUT_4)
+         *
+         * @tag订单
          */
         put(options: {
             body: TBodyOfupdateAllUsingPUT_4;
@@ -176,8 +184,10 @@ interface IApiFn {
     };
     (url: "/order/export"): {
         /**
-         * @description 导出Excel exportExcelUsingPOST_5
-         * 订单
+         * @description 导出Excel
+         * @see [Swagger doc: 导出Excel](http://120.79.250.86:8760/doc.html#/平台端模块/订单/exportExcelUsingPOST_5)
+         *
+         * @tag订单
          */
         post(options: {
             body: TBodyOfexportExcelUsingPOST_5;
@@ -185,8 +195,10 @@ interface IApiFn {
     };
     (url: "/order/import"): {
         /**
-         * @description 导入Excel importExcelUsingPOST_5
-         * 订单
+         * @description 导入Excel
+         * @see [Swagger doc: 导入Excel](http://120.79.250.86:8760/doc.html#/平台端模块/订单/importExcelUsingPOST_5)
+         *
+         * @tag订单
          */
         post(options: {
             formData: TFormDataOfimportExcelUsingPOST_5;
@@ -194,8 +206,10 @@ interface IApiFn {
     };
     (url: "/order/page"): {
         /**
-         * @description 分页列表查询 pageUsingPOST_5
-         * 订单
+         * @description 分页列表查询
+         * @see [Swagger doc: 分页列表查询](http://120.79.250.86:8760/doc.html#/平台端模块/订单/pageUsingPOST_5)
+         *
+         * @tag订单
          */
         post(options: {
             body: TBodyOfpageUsingPOST_5;
@@ -203,8 +217,10 @@ interface IApiFn {
     };
     (url: "/order/preview"): {
         /**
-         * @description 预览Excel previewUsingPOST_5
-         * 订单
+         * @description 预览Excel
+         * @see [Swagger doc: 预览Excel](http://120.79.250.86:8760/doc.html#/平台端模块/订单/previewUsingPOST_5)
+         *
+         * @tag订单
          */
         post(options: {
             body: TBodyOfpreviewUsingPOST_5;
@@ -212,13 +228,17 @@ interface IApiFn {
     };
     (url: "/order/query"): {
         /**
-         * @description query queryUsingGET
-         * 订单
+         * @description query
+         * @see [Swagger doc: query](http://120.79.250.86:8760/doc.html#/平台端模块/订单/queryUsingGET)
+         *
+         * @tag订单
          */
         get(options: {}): Promise<TResponseOfqueryUsingGET>;
         /**
-         * @description 批量查询 queryUsingPOST_4
-         * 订单
+         * @description 批量查询
+         * @see [Swagger doc: 批量查询](http://120.79.250.86:8760/doc.html#/平台端模块/订单/queryUsingPOST_4)
+         *
+         * @tag订单
          */
         post(options: {
             body: TBodyOfqueryUsingPOST_4;
@@ -226,8 +246,10 @@ interface IApiFn {
     };
     (url: "/order/{id}"): {
         /**
-         * @description 单体查询 getUsingGET_5
-         * 订单
+         * @description 单体查询
+         * @see [Swagger doc: 单体查询](http://120.79.250.86:8760/doc.html#/平台端模块/订单/getUsingGET_5)
+         *
+         * @tag订单
          */
         get(options: {
             path: TPathOfgetUsingGET_5;

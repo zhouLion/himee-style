@@ -239,34 +239,44 @@ export interface IApiFn {
 
   (url: "/employee"): {
     /**
-     * @description 新增 saveUsingPOST_1
-     * 员工
+     * @description 新增
+     * @see [Swagger doc: 新增](http://120.79.250.86:8761/doc.html#/员工模块/员工/saveUsingPOST_1)
+     *
+     * @tag员工
      */
     post(options: { body: TBodyOfsaveUsingPOST_1 }): Promise<TResponseOfsaveUsingPOST_1>;
 
     /**
-     * @description 修改 updateUsingPUT_1
-     * 员工
+     * @description 修改
+     * @see [Swagger doc: 修改](http://120.79.250.86:8761/doc.html#/员工模块/员工/updateUsingPUT_1)
+     *
+     * @tag员工
      */
     put(options: { body: TBodyOfupdateUsingPUT_1 }): Promise<TResponseOfupdateUsingPUT_1>;
 
     /**
-     * @description 删除 deleteUsingDELETE_1
-     * 员工
+     * @description 删除
+     * @see [Swagger doc: 删除](http://120.79.250.86:8761/doc.html#/员工模块/员工/deleteUsingDELETE_1)
+     *
+     * @tag员工
      */
     delete(options: { body: TBodyOfdeleteUsingDELETE_1 }): Promise<TResponseOfdeleteUsingDELETE_1>;
   };
   (url: "/employee/all"): {
     /**
-     * @description 修改所有字段 updateAllUsingPUT_1
-     * 员工
+     * @description 修改所有字段
+     * @see [Swagger doc: 修改所有字段](http://120.79.250.86:8761/doc.html#/员工模块/员工/updateAllUsingPUT_1)
+     *
+     * @tag员工
      */
     put(options: { body: TBodyOfupdateAllUsingPUT_1 }): Promise<TResponseOfupdateAllUsingPUT_1>;
   };
   (url: "/employee/export"): {
     /**
-     * @description 导出Excel exportExcelUsingPOST_1
-     * 员工
+     * @description 导出Excel
+     * @see [Swagger doc: 导出Excel](http://120.79.250.86:8761/doc.html#/员工模块/员工/exportExcelUsingPOST_1)
+     *
+     * @tag员工
      */
     post(options: {
       body: TBodyOfexportExcelUsingPOST_1;
@@ -274,8 +284,10 @@ export interface IApiFn {
   };
   (url: "/employee/import"): {
     /**
-     * @description 导入Excel importExcelUsingPOST_1
-     * 员工
+     * @description 导入Excel
+     * @see [Swagger doc: 导入Excel](http://120.79.250.86:8761/doc.html#/员工模块/员工/importExcelUsingPOST_1)
+     *
+     * @tag员工
      */
     post(options: {
       formData: TFormDataOfimportExcelUsingPOST_1;
@@ -283,29 +295,37 @@ export interface IApiFn {
   };
   (url: "/employee/page"): {
     /**
-     * @description 分页列表查询 pageUsingPOST_1
-     * 员工
+     * @description 分页列表查询
+     * @see [Swagger doc: 分页列表查询](http://120.79.250.86:8761/doc.html#/员工模块/员工/pageUsingPOST_1)
+     *
+     * @tag员工
      */
     post(options: { body: TBodyOfpageUsingPOST_1 }): Promise<TResponseOfpageUsingPOST_1>;
   };
   (url: "/employee/preview"): {
     /**
-     * @description 预览Excel previewUsingPOST_1
-     * 员工
+     * @description 预览Excel
+     * @see [Swagger doc: 预览Excel](http://120.79.250.86:8761/doc.html#/员工模块/员工/previewUsingPOST_1)
+     *
+     * @tag员工
      */
     post(options: { body: TBodyOfpreviewUsingPOST_1 }): Promise<TResponseOfpreviewUsingPOST_1>;
   };
   (url: "/employee/query"): {
     /**
-     * @description 批量查询 queryUsingPOST_1
-     * 员工
+     * @description 批量查询
+     * @see [Swagger doc: 批量查询](http://120.79.250.86:8761/doc.html#/员工模块/员工/queryUsingPOST_1)
+     *
+     * @tag员工
      */
     post(options: { body: TBodyOfqueryUsingPOST_1 }): Promise<TResponseOfqueryUsingPOST_1>;
   };
   (url: "/employee/{id}"): {
     /**
-     * @description 单体查询 getUsingGET_1
-     * 员工
+     * @description 单体查询
+     * @see [Swagger doc: 单体查询](http://120.79.250.86:8761/doc.html#/员工模块/员工/getUsingGET_1)
+     *
+     * @tag员工
      */
     get(options: { path: TPathOfgetUsingGET_1 }): Promise<TResponseOfgetUsingGET_1>;
   };

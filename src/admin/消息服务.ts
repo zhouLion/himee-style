@@ -942,35 +942,45 @@ export interface IApiFn {
 
   (url: "/anyone/myMsg"): {
     /**
-     * @description 全量查询我的消息 myMsgUsingPOST
-     * 我的消息
+     * @description 全量查询我的消息
+     * @see [Swagger doc: 全量查询我的消息](http://120.79.250.86:8760/doc.html#/消息服务/我的消息/myMsgUsingPOST)
+     *
+     * @tag我的消息
      */
     post(options: { body: TBodyOfmyMsgUsingPOST }): Promise<TResponseOfmyMsgUsingPOST>;
   };
   (url: "/anyone/myMsg/mark"): {
     /**
-     * @description 标记消息为已读 markUsingPOST
-     * 我的消息
+     * @description 标记消息为已读
+     * @see [Swagger doc: 标记消息为已读](http://120.79.250.86:8760/doc.html#/消息服务/我的消息/markUsingPOST)
+     *
+     * @tag我的消息
      */
     post(options: { body: TBodyOfmarkUsingPOST }): Promise<TResponseOfmarkUsingPOST>;
   };
   (url: "/anyone/myMsg/page"): {
     /**
-     * @description 分页查询我的消息 pageUsingPOST_15
-     * 我的消息
+     * @description 分页查询我的消息
+     * @see [Swagger doc: 分页查询我的消息](http://120.79.250.86:8760/doc.html#/消息服务/我的消息/pageUsingPOST_15)
+     *
+     * @tag我的消息
      */
     post(options: { body: TBodyOfpageUsingPOST_15 }): Promise<TResponseOfpageUsingPOST_15>;
   };
   (url: "/msg"): {
     /**
-     * @description 新增消息中心 saveUsingPOST_11
-     * 消息中心
+     * @description 新增消息中心
+     * @see [Swagger doc: 新增消息中心](http://120.79.250.86:8760/doc.html#/消息服务/消息中心/saveUsingPOST_11)
+     *
+     * @tag消息中心
      */
     post(options: { body: TBodyOfsaveUsingPOST_11 }): Promise<TResponseOfsaveUsingPOST_11>;
 
     /**
-     * @description 删除消息 deleteUsingDELETE_14
-     * 消息中心
+     * @description 删除消息
+     * @see [Swagger doc: 删除消息](http://120.79.250.86:8760/doc.html#/消息服务/消息中心/deleteUsingDELETE_14)
+     *
+     * @tag消息中心
      */
     delete(options: {
       body: TBodyOfdeleteUsingDELETE_14;
@@ -978,8 +988,10 @@ export interface IApiFn {
   };
   (url: "/msg/export"): {
     /**
-     * @description 导出Excel exportExcelUsingPOST_12
-     * 消息中心
+     * @description 导出Excel
+     * @see [Swagger doc: 导出Excel](http://120.79.250.86:8760/doc.html#/消息服务/消息中心/exportExcelUsingPOST_12)
+     *
+     * @tag消息中心
      */
     post(options: {
       body: TBodyOfexportExcelUsingPOST_12;
@@ -987,62 +999,80 @@ export interface IApiFn {
   };
   (url: "/msg/page"): {
     /**
-     * @description 分页查询消息中心 pageUsingPOST_14
-     * 消息中心
+     * @description 分页查询消息中心
+     * @see [Swagger doc: 分页查询消息中心](http://120.79.250.86:8760/doc.html#/消息服务/消息中心/pageUsingPOST_14)
+     *
+     * @tag消息中心
      */
     post(options: { body: TBodyOfpageUsingPOST_14 }): Promise<TResponseOfpageUsingPOST_14>;
   };
   (url: "/msg/preview"): {
     /**
-     * @description 预览Excel previewUsingPOST_12
-     * 消息中心
+     * @description 预览Excel
+     * @see [Swagger doc: 预览Excel](http://120.79.250.86:8760/doc.html#/消息服务/消息中心/previewUsingPOST_12)
+     *
+     * @tag消息中心
      */
     post(options: { body: TBodyOfpreviewUsingPOST_12 }): Promise<TResponseOfpreviewUsingPOST_12>;
   };
   (url: "/msg/{id}"): {
     /**
-     * @description 查询消息中心 getUsingGET_13
-     * 消息中心
+     * @description 查询消息中心
+     * @see [Swagger doc: 查询消息中心](http://120.79.250.86:8760/doc.html#/消息服务/消息中心/getUsingGET_13)
+     *
+     * @tag消息中心
      */
     get(options: { path: TPathOfgetUsingGET_13 }): Promise<TResponseOfgetUsingGET_13>;
   };
   (url: "/smsSendStatus/page"): {
     /**
-     * @description 分页列表查询 pageUsingPOST_16
-     * 短信发送状态
+     * @description 分页列表查询
+     * @see [Swagger doc: 分页列表查询](http://120.79.250.86:8760/doc.html#/消息服务/短信发送状态/pageUsingPOST_16)
+     *
+     * @tag短信发送状态
      */
     post(options: { body: TBodyOfpageUsingPOST_16 }): Promise<TResponseOfpageUsingPOST_16>;
   };
   (url: "/smsSendStatus/query"): {
     /**
-     * @description 批量查询 queryUsingPOST_12
-     * 短信发送状态
+     * @description 批量查询
+     * @see [Swagger doc: 批量查询](http://120.79.250.86:8760/doc.html#/消息服务/短信发送状态/queryUsingPOST_12)
+     *
+     * @tag短信发送状态
      */
     post(options: { body: TBodyOfqueryUsingPOST_12 }): Promise<TResponseOfqueryUsingPOST_12>;
   };
   (url: "/smsSendStatus/{id}"): {
     /**
-     * @description 单体查询 getUsingGET_14
-     * 短信发送状态
+     * @description 单体查询
+     * @see [Swagger doc: 单体查询](http://120.79.250.86:8760/doc.html#/消息服务/短信发送状态/getUsingGET_14)
+     *
+     * @tag短信发送状态
      */
     get(options: { path: TPathOfgetUsingGET_14 }): Promise<TResponseOfgetUsingGET_14>;
   };
   (url: "/smsTask"): {
     /**
-     * @description 新增 saveUsingPOST_12
-     * 短信发送
+     * @description 新增
+     * @see [Swagger doc: 新增](http://120.79.250.86:8760/doc.html#/消息服务/短信发送/saveUsingPOST_12)
+     *
+     * @tag短信发送
      */
     post(options: { body: TBodyOfsaveUsingPOST_12 }): Promise<TResponseOfsaveUsingPOST_12>;
 
     /**
-     * @description 修改 updateUsingPUT_11
-     * 短信发送
+     * @description 修改
+     * @see [Swagger doc: 修改](http://120.79.250.86:8760/doc.html#/消息服务/短信发送/updateUsingPUT_11)
+     *
+     * @tag短信发送
      */
     put(options: { body: TBodyOfupdateUsingPUT_11 }): Promise<TResponseOfupdateUsingPUT_11>;
 
     /**
-     * @description 删除 deleteUsingDELETE_15
-     * 短信发送
+     * @description 删除
+     * @see [Swagger doc: 删除](http://120.79.250.86:8760/doc.html#/消息服务/短信发送/deleteUsingDELETE_15)
+     *
+     * @tag短信发送
      */
     delete(options: {
       body: TBodyOfdeleteUsingDELETE_15;
@@ -1050,22 +1080,28 @@ export interface IApiFn {
   };
   (url: "/smsTask/all"): {
     /**
-     * @description 修改所有字段 updateAllUsingPUT_11
-     * 短信发送
+     * @description 修改所有字段
+     * @see [Swagger doc: 修改所有字段](http://120.79.250.86:8760/doc.html#/消息服务/短信发送/updateAllUsingPUT_11)
+     *
+     * @tag短信发送
      */
     put(options: { body: TBodyOfupdateAllUsingPUT_11 }): Promise<TResponseOfupdateAllUsingPUT_11>;
   };
   (url: "/smsTask/detail/{id}"): {
     /**
-     * @description 详情 detailUsingGET
-     * 短信发送
+     * @description 详情
+     * @see [Swagger doc: 详情](http://120.79.250.86:8760/doc.html#/消息服务/短信发送/detailUsingGET)
+     *
+     * @tag短信发送
      */
     get(options: { path: TPathOfdetailUsingGET }): Promise<TResponseOfdetailUsingGET>;
   };
   (url: "/smsTask/export"): {
     /**
-     * @description 导出Excel exportExcelUsingPOST_13
-     * 短信发送
+     * @description 导出Excel
+     * @see [Swagger doc: 导出Excel](http://120.79.250.86:8760/doc.html#/消息服务/短信发送/exportExcelUsingPOST_13)
+     *
+     * @tag短信发送
      */
     post(options: {
       body: TBodyOfexportExcelUsingPOST_13;
@@ -1073,8 +1109,10 @@ export interface IApiFn {
   };
   (url: "/smsTask/import"): {
     /**
-     * @description 导入Excel importExcelUsingPOST_12
-     * 短信发送
+     * @description 导入Excel
+     * @see [Swagger doc: 导入Excel](http://120.79.250.86:8760/doc.html#/消息服务/短信发送/importExcelUsingPOST_12)
+     *
+     * @tag短信发送
      */
     post(options: {
       formData: TFormDataOfimportExcelUsingPOST_12;
@@ -1082,48 +1120,62 @@ export interface IApiFn {
   };
   (url: "/smsTask/page"): {
     /**
-     * @description 分页列表查询 pageUsingPOST_17
-     * 短信发送
+     * @description 分页列表查询
+     * @see [Swagger doc: 分页列表查询](http://120.79.250.86:8760/doc.html#/消息服务/短信发送/pageUsingPOST_17)
+     *
+     * @tag短信发送
      */
     post(options: { body: TBodyOfpageUsingPOST_17 }): Promise<TResponseOfpageUsingPOST_17>;
   };
   (url: "/smsTask/preview"): {
     /**
-     * @description 预览Excel previewUsingPOST_13
-     * 短信发送
+     * @description 预览Excel
+     * @see [Swagger doc: 预览Excel](http://120.79.250.86:8760/doc.html#/消息服务/短信发送/previewUsingPOST_13)
+     *
+     * @tag短信发送
      */
     post(options: { body: TBodyOfpreviewUsingPOST_13 }): Promise<TResponseOfpreviewUsingPOST_13>;
   };
   (url: "/smsTask/query"): {
     /**
-     * @description 批量查询 queryUsingPOST_13
-     * 短信发送
+     * @description 批量查询
+     * @see [Swagger doc: 批量查询](http://120.79.250.86:8760/doc.html#/消息服务/短信发送/queryUsingPOST_13)
+     *
+     * @tag短信发送
      */
     post(options: { body: TBodyOfqueryUsingPOST_13 }): Promise<TResponseOfqueryUsingPOST_13>;
   };
   (url: "/smsTask/{id}"): {
     /**
-     * @description 单体查询 getUsingGET_15
-     * 短信发送
+     * @description 单体查询
+     * @see [Swagger doc: 单体查询](http://120.79.250.86:8760/doc.html#/消息服务/短信发送/getUsingGET_15)
+     *
+     * @tag短信发送
      */
     get(options: { path: TPathOfgetUsingGET_15 }): Promise<TResponseOfgetUsingGET_15>;
   };
   (url: "/smsTemplate"): {
     /**
-     * @description 新增 saveUsingPOST_13
-     * 短信模板
+     * @description 新增
+     * @see [Swagger doc: 新增](http://120.79.250.86:8760/doc.html#/消息服务/短信模板/saveUsingPOST_13)
+     *
+     * @tag短信模板
      */
     post(options: { body: TBodyOfsaveUsingPOST_13 }): Promise<TResponseOfsaveUsingPOST_13>;
 
     /**
-     * @description 修改 updateUsingPUT_12
-     * 短信模板
+     * @description 修改
+     * @see [Swagger doc: 修改](http://120.79.250.86:8760/doc.html#/消息服务/短信模板/updateUsingPUT_12)
+     *
+     * @tag短信模板
      */
     put(options: { body: TBodyOfupdateUsingPUT_12 }): Promise<TResponseOfupdateUsingPUT_12>;
 
     /**
-     * @description 删除 deleteUsingDELETE_16
-     * 短信模板
+     * @description 删除
+     * @see [Swagger doc: 删除](http://120.79.250.86:8760/doc.html#/消息服务/短信模板/deleteUsingDELETE_16)
+     *
+     * @tag短信模板
      */
     delete(options: {
       body: TBodyOfdeleteUsingDELETE_16;
@@ -1131,15 +1183,19 @@ export interface IApiFn {
   };
   (url: "/smsTemplate/all"): {
     /**
-     * @description 修改所有字段 updateAllUsingPUT_12
-     * 短信模板
+     * @description 修改所有字段
+     * @see [Swagger doc: 修改所有字段](http://120.79.250.86:8760/doc.html#/消息服务/短信模板/updateAllUsingPUT_12)
+     *
+     * @tag短信模板
      */
     put(options: { body: TBodyOfupdateAllUsingPUT_12 }): Promise<TResponseOfupdateAllUsingPUT_12>;
   };
   (url: "/smsTemplate/export"): {
     /**
-     * @description 导出Excel exportExcelUsingPOST_14
-     * 短信模板
+     * @description 导出Excel
+     * @see [Swagger doc: 导出Excel](http://120.79.250.86:8760/doc.html#/消息服务/短信模板/exportExcelUsingPOST_14)
+     *
+     * @tag短信模板
      */
     post(options: {
       body: TBodyOfexportExcelUsingPOST_14;
@@ -1147,8 +1203,10 @@ export interface IApiFn {
   };
   (url: "/smsTemplate/import"): {
     /**
-     * @description 导入Excel importExcelUsingPOST_13
-     * 短信模板
+     * @description 导入Excel
+     * @see [Swagger doc: 导入Excel](http://120.79.250.86:8760/doc.html#/消息服务/短信模板/importExcelUsingPOST_13)
+     *
+     * @tag短信模板
      */
     post(options: {
       formData: TFormDataOfimportExcelUsingPOST_13;
@@ -1156,36 +1214,46 @@ export interface IApiFn {
   };
   (url: "/smsTemplate/page"): {
     /**
-     * @description 分页列表查询 pageUsingPOST_18
-     * 短信模板
+     * @description 分页列表查询
+     * @see [Swagger doc: 分页列表查询](http://120.79.250.86:8760/doc.html#/消息服务/短信模板/pageUsingPOST_18)
+     *
+     * @tag短信模板
      */
     post(options: { body: TBodyOfpageUsingPOST_18 }): Promise<TResponseOfpageUsingPOST_18>;
   };
   (url: "/smsTemplate/preview"): {
     /**
-     * @description 预览Excel previewUsingPOST_14
-     * 短信模板
+     * @description 预览Excel
+     * @see [Swagger doc: 预览Excel](http://120.79.250.86:8760/doc.html#/消息服务/短信模板/previewUsingPOST_14)
+     *
+     * @tag短信模板
      */
     post(options: { body: TBodyOfpreviewUsingPOST_14 }): Promise<TResponseOfpreviewUsingPOST_14>;
   };
   (url: "/smsTemplate/query"): {
     /**
-     * @description 批量查询 queryUsingPOST_14
-     * 短信模板
+     * @description 批量查询
+     * @see [Swagger doc: 批量查询](http://120.79.250.86:8760/doc.html#/消息服务/短信模板/queryUsingPOST_14)
+     *
+     * @tag短信模板
      */
     post(options: { body: TBodyOfqueryUsingPOST_14 }): Promise<TResponseOfqueryUsingPOST_14>;
   };
   (url: "/smsTemplate/{id}"): {
     /**
-     * @description 单体查询 getUsingGET_16
-     * 短信模板
+     * @description 单体查询
+     * @see [Swagger doc: 单体查询](http://120.79.250.86:8760/doc.html#/消息服务/短信模板/getUsingGET_16)
+     *
+     * @tag短信模板
      */
     get(options: { path: TPathOfgetUsingGET_16 }): Promise<TResponseOfgetUsingGET_16>;
   };
   (url: "/verification"): {
     /**
-     * @description 验证验证码 verificationUsingPOST
-     * 验证码
+     * @description 验证验证码
+     * @see [Swagger doc: 验证验证码](http://120.79.250.86:8760/doc.html#/消息服务/验证码/verificationUsingPOST)
+     *
+     * @tag验证码
      */
     post(options: {
       body: TBodyOfverificationUsingPOST;
@@ -1193,8 +1261,10 @@ export interface IApiFn {
   };
   (url: "/verification/send"): {
     /**
-     * @description 发送验证码 sendUsingPOST
-     * 验证码
+     * @description 发送验证码
+     * @see [Swagger doc: 发送验证码](http://120.79.250.86:8760/doc.html#/消息服务/验证码/sendUsingPOST)
+     *
+     * @tag验证码
      */
     post(options: { body: TBodyOfsendUsingPOST }): Promise<TResponseOfsendUsingPOST>;
   };

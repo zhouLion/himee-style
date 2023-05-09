@@ -1,1 +1,1 @@
-function n(t){return i=>({get:e=>t.get(i,e),post:e=>t.post(i,e),put:e=>t.put(i,e),head:e=>t.head(i,e),delete:e=>t.delete(i,e),patch:e=>t.patch(i,e)})}export{n as createRequest};
+function t(t){return e=>({get:p=>t.get(e,p),post:p=>t.post(e,p),put:p=>t.put(e,p),head:p=>t.head(e,p),delete:p=>t.delete(e,p),patch:p=>t.patch(e,p)})}export{t as createRequest};//# sourceMappingURL=文件服务.js.map

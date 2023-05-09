@@ -1487,20 +1487,26 @@ export interface IApiFn {
 
   (url: "/orderPay"): {
     /**
-     * @description 新增 saveUsingPOST_13
-     * 订单支付信息表
+     * @description 新增
+     * @see [Swagger doc: 新增](http://120.79.250.86:8762/doc.html#/用户端会员模块/订单支付信息表/saveUsingPOST_13)
+     *
+     * @tag订单支付信息表
      */
     post(options: { body: TBodyOfsaveUsingPOST_13 }): Promise<TResponseOfsaveUsingPOST_13>;
 
     /**
-     * @description 修改 updateUsingPUT_12
-     * 订单支付信息表
+     * @description 修改
+     * @see [Swagger doc: 修改](http://120.79.250.86:8762/doc.html#/用户端会员模块/订单支付信息表/updateUsingPUT_12)
+     *
+     * @tag订单支付信息表
      */
     put(options: { body: TBodyOfupdateUsingPUT_12 }): Promise<TResponseOfupdateUsingPUT_12>;
 
     /**
-     * @description 删除 deleteUsingDELETE_16
-     * 订单支付信息表
+     * @description 删除
+     * @see [Swagger doc: 删除](http://120.79.250.86:8762/doc.html#/用户端会员模块/订单支付信息表/deleteUsingDELETE_16)
+     *
+     * @tag订单支付信息表
      */
     delete(options: {
       body: TBodyOfdeleteUsingDELETE_16;
@@ -1508,15 +1514,19 @@ export interface IApiFn {
   };
   (url: "/orderPay/all"): {
     /**
-     * @description 修改所有字段 updateAllUsingPUT_12
-     * 订单支付信息表
+     * @description 修改所有字段
+     * @see [Swagger doc: 修改所有字段](http://120.79.250.86:8762/doc.html#/用户端会员模块/订单支付信息表/updateAllUsingPUT_12)
+     *
+     * @tag订单支付信息表
      */
     put(options: { body: TBodyOfupdateAllUsingPUT_12 }): Promise<TResponseOfupdateAllUsingPUT_12>;
   };
   (url: "/orderPay/export"): {
     /**
-     * @description 导出Excel exportExcelUsingPOST_14
-     * 订单支付信息表
+     * @description 导出Excel
+     * @see [Swagger doc: 导出Excel](http://120.79.250.86:8762/doc.html#/用户端会员模块/订单支付信息表/exportExcelUsingPOST_14)
+     *
+     * @tag订单支付信息表
      */
     post(options: {
       body: TBodyOfexportExcelUsingPOST_14;
@@ -1524,8 +1534,10 @@ export interface IApiFn {
   };
   (url: "/orderPay/import"): {
     /**
-     * @description 导入Excel importExcelUsingPOST_13
-     * 订单支付信息表
+     * @description 导入Excel
+     * @see [Swagger doc: 导入Excel](http://120.79.250.86:8762/doc.html#/用户端会员模块/订单支付信息表/importExcelUsingPOST_13)
+     *
+     * @tag订单支付信息表
      */
     post(options: {
       formData: TFormDataOfimportExcelUsingPOST_13;
@@ -1533,48 +1545,62 @@ export interface IApiFn {
   };
   (url: "/orderPay/page"): {
     /**
-     * @description 分页列表查询 pageUsingPOST_18
-     * 订单支付信息表
+     * @description 分页列表查询
+     * @see [Swagger doc: 分页列表查询](http://120.79.250.86:8762/doc.html#/用户端会员模块/订单支付信息表/pageUsingPOST_18)
+     *
+     * @tag订单支付信息表
      */
     post(options: { body: TBodyOfpageUsingPOST_18 }): Promise<TResponseOfpageUsingPOST_18>;
   };
   (url: "/orderPay/preview"): {
     /**
-     * @description 预览Excel previewUsingPOST_14
-     * 订单支付信息表
+     * @description 预览Excel
+     * @see [Swagger doc: 预览Excel](http://120.79.250.86:8762/doc.html#/用户端会员模块/订单支付信息表/previewUsingPOST_14)
+     *
+     * @tag订单支付信息表
      */
     post(options: { body: TBodyOfpreviewUsingPOST_14 }): Promise<TResponseOfpreviewUsingPOST_14>;
   };
   (url: "/orderPay/query"): {
     /**
-     * @description 批量查询 queryUsingPOST_14
-     * 订单支付信息表
+     * @description 批量查询
+     * @see [Swagger doc: 批量查询](http://120.79.250.86:8762/doc.html#/用户端会员模块/订单支付信息表/queryUsingPOST_14)
+     *
+     * @tag订单支付信息表
      */
     post(options: { body: TBodyOfqueryUsingPOST_14 }): Promise<TResponseOfqueryUsingPOST_14>;
   };
   (url: "/orderPay/{id}"): {
     /**
-     * @description 单体查询 getUsingGET_16
-     * 订单支付信息表
+     * @description 单体查询
+     * @see [Swagger doc: 单体查询](http://120.79.250.86:8762/doc.html#/用户端会员模块/订单支付信息表/getUsingGET_16)
+     *
+     * @tag订单支付信息表
      */
     get(options: { path: TPathOfgetUsingGET_16 }): Promise<TResponseOfgetUsingGET_16>;
   };
   (url: "/rechargeOrder"): {
     /**
-     * @description 新增 saveUsingPOST_14
-     * 充值订单表
+     * @description 新增
+     * @see [Swagger doc: 新增](http://120.79.250.86:8762/doc.html#/用户端会员模块/充值订单表/saveUsingPOST_14)
+     *
+     * @tag充值订单表
      */
     post(options: { body: TBodyOfsaveUsingPOST_14 }): Promise<TResponseOfsaveUsingPOST_14>;
 
     /**
-     * @description 修改 updateUsingPUT_13
-     * 充值订单表
+     * @description 修改
+     * @see [Swagger doc: 修改](http://120.79.250.86:8762/doc.html#/用户端会员模块/充值订单表/updateUsingPUT_13)
+     *
+     * @tag充值订单表
      */
     put(options: { body: TBodyOfupdateUsingPUT_13 }): Promise<TResponseOfupdateUsingPUT_13>;
 
     /**
-     * @description 删除 deleteUsingDELETE_17
-     * 充值订单表
+     * @description 删除
+     * @see [Swagger doc: 删除](http://120.79.250.86:8762/doc.html#/用户端会员模块/充值订单表/deleteUsingDELETE_17)
+     *
+     * @tag充值订单表
      */
     delete(options: {
       body: TBodyOfdeleteUsingDELETE_17;
@@ -1582,15 +1608,19 @@ export interface IApiFn {
   };
   (url: "/rechargeOrder/all"): {
     /**
-     * @description 修改所有字段 updateAllUsingPUT_13
-     * 充值订单表
+     * @description 修改所有字段
+     * @see [Swagger doc: 修改所有字段](http://120.79.250.86:8762/doc.html#/用户端会员模块/充值订单表/updateAllUsingPUT_13)
+     *
+     * @tag充值订单表
      */
     put(options: { body: TBodyOfupdateAllUsingPUT_13 }): Promise<TResponseOfupdateAllUsingPUT_13>;
   };
   (url: "/rechargeOrder/export"): {
     /**
-     * @description 导出Excel exportExcelUsingPOST_15
-     * 充值订单表
+     * @description 导出Excel
+     * @see [Swagger doc: 导出Excel](http://120.79.250.86:8762/doc.html#/用户端会员模块/充值订单表/exportExcelUsingPOST_15)
+     *
+     * @tag充值订单表
      */
     post(options: {
       body: TBodyOfexportExcelUsingPOST_15;
@@ -1598,8 +1628,10 @@ export interface IApiFn {
   };
   (url: "/rechargeOrder/import"): {
     /**
-     * @description 导入Excel importExcelUsingPOST_14
-     * 充值订单表
+     * @description 导入Excel
+     * @see [Swagger doc: 导入Excel](http://120.79.250.86:8762/doc.html#/用户端会员模块/充值订单表/importExcelUsingPOST_14)
+     *
+     * @tag充值订单表
      */
     post(options: {
       formData: TFormDataOfimportExcelUsingPOST_14;
@@ -1607,48 +1639,62 @@ export interface IApiFn {
   };
   (url: "/rechargeOrder/page"): {
     /**
-     * @description 分页列表查询 pageUsingPOST_19
-     * 充值订单表
+     * @description 分页列表查询
+     * @see [Swagger doc: 分页列表查询](http://120.79.250.86:8762/doc.html#/用户端会员模块/充值订单表/pageUsingPOST_19)
+     *
+     * @tag充值订单表
      */
     post(options: { body: TBodyOfpageUsingPOST_19 }): Promise<TResponseOfpageUsingPOST_19>;
   };
   (url: "/rechargeOrder/preview"): {
     /**
-     * @description 预览Excel previewUsingPOST_15
-     * 充值订单表
+     * @description 预览Excel
+     * @see [Swagger doc: 预览Excel](http://120.79.250.86:8762/doc.html#/用户端会员模块/充值订单表/previewUsingPOST_15)
+     *
+     * @tag充值订单表
      */
     post(options: { body: TBodyOfpreviewUsingPOST_15 }): Promise<TResponseOfpreviewUsingPOST_15>;
   };
   (url: "/rechargeOrder/query"): {
     /**
-     * @description 批量查询 queryUsingPOST_15
-     * 充值订单表
+     * @description 批量查询
+     * @see [Swagger doc: 批量查询](http://120.79.250.86:8762/doc.html#/用户端会员模块/充值订单表/queryUsingPOST_15)
+     *
+     * @tag充值订单表
      */
     post(options: { body: TBodyOfqueryUsingPOST_15 }): Promise<TResponseOfqueryUsingPOST_15>;
   };
   (url: "/rechargeOrder/{id}"): {
     /**
-     * @description 单体查询 getUsingGET_17
-     * 充值订单表
+     * @description 单体查询
+     * @see [Swagger doc: 单体查询](http://120.79.250.86:8762/doc.html#/用户端会员模块/充值订单表/getUsingGET_17)
+     *
+     * @tag充值订单表
      */
     get(options: { path: TPathOfgetUsingGET_17 }): Promise<TResponseOfgetUsingGET_17>;
   };
   (url: "/sellOrder"): {
     /**
-     * @description 新增 saveUsingPOST_15
-     * 销售订单表
+     * @description 新增
+     * @see [Swagger doc: 新增](http://120.79.250.86:8762/doc.html#/用户端会员模块/销售订单表/saveUsingPOST_15)
+     *
+     * @tag销售订单表
      */
     post(options: { body: TBodyOfsaveUsingPOST_15 }): Promise<TResponseOfsaveUsingPOST_15>;
 
     /**
-     * @description 修改 updateUsingPUT_14
-     * 销售订单表
+     * @description 修改
+     * @see [Swagger doc: 修改](http://120.79.250.86:8762/doc.html#/用户端会员模块/销售订单表/updateUsingPUT_14)
+     *
+     * @tag销售订单表
      */
     put(options: { body: TBodyOfupdateUsingPUT_14 }): Promise<TResponseOfupdateUsingPUT_14>;
 
     /**
-     * @description 删除 deleteUsingDELETE_18
-     * 销售订单表
+     * @description 删除
+     * @see [Swagger doc: 删除](http://120.79.250.86:8762/doc.html#/用户端会员模块/销售订单表/deleteUsingDELETE_18)
+     *
+     * @tag销售订单表
      */
     delete(options: {
       body: TBodyOfdeleteUsingDELETE_18;
@@ -1656,15 +1702,19 @@ export interface IApiFn {
   };
   (url: "/sellOrder/all"): {
     /**
-     * @description 修改所有字段 updateAllUsingPUT_14
-     * 销售订单表
+     * @description 修改所有字段
+     * @see [Swagger doc: 修改所有字段](http://120.79.250.86:8762/doc.html#/用户端会员模块/销售订单表/updateAllUsingPUT_14)
+     *
+     * @tag销售订单表
      */
     put(options: { body: TBodyOfupdateAllUsingPUT_14 }): Promise<TResponseOfupdateAllUsingPUT_14>;
   };
   (url: "/sellOrder/export"): {
     /**
-     * @description 导出Excel exportExcelUsingPOST_16
-     * 销售订单表
+     * @description 导出Excel
+     * @see [Swagger doc: 导出Excel](http://120.79.250.86:8762/doc.html#/用户端会员模块/销售订单表/exportExcelUsingPOST_16)
+     *
+     * @tag销售订单表
      */
     post(options: {
       body: TBodyOfexportExcelUsingPOST_16;
@@ -1672,8 +1722,10 @@ export interface IApiFn {
   };
   (url: "/sellOrder/import"): {
     /**
-     * @description 导入Excel importExcelUsingPOST_15
-     * 销售订单表
+     * @description 导入Excel
+     * @see [Swagger doc: 导入Excel](http://120.79.250.86:8762/doc.html#/用户端会员模块/销售订单表/importExcelUsingPOST_15)
+     *
+     * @tag销售订单表
      */
     post(options: {
       formData: TFormDataOfimportExcelUsingPOST_15;
@@ -1681,48 +1733,62 @@ export interface IApiFn {
   };
   (url: "/sellOrder/page"): {
     /**
-     * @description 分页列表查询 pageUsingPOST_20
-     * 销售订单表
+     * @description 分页列表查询
+     * @see [Swagger doc: 分页列表查询](http://120.79.250.86:8762/doc.html#/用户端会员模块/销售订单表/pageUsingPOST_20)
+     *
+     * @tag销售订单表
      */
     post(options: { body: TBodyOfpageUsingPOST_20 }): Promise<TResponseOfpageUsingPOST_20>;
   };
   (url: "/sellOrder/preview"): {
     /**
-     * @description 预览Excel previewUsingPOST_16
-     * 销售订单表
+     * @description 预览Excel
+     * @see [Swagger doc: 预览Excel](http://120.79.250.86:8762/doc.html#/用户端会员模块/销售订单表/previewUsingPOST_16)
+     *
+     * @tag销售订单表
      */
     post(options: { body: TBodyOfpreviewUsingPOST_16 }): Promise<TResponseOfpreviewUsingPOST_16>;
   };
   (url: "/sellOrder/query"): {
     /**
-     * @description 批量查询 queryUsingPOST_16
-     * 销售订单表
+     * @description 批量查询
+     * @see [Swagger doc: 批量查询](http://120.79.250.86:8762/doc.html#/用户端会员模块/销售订单表/queryUsingPOST_16)
+     *
+     * @tag销售订单表
      */
     post(options: { body: TBodyOfqueryUsingPOST_16 }): Promise<TResponseOfqueryUsingPOST_16>;
   };
   (url: "/sellOrder/{id}"): {
     /**
-     * @description 单体查询 getUsingGET_18
-     * 销售订单表
+     * @description 单体查询
+     * @see [Swagger doc: 单体查询](http://120.79.250.86:8762/doc.html#/用户端会员模块/销售订单表/getUsingGET_18)
+     *
+     * @tag销售订单表
      */
     get(options: { path: TPathOfgetUsingGET_18 }): Promise<TResponseOfgetUsingGET_18>;
   };
   (url: "/vipAppointment"): {
     /**
-     * @description 新增 saveUsingPOST_16
-     * 会员预约表
+     * @description 新增
+     * @see [Swagger doc: 新增](http://120.79.250.86:8762/doc.html#/用户端会员模块/会员预约表/saveUsingPOST_16)
+     *
+     * @tag会员预约表
      */
     post(options: { body: TBodyOfsaveUsingPOST_16 }): Promise<TResponseOfsaveUsingPOST_16>;
 
     /**
-     * @description 修改 updateUsingPUT_15
-     * 会员预约表
+     * @description 修改
+     * @see [Swagger doc: 修改](http://120.79.250.86:8762/doc.html#/用户端会员模块/会员预约表/updateUsingPUT_15)
+     *
+     * @tag会员预约表
      */
     put(options: { body: TBodyOfupdateUsingPUT_15 }): Promise<TResponseOfupdateUsingPUT_15>;
 
     /**
-     * @description 删除 deleteUsingDELETE_19
-     * 会员预约表
+     * @description 删除
+     * @see [Swagger doc: 删除](http://120.79.250.86:8762/doc.html#/用户端会员模块/会员预约表/deleteUsingDELETE_19)
+     *
+     * @tag会员预约表
      */
     delete(options: {
       body: TBodyOfdeleteUsingDELETE_19;
@@ -1730,15 +1796,19 @@ export interface IApiFn {
   };
   (url: "/vipAppointment/all"): {
     /**
-     * @description 修改所有字段 updateAllUsingPUT_15
-     * 会员预约表
+     * @description 修改所有字段
+     * @see [Swagger doc: 修改所有字段](http://120.79.250.86:8762/doc.html#/用户端会员模块/会员预约表/updateAllUsingPUT_15)
+     *
+     * @tag会员预约表
      */
     put(options: { body: TBodyOfupdateAllUsingPUT_15 }): Promise<TResponseOfupdateAllUsingPUT_15>;
   };
   (url: "/vipAppointment/export"): {
     /**
-     * @description 导出Excel exportExcelUsingPOST_17
-     * 会员预约表
+     * @description 导出Excel
+     * @see [Swagger doc: 导出Excel](http://120.79.250.86:8762/doc.html#/用户端会员模块/会员预约表/exportExcelUsingPOST_17)
+     *
+     * @tag会员预约表
      */
     post(options: {
       body: TBodyOfexportExcelUsingPOST_17;
@@ -1746,8 +1816,10 @@ export interface IApiFn {
   };
   (url: "/vipAppointment/import"): {
     /**
-     * @description 导入Excel importExcelUsingPOST_16
-     * 会员预约表
+     * @description 导入Excel
+     * @see [Swagger doc: 导入Excel](http://120.79.250.86:8762/doc.html#/用户端会员模块/会员预约表/importExcelUsingPOST_16)
+     *
+     * @tag会员预约表
      */
     post(options: {
       formData: TFormDataOfimportExcelUsingPOST_16;
@@ -1755,48 +1827,62 @@ export interface IApiFn {
   };
   (url: "/vipAppointment/page"): {
     /**
-     * @description 分页列表查询 pageUsingPOST_21
-     * 会员预约表
+     * @description 分页列表查询
+     * @see [Swagger doc: 分页列表查询](http://120.79.250.86:8762/doc.html#/用户端会员模块/会员预约表/pageUsingPOST_21)
+     *
+     * @tag会员预约表
      */
     post(options: { body: TBodyOfpageUsingPOST_21 }): Promise<TResponseOfpageUsingPOST_21>;
   };
   (url: "/vipAppointment/preview"): {
     /**
-     * @description 预览Excel previewUsingPOST_17
-     * 会员预约表
+     * @description 预览Excel
+     * @see [Swagger doc: 预览Excel](http://120.79.250.86:8762/doc.html#/用户端会员模块/会员预约表/previewUsingPOST_17)
+     *
+     * @tag会员预约表
      */
     post(options: { body: TBodyOfpreviewUsingPOST_17 }): Promise<TResponseOfpreviewUsingPOST_17>;
   };
   (url: "/vipAppointment/query"): {
     /**
-     * @description 批量查询 queryUsingPOST_17
-     * 会员预约表
+     * @description 批量查询
+     * @see [Swagger doc: 批量查询](http://120.79.250.86:8762/doc.html#/用户端会员模块/会员预约表/queryUsingPOST_17)
+     *
+     * @tag会员预约表
      */
     post(options: { body: TBodyOfqueryUsingPOST_17 }): Promise<TResponseOfqueryUsingPOST_17>;
   };
   (url: "/vipAppointment/{id}"): {
     /**
-     * @description 单体查询 getUsingGET_19
-     * 会员预约表
+     * @description 单体查询
+     * @see [Swagger doc: 单体查询](http://120.79.250.86:8762/doc.html#/用户端会员模块/会员预约表/getUsingGET_19)
+     *
+     * @tag会员预约表
      */
     get(options: { path: TPathOfgetUsingGET_19 }): Promise<TResponseOfgetUsingGET_19>;
   };
   (url: "/vipAssets"): {
     /**
-     * @description 新增 saveUsingPOST_17
-     * 会员资产表
+     * @description 新增
+     * @see [Swagger doc: 新增](http://120.79.250.86:8762/doc.html#/用户端会员模块/会员资产表/saveUsingPOST_17)
+     *
+     * @tag会员资产表
      */
     post(options: { body: TBodyOfsaveUsingPOST_17 }): Promise<TResponseOfsaveUsingPOST_17>;
 
     /**
-     * @description 修改 updateUsingPUT_16
-     * 会员资产表
+     * @description 修改
+     * @see [Swagger doc: 修改](http://120.79.250.86:8762/doc.html#/用户端会员模块/会员资产表/updateUsingPUT_16)
+     *
+     * @tag会员资产表
      */
     put(options: { body: TBodyOfupdateUsingPUT_16 }): Promise<TResponseOfupdateUsingPUT_16>;
 
     /**
-     * @description 删除 deleteUsingDELETE_20
-     * 会员资产表
+     * @description 删除
+     * @see [Swagger doc: 删除](http://120.79.250.86:8762/doc.html#/用户端会员模块/会员资产表/deleteUsingDELETE_20)
+     *
+     * @tag会员资产表
      */
     delete(options: {
       body: TBodyOfdeleteUsingDELETE_20;
@@ -1804,15 +1890,19 @@ export interface IApiFn {
   };
   (url: "/vipAssets/all"): {
     /**
-     * @description 修改所有字段 updateAllUsingPUT_16
-     * 会员资产表
+     * @description 修改所有字段
+     * @see [Swagger doc: 修改所有字段](http://120.79.250.86:8762/doc.html#/用户端会员模块/会员资产表/updateAllUsingPUT_16)
+     *
+     * @tag会员资产表
      */
     put(options: { body: TBodyOfupdateAllUsingPUT_16 }): Promise<TResponseOfupdateAllUsingPUT_16>;
   };
   (url: "/vipAssets/export"): {
     /**
-     * @description 导出Excel exportExcelUsingPOST_18
-     * 会员资产表
+     * @description 导出Excel
+     * @see [Swagger doc: 导出Excel](http://120.79.250.86:8762/doc.html#/用户端会员模块/会员资产表/exportExcelUsingPOST_18)
+     *
+     * @tag会员资产表
      */
     post(options: {
       body: TBodyOfexportExcelUsingPOST_18;
@@ -1820,8 +1910,10 @@ export interface IApiFn {
   };
   (url: "/vipAssets/import"): {
     /**
-     * @description 导入Excel importExcelUsingPOST_17
-     * 会员资产表
+     * @description 导入Excel
+     * @see [Swagger doc: 导入Excel](http://120.79.250.86:8762/doc.html#/用户端会员模块/会员资产表/importExcelUsingPOST_17)
+     *
+     * @tag会员资产表
      */
     post(options: {
       formData: TFormDataOfimportExcelUsingPOST_17;
@@ -1829,48 +1921,62 @@ export interface IApiFn {
   };
   (url: "/vipAssets/page"): {
     /**
-     * @description 分页列表查询 pageUsingPOST_22
-     * 会员资产表
+     * @description 分页列表查询
+     * @see [Swagger doc: 分页列表查询](http://120.79.250.86:8762/doc.html#/用户端会员模块/会员资产表/pageUsingPOST_22)
+     *
+     * @tag会员资产表
      */
     post(options: { body: TBodyOfpageUsingPOST_22 }): Promise<TResponseOfpageUsingPOST_22>;
   };
   (url: "/vipAssets/preview"): {
     /**
-     * @description 预览Excel previewUsingPOST_18
-     * 会员资产表
+     * @description 预览Excel
+     * @see [Swagger doc: 预览Excel](http://120.79.250.86:8762/doc.html#/用户端会员模块/会员资产表/previewUsingPOST_18)
+     *
+     * @tag会员资产表
      */
     post(options: { body: TBodyOfpreviewUsingPOST_18 }): Promise<TResponseOfpreviewUsingPOST_18>;
   };
   (url: "/vipAssets/query"): {
     /**
-     * @description 批量查询 queryUsingPOST_18
-     * 会员资产表
+     * @description 批量查询
+     * @see [Swagger doc: 批量查询](http://120.79.250.86:8762/doc.html#/用户端会员模块/会员资产表/queryUsingPOST_18)
+     *
+     * @tag会员资产表
      */
     post(options: { body: TBodyOfqueryUsingPOST_18 }): Promise<TResponseOfqueryUsingPOST_18>;
   };
   (url: "/vipAssets/{id}"): {
     /**
-     * @description 单体查询 getUsingGET_20
-     * 会员资产表
+     * @description 单体查询
+     * @see [Swagger doc: 单体查询](http://120.79.250.86:8762/doc.html#/用户端会员模块/会员资产表/getUsingGET_20)
+     *
+     * @tag会员资产表
      */
     get(options: { path: TPathOfgetUsingGET_20 }): Promise<TResponseOfgetUsingGET_20>;
   };
   (url: "/vipFocus"): {
     /**
-     * @description 新增 saveUsingPOST_18
-     * 用户关注表
+     * @description 新增
+     * @see [Swagger doc: 新增](http://120.79.250.86:8762/doc.html#/用户端会员模块/用户关注表/saveUsingPOST_18)
+     *
+     * @tag用户关注表
      */
     post(options: { body: TBodyOfsaveUsingPOST_18 }): Promise<TResponseOfsaveUsingPOST_18>;
 
     /**
-     * @description 修改 updateUsingPUT_17
-     * 用户关注表
+     * @description 修改
+     * @see [Swagger doc: 修改](http://120.79.250.86:8762/doc.html#/用户端会员模块/用户关注表/updateUsingPUT_17)
+     *
+     * @tag用户关注表
      */
     put(options: { body: TBodyOfupdateUsingPUT_17 }): Promise<TResponseOfupdateUsingPUT_17>;
 
     /**
-     * @description 删除 deleteUsingDELETE_21
-     * 用户关注表
+     * @description 删除
+     * @see [Swagger doc: 删除](http://120.79.250.86:8762/doc.html#/用户端会员模块/用户关注表/deleteUsingDELETE_21)
+     *
+     * @tag用户关注表
      */
     delete(options: {
       body: TBodyOfdeleteUsingDELETE_21;
@@ -1878,15 +1984,19 @@ export interface IApiFn {
   };
   (url: "/vipFocus/all"): {
     /**
-     * @description 修改所有字段 updateAllUsingPUT_17
-     * 用户关注表
+     * @description 修改所有字段
+     * @see [Swagger doc: 修改所有字段](http://120.79.250.86:8762/doc.html#/用户端会员模块/用户关注表/updateAllUsingPUT_17)
+     *
+     * @tag用户关注表
      */
     put(options: { body: TBodyOfupdateAllUsingPUT_17 }): Promise<TResponseOfupdateAllUsingPUT_17>;
   };
   (url: "/vipFocus/export"): {
     /**
-     * @description 导出Excel exportExcelUsingPOST_19
-     * 用户关注表
+     * @description 导出Excel
+     * @see [Swagger doc: 导出Excel](http://120.79.250.86:8762/doc.html#/用户端会员模块/用户关注表/exportExcelUsingPOST_19)
+     *
+     * @tag用户关注表
      */
     post(options: {
       body: TBodyOfexportExcelUsingPOST_19;
@@ -1894,8 +2004,10 @@ export interface IApiFn {
   };
   (url: "/vipFocus/import"): {
     /**
-     * @description 导入Excel importExcelUsingPOST_18
-     * 用户关注表
+     * @description 导入Excel
+     * @see [Swagger doc: 导入Excel](http://120.79.250.86:8762/doc.html#/用户端会员模块/用户关注表/importExcelUsingPOST_18)
+     *
+     * @tag用户关注表
      */
     post(options: {
       formData: TFormDataOfimportExcelUsingPOST_18;
@@ -1903,48 +2015,62 @@ export interface IApiFn {
   };
   (url: "/vipFocus/page"): {
     /**
-     * @description 分页列表查询 pageUsingPOST_23
-     * 用户关注表
+     * @description 分页列表查询
+     * @see [Swagger doc: 分页列表查询](http://120.79.250.86:8762/doc.html#/用户端会员模块/用户关注表/pageUsingPOST_23)
+     *
+     * @tag用户关注表
      */
     post(options: { body: TBodyOfpageUsingPOST_23 }): Promise<TResponseOfpageUsingPOST_23>;
   };
   (url: "/vipFocus/preview"): {
     /**
-     * @description 预览Excel previewUsingPOST_19
-     * 用户关注表
+     * @description 预览Excel
+     * @see [Swagger doc: 预览Excel](http://120.79.250.86:8762/doc.html#/用户端会员模块/用户关注表/previewUsingPOST_19)
+     *
+     * @tag用户关注表
      */
     post(options: { body: TBodyOfpreviewUsingPOST_19 }): Promise<TResponseOfpreviewUsingPOST_19>;
   };
   (url: "/vipFocus/query"): {
     /**
-     * @description 批量查询 queryUsingPOST_19
-     * 用户关注表
+     * @description 批量查询
+     * @see [Swagger doc: 批量查询](http://120.79.250.86:8762/doc.html#/用户端会员模块/用户关注表/queryUsingPOST_19)
+     *
+     * @tag用户关注表
      */
     post(options: { body: TBodyOfqueryUsingPOST_19 }): Promise<TResponseOfqueryUsingPOST_19>;
   };
   (url: "/vipFocus/{id}"): {
     /**
-     * @description 单体查询 getUsingGET_21
-     * 用户关注表
+     * @description 单体查询
+     * @see [Swagger doc: 单体查询](http://120.79.250.86:8762/doc.html#/用户端会员模块/用户关注表/getUsingGET_21)
+     *
+     * @tag用户关注表
      */
     get(options: { path: TPathOfgetUsingGET_21 }): Promise<TResponseOfgetUsingGET_21>;
   };
   (url: "/vipInfo"): {
     /**
-     * @description 新增 saveUsingPOST_19
-     * 会员信息表
+     * @description 新增
+     * @see [Swagger doc: 新增](http://120.79.250.86:8762/doc.html#/用户端会员模块/会员信息表/saveUsingPOST_19)
+     *
+     * @tag会员信息表
      */
     post(options: { body: TBodyOfsaveUsingPOST_19 }): Promise<TResponseOfsaveUsingPOST_19>;
 
     /**
-     * @description 修改 updateUsingPUT_18
-     * 会员信息表
+     * @description 修改
+     * @see [Swagger doc: 修改](http://120.79.250.86:8762/doc.html#/用户端会员模块/会员信息表/updateUsingPUT_18)
+     *
+     * @tag会员信息表
      */
     put(options: { body: TBodyOfupdateUsingPUT_18 }): Promise<TResponseOfupdateUsingPUT_18>;
 
     /**
-     * @description 删除 deleteUsingDELETE_22
-     * 会员信息表
+     * @description 删除
+     * @see [Swagger doc: 删除](http://120.79.250.86:8762/doc.html#/用户端会员模块/会员信息表/deleteUsingDELETE_22)
+     *
+     * @tag会员信息表
      */
     delete(options: {
       body: TBodyOfdeleteUsingDELETE_22;
@@ -1952,15 +2078,19 @@ export interface IApiFn {
   };
   (url: "/vipInfo/all"): {
     /**
-     * @description 修改所有字段 updateAllUsingPUT_18
-     * 会员信息表
+     * @description 修改所有字段
+     * @see [Swagger doc: 修改所有字段](http://120.79.250.86:8762/doc.html#/用户端会员模块/会员信息表/updateAllUsingPUT_18)
+     *
+     * @tag会员信息表
      */
     put(options: { body: TBodyOfupdateAllUsingPUT_18 }): Promise<TResponseOfupdateAllUsingPUT_18>;
   };
   (url: "/vipInfo/export"): {
     /**
-     * @description 导出Excel exportExcelUsingPOST_20
-     * 会员信息表
+     * @description 导出Excel
+     * @see [Swagger doc: 导出Excel](http://120.79.250.86:8762/doc.html#/用户端会员模块/会员信息表/exportExcelUsingPOST_20)
+     *
+     * @tag会员信息表
      */
     post(options: {
       body: TBodyOfexportExcelUsingPOST_20;
@@ -1968,8 +2098,10 @@ export interface IApiFn {
   };
   (url: "/vipInfo/import"): {
     /**
-     * @description 导入Excel importExcelUsingPOST_19
-     * 会员信息表
+     * @description 导入Excel
+     * @see [Swagger doc: 导入Excel](http://120.79.250.86:8762/doc.html#/用户端会员模块/会员信息表/importExcelUsingPOST_19)
+     *
+     * @tag会员信息表
      */
     post(options: {
       formData: TFormDataOfimportExcelUsingPOST_19;
@@ -1977,29 +2109,37 @@ export interface IApiFn {
   };
   (url: "/vipInfo/page"): {
     /**
-     * @description 分页列表查询 pageUsingPOST_24
-     * 会员信息表
+     * @description 分页列表查询
+     * @see [Swagger doc: 分页列表查询](http://120.79.250.86:8762/doc.html#/用户端会员模块/会员信息表/pageUsingPOST_24)
+     *
+     * @tag会员信息表
      */
     post(options: { body: TBodyOfpageUsingPOST_24 }): Promise<TResponseOfpageUsingPOST_24>;
   };
   (url: "/vipInfo/preview"): {
     /**
-     * @description 预览Excel previewUsingPOST_20
-     * 会员信息表
+     * @description 预览Excel
+     * @see [Swagger doc: 预览Excel](http://120.79.250.86:8762/doc.html#/用户端会员模块/会员信息表/previewUsingPOST_20)
+     *
+     * @tag会员信息表
      */
     post(options: { body: TBodyOfpreviewUsingPOST_20 }): Promise<TResponseOfpreviewUsingPOST_20>;
   };
   (url: "/vipInfo/query"): {
     /**
-     * @description 批量查询 queryUsingPOST_20
-     * 会员信息表
+     * @description 批量查询
+     * @see [Swagger doc: 批量查询](http://120.79.250.86:8762/doc.html#/用户端会员模块/会员信息表/queryUsingPOST_20)
+     *
+     * @tag会员信息表
      */
     post(options: { body: TBodyOfqueryUsingPOST_20 }): Promise<TResponseOfqueryUsingPOST_20>;
   };
   (url: "/vipInfo/{id}"): {
     /**
-     * @description 单体查询 getUsingGET_22
-     * 会员信息表
+     * @description 单体查询
+     * @see [Swagger doc: 单体查询](http://120.79.250.86:8762/doc.html#/用户端会员模块/会员信息表/getUsingGET_22)
+     *
+     * @tag会员信息表
      */
     get(options: { path: TPathOfgetUsingGET_22 }): Promise<TResponseOfgetUsingGET_22>;
   };

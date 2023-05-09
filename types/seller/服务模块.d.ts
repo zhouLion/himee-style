@@ -636,22 +636,28 @@ interface IApiFn {
     };
     (url: "/merchantSvc"): {
         /**
-         * @description 新增 saveUsingPOST_5
-         * 商户服务
+         * @description 新增
+         * @see [Swagger doc: 新增](http://120.79.250.86:8761/doc.html#/服务模块/商户服务/saveUsingPOST_5)
+         *
+         * @tag商户服务
          */
         post(options: {
             body: TBodyOfsaveUsingPOST_5;
         }): Promise<TResponseOfsaveUsingPOST_5>;
         /**
-         * @description 修改 updateUsingPUT_5
-         * 商户服务
+         * @description 修改
+         * @see [Swagger doc: 修改](http://120.79.250.86:8761/doc.html#/服务模块/商户服务/updateUsingPUT_5)
+         *
+         * @tag商户服务
          */
         put(options: {
             body: TBodyOfupdateUsingPUT_5;
         }): Promise<TResponseOfupdateUsingPUT_5>;
         /**
-         * @description 删除 deleteUsingDELETE_5
-         * 商户服务
+         * @description 删除
+         * @see [Swagger doc: 删除](http://120.79.250.86:8761/doc.html#/服务模块/商户服务/deleteUsingDELETE_5)
+         *
+         * @tag商户服务
          */
         delete(options: {
             body: TBodyOfdeleteUsingDELETE_5;
@@ -659,8 +665,10 @@ interface IApiFn {
     };
     (url: "/merchantSvc/all"): {
         /**
-         * @description 修改所有字段 updateAllUsingPUT_5
-         * 商户服务
+         * @description 修改所有字段
+         * @see [Swagger doc: 修改所有字段](http://120.79.250.86:8761/doc.html#/服务模块/商户服务/updateAllUsingPUT_5)
+         *
+         * @tag商户服务
          */
         put(options: {
             body: TBodyOfupdateAllUsingPUT_5;
@@ -668,8 +676,10 @@ interface IApiFn {
     };
     (url: "/merchantSvc/export"): {
         /**
-         * @description 导出Excel exportExcelUsingPOST_5
-         * 商户服务
+         * @description 导出Excel
+         * @see [Swagger doc: 导出Excel](http://120.79.250.86:8761/doc.html#/服务模块/商户服务/exportExcelUsingPOST_5)
+         *
+         * @tag商户服务
          */
         post(options: {
             body: TBodyOfexportExcelUsingPOST_5;
@@ -677,8 +687,10 @@ interface IApiFn {
     };
     (url: "/merchantSvc/import"): {
         /**
-         * @description 导入Excel importExcelUsingPOST_5
-         * 商户服务
+         * @description 导入Excel
+         * @see [Swagger doc: 导入Excel](http://120.79.250.86:8761/doc.html#/服务模块/商户服务/importExcelUsingPOST_5)
+         *
+         * @tag商户服务
          */
         post(options: {
             formData: TFormDataOfimportExcelUsingPOST_5;
@@ -686,8 +698,10 @@ interface IApiFn {
     };
     (url: "/merchantSvc/page"): {
         /**
-         * @description 分页列表查询 pageUsingPOST_5
-         * 商户服务
+         * @description 分页列表查询
+         * @see [Swagger doc: 分页列表查询](http://120.79.250.86:8761/doc.html#/服务模块/商户服务/pageUsingPOST_5)
+         *
+         * @tag商户服务
          */
         post(options: {
             body: TBodyOfpageUsingPOST_5;
@@ -695,8 +709,10 @@ interface IApiFn {
     };
     (url: "/merchantSvc/preview"): {
         /**
-         * @description 预览Excel previewUsingPOST_5
-         * 商户服务
+         * @description 预览Excel
+         * @see [Swagger doc: 预览Excel](http://120.79.250.86:8761/doc.html#/服务模块/商户服务/previewUsingPOST_5)
+         *
+         * @tag商户服务
          */
         post(options: {
             body: TBodyOfpreviewUsingPOST_5;
@@ -704,8 +720,10 @@ interface IApiFn {
     };
     (url: "/merchantSvc/query"): {
         /**
-         * @description 批量查询 queryUsingPOST_5
-         * 商户服务
+         * @description 批量查询
+         * @see [Swagger doc: 批量查询](http://120.79.250.86:8761/doc.html#/服务模块/商户服务/queryUsingPOST_5)
+         *
+         * @tag商户服务
          */
         post(options: {
             body: TBodyOfqueryUsingPOST_5;
@@ -713,8 +731,10 @@ interface IApiFn {
     };
     (url: "/merchantSvc/{id}"): {
         /**
-         * @description 单体查询 getUsingGET_5
-         * 商户服务
+         * @description 单体查询
+         * @see [Swagger doc: 单体查询](http://120.79.250.86:8761/doc.html#/服务模块/商户服务/getUsingGET_5)
+         *
+         * @tag商户服务
          */
         get(options: {
             path: TPathOfgetUsingGET_5;
@@ -722,22 +742,28 @@ interface IApiFn {
     };
     (url: "/storeSvc"): {
         /**
-         * @description 新增 saveUsingPOST_7
-         * 门店服务
+         * @description 新增
+         * @see [Swagger doc: 新增](http://120.79.250.86:8761/doc.html#/服务模块/门店服务/saveUsingPOST_7)
+         *
+         * @tag门店服务
          */
         post(options: {
             body: TBodyOfsaveUsingPOST_7;
         }): Promise<TResponseOfsaveUsingPOST_7>;
         /**
-         * @description 修改 updateUsingPUT_7
-         * 门店服务
+         * @description 修改
+         * @see [Swagger doc: 修改](http://120.79.250.86:8761/doc.html#/服务模块/门店服务/updateUsingPUT_7)
+         *
+         * @tag门店服务
          */
         put(options: {
             body: TBodyOfupdateUsingPUT_7;
         }): Promise<TResponseOfupdateUsingPUT_7>;
         /**
-         * @description 删除 deleteUsingDELETE_7
-         * 门店服务
+         * @description 删除
+         * @see [Swagger doc: 删除](http://120.79.250.86:8761/doc.html#/服务模块/门店服务/deleteUsingDELETE_7)
+         *
+         * @tag门店服务
          */
         delete(options: {
             body: TBodyOfdeleteUsingDELETE_7;
@@ -745,8 +771,10 @@ interface IApiFn {
     };
     (url: "/storeSvc/all"): {
         /**
-         * @description 修改所有字段 updateAllUsingPUT_7
-         * 门店服务
+         * @description 修改所有字段
+         * @see [Swagger doc: 修改所有字段](http://120.79.250.86:8761/doc.html#/服务模块/门店服务/updateAllUsingPUT_7)
+         *
+         * @tag门店服务
          */
         put(options: {
             body: TBodyOfupdateAllUsingPUT_7;
@@ -754,8 +782,10 @@ interface IApiFn {
     };
     (url: "/storeSvc/export"): {
         /**
-         * @description 导出Excel exportExcelUsingPOST_7
-         * 门店服务
+         * @description 导出Excel
+         * @see [Swagger doc: 导出Excel](http://120.79.250.86:8761/doc.html#/服务模块/门店服务/exportExcelUsingPOST_7)
+         *
+         * @tag门店服务
          */
         post(options: {
             body: TBodyOfexportExcelUsingPOST_7;
@@ -763,8 +793,10 @@ interface IApiFn {
     };
     (url: "/storeSvc/import"): {
         /**
-         * @description 导入Excel importExcelUsingPOST_7
-         * 门店服务
+         * @description 导入Excel
+         * @see [Swagger doc: 导入Excel](http://120.79.250.86:8761/doc.html#/服务模块/门店服务/importExcelUsingPOST_7)
+         *
+         * @tag门店服务
          */
         post(options: {
             formData: TFormDataOfimportExcelUsingPOST_7;
@@ -772,8 +804,10 @@ interface IApiFn {
     };
     (url: "/storeSvc/page"): {
         /**
-         * @description 分页列表查询 pageUsingPOST_7
-         * 门店服务
+         * @description 分页列表查询
+         * @see [Swagger doc: 分页列表查询](http://120.79.250.86:8761/doc.html#/服务模块/门店服务/pageUsingPOST_7)
+         *
+         * @tag门店服务
          */
         post(options: {
             body: TBodyOfpageUsingPOST_7;
@@ -781,8 +815,10 @@ interface IApiFn {
     };
     (url: "/storeSvc/preview"): {
         /**
-         * @description 预览Excel previewUsingPOST_7
-         * 门店服务
+         * @description 预览Excel
+         * @see [Swagger doc: 预览Excel](http://120.79.250.86:8761/doc.html#/服务模块/门店服务/previewUsingPOST_7)
+         *
+         * @tag门店服务
          */
         post(options: {
             body: TBodyOfpreviewUsingPOST_7;
@@ -790,8 +826,10 @@ interface IApiFn {
     };
     (url: "/storeSvc/query"): {
         /**
-         * @description 批量查询 queryUsingPOST_7
-         * 门店服务
+         * @description 批量查询
+         * @see [Swagger doc: 批量查询](http://120.79.250.86:8761/doc.html#/服务模块/门店服务/queryUsingPOST_7)
+         *
+         * @tag门店服务
          */
         post(options: {
             body: TBodyOfqueryUsingPOST_7;
@@ -799,8 +837,10 @@ interface IApiFn {
     };
     (url: "/storeSvc/{id}"): {
         /**
-         * @description 单体查询 getUsingGET_7
-         * 门店服务
+         * @description 单体查询
+         * @see [Swagger doc: 单体查询](http://120.79.250.86:8761/doc.html#/服务模块/门店服务/getUsingGET_7)
+         *
+         * @tag门店服务
          */
         get(options: {
             path: TPathOfgetUsingGET_7;
@@ -808,22 +848,28 @@ interface IApiFn {
     };
     (url: "/storeSvcCategory"): {
         /**
-         * @description 新增 saveUsingPOST_6
-         * 门店服务分类
+         * @description 新增
+         * @see [Swagger doc: 新增](http://120.79.250.86:8761/doc.html#/服务模块/门店服务分类/saveUsingPOST_6)
+         *
+         * @tag门店服务分类
          */
         post(options: {
             body: TBodyOfsaveUsingPOST_6;
         }): Promise<TResponseOfsaveUsingPOST_6>;
         /**
-         * @description 修改 updateUsingPUT_6
-         * 门店服务分类
+         * @description 修改
+         * @see [Swagger doc: 修改](http://120.79.250.86:8761/doc.html#/服务模块/门店服务分类/updateUsingPUT_6)
+         *
+         * @tag门店服务分类
          */
         put(options: {
             body: TBodyOfupdateUsingPUT_6;
         }): Promise<TResponseOfupdateUsingPUT_6>;
         /**
-         * @description 删除 deleteUsingDELETE_6
-         * 门店服务分类
+         * @description 删除
+         * @see [Swagger doc: 删除](http://120.79.250.86:8761/doc.html#/服务模块/门店服务分类/deleteUsingDELETE_6)
+         *
+         * @tag门店服务分类
          */
         delete(options: {
             body: TBodyOfdeleteUsingDELETE_6;
@@ -831,8 +877,10 @@ interface IApiFn {
     };
     (url: "/storeSvcCategory/all"): {
         /**
-         * @description 修改所有字段 updateAllUsingPUT_6
-         * 门店服务分类
+         * @description 修改所有字段
+         * @see [Swagger doc: 修改所有字段](http://120.79.250.86:8761/doc.html#/服务模块/门店服务分类/updateAllUsingPUT_6)
+         *
+         * @tag门店服务分类
          */
         put(options: {
             body: TBodyOfupdateAllUsingPUT_6;
@@ -840,8 +888,10 @@ interface IApiFn {
     };
     (url: "/storeSvcCategory/export"): {
         /**
-         * @description 导出Excel exportExcelUsingPOST_6
-         * 门店服务分类
+         * @description 导出Excel
+         * @see [Swagger doc: 导出Excel](http://120.79.250.86:8761/doc.html#/服务模块/门店服务分类/exportExcelUsingPOST_6)
+         *
+         * @tag门店服务分类
          */
         post(options: {
             body: TBodyOfexportExcelUsingPOST_6;
@@ -849,8 +899,10 @@ interface IApiFn {
     };
     (url: "/storeSvcCategory/import"): {
         /**
-         * @description 导入Excel importExcelUsingPOST_6
-         * 门店服务分类
+         * @description 导入Excel
+         * @see [Swagger doc: 导入Excel](http://120.79.250.86:8761/doc.html#/服务模块/门店服务分类/importExcelUsingPOST_6)
+         *
+         * @tag门店服务分类
          */
         post(options: {
             formData: TFormDataOfimportExcelUsingPOST_6;
@@ -858,8 +910,10 @@ interface IApiFn {
     };
     (url: "/storeSvcCategory/page"): {
         /**
-         * @description 分页列表查询 pageUsingPOST_6
-         * 门店服务分类
+         * @description 分页列表查询
+         * @see [Swagger doc: 分页列表查询](http://120.79.250.86:8761/doc.html#/服务模块/门店服务分类/pageUsingPOST_6)
+         *
+         * @tag门店服务分类
          */
         post(options: {
             body: TBodyOfpageUsingPOST_6;
@@ -867,8 +921,10 @@ interface IApiFn {
     };
     (url: "/storeSvcCategory/preview"): {
         /**
-         * @description 预览Excel previewUsingPOST_6
-         * 门店服务分类
+         * @description 预览Excel
+         * @see [Swagger doc: 预览Excel](http://120.79.250.86:8761/doc.html#/服务模块/门店服务分类/previewUsingPOST_6)
+         *
+         * @tag门店服务分类
          */
         post(options: {
             body: TBodyOfpreviewUsingPOST_6;
@@ -876,8 +932,10 @@ interface IApiFn {
     };
     (url: "/storeSvcCategory/query"): {
         /**
-         * @description 批量查询 queryUsingPOST_6
-         * 门店服务分类
+         * @description 批量查询
+         * @see [Swagger doc: 批量查询](http://120.79.250.86:8761/doc.html#/服务模块/门店服务分类/queryUsingPOST_6)
+         *
+         * @tag门店服务分类
          */
         post(options: {
             body: TBodyOfqueryUsingPOST_6;
@@ -885,8 +943,10 @@ interface IApiFn {
     };
     (url: "/storeSvcCategory/{id}"): {
         /**
-         * @description 单体查询 getUsingGET_6
-         * 门店服务分类
+         * @description 单体查询
+         * @see [Swagger doc: 单体查询](http://120.79.250.86:8761/doc.html#/服务模块/门店服务分类/getUsingGET_6)
+         *
+         * @tag门店服务分类
          */
         get(options: {
             path: TPathOfgetUsingGET_6;
@@ -894,22 +954,28 @@ interface IApiFn {
     };
     (url: "/svcCatetory"): {
         /**
-         * @description 新增 saveUsingPOST_8
-         * 服务分类
+         * @description 新增
+         * @see [Swagger doc: 新增](http://120.79.250.86:8761/doc.html#/服务模块/服务分类/saveUsingPOST_8)
+         *
+         * @tag服务分类
          */
         post(options: {
             body: TBodyOfsaveUsingPOST_8;
         }): Promise<TResponseOfsaveUsingPOST_8>;
         /**
-         * @description 修改 updateUsingPUT_8
-         * 服务分类
+         * @description 修改
+         * @see [Swagger doc: 修改](http://120.79.250.86:8761/doc.html#/服务模块/服务分类/updateUsingPUT_8)
+         *
+         * @tag服务分类
          */
         put(options: {
             body: TBodyOfupdateUsingPUT_8;
         }): Promise<TResponseOfupdateUsingPUT_8>;
         /**
-         * @description 删除 deleteUsingDELETE_8
-         * 服务分类
+         * @description 删除
+         * @see [Swagger doc: 删除](http://120.79.250.86:8761/doc.html#/服务模块/服务分类/deleteUsingDELETE_8)
+         *
+         * @tag服务分类
          */
         delete(options: {
             body: TBodyOfdeleteUsingDELETE_8;
@@ -917,8 +983,10 @@ interface IApiFn {
     };
     (url: "/svcCatetory/all"): {
         /**
-         * @description 修改所有字段 updateAllUsingPUT_8
-         * 服务分类
+         * @description 修改所有字段
+         * @see [Swagger doc: 修改所有字段](http://120.79.250.86:8761/doc.html#/服务模块/服务分类/updateAllUsingPUT_8)
+         *
+         * @tag服务分类
          */
         put(options: {
             body: TBodyOfupdateAllUsingPUT_8;
@@ -926,8 +994,10 @@ interface IApiFn {
     };
     (url: "/svcCatetory/export"): {
         /**
-         * @description 导出Excel exportExcelUsingPOST_8
-         * 服务分类
+         * @description 导出Excel
+         * @see [Swagger doc: 导出Excel](http://120.79.250.86:8761/doc.html#/服务模块/服务分类/exportExcelUsingPOST_8)
+         *
+         * @tag服务分类
          */
         post(options: {
             body: TBodyOfexportExcelUsingPOST_8;
@@ -935,8 +1005,10 @@ interface IApiFn {
     };
     (url: "/svcCatetory/import"): {
         /**
-         * @description 导入Excel importExcelUsingPOST_8
-         * 服务分类
+         * @description 导入Excel
+         * @see [Swagger doc: 导入Excel](http://120.79.250.86:8761/doc.html#/服务模块/服务分类/importExcelUsingPOST_8)
+         *
+         * @tag服务分类
          */
         post(options: {
             formData: TFormDataOfimportExcelUsingPOST_8;
@@ -944,8 +1016,10 @@ interface IApiFn {
     };
     (url: "/svcCatetory/page"): {
         /**
-         * @description 分页列表查询 pageUsingPOST_8
-         * 服务分类
+         * @description 分页列表查询
+         * @see [Swagger doc: 分页列表查询](http://120.79.250.86:8761/doc.html#/服务模块/服务分类/pageUsingPOST_8)
+         *
+         * @tag服务分类
          */
         post(options: {
             body: TBodyOfpageUsingPOST_8;
@@ -953,8 +1027,10 @@ interface IApiFn {
     };
     (url: "/svcCatetory/preview"): {
         /**
-         * @description 预览Excel previewUsingPOST_8
-         * 服务分类
+         * @description 预览Excel
+         * @see [Swagger doc: 预览Excel](http://120.79.250.86:8761/doc.html#/服务模块/服务分类/previewUsingPOST_8)
+         *
+         * @tag服务分类
          */
         post(options: {
             body: TBodyOfpreviewUsingPOST_8;
@@ -962,8 +1038,10 @@ interface IApiFn {
     };
     (url: "/svcCatetory/query"): {
         /**
-         * @description 批量查询 queryUsingPOST_8
-         * 服务分类
+         * @description 批量查询
+         * @see [Swagger doc: 批量查询](http://120.79.250.86:8761/doc.html#/服务模块/服务分类/queryUsingPOST_8)
+         *
+         * @tag服务分类
          */
         post(options: {
             body: TBodyOfqueryUsingPOST_8;
@@ -971,8 +1049,10 @@ interface IApiFn {
     };
     (url: "/svcCatetory/{id}"): {
         /**
-         * @description 单体查询 getUsingGET_8
-         * 服务分类
+         * @description 单体查询
+         * @see [Swagger doc: 单体查询](http://120.79.250.86:8761/doc.html#/服务模块/服务分类/getUsingGET_8)
+         *
+         * @tag服务分类
          */
         get(options: {
             path: TPathOfgetUsingGET_8;

@@ -135,22 +135,28 @@ interface IApiFn {
     };
     (url: "/district"): {
         /**
-         * @description 新增 saveUsingPOST
-         * 区域
+         * @description 新增
+         * @see [Swagger doc: 新增](http://120.79.250.86:8761/doc.html#/区域模块/区域/saveUsingPOST)
+         *
+         * @tag区域
          */
         post(options: {
             body: TBodyOfsaveUsingPOST;
         }): Promise<TResponseOfsaveUsingPOST>;
         /**
-         * @description 修改 updateUsingPUT
-         * 区域
+         * @description 修改
+         * @see [Swagger doc: 修改](http://120.79.250.86:8761/doc.html#/区域模块/区域/updateUsingPUT)
+         *
+         * @tag区域
          */
         put(options: {
             body: TBodyOfupdateUsingPUT;
         }): Promise<TResponseOfupdateUsingPUT>;
         /**
-         * @description 删除 deleteUsingDELETE
-         * 区域
+         * @description 删除
+         * @see [Swagger doc: 删除](http://120.79.250.86:8761/doc.html#/区域模块/区域/deleteUsingDELETE)
+         *
+         * @tag区域
          */
         delete(options: {
             body: TBodyOfdeleteUsingDELETE;
@@ -158,8 +164,10 @@ interface IApiFn {
     };
     (url: "/district/all"): {
         /**
-         * @description 修改所有字段 updateAllUsingPUT
-         * 区域
+         * @description 修改所有字段
+         * @see [Swagger doc: 修改所有字段](http://120.79.250.86:8761/doc.html#/区域模块/区域/updateAllUsingPUT)
+         *
+         * @tag区域
          */
         put(options: {
             body: TBodyOfupdateAllUsingPUT;
@@ -167,8 +175,10 @@ interface IApiFn {
     };
     (url: "/district/export"): {
         /**
-         * @description 导出Excel exportExcelUsingPOST
-         * 区域
+         * @description 导出Excel
+         * @see [Swagger doc: 导出Excel](http://120.79.250.86:8761/doc.html#/区域模块/区域/exportExcelUsingPOST)
+         *
+         * @tag区域
          */
         post(options: {
             body: TBodyOfexportExcelUsingPOST;
@@ -176,8 +186,10 @@ interface IApiFn {
     };
     (url: "/district/import"): {
         /**
-         * @description 导入Excel importExcelUsingPOST
-         * 区域
+         * @description 导入Excel
+         * @see [Swagger doc: 导入Excel](http://120.79.250.86:8761/doc.html#/区域模块/区域/importExcelUsingPOST)
+         *
+         * @tag区域
          */
         post(options: {
             formData: TFormDataOfimportExcelUsingPOST;
@@ -185,8 +197,10 @@ interface IApiFn {
     };
     (url: "/district/page"): {
         /**
-         * @description 分页列表查询 pageUsingPOST
-         * 区域
+         * @description 分页列表查询
+         * @see [Swagger doc: 分页列表查询](http://120.79.250.86:8761/doc.html#/区域模块/区域/pageUsingPOST)
+         *
+         * @tag区域
          */
         post(options: {
             body: TBodyOfpageUsingPOST;
@@ -194,8 +208,10 @@ interface IApiFn {
     };
     (url: "/district/preview"): {
         /**
-         * @description 预览Excel previewUsingPOST
-         * 区域
+         * @description 预览Excel
+         * @see [Swagger doc: 预览Excel](http://120.79.250.86:8761/doc.html#/区域模块/区域/previewUsingPOST)
+         *
+         * @tag区域
          */
         post(options: {
             body: TBodyOfpreviewUsingPOST;
@@ -203,8 +219,10 @@ interface IApiFn {
     };
     (url: "/district/query"): {
         /**
-         * @description 批量查询 queryUsingPOST
-         * 区域
+         * @description 批量查询
+         * @see [Swagger doc: 批量查询](http://120.79.250.86:8761/doc.html#/区域模块/区域/queryUsingPOST)
+         *
+         * @tag区域
          */
         post(options: {
             body: TBodyOfqueryUsingPOST;
@@ -212,8 +230,10 @@ interface IApiFn {
     };
     (url: "/district/{id}"): {
         /**
-         * @description 单体查询 getUsingGET
-         * 区域
+         * @description 单体查询
+         * @see [Swagger doc: 单体查询](http://120.79.250.86:8761/doc.html#/区域模块/区域/getUsingGET)
+         *
+         * @tag区域
          */
         get(options: {
             path: TPathOfgetUsingGET;

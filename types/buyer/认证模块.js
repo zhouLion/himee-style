@@ -1,1 +1,1 @@
-function r(n){return t=>({get:e=>n.get(t,e),post:e=>n.post(t,e),put:e=>n.put(t,e),head:e=>n.head(t,e),delete:e=>n.delete(t,e),patch:e=>n.patch(t,e)})}export{r as createRequest};
+function t(t){return e=>({get:p=>t.get(e,p),post:p=>t.post(e,p),put:p=>t.put(e,p),head:p=>t.head(e,p),delete:p=>t.delete(e,p),patch:p=>t.patch(e,p)})}export{t as createRequest};//# sourceMappingURL=认证模块.js.map

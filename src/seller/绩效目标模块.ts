@@ -239,20 +239,26 @@ export interface IApiFn {
 
   (url: "/kpi"): {
     /**
-     * @description 新增 saveUsingPOST_15
-     * 绩效目标
+     * @description 新增
+     * @see [Swagger doc: 新增](http://120.79.250.86:8761/doc.html#/绩效目标模块/绩效目标/saveUsingPOST_15)
+     *
+     * @tag绩效目标
      */
     post(options: { body: TBodyOfsaveUsingPOST_15 }): Promise<TResponseOfsaveUsingPOST_15>;
 
     /**
-     * @description 修改 updateUsingPUT_15
-     * 绩效目标
+     * @description 修改
+     * @see [Swagger doc: 修改](http://120.79.250.86:8761/doc.html#/绩效目标模块/绩效目标/updateUsingPUT_15)
+     *
+     * @tag绩效目标
      */
     put(options: { body: TBodyOfupdateUsingPUT_15 }): Promise<TResponseOfupdateUsingPUT_15>;
 
     /**
-     * @description 删除 deleteUsingDELETE_16
-     * 绩效目标
+     * @description 删除
+     * @see [Swagger doc: 删除](http://120.79.250.86:8761/doc.html#/绩效目标模块/绩效目标/deleteUsingDELETE_16)
+     *
+     * @tag绩效目标
      */
     delete(options: {
       body: TBodyOfdeleteUsingDELETE_16;
@@ -260,15 +266,19 @@ export interface IApiFn {
   };
   (url: "/kpi/all"): {
     /**
-     * @description 修改所有字段 updateAllUsingPUT_15
-     * 绩效目标
+     * @description 修改所有字段
+     * @see [Swagger doc: 修改所有字段](http://120.79.250.86:8761/doc.html#/绩效目标模块/绩效目标/updateAllUsingPUT_15)
+     *
+     * @tag绩效目标
      */
     put(options: { body: TBodyOfupdateAllUsingPUT_15 }): Promise<TResponseOfupdateAllUsingPUT_15>;
   };
   (url: "/kpi/export"): {
     /**
-     * @description 导出Excel exportExcelUsingPOST_15
-     * 绩效目标
+     * @description 导出Excel
+     * @see [Swagger doc: 导出Excel](http://120.79.250.86:8761/doc.html#/绩效目标模块/绩效目标/exportExcelUsingPOST_15)
+     *
+     * @tag绩效目标
      */
     post(options: {
       body: TBodyOfexportExcelUsingPOST_15;
@@ -276,8 +286,10 @@ export interface IApiFn {
   };
   (url: "/kpi/import"): {
     /**
-     * @description 导入Excel importExcelUsingPOST_15
-     * 绩效目标
+     * @description 导入Excel
+     * @see [Swagger doc: 导入Excel](http://120.79.250.86:8761/doc.html#/绩效目标模块/绩效目标/importExcelUsingPOST_15)
+     *
+     * @tag绩效目标
      */
     post(options: {
       formData: TFormDataOfimportExcelUsingPOST_15;
@@ -285,29 +297,37 @@ export interface IApiFn {
   };
   (url: "/kpi/page"): {
     /**
-     * @description 分页列表查询 pageUsingPOST_16
-     * 绩效目标
+     * @description 分页列表查询
+     * @see [Swagger doc: 分页列表查询](http://120.79.250.86:8761/doc.html#/绩效目标模块/绩效目标/pageUsingPOST_16)
+     *
+     * @tag绩效目标
      */
     post(options: { body: TBodyOfpageUsingPOST_16 }): Promise<TResponseOfpageUsingPOST_16>;
   };
   (url: "/kpi/preview"): {
     /**
-     * @description 预览Excel previewUsingPOST_15
-     * 绩效目标
+     * @description 预览Excel
+     * @see [Swagger doc: 预览Excel](http://120.79.250.86:8761/doc.html#/绩效目标模块/绩效目标/previewUsingPOST_15)
+     *
+     * @tag绩效目标
      */
     post(options: { body: TBodyOfpreviewUsingPOST_15 }): Promise<TResponseOfpreviewUsingPOST_15>;
   };
   (url: "/kpi/query"): {
     /**
-     * @description 批量查询 queryUsingPOST_15
-     * 绩效目标
+     * @description 批量查询
+     * @see [Swagger doc: 批量查询](http://120.79.250.86:8761/doc.html#/绩效目标模块/绩效目标/queryUsingPOST_15)
+     *
+     * @tag绩效目标
      */
     post(options: { body: TBodyOfqueryUsingPOST_15 }): Promise<TResponseOfqueryUsingPOST_15>;
   };
   (url: "/kpi/{id}"): {
     /**
-     * @description 单体查询 getUsingGET_15
-     * 绩效目标
+     * @description 单体查询
+     * @see [Swagger doc: 单体查询](http://120.79.250.86:8761/doc.html#/绩效目标模块/绩效目标/getUsingGET_15)
+     *
+     * @tag绩效目标
      */
     get(options: { path: TPathOfgetUsingGET_15 }): Promise<TResponseOfgetUsingGET_15>;
   };

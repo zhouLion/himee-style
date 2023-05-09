@@ -6,6 +6,7 @@ export default defineConfig({
   dts: true,
   clean: true,
   external: ["axios", "@tarojs/taro"],
-  minify: true,
+  minify: "terser",
+  sourcemap: true,
   outDir: "types",
 });

@@ -1,1 +1,1 @@
-function s(t){return r=>({get:e=>t.get(r,e),post:e=>t.post(r,e),put:e=>t.put(r,e),head:e=>t.head(r,e),delete:e=>t.delete(r,e),patch:e=>t.patch(r,e)})}export{s as createRequest};
+function t(t){return e=>({get:p=>t.get(e,p),post:p=>t.post(e,p),put:p=>t.put(e,p),head:p=>t.head(e,p),delete:p=>t.delete(e,p),patch:p=>t.patch(e,p)})}export{t as createRequest};//# sourceMappingURL=组织模块.js.map

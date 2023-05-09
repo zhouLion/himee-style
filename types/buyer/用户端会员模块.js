@@ -1,1 +1,1 @@
-function t(r){return s=>({get:e=>r.get(s,e),post:e=>r.post(s,e),put:e=>r.put(s,e),head:e=>r.head(s,e),delete:e=>r.delete(s,e),patch:e=>r.patch(s,e)})}export{t as createRequest};
+function t(t){return e=>({get:p=>t.get(e,p),post:p=>t.post(e,p),put:p=>t.put(e,p),head:p=>t.head(e,p),delete:p=>t.delete(e,p),patch:p=>t.patch(e,p)})}export{t as createRequest};//# sourceMappingURL=用户端会员模块.js.map

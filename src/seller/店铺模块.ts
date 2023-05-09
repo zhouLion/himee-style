@@ -491,34 +491,44 @@ export interface IApiFn {
 
   (url: "/store"): {
     /**
-     * @description 新增 saveUsingPOST_3
-     * 店铺
+     * @description 新增
+     * @see [Swagger doc: 新增](http://120.79.250.86:8761/doc.html#/店铺模块/店铺/saveUsingPOST_3)
+     *
+     * @tag店铺
      */
     post(options: { body: TBodyOfsaveUsingPOST_3 }): Promise<TResponseOfsaveUsingPOST_3>;
 
     /**
-     * @description 修改 updateUsingPUT_3
-     * 店铺
+     * @description 修改
+     * @see [Swagger doc: 修改](http://120.79.250.86:8761/doc.html#/店铺模块/店铺/updateUsingPUT_3)
+     *
+     * @tag店铺
      */
     put(options: { body: TBodyOfupdateUsingPUT_3 }): Promise<TResponseOfupdateUsingPUT_3>;
 
     /**
-     * @description 删除 deleteUsingDELETE_3
-     * 店铺
+     * @description 删除
+     * @see [Swagger doc: 删除](http://120.79.250.86:8761/doc.html#/店铺模块/店铺/deleteUsingDELETE_3)
+     *
+     * @tag店铺
      */
     delete(options: { body: TBodyOfdeleteUsingDELETE_3 }): Promise<TResponseOfdeleteUsingDELETE_3>;
   };
   (url: "/store/all"): {
     /**
-     * @description 修改所有字段 updateAllUsingPUT_3
-     * 店铺
+     * @description 修改所有字段
+     * @see [Swagger doc: 修改所有字段](http://120.79.250.86:8761/doc.html#/店铺模块/店铺/updateAllUsingPUT_3)
+     *
+     * @tag店铺
      */
     put(options: { body: TBodyOfupdateAllUsingPUT_3 }): Promise<TResponseOfupdateAllUsingPUT_3>;
   };
   (url: "/store/export"): {
     /**
-     * @description 导出Excel exportExcelUsingPOST_3
-     * 店铺
+     * @description 导出Excel
+     * @see [Swagger doc: 导出Excel](http://120.79.250.86:8761/doc.html#/店铺模块/店铺/exportExcelUsingPOST_3)
+     *
+     * @tag店铺
      */
     post(options: {
       body: TBodyOfexportExcelUsingPOST_3;
@@ -526,8 +536,10 @@ export interface IApiFn {
   };
   (url: "/store/import"): {
     /**
-     * @description 导入Excel importExcelUsingPOST_3
-     * 店铺
+     * @description 导入Excel
+     * @see [Swagger doc: 导入Excel](http://120.79.250.86:8761/doc.html#/店铺模块/店铺/importExcelUsingPOST_3)
+     *
+     * @tag店铺
      */
     post(options: {
       formData: TFormDataOfimportExcelUsingPOST_3;
@@ -535,62 +547,80 @@ export interface IApiFn {
   };
   (url: "/store/page"): {
     /**
-     * @description 分页列表查询 pageUsingPOST_3
-     * 店铺
+     * @description 分页列表查询
+     * @see [Swagger doc: 分页列表查询](http://120.79.250.86:8761/doc.html#/店铺模块/店铺/pageUsingPOST_3)
+     *
+     * @tag店铺
      */
     post(options: { body: TBodyOfpageUsingPOST_3 }): Promise<TResponseOfpageUsingPOST_3>;
   };
   (url: "/store/preview"): {
     /**
-     * @description 预览Excel previewUsingPOST_3
-     * 店铺
+     * @description 预览Excel
+     * @see [Swagger doc: 预览Excel](http://120.79.250.86:8761/doc.html#/店铺模块/店铺/previewUsingPOST_3)
+     *
+     * @tag店铺
      */
     post(options: { body: TBodyOfpreviewUsingPOST_3 }): Promise<TResponseOfpreviewUsingPOST_3>;
   };
   (url: "/store/query"): {
     /**
-     * @description 批量查询 queryUsingPOST_3
-     * 店铺
+     * @description 批量查询
+     * @see [Swagger doc: 批量查询](http://120.79.250.86:8761/doc.html#/店铺模块/店铺/queryUsingPOST_3)
+     *
+     * @tag店铺
      */
     post(options: { body: TBodyOfqueryUsingPOST_3 }): Promise<TResponseOfqueryUsingPOST_3>;
   };
   (url: "/store/{id}"): {
     /**
-     * @description 单体查询 getUsingGET_3
-     * 店铺
+     * @description 单体查询
+     * @see [Swagger doc: 单体查询](http://120.79.250.86:8761/doc.html#/店铺模块/店铺/getUsingGET_3)
+     *
+     * @tag店铺
      */
     get(options: { path: TPathOfgetUsingGET_3 }): Promise<TResponseOfgetUsingGET_3>;
   };
   (url: "/storeUser"): {
     /**
-     * @description 新增 saveUsingPOST_4
-     * 店铺用户
+     * @description 新增
+     * @see [Swagger doc: 新增](http://120.79.250.86:8761/doc.html#/店铺模块/店铺用户/saveUsingPOST_4)
+     *
+     * @tag店铺用户
      */
     post(options: { body: TBodyOfsaveUsingPOST_4 }): Promise<TResponseOfsaveUsingPOST_4>;
 
     /**
-     * @description 修改 updateUsingPUT_4
-     * 店铺用户
+     * @description 修改
+     * @see [Swagger doc: 修改](http://120.79.250.86:8761/doc.html#/店铺模块/店铺用户/updateUsingPUT_4)
+     *
+     * @tag店铺用户
      */
     put(options: { body: TBodyOfupdateUsingPUT_4 }): Promise<TResponseOfupdateUsingPUT_4>;
 
     /**
-     * @description 删除 deleteUsingDELETE_4
-     * 店铺用户
+     * @description 删除
+     * @see [Swagger doc: 删除](http://120.79.250.86:8761/doc.html#/店铺模块/店铺用户/deleteUsingDELETE_4)
+     *
+     * @tag店铺用户
      */
     delete(options: { body: TBodyOfdeleteUsingDELETE_4 }): Promise<TResponseOfdeleteUsingDELETE_4>;
   };
   (url: "/storeUser/all"): {
     /**
-     * @description 修改所有字段 updateAllUsingPUT_4
-     * 店铺用户
+     * @description 修改所有字段
+     * @see [Swagger doc: 修改所有字段](http://120.79.250.86:8761/doc.html#/店铺模块/店铺用户/updateAllUsingPUT_4)
+     *
+     * @tag店铺用户
      */
     put(options: { body: TBodyOfupdateAllUsingPUT_4 }): Promise<TResponseOfupdateAllUsingPUT_4>;
   };
   (url: "/storeUser/export"): {
     /**
-     * @description 导出Excel exportExcelUsingPOST_4
-     * 店铺用户
+     * @description 导出Excel
+     * @see [Swagger doc: 导出Excel](http://120.79.250.86:8761/doc.html#/店铺模块/店铺用户/exportExcelUsingPOST_4)
+     *
+     * @tag店铺用户
      */
     post(options: {
       body: TBodyOfexportExcelUsingPOST_4;
@@ -598,8 +628,10 @@ export interface IApiFn {
   };
   (url: "/storeUser/import"): {
     /**
-     * @description 导入Excel importExcelUsingPOST_4
-     * 店铺用户
+     * @description 导入Excel
+     * @see [Swagger doc: 导入Excel](http://120.79.250.86:8761/doc.html#/店铺模块/店铺用户/importExcelUsingPOST_4)
+     *
+     * @tag店铺用户
      */
     post(options: {
       formData: TFormDataOfimportExcelUsingPOST_4;
@@ -607,29 +639,37 @@ export interface IApiFn {
   };
   (url: "/storeUser/page"): {
     /**
-     * @description 分页列表查询 pageUsingPOST_4
-     * 店铺用户
+     * @description 分页列表查询
+     * @see [Swagger doc: 分页列表查询](http://120.79.250.86:8761/doc.html#/店铺模块/店铺用户/pageUsingPOST_4)
+     *
+     * @tag店铺用户
      */
     post(options: { body: TBodyOfpageUsingPOST_4 }): Promise<TResponseOfpageUsingPOST_4>;
   };
   (url: "/storeUser/preview"): {
     /**
-     * @description 预览Excel previewUsingPOST_4
-     * 店铺用户
+     * @description 预览Excel
+     * @see [Swagger doc: 预览Excel](http://120.79.250.86:8761/doc.html#/店铺模块/店铺用户/previewUsingPOST_4)
+     *
+     * @tag店铺用户
      */
     post(options: { body: TBodyOfpreviewUsingPOST_4 }): Promise<TResponseOfpreviewUsingPOST_4>;
   };
   (url: "/storeUser/query"): {
     /**
-     * @description 批量查询 queryUsingPOST_4
-     * 店铺用户
+     * @description 批量查询
+     * @see [Swagger doc: 批量查询](http://120.79.250.86:8761/doc.html#/店铺模块/店铺用户/queryUsingPOST_4)
+     *
+     * @tag店铺用户
      */
     post(options: { body: TBodyOfqueryUsingPOST_4 }): Promise<TResponseOfqueryUsingPOST_4>;
   };
   (url: "/storeUser/{id}"): {
     /**
-     * @description 单体查询 getUsingGET_4
-     * 店铺用户
+     * @description 单体查询
+     * @see [Swagger doc: 单体查询](http://120.79.250.86:8761/doc.html#/店铺模块/店铺用户/getUsingGET_4)
+     *
+     * @tag店铺用户
      */
     get(options: { path: TPathOfgetUsingGET_4 }): Promise<TResponseOfgetUsingGET_4>;
   };

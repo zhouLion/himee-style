@@ -494,20 +494,26 @@ export interface IApiFn {
 
   (url: "/datasourceConfig"): {
     /**
-     * @description 新增 saveUsingPOST_20
-     * 数据源
+     * @description 新增
+     * @see [Swagger doc: 新增](http://120.79.250.86:8762/doc.html#/租户模块/数据源/saveUsingPOST_20)
+     *
+     * @tag数据源
      */
     post(options: { body: TBodyOfsaveUsingPOST_20 }): Promise<TResponseOfsaveUsingPOST_20>;
 
     /**
-     * @description 修改 updateUsingPUT_19
-     * 数据源
+     * @description 修改
+     * @see [Swagger doc: 修改](http://120.79.250.86:8762/doc.html#/租户模块/数据源/updateUsingPUT_19)
+     *
+     * @tag数据源
      */
     put(options: { body: TBodyOfupdateUsingPUT_19 }): Promise<TResponseOfupdateUsingPUT_19>;
 
     /**
-     * @description 删除 deleteUsingDELETE_23
-     * 数据源
+     * @description 删除
+     * @see [Swagger doc: 删除](http://120.79.250.86:8762/doc.html#/租户模块/数据源/deleteUsingDELETE_23)
+     *
+     * @tag数据源
      */
     delete(options: {
       body: TBodyOfdeleteUsingDELETE_23;
@@ -515,15 +521,19 @@ export interface IApiFn {
   };
   (url: "/datasourceConfig/all"): {
     /**
-     * @description 修改所有字段 updateAllUsingPUT_19
-     * 数据源
+     * @description 修改所有字段
+     * @see [Swagger doc: 修改所有字段](http://120.79.250.86:8762/doc.html#/租户模块/数据源/updateAllUsingPUT_19)
+     *
+     * @tag数据源
      */
     put(options: { body: TBodyOfupdateAllUsingPUT_19 }): Promise<TResponseOfupdateAllUsingPUT_19>;
   };
   (url: "/datasourceConfig/export"): {
     /**
-     * @description 导出Excel exportExcelUsingPOST_21
-     * 数据源
+     * @description 导出Excel
+     * @see [Swagger doc: 导出Excel](http://120.79.250.86:8762/doc.html#/租户模块/数据源/exportExcelUsingPOST_21)
+     *
+     * @tag数据源
      */
     post(options: {
       body: TBodyOfexportExcelUsingPOST_21;
@@ -531,8 +541,10 @@ export interface IApiFn {
   };
   (url: "/datasourceConfig/import"): {
     /**
-     * @description 导入Excel importExcelUsingPOST_20
-     * 数据源
+     * @description 导入Excel
+     * @see [Swagger doc: 导入Excel](http://120.79.250.86:8762/doc.html#/租户模块/数据源/importExcelUsingPOST_20)
+     *
+     * @tag数据源
      */
     post(options: {
       formData: TFormDataOfimportExcelUsingPOST_20;
@@ -540,48 +552,62 @@ export interface IApiFn {
   };
   (url: "/datasourceConfig/page"): {
     /**
-     * @description 分页列表查询 pageUsingPOST_25
-     * 数据源
+     * @description 分页列表查询
+     * @see [Swagger doc: 分页列表查询](http://120.79.250.86:8762/doc.html#/租户模块/数据源/pageUsingPOST_25)
+     *
+     * @tag数据源
      */
     post(options: { body: TBodyOfpageUsingPOST_25 }): Promise<TResponseOfpageUsingPOST_25>;
   };
   (url: "/datasourceConfig/preview"): {
     /**
-     * @description 预览Excel previewUsingPOST_21
-     * 数据源
+     * @description 预览Excel
+     * @see [Swagger doc: 预览Excel](http://120.79.250.86:8762/doc.html#/租户模块/数据源/previewUsingPOST_21)
+     *
+     * @tag数据源
      */
     post(options: { body: TBodyOfpreviewUsingPOST_21 }): Promise<TResponseOfpreviewUsingPOST_21>;
   };
   (url: "/datasourceConfig/query"): {
     /**
-     * @description 批量查询 queryUsingPOST_21
-     * 数据源
+     * @description 批量查询
+     * @see [Swagger doc: 批量查询](http://120.79.250.86:8762/doc.html#/租户模块/数据源/queryUsingPOST_21)
+     *
+     * @tag数据源
      */
     post(options: { body: TBodyOfqueryUsingPOST_21 }): Promise<TResponseOfqueryUsingPOST_21>;
   };
   (url: "/datasourceConfig/{id}"): {
     /**
-     * @description 单体查询 getUsingGET_23
-     * 数据源
+     * @description 单体查询
+     * @see [Swagger doc: 单体查询](http://120.79.250.86:8762/doc.html#/租户模块/数据源/getUsingGET_23)
+     *
+     * @tag数据源
      */
     get(options: { path: TPathOfgetUsingGET_23 }): Promise<TResponseOfgetUsingGET_23>;
   };
   (url: "/tenant"): {
     /**
-     * @description 新增 saveUsingPOST_21
-     * 企业
+     * @description 新增
+     * @see [Swagger doc: 新增](http://120.79.250.86:8762/doc.html#/租户模块/企业/saveUsingPOST_21)
+     *
+     * @tag企业
      */
     post(options: { body: TBodyOfsaveUsingPOST_21 }): Promise<TResponseOfsaveUsingPOST_21>;
 
     /**
-     * @description 修改 updateUsingPUT_20
-     * 企业
+     * @description 修改
+     * @see [Swagger doc: 修改](http://120.79.250.86:8762/doc.html#/租户模块/企业/updateUsingPUT_20)
+     *
+     * @tag企业
      */
     put(options: { body: TBodyOfupdateUsingPUT_20 }): Promise<TResponseOfupdateUsingPUT_20>;
 
     /**
-     * @description 删除 deleteUsingDELETE_24
-     * 企业
+     * @description 删除
+     * @see [Swagger doc: 删除](http://120.79.250.86:8762/doc.html#/租户模块/企业/deleteUsingDELETE_24)
+     *
+     * @tag企业
      */
     delete(options: {
       body: TBodyOfdeleteUsingDELETE_24;
@@ -589,35 +615,45 @@ export interface IApiFn {
   };
   (url: "/tenant/all"): {
     /**
-     * @description 查询所有企业 listUsingGET
-     * 企业
+     * @description 查询所有企业
+     * @see [Swagger doc: 查询所有企业](http://120.79.250.86:8762/doc.html#/租户模块/企业/listUsingGET)
+     *
+     * @tag企业
      */
     get(options: {}): Promise<TResponseOflistUsingGET>;
 
     /**
-     * @description 修改所有字段 updateAllUsingPUT_20
-     * 企业
+     * @description 修改所有字段
+     * @see [Swagger doc: 修改所有字段](http://120.79.250.86:8762/doc.html#/租户模块/企业/updateAllUsingPUT_20)
+     *
+     * @tag企业
      */
     put(options: { body: TBodyOfupdateAllUsingPUT_20 }): Promise<TResponseOfupdateAllUsingPUT_20>;
   };
   (url: "/tenant/check/{code}"): {
     /**
-     * @description 检测租户是否存在 checkUsingGET_5
-     * 企业
+     * @description 检测租户是否存在
+     * @see [Swagger doc: 检测租户是否存在](http://120.79.250.86:8762/doc.html#/租户模块/企业/checkUsingGET_5)
+     *
+     * @tag企业
      */
     get(options: { path: TPathOfcheckUsingGET_5 }): Promise<TResponseOfcheckUsingGET_5>;
   };
   (url: "/tenant/clearCache"): {
     /**
-     * @description 清理缓存 clearCacheUsingPOST_6
-     * 企业
+     * @description 清理缓存
+     * @see [Swagger doc: 清理缓存](http://120.79.250.86:8762/doc.html#/租户模块/企业/clearCacheUsingPOST_6)
+     *
+     * @tag企业
      */
     post(options: {}): Promise<TResponseOfclearCacheUsingPOST_6>;
   };
   (url: "/tenant/deleteAll"): {
     /**
-     * @description 删除租户和基础租户数据，请谨慎操作 deleteAllUsingDELETE
-     * 企业
+     * @description 删除租户和基础租户数据，请谨慎操作
+     * @see [Swagger doc: 删除租户和基础租户数据，请谨慎操作](http://120.79.250.86:8762/doc.html#/租户模块/企业/deleteAllUsingDELETE)
+     *
+     * @tag企业
      */
     delete(options: {
       body: TBodyOfdeleteAllUsingDELETE;
@@ -625,8 +661,10 @@ export interface IApiFn {
   };
   (url: "/tenant/export"): {
     /**
-     * @description 导出Excel exportExcelUsingPOST_22
-     * 企业
+     * @description 导出Excel
+     * @see [Swagger doc: 导出Excel](http://120.79.250.86:8762/doc.html#/租户模块/企业/exportExcelUsingPOST_22)
+     *
+     * @tag企业
      */
     post(options: {
       body: TBodyOfexportExcelUsingPOST_22;
@@ -634,8 +672,10 @@ export interface IApiFn {
   };
   (url: "/tenant/import"): {
     /**
-     * @description 导入Excel importExcelUsingPOST_21
-     * 企业
+     * @description 导入Excel
+     * @see [Swagger doc: 导入Excel](http://120.79.250.86:8762/doc.html#/租户模块/企业/importExcelUsingPOST_21)
+     *
+     * @tag企业
      */
     post(options: {
       formData: TFormDataOfimportExcelUsingPOST_21;
@@ -643,43 +683,55 @@ export interface IApiFn {
   };
   (url: "/tenant/initConnect"): {
     /**
-     * @description 连接数据源 initConnectUsingPOST
-     * 企业
+     * @description 连接数据源
+     * @see [Swagger doc: 连接数据源](http://120.79.250.86:8762/doc.html#/租户模块/企业/initConnectUsingPOST)
+     *
+     * @tag企业
      */
     post(options: { body: TBodyOfinitConnectUsingPOST }): Promise<TResponseOfinitConnectUsingPOST>;
   };
   (url: "/tenant/page"): {
     /**
-     * @description 分页列表查询 pageUsingPOST_26
-     * 企业
+     * @description 分页列表查询
+     * @see [Swagger doc: 分页列表查询](http://120.79.250.86:8762/doc.html#/租户模块/企业/pageUsingPOST_26)
+     *
+     * @tag企业
      */
     post(options: { body: TBodyOfpageUsingPOST_26 }): Promise<TResponseOfpageUsingPOST_26>;
   };
   (url: "/tenant/preview"): {
     /**
-     * @description 预览Excel previewUsingPOST_22
-     * 企业
+     * @description 预览Excel
+     * @see [Swagger doc: 预览Excel](http://120.79.250.86:8762/doc.html#/租户模块/企业/previewUsingPOST_22)
+     *
+     * @tag企业
      */
     post(options: { body: TBodyOfpreviewUsingPOST_22 }): Promise<TResponseOfpreviewUsingPOST_22>;
   };
   (url: "/tenant/query"): {
     /**
-     * @description 批量查询 queryUsingPOST_22
-     * 企业
+     * @description 批量查询
+     * @see [Swagger doc: 批量查询](http://120.79.250.86:8762/doc.html#/租户模块/企业/queryUsingPOST_22)
+     *
+     * @tag企业
      */
     post(options: { body: TBodyOfqueryUsingPOST_22 }): Promise<TResponseOfqueryUsingPOST_22>;
   };
   (url: "/tenant/refreshCache"): {
     /**
-     * @description 刷新缓存 refreshCacheUsingPOST_6
-     * 企业
+     * @description 刷新缓存
+     * @see [Swagger doc: 刷新缓存](http://120.79.250.86:8762/doc.html#/租户模块/企业/refreshCacheUsingPOST_6)
+     *
+     * @tag企业
      */
     post(options: {}): Promise<TResponseOfrefreshCacheUsingPOST_6>;
   };
   (url: "/tenant/status"): {
     /**
-     * @description 修改租户状态 updateStatusUsingPOST
-     * 企业
+     * @description 修改租户状态
+     * @see [Swagger doc: 修改租户状态](http://120.79.250.86:8762/doc.html#/租户模块/企业/updateStatusUsingPOST)
+     *
+     * @tag企业
      */
     post(options: {
       query: TQueryOfupdateStatusUsingPOST;
@@ -687,8 +739,10 @@ export interface IApiFn {
   };
   (url: "/tenant/{id}"): {
     /**
-     * @description 单体查询 getUsingGET_24
-     * 企业
+     * @description 单体查询
+     * @see [Swagger doc: 单体查询](http://120.79.250.86:8762/doc.html#/租户模块/企业/getUsingGET_24)
+     *
+     * @tag企业
      */
     get(options: { path: TPathOfgetUsingGET_24 }): Promise<TResponseOfgetUsingGET_24>;
   };

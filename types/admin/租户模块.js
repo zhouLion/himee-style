@@ -1,1 +1,1 @@
-function s(t){return n=>({get:e=>t.get(n,e),post:e=>t.post(n,e),put:e=>t.put(n,e),head:e=>t.head(n,e),delete:e=>t.delete(n,e),patch:e=>t.patch(n,e)})}export{s as createRequest};
+function t(t){return e=>({get:p=>t.get(e,p),post:p=>t.post(e,p),put:p=>t.put(e,p),head:p=>t.head(e,p),delete:p=>t.delete(e,p),patch:p=>t.patch(e,p)})}export{t as createRequest};//# sourceMappingURL=租户模块.js.map
