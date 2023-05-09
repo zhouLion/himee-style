@@ -12,7 +12,7 @@
     "gen:api": "tsx script/genApi",
     "ts2js": "tsup",
     "build": "npm run gen:api && npm run ts2js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "vitest",
     "release": "bumpp --commit --push --tag && npm publish --access=public",
     "rollup": "rollup --config rollup.config.ts --configPlugin typescript"
   },
@@ -43,7 +43,8 @@
     "terser": "^5.17.2",
     "tsup": "^6.7.0",
     "tsx": "^3.12.6",
-    "typescript": "^5.0.4"
+    "typescript": "^5.0.4",
+    "vitest": "^0.31.0"
   },
   "optionalDependencies": {
     "@tarojs/taro": "^3.6.5",
